@@ -1,0 +1,215 @@
+Return-Path: <ruhi@offtechlive.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id EL8zFovnK2ivugYAM7Pthw
+	(envelope-from <ruhi@offtechlive.com>)
+	for <contact@makeastride.com>; Mon, 19 May 2025 22:23:07 -0400
+Return-path: <ruhi@offtechlive.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Mon, 19 May 2025 22:23:07 -0400
+Received: from [198.54.122.200] (port=37354 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <ruhi@offtechlive.com>)
+	id 1uHCdG-000000029PF-20eY
+	for contact@makeastride.com;
+	Mon, 19 May 2025 22:23:06 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=offtechlive-com.20230601.gappssmtp.com header.s=20230601 header.b=GcbBbCJZ;
+	dmarc=temperror reason="server fail" header.from=offtechlive.com (policy=temperror);
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of ruhi@offtechlive.com designates 209.85.215.194 as permitted sender) smtp.mailfrom=ruhi@offtechlive.com
+Received: from mail-pg1-f194.google.com (mail-pg1-f194.google.com [209.85.215.194])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4b1dcw6qQ9z278Z
+	for <contact@makeastride.com>; Tue, 20 May 2025 02:22:56 +0000 (UTC)
+Received: by mail-pg1-f194.google.com with SMTP id 41be03b00d2f7-af51596da56so3723838a12.0
+        for <contact@makeastride.com>; Mon, 19 May 2025 19:22:56 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=offtechlive-com.20230601.gappssmtp.com; s=20230601; t=1747707776; x=1748312576; darn=makeastride.com;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=PG/oGNap9TvVL2guTqIbpxA1yMvF4Ka/k7hmzY0DleQ=;
+        b=GcbBbCJZJaJOory5Ul2P4g211vVdhb5roaQDjzPSeJSBCku24EaZwuCtyHZjI46I7p
+         xqj4SbZbq+Isvm8NyGzXO2Rp8e6cm9hDWZRf9ViiRwgIQqbBu+WaOVHBDROOSp8Gyj21
+         BK6ySCNXJgxdDm0ynbMQOPrzYSaRriNtzlMx4sEiwuXqKBRlKhXDIh/Y/UXb2BqvGWz7
+         beK6VLey1wGvhlKkIH9VTXgQ0mpQnNLHmG0EP747QvktlMH9E/F86Q8XE9UaklpEtys7
+         UsWC01t0+HzYmZpW91wiqoEMeSJ9YjgnjdiCQNxGESXYBjMD6dBRAZ2ZLxA8eNm0KLMC
+         7e7w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1747707776; x=1748312576;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=PG/oGNap9TvVL2guTqIbpxA1yMvF4Ka/k7hmzY0DleQ=;
+        b=sYYV+Ik1l9FxmD6HuNfTe/thVlZkVRHgbo5Uxk/4uEiZq+HigOCZqmR/u7kzTvPEwn
+         AOOyjlpOwkLMDZTgj1JTSdZbWOcZY+DRxd0KHKniGP/fKzg02vwu/FwwgQ4JszeAyYvO
+         7s4yOg1stgcCpFpv5H8PmoLDPq56rxx1pLXZZ1PoAmocNG/+V8fcRE2V+lkJAcpZ9iqS
+         6wwR4jxQFteFHZ2fiV4RGC5OwtEXlv7AZPw9zXdPF4qKMbKAfhYDZ4qu/LCKsmSx9g85
+         h9EuvDRNZ5VlJ77unDC5edv3j1aWY2qNQzqziXjHb4FNZG1V6bs72z6JvYwY3V66BTFU
+         LAow==
+X-Gm-Message-State: AOJu0YwBM5YeFPX1pk9UggrsjIykLHVsVsz988jydplRQQe0tYP6iooW
+	BPxt3b8CyWZsRfhwCWS7ISGIiDAWoaXNVUbQGZjFsD550YRKWBdyOufGu+uUx82gApg7VDs74oL
+	J26YPww==
+X-Gm-Gg: ASbGncvusucPLOnek6W7EUsQcIIUOt/nzTezvRbKYR92+pztW7NzmJOWAgtDTbGcHhI
+	xGRAKv/QJjgc9ZA0SZxbQxu14iMyXB2cGFB0eb5aUBerU4HMTTXMSc8MQbNK9XNsXO3b7Is6Cot
+	DhGdXiD1sGk+rpmt/6SXCaIJYB+Vc4ylXPYE5NtNRoG/Flhj+GKZPceMDMIOF9J6J7lLoDJ4hOU
+	v6oJ7jmhTnLLqQ5d3m5iGSYgztKDYuneC4AlvwUkTqQxVgn00vKD7jfZSEKzKTwtrGAH6O2m5Px
+	t20bCHcy8c0COJxA6oQaey2r5XSWtEk+/r7hW0hUUZIxnm3IwoQrp12zBYyYWDzpdMXfysqDgz4
+	=
+X-Google-Smtp-Source: AGHT+IFdzQ623mfLPIPRg6/hJtRPO24nXPaJhfdWES9dGdkSUr2TvMifty0gJ1X044o4xc2OVm2KMw==
+X-Received: by 2002:a17:903:182:b0:231:fc6a:9639 with SMTP id d9443c01a7336-231fc6a963dmr157605395ad.27.1747707775827;
+        Mon, 19 May 2025 19:22:55 -0700 (PDT)
+Received: from DESKTOPITI129D ([223.181.32.44])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-231d4ac9261sm66938935ad.1.2025.05.19.19.22.54
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 19 May 2025 19:22:55 -0700 (PDT)
+From: "Ruhi" <ruhi@offtechlive.com>
+To: <contact@makeastride.com>
+Subject: App idea?	
+Date: Tue, 20 May 2025 07:49:16 +0530
+Message-ID: <ae8401dbc92e$17e7fe00$47b7fa00$@offtechlive.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_AE8E_01DBC95C.31A717D0"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AdvI/jIDIS/UUNrCReaUcZ1o5ZfgcA==
+Content-Language: en-gb
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_AE8E_01DBC95C.31A717D0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+ 
+
+I was checking your website www.makeastride.com, and to help your business
+for a mobile app solutions.
+
+ 
+
+Are you planning to build, redesign, or upgrade your Mobile app?
+
+ 
+
+I've worked on several successful projects, and I can share my work &
+details with you.
+
+ 
+
+Regards,
+
+Ruhi
+
+
+------=_NextPart_000_AE8E_01DBC95C.31A717D0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Cambria;
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-GB link=3Dblue =
+vlink=3Dpurple><div class=3DWordSection1><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>Hi,<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>&nbsp;<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>I was checking your website&nbsp;www.makeastride.com, and to =
+help your business for a mobile app solutions.<o:p></o:p></span></p><p =
+class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>&nbsp;<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>Are you planning to build, redesign, or upgrade your Mobile =
+app?<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>&nbsp;<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>I&#8217;ve worked on several successful projects, and I can =
+share my work &amp; details with you.<o:p></o:p></span></p><p =
+class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>&nbsp;<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal;backg=
+round:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>Regards,<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:12.65pt;background:white'><span =
+style=3D'font-family:"Cambria","serif";color:#222222;mso-fareast-language=
+:EN-GB'>Ruhi<o:p></o:p></span></p></div></body></html>
+------=_NextPart_000_AE8E_01DBC95C.31A717D0--
+

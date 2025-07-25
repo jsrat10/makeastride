@@ -1,0 +1,184 @@
+Return-Path: <aditya@indiadesigner.in>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id IJC/CHhLb2jP+z4AM7Pthw
+	(envelope-from <aditya@indiadesigner.in>)
+	for <contact@makeastride.com>; Thu, 10 Jul 2025 01:11:20 -0400
+Return-path: <aditya@indiadesigner.in>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 10 Jul 2025 01:11:20 -0400
+Received: from [198.54.122.200] (port=48732 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <aditya@indiadesigner.in>)
+	id 1uZjYz-0000000HZ4q-2bf2
+	for contact@makeastride.com;
+	Thu, 10 Jul 2025 01:11:17 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=indiadesigner.in header.s=google header.b=UNiUWNkL;
+	spf=none (asp-relay-shared.jellyfish.systems: domain of aditya@indiadesigner.in has no SPF policy when checking 209.85.210.181) smtp.mailfrom=aditya@indiadesigner.in;
+	dmarc=pass (policy=none) header.from=indiadesigner.in
+Received: from mail-pf1-f181.google.com (mail-pf1-f181.google.com [209.85.210.181])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bd2xT6KRMz27Lp
+	for <contact@makeastride.com>; Thu, 10 Jul 2025 05:11:09 +0000 (UTC)
+Received: by mail-pf1-f181.google.com with SMTP id d2e1a72fcca58-742c3d06de3so772604b3a.0
+        for <contact@makeastride.com>; Wed, 09 Jul 2025 22:11:09 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=indiadesigner.in; s=google; t=1752124268; x=1752729068; darn=makeastride.com;
+        h=thread-index:content-language:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=jJ6LJQJ0i8QWfOknKIrS7908YPgn7AAnftKrJCW0CHo=;
+        b=UNiUWNkL0RZ2C4xLy8vArGVLrQ+roOnt9/469pPYBzieiO/vOZNqNWxqa1H7YwWlWC
+         +a0H03UdXChVrh7P9p6/Bo8g1KYQ53k/Sn2jIJZRDd774Uwr4GyUw/QdNkHP0wyvy9MT
+         6SDxzBEIq2aVm1V1k1M/n7U01llbLkHMhc/FU=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1752124268; x=1752729068;
+        h=thread-index:content-language:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=jJ6LJQJ0i8QWfOknKIrS7908YPgn7AAnftKrJCW0CHo=;
+        b=etGoLkanj1BXXzvD8yyLltySSxyWY2NCIJZQ6NA/6tzUL9+QHLMT6NcqWITZz57h11
+         VRUNhUq2/5nlcE9mxvGU3My4iIcDPk6+fY5/b9krhwVEoHIxFO7bT86kn414nfvUM4E1
+         /UQ9eumYqOeN5XquOKrG4v3bKZhS6f1bv8hXHcrJSoillLRbQEXCXciBSyocHnUxA8Xl
+         TXTo5FP89cgliPt2ASg4VXglsluPaxCAsfN4UlL+N+wvkCVVB0DxPZHHQW3PhkoQHlCV
+         h0As83gKCmfQVXJMGNoyAZU52H+LS6VxpiA0CZ3vwJjSbzDD0tiI1JlQyjRGi/eX8L1E
+         12rA==
+X-Gm-Message-State: AOJu0YzLhsaqPqR4swMaWmldXiICzMQIhWTfT3SzjjgRJj8ego3G2/HP
+	CNAY5KBMnSWuYJvBUB7WJROv8xJRw+xxOlo7+MoshUH/MgM2Ffhsh7sCHV3k9IMZiCG96SdWy52
+	sh2ZKvQ==
+X-Gm-Gg: ASbGncu3rMOlBl6lP7IWAjrhXnJdU0a8yUwM2APxPMbVdPBXi0Oc5gwePj7Aas7vd47
+	FseuOzZ5mOmO95yiH6/fCYMcn35C2Mgv1K42VwdNvGqE5NIJRKt3pbGG6NMlW9unGSulgvTZxHV
+	kaSOlcQfzqdFJcjoQUPB4k/rcKNEXHW7FuFCixofJ8MzCQNAYMMIcbaIKDoUOKADDiDk9ASg68D
+	arehjELbZOv8YcL8WhmH9bEGPz0XZ/ShqNzO0F+ZsslejE6ErsWIP0SXT9GvITqdMdoyaXbLpVm
+	LAOOrDaGDMHZXGPfVSVY0lNueuVl7UIPM9XBm6GcsyasvPJRhVqA0jij+k1m7hLAapLL7PGF+0O
+	yv65aKyHB
+X-Google-Smtp-Source: AGHT+IGc5dWOox7nCtAkUnqpKVeHe0ej6PfkQeJx6Emd9oB5Eo7FC1d9+XBzlak4fxEjqkBjWAbA7g==
+X-Received: by 2002:a05:6a00:3a1a:b0:74d:2312:ca7e with SMTP id d2e1a72fcca58-74eb8fcc2fdmr2382554b3a.24.1752124268131;
+        Wed, 09 Jul 2025 22:11:08 -0700 (PDT)
+Received: from DESKTOPQPJ2HB0 ([122.161.66.150])
+        by smtp.gmail.com with ESMTPSA id d2e1a72fcca58-74eb9dd73c3sm871530b3a.7.2025.07.09.22.11.05
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 09 Jul 2025 22:11:07 -0700 (PDT)
+From: "Aditya" <aditya@indiadesigner.in>
+To: <contact@makeastride.com>
+Subject: Apps Proposal?
+Date: Thu, 10 Jul 2025 09:53:31 +0530
+Message-ID: <27e9601dbf159$5304f9e0$f90eeda0$@in>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_27E97_01DBF187.6CBD35E0"
+X-Mailer: Microsoft Office Outlook 12.0
+Content-Language: en-us
+Thread-Index: AdvwrIqxXGoCNoC0QZGviYEG6knTPw==
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_27E97_01DBF187.6CBD35E0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi contact@makeastride.com,
+
+ 
+
+Good Morning
+
+Hope you're doing great!
+
+I'm Aditya, a professional with over 12 years of experience in developing
+iOS and Android apps from India. Need help with a new app or improving an
+existing one?
+
+Don't hesitate to reach out for any mobile app needs.
+
+Warmest regards,
+
+Aditya
+
+
+------=_NextPart_000_27E97_01DBF187.6CBD35E0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 12 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-priority:99;
+	color:purple;
+	text-decoration:underline;}
+p.v1msonormal1, li.v1msonormal1, div.v1msonormal1
+	{mso-style-name:v1msonormal1;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.v1msonospacing1, li.v1msonospacing1, div.v1msonospacing1
+	{mso-style-name:v1msonospacing1;
+	mso-style-priority:1;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-US link=3Dblue vlink=3Dpurple><div =
+class=3DWordSection1><p class=3Dv1msonospacing1 =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Hi =
+contact@makeastride.com,</span></p><p class=3Dv1msonospacing1 =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>&nbsp;</span></p><p =
+class=3Dv1msonospacing1 style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Good Morning<br><br>Hope =
+you're doing great!<br><br>I'm Aditya, a professional with over 12 years =
+of experience in developing iOS and Android apps from India. Need help =
+with a new app or improving an existing one?<br><br>Don't hesitate to =
+reach out for any mobile app needs.<br><br>Warmest regards,</span></p><p =
+class=3DMsoNormal><span =
+style=3D'font-size:12.0pt;line-height:115%'>Aditya</span></p></div></body=
+></html>
+------=_NextPart_000_27E97_01DBF187.6CBD35E0--
+

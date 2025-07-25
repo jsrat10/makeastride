@@ -1,0 +1,99 @@
+Return-Path: <>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id gOjEJ2xscGgUlDgAM7Pthw
+	(envelope-from <>)
+	for <contact@makeastride.com>; Thu, 10 Jul 2025 21:44:12 -0400
+Return-path: <>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 10 Jul 2025 21:44:12 -0400
+Received: from mailnull by server336.web-hosting.com with local (Exim 4.98.2)
+	id 1ua2o7-0000000FmWG-3gDs
+	for contact@makeastride.com;
+	Thu, 10 Jul 2025 21:44:11 -0400
+X-Failed-Recipients: nigel.laseron@msn.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@server336.web-hosting.com>
+To: contact@makeastride.com
+References: <ptgQoc64U9mQv7SEukQXAO9h0Zu54hcUMHsgBW8cHpY@makeastride.com> <e46de3103c3a0471361cd614b7928d8b@makeastride.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1752198251-eximdsn-1810616248
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1ua2o7-0000000FmWG-3gDs@server336.web-hosting.com>
+Date: Thu, 10 Jul 2025 21:44:11 -0400
+
+--1752198251-eximdsn-1810616248
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  nigel.laseron@msn.com
+    host msn-com.olc.protection.outlook.com [52.101.9.27]
+    SMTP error from remote mail server after RCPT TO:<nigel.laseron@msn.com>:
+    550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302). [BL02EPF0002992B.namprd02.prod.outlook.com 2025-07-11T01:44:11.689Z 08DDBE9DE72589BD]
+
+--1752198251-eximdsn-1810616248
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; server336.web-hosting.com
+
+Action: failed
+Final-Recipient: rfc822;nigel.laseron@msn.com
+Status: 5.0.0
+Remote-MTA: dns; msn-com.olc.protection.outlook.com
+Diagnostic-Code: smtp; 550 5.5.0 Requested action not taken: mailbox unavailable (S2017062302). [BL02EPF0002992B.namprd02.prod.outlook.com 2025-07-11T01:44:11.689Z 08DDBE9DE72589BD]
+
+--1752198251-eximdsn-1810616248
+Content-type: message/rfc822
+
+Return-path: <contact@makeastride.com>
+Received: from [::1] (port=38530 helo=server336.web-hosting.com)
+	by server336.web-hosting.com with esmtpa (Exim 4.98.2)
+	(envelope-from <contact@makeastride.com>)
+	id 1ua2o4-0000000FmNc-11Kc
+	for nigel.laseron@msn.com;
+	Thu, 10 Jul 2025 21:44:08 -0400
+MIME-Version: 1.0
+Date: Thu, 10 Jul 2025 21:44:08 -0400
+From: contact@makeastride.com
+To: nigel.laseron@msn.com
+Subject: Re: Enquire from the web page
+In-Reply-To: <ptgQoc64U9mQv7SEukQXAO9h0Zu54hcUMHsgBW8cHpY@makeastride.com>
+References: <ptgQoc64U9mQv7SEukQXAO9h0Zu54hcUMHsgBW8cHpY@makeastride.com>
+User-Agent: Roundcube Webmail/1.6.11
+Message-ID: <e46de3103c3a0471361cd614b7928d8b@makeastride.com>
+X-Sender: contact@makeastride.com
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hi Nigel,
+
+Thank you for reaching out. I’d be happy to learn more and explore how 
+we might work together.
+
+Could you please share a bit more about your company, your current 
+needs, and what kind of support or services you're looking for? That 
+will help me better prepare for a productive discussion.
+
+Looking forward to hearing from you!
+Thank you
+Jo
+On 2025-07-08 14:42, no-reply@makeastride.com wrote:
+> Name:
+> 		Nigel Laseron
+> 
+> 		E-mail:
+> 		nigel.laseron@msn.com
+> 
+> 		Message:
+> 
+> Hello
+> We are looking for company that can help us, lets discuss cooperation
+> on Whatsapp, send me message:+44 740 491 5834
+
+--1752198251-eximdsn-1810616248--

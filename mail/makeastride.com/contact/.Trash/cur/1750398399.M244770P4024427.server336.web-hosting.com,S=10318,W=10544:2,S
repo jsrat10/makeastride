@@ -1,0 +1,226 @@
+Return-Path: <larry@anydigitalmarketers.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id KKcZDb/1VGhraD0AM7Pthw
+	(envelope-from <larry@anydigitalmarketers.com>)
+	for <contact@makeastride.com>; Fri, 20 Jun 2025 01:46:39 -0400
+Return-path: <larry@anydigitalmarketers.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 20 Jun 2025 01:46:39 -0400
+Received: from [198.54.122.200] (port=59759 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <larry@anydigitalmarketers.com>)
+	id 1uSUaE-0000000H0Nl-20g2
+	for contact@makeastride.com;
+	Fri, 20 Jun 2025 01:46:38 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=anydigitalmarketers-com.20230601.gappssmtp.com header.s=20230601 header.b=xt8OgmbG;
+	dmarc=none;
+	spf=softfail (asp-relay-shared.jellyfish.systems: 209.85.210.174 is neither permitted nor denied by domain of larry@anydigitalmarketers.com) smtp.mailfrom=larry@anydigitalmarketers.com
+Received: from mail-pf1-f174.google.com (mail-pf1-f174.google.com [209.85.210.174])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bNmgX60jZz17mR
+	for <contact@makeastride.com>; Fri, 20 Jun 2025 05:46:32 +0000 (UTC)
+Received: by mail-pf1-f174.google.com with SMTP id d2e1a72fcca58-7426c44e014so1189328b3a.3
+        for <contact@makeastride.com>; Thu, 19 Jun 2025 22:46:32 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=anydigitalmarketers-com.20230601.gappssmtp.com; s=20230601; t=1750398392; x=1751003192; darn=makeastride.com;
+        h=thread-index:content-language:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=FK/Np2bvJwjS8IBHRCF+KXDs2xvDtbvj+mX2AULYYtY=;
+        b=xt8OgmbGrJtGa3ZGIsscMouSW/TzQ/nDk+pmyxQjIrFW4mqsiHe52s9pRyqLXfMRC6
+         lWYr5puaCt3Ns4Q6GIsK1hfrCyULf1B99ZocpiISu8Gg0ilMpf7DyGI1XTjDlrxn7zfj
+         78Nwdnz++sNfdfiH9oQ0wBxVX4liQ1pTbCFh06t7SlGxYd/rLjS6cVcqyg8MjiaOQPli
+         XvUyi6vb/gsQSBY3Mw1ya26+gTn5p6P1n02GFjFJSOc4tK1e7xja4cNI8I37uumJtXSz
+         eKFcD6L8zraUYdyv5go5tIcIXCFfCrlZ2EoYL8wwXENBCKtMuQT2iZSfOroaXrkKc1qQ
+         x1/A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1750398392; x=1751003192;
+        h=thread-index:content-language:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=FK/Np2bvJwjS8IBHRCF+KXDs2xvDtbvj+mX2AULYYtY=;
+        b=VN15wUOpIJDfdvZVjRe/ZwtxdAuoV4NLwN83eqrXtCkTf3TiF80DuHi6DbhgERWUN7
+         zL0iNWcejDbLyRUVUORMSZ3Zu9F+BA4mzuO88BwyPbWE4AtiITZ+7smtpB4UQ8siTBHZ
+         GfNYmOUeQoTbflNBIgBNN0XRrfie9yeTEaZSvcG7wsau59cLT8m13JvZDvnx/o+brdje
+         s3y0bzGpMfWLKVOE2KZkX0xw+M87ApQG058D0Y7JZTeABszgqiHZ+T4PUC8N4X2RLpjD
+         I15tjR3ZxTS2soS8Dti3f3ej6jTV2YlsAXUCHL1PcmvN9GJawvedCGxQ33flyzAP8sli
+         tuHg==
+X-Gm-Message-State: AOJu0Yz9CuqsaAULkAxNkIMFaF6cqHiACKrSWMhQLQGxzdiX16Urnxys
+	FpjQKlLJycg7Jk0hanPZ2QRflZmOYxSncCVlAEqm4ISHNG//VY5KqRxSfYg+z8oICAHStWKPfug
+	ejzc7
+X-Gm-Gg: ASbGncv7mZuCPG3053qnFkXDHV2yrWNG6TzuGVaNdd1OQAGjz5wk5IlKidlLeA8tnGV
+	1QRlmA7ZelRhjGcr5iK5KMGXp5qI9PzKAHHKDmt4IDFwdBH4kVcUURMw1jhatPmKbuACXzKbEQy
+	5Q9zWkp/kNk5PBxMt4rKPkMkeFxiZiZQe4q9VDCc/GlTf838tov6YrgUxrMnISxoDzP18Gb8kPw
+	ZgeYXEtFnZc1T+1yxzxelGH0kkBgfchE7qS/DwfZKKgpJRMLpP3a8A5wjVRsnlZ2voNUFDQdrfY
+	nvV0k+x5z13h/yAJifVjs3j3IaHxb2Rl+CCAHFR72vAMrHIuhEuft5CkPtCh/wWN70NYK8nviwb
+	mqdAjQIuPBSX2KQ==
+X-Google-Smtp-Source: AGHT+IHEEbCjLwGvM+bDkzAXiRRDhH/7zhQc2kaxMtTZQ7aKXODKEyefdtVT5AtwZV2W/QhevUssNg==
+X-Received: by 2002:a05:6a00:1250:b0:737:9b:582a with SMTP id d2e1a72fcca58-7490d725a56mr2486841b3a.24.1750398391861;
+        Thu, 19 Jun 2025 22:46:31 -0700 (PDT)
+Received: from DESKTOPTJR4TBF ([43.227.226.209])
+        by smtp.gmail.com with ESMTPSA id 41be03b00d2f7-b31f11aba2bsm690386a12.33.2025.06.19.22.46.30
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 19 Jun 2025 22:46:31 -0700 (PDT)
+From: "Larry" <larry@anydigitalmarketers.com>
+To: <contact@makeastride.com>
+Subject: Re: Mobile Apps
+Date: Fri, 20 Jun 2025 10:38:09 +0530
+Message-ID: <e32301dbe1a6$ac9e2e30$05da8a90$@anydigitalmarketers.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_E324_01DBE1D4.C657A2B0"
+X-Mailer: Microsoft Outlook 14.0
+Content-Language: en-gb
+Thread-Index: AdvhlZcjqfP3cPP5Rlul1DlGxYIj5g==
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_E324_01DBE1D4.C657A2B0
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+I hope all is well with you.
+
+Can you please give me an update on my previous mail?
+
+Waiting for your valuable response.
+
+Thanks,
+
+---------------------------------------------------------
+
+From: Larry
+
+Sent: Monday, June 09, 2025 09:18 AM
+
+To: contact@makeastride.com
+
+Subject: Mobile Apps
+
+ 
+
+Hi,
+
+I'm checking with you on your contact@makeastride.com profile to see if you
+want to build a new IOS & Android Apps or if there are any changes or
+updates you'd like to make to your existing iOS and Android apps.
+
+Do you want custom mobile app for your business, we specialize in building
+apps for brands and would love to hear your thoughts
+
+If you are interested, I would be happy I can send you our past work and
+Packages with the best offer.
+
+I am waiting for your reply
+
+Thanks
+
+Larry
+
+
+------=_NextPart_000_E324_01DBE1D4.C657A2B0
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:10.0pt;
+	margin-left:0cm;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-GB><div class=3DWordSection1><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>Hi,<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>I hope all is well with =
+you.<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>Can you please give me an update on my previous =
+mail?<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>Waiting for your valuable response.<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>Thanks,<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans =
+MS"'>---------------------------------------------------------<o:p></o:p>=
+</span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal'><spa=
+n style=3D'font-family:"Comic Sans MS"'>From: =
+Larry<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal'><spa=
+n style=3D'font-family:"Comic Sans MS"'>Sent: Monday, June 09, 2025 =
+09:18 AM<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal'><spa=
+n style=3D'font-family:"Comic Sans MS"'>To: =
+contact@makeastride.com<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal'><spa=
+n style=3D'font-family:"Comic Sans MS"'>Subject: Mobile =
+Apps<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0cm;margin-bottom:.0001pt;line-height:normal'><spa=
+n style=3D'font-family:"Comic Sans MS"'><o:p>&nbsp;</o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>Hi,<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>I&#8217;m checking with you on =
+your contact@makeastride.com profile to see if you want to build a new =
+IOS &amp; Android Apps or if there are any changes or updates =
+you&#8217;d like to make to your existing iOS and Android =
+apps.<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>Do you want custom mobile app for your business, we specialize in =
+building apps for brands and would love to hear your =
+thoughts<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>If you are interested, I would be happy I can send you our past =
+work and Packages with the best offer.<o:p></o:p></span></p><p =
+class=3DMsoNormal style=3D'line-height:normal'><span =
+style=3D'font-family:"Comic Sans MS"'>I am waiting for your =
+reply<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>Thanks<o:p></o:p></span></p><p class=3DMsoNormal =
+style=3D'line-height:normal'><span style=3D'font-family:"Comic Sans =
+MS"'>Larry<o:p></o:p></span></p></div></body></html>
+------=_NextPart_000_E324_01DBE1D4.C657A2B0--
+

@@ -1,0 +1,12 @@
+[13-Sep-2024 05:00:32 UTC] PHP Warning:  require_once(/home/makerjbm/public_html/ncsitebuilder/tcpdf/tcpdf_autoconfig.php): Failed to open stream: No such file or directory in /home/makerjbm/public_html/ncsitebuilder/index.php on line 217
+[13-Sep-2024 05:00:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/makerjbm/public_html/ncsitebuilder/tcpdf/tcpdf_autoconfig.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/makerjbm/public_html/ncsitebuilder/index.php:217
+Stack trace:
+#0 /home/makerjbm/public_html/index.php(4): include()
+#1 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/index.php on line 217
+[13-Sep-2024 05:00:34 UTC] PHP Warning:  require_once(/home/makerjbm/public_html/ncsitebuilder/tcpdf/tcpdf_autoconfig.php): Failed to open stream: No such file or directory in /home/makerjbm/public_html/ncsitebuilder/index.php on line 217
+[13-Sep-2024 05:00:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/makerjbm/public_html/ncsitebuilder/tcpdf/tcpdf_autoconfig.php' (include_path='.:/opt/alt/php80/usr/share/pear:/opt/alt/php80/usr/share/php:/usr/share/pear:/usr/share/php') in /home/makerjbm/public_html/ncsitebuilder/index.php:217
+Stack trace:
+#0 /home/makerjbm/public_html/index.php(4): include()
+#1 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/index.php on line 217

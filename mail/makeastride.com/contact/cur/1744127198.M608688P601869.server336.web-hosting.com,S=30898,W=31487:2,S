@@ -1,0 +1,589 @@
+Return-Path: <bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id kDllId5E9WcNLwkAM7Pthw
+	(envelope-from <bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com>)
+	for <contact@makeastride.com>; Tue, 08 Apr 2025 11:46:38 -0400
+Return-path: <bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Tue, 08 Apr 2025 11:46:38 -0400
+Received: from [198.54.122.200] (port=46289 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com>)
+	id 1u2B9p-00000002YFP-2NB6
+	for contact@makeastride.com;
+	Tue, 08 Apr 2025 11:46:37 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=yelp.com header.s=200608 header.b=SYapvo5Z;
+	dkim=pass header.d=s1.y.mc.salesforce.com header.s=fbldkim1 header.b=YY10EXCf;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com designates 13.111.33.187 as permitted sender) smtp.mailfrom=bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com;
+	dmarc=pass (policy=reject) header.from=yelp.com
+Received: from mta.e.yelp.com (mta.e.yelp.com [13.111.33.187])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4ZX9RV3wg3z55cQ
+	for <contact@makeastride.com>; Tue, 08 Apr 2025 15:46:30 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=yelp.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=business@yelp.com;
+ bh=KhxPMr5BikXOoeC1A1Da3z/YkA/BmaN74ffxmd3fU1o=;
+ b=SYapvo5ZDE9fS9iq2ugKWMfK5Jzg2geRALMznF97VfA/OLiZsGEwOEstm+OYViiH2UmkxaIDZ/IX
+   ziB6v894e/r5c5Rj+e8faivzSOYcWklSTCcpFP+/iqDsABPdDdKIxIlQ4mBuZZYTyv1ddAjlYYoX
+   A6RCIE6mHPWbeuufoWA=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim1; d=s1.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=KhxPMr5BikXOoeC1A1Da3z/YkA/BmaN74ffxmd3fU1o=;
+ b=YY10EXCfU4MGJMTpkMXk0IiQ5qDK61KcZ0ABGpPNj0lHWyb6RqpfErNAqjeGSojUVoQATTT7sCaL
+   1efHWtUAw0dbHCPTDHC6U1Q6LvBMPVn/Vzyz1pTo1AJyJbvJXgwQGUKzwloYBlYPyznIpLArFiiA
+   OX29mVTGJfs34T888iMGzT1epfCoqdCB7P2ZMYbMvk/w2SVFGIIPjsq3TE8tYUGWhqNo0mYcb/NG
+   TbI8n/KQv1saSQxJ/U9gKRMH5laF5TRsDNd3DkEysZ2dM/FIDaXAZmC6NHVk0nFeOH/Cu91esA+Q
+   m0viATxpni/ITjqUc3815uLlM8UYdFIAGQ527Q==
+Received: by mta.e.yelp.com id hul2dm2fmd4h for <contact@makeastride.com>; Tue, 8 Apr 2025 15:46:29 +0000 (envelope-from <bounce-140_HTML-205317701-2269333-10963856-2753@bounce.e.yelp.com>)
+From: "Yelp for Business" <business@yelp.com>
+To: <contact@makeastride.com>
+Subject: Show up in the right searches
+Date: Tue, 08 Apr 2025 09:46:29 -0600
+List-Unsubscribe: <https://click.e.yelp-business.com/subscription_center.aspx?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiIxMDk2Mzg1NiIsInMiOiIyMDUzMTc3MDEiLCJsaWQiOiIxNDAiLCJqIjoiMjI2OTMzMyIsImpiIjoiMjc1MyIsImQiOiIxMDE4NCJ9.XjtuRZ4GgD22T4AdN1VoNHGB9dcwRJbAL_VGdWABkco>, <mailto:leave-fd561574750b5c392848-fe3516707067057a721471-fe931672736d077e76-fe5915707c6207757012-ff2e16777067@leave.e.yelp-business.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "Yelp for Business" <reply-2269333-140_HTML-205317701-10963856-2753@e.yelp.com>
+X-SFMC-Stack: 1
+x-job: 10963856_2269333
+Message-ID: <4fa12b1e-b98b-4a3d-b85b-d928b8350c56@ind1s01mta641.xt.local>
+Content-Type: multipart/alternative;
+	boundary="hj1gkWRlpqGJ=_?:"
+
+This is a multi-part message in MIME format.
+
+--hj1gkWRlpqGJ=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Yelp for Business
+ 
+  ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ ‌ 
+ 
+
+
+ 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a 
+
+
+Did you know it’s free to control the details that help your business show up in Yelp searches?
+
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a 
+Manage your info
+
+
+
+Get found for the right reasons
+
+Your business info helps us connect you with customers who are searching for what you do.
+ 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a 
+Claim your page  to manage the categories, specialties, and services for your business.
+ 
+
+ 
+
+
+  
+ 
+ 
+ 
+
+
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cddde6ab4ecd1bc825976976546a71b05516252258f9f4b3f019693baa9cb3152c75cbd814f590879a4b33ab540b31b42b8 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd58772f23626b75c9204132f5ca45f2feac85747658906d0166296d56d3b6e9ec1cdb86a9028920e9482501f259c76fc8 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd4019b5511f518379eca26d91a1e3fb73e8614574d00926e477e999cf95ec2a9f51e945db96f26fc6438d8faeee60d436 
+
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd607337281ebf60644a59b80ad4d71a9438aa77461129f492b456d4e7b2e26630bf3e24b8a3df7555173f097beed0958c 
+
+This email was sent to contact@makeastride.com 
+ 
+
+ Don’t want to receive these emails for this account anymore? 
+ 
+https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd4e0bc2ba03eb570d5c22ab2bdebc3e4f9ee72ef5663d601e65215a85c11eeeb44d6ff1637b8d33e5801765a90eee8443 
+Unsubscribe  
+
+Copyright © 2025 Yelp, 350 Mission Street San Francisco, CA 94105, US
+ 
+business.yelp.com
+ 
+
+ 
+ 
+
+
+
+--hj1gkWRlpqGJ=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!--[if !mso]><!-->
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="x-apple-disable-message-reformatting">
+    <!--<![endif]-->
+    <title>Yelp for Business
+    </title>
+    <link href="./2020MasterTemplate_files/css" rel="stylesheet" media="screen"> 
+    <style type="text/css">
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLDD4Z1xlFd2JQEk.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        mso-generic-font-family:swiss;
+        mso-font-alt: 'Arial Black';
+      }
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        mso-generic-font-family:swiss;
+      }
+      @font-face {
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-stretch: 100%;
+        font-display: swap;
+        src: url(https://fonts.gstatic.com/s/opensans/v34/memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+        mso-generic-font-family:swiss;
+      }
+      table {
+        border-collapse: collapse;
+      }
+      table td {
+        border-collapse: collapse;
+      }
+      img, a img {
+        border: 0;
+        height: auto;
+        outline: none;
+        text-decoration: none;
+      }
+      body {
+        height: 100% !important;
+        margin: 0 auto !important;
+        padding: 0;
+        width: 100% !important;
+      }
+      img {
+        -ms-interpolation-mode: bicubic;
+      }
+      #outlook a {
+        padding: 0;
+      }
+      table {
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+      .ReadMsgBody {
+        width: 100%;
+      }
+      .ExternalClass {
+        width: 100%;
+      }
+      p, a, td {
+        mso-line-height-rule: exactly;
+      }
+      p, a, td, body, table {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      .ExternalClass, .ExternalClass p, .ExternalClass td, .ExternalClass div, .ExternalClass span, .ExternalClass font {
+        line-height:100%;
+      }
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+      .cta-dark:hover{
+        background-color: #2B1D67!important;
+        text-decoration: none!important;
+      }
+      .cta-red:hover{
+        background-color:#D83939!important;
+        text-decoration:none!important;
+      }
+      .cta-white:hover{
+        background-color: #E2E2E6!important;
+        text-decoration: none!important;
+      }
+      .cta-dark-center:hover{
+        background-color: #2B1D67!important;
+        text-decoration: none!important;
+      }
+      .cta-red-center:hover{
+        background-color:#D83939!important;
+        text-decoration:none!important;
+      }
+      .cta-white-center:hover{
+        background-color: #E2E2E6!important;
+        text-decoration: none!important;
+      }
+      @media screen and (max-width:480px){
+        .center{
+          margin:0 auto!important;
+        }
+        .cta-dark-center{
+          margin:0 auto!important;
+        }
+        .cta-red-center{
+          margin:0 auto!important;
+        }
+        .cta-white-center{
+          margin:0 auto!important;
+        }
+        .h157{
+          height:157px!important;
+          vertical-align:middle!important;
+        }
+        .h-auto{
+          height:auto!important;
+        }
+        .hero {
+          border-radius:4px!important;
+          width:100%!important;
+          max-width:480px!important;
+        }
+        .fnt14{
+          font-size: 14px!important;
+          line-height: 20px!important;
+        }
+        .fnt32{
+          font-size: 32px!important;
+          line-height: 40px!important;
+        }
+        .logo {
+          width:100px!important;
+        }
+        .mblhide {
+          display: none!important;
+        }
+        .mblshow{
+          display:block!important;
+        }
+        .mw100{
+          max-width: 100%!important;
+        }
+        .w84 {
+          width: 84%!important;
+        }
+        .w90 {
+          width: 90%!important;
+        }
+        .w96 {
+          width: 96%!important;
+        }
+        .w100{
+          width: 100%!important;
+        }
+        .txt-cntr {
+          text-align: center!important;
+        }
+      }
+    </style>
+    <style>
+      .imgPad {
+        padding-top:20px!important;
+      }
+      @media screen and (min-width:600px) {
+        .imgPad {
+          padding-top: 0 !important;
+        }
+      }
+      @media screen and (max-width:599px) {
+        .wInner {
+          width: 90% !important;
+        }
+        .wFull {
+          width: 100% !important;
+        }
+        .imgFull {
+          width: 100% !important;
+          height: auto !important;
+        }
+        .tPad-0 {
+          padding-top: 0 !important;
+        }
+        .tPad-20 {
+          padding-top: 20px !important;
+        }
+        .imgPad {
+          padding-top: 20px !important;
+        }
+      }
+    </style>       
+    <!--[if mso]> <style type="text/css"> body, table, td, a, p, span, ul, li {font-family: Arial, sans-serif!important;} .mso-header {font-family:'Arial Black', sans-serif!important;} </style> <![endif]-->
+    <!--[if gte mso 9]><xml> <o:OfficeDocumentSettings> <o:AllowPNG/> <o:PixelsPerInch>96</o:PixelsPerInch> </o:OfficeDocumentSettings> </xml><![endif]-->
+  </head>
+  <body style="background-color:#ffffff; margin: 0px; padding: 0px;"><style type="text/css">
+div.preheader 
+{ display: none !important; } 
+</style>
+<div class="preheader" style="font-size: 1px; display: none !important;">Take control of your page for free and help customers find you.</div>
+    <center>
+      <div style="background-color: #ffffff;">
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#ffffff;width:100%;">
+          <tbody>
+            <tr>
+              <td align="center" valign="top">
+                <div style="display: none; max-height: 0px; overflow: hidden;">
+                  &nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+                </div>
+                <!--/preheader-->
+                <!--[if (gte mso 9)|(IE)]> <table align="center" border="0" cellspacing="0" cellpadding="0" style="width:600px;"> <tr> <td valign="top" align="center"> <![endif]-->
+                <table cellpadding="0" cellspacing="0" border="0" align="center" role="presentation" style="width:100%; max-width:620px;">
+                  <tbody>
+                    <tr>
+                      <td align="center" valign="top" style="width:620px;">
+                        <!--main-->
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                          <tbody>
+                            <tr>
+                              <td align="center">
+                                <!--module 1b: logo-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="padding:24px 0;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:90%;">
+                                          <tbody>
+                                            <tr>
+                                              <td align="center">
+                                                <img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/4/ebd73085-a857-4a07-a66b-e29653e36485.png" alt="Yelp Logo" width="220" style="border:0;display: block;padding:0;outline:0;width:220px;">
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--/module 1b: logo-->
+                                <table align="center" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:620px;">
+                                  <tr>
+                                    <td align="center" valign="top">
+                                      <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!--HERO IMG-->                                
+<table align="center" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:620px;">
+  <tr>
+    <td align="center" valign="top">
+      <!--desktop-->
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+        <tr>
+          <td align="center" class="mblhide">
+            <a href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a" style="text-decoration: none;"><img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/1/1cf4bd9b-f7bd-495e-8a55-6025001a6a44.gif" width="620" alt="Show up when it counts!" style="border:0;border-radius:4px;display: block;padding:0;outline:0;width:100%;max-width:620px;color:#2B273C;font-family:Poppins,'Arial Black',Arial,sans-serif;font-size:30px;font-weight:800;line-height:40px;"></a>
+          </td>
+        </tr>         
+      </table>
+      <!--/desktop-->
+      <!--mobile-->
+      <div style="display: none;mso-hide:all;" class="mblshow">
+        <!--[if !mso]><!-- -->
+        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+          <tr>
+            <td align="center">
+              <a href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a" style="text-decoration: none;"><img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/1/685300fe-3bcc-4525-959f-135ba525c28a.gif" alt="Show up when it counts!" width="480" style="border:0;display: block; padding:0; outline:0; height:auto; width:100%; max-width:480px;color:#2B273C;font-family:Poppins,'Arial Black',Arial,sans-serif;font-size:20px;font-weight:700;line-height:26px;padding-bottom:15px;"></a>
+            </td>
+          </tr>           
+        </table>
+        <!--<![endif]-->
+      </div>
+      <!--/mobile-->
+    </td>
+  </tr>
+</table>      
+<!--/HERO IMG--> </td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!--module 3a: headline and copy specs-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+  <tr>
+    <td align="left" style="padding-bottom:32px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:90%;">
+        <tr>
+          <td align="center">
+            <p style="margin:0;padding:0;margin-top:32px;color:#2B273C;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:16px;line-height:24px;"><b>Did you know it’s free to control the details that help your business show up in Yelp searches?</b>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--/module 3a: headline and copy specs-->
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+  <tr>
+    <td align="center" style="padding-bottom:36px;">
+      <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:90%;">
+        <tr>
+          <td align="center">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#F03939;border-collapse:separate;border-radius:4px;width: 210px;transition: all .6s ease;" class="cta-red">
+              <tr>
+                <td height="48" valign="middle" style="text-align: center; height: 48px;">
+                  <a href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a" style="display: inline-block; padding: 10px 30px; font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size:16px; line-height:20px; color:#ffffff; text-decoration:none;"><!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]-->Manage your info<!--[if mso]>&nbsp;&nbsp;&nbsp;<![endif]--></a>
+                </td>
+              </tr>  
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><!--module 15b: 1 container centered-->
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+  <tr>
+    <td align="center">
+      <table align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style="border:1px solid #dcdfe5;border-collapse: separate; border-radius: 4px;box-shadow: 0 0 15px -8px rgba(0,0,0,0.50); width:86%;" class="w84">
+        <tr>
+          <td align="center" valign="top" style="padding-top:32px;">
+            <table align="center" cellpadding="0" cellspacing="0" border="0" role="presentation" style="width:89%;">
+              <!--icon-->
+              <tr>
+                <td align="center" style="padding-bottom: 24px;">
+                  <img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/1/a81a9938-9acb-45aa-b5be-80fb052a363d.png" alt="" width="40" style="border:0;display:block;outline:0;padding:0;width:40px;">
+                </td>
+              </tr>
+              <!--/icon-->
+              <tr>
+                <td align="center">
+                  <p style="margin:0;padding:0;color:#2B273C;font-family:Poppins,'Arial Black',Arial,sans-serif;font-size:20px;line-height:26px;text-align: center;"><b>Get found for the right reasons</b>
+                  </p>
+                  <p style="margin:0;padding:0;margin-top:16px;color:#2B273C;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;line-height:24px;text-align: center;">Your business info helps us connect you with customers who are searching for what you do.
+                  </p>
+                  <p style="margin:0;padding:0;margin-top:16px;color:#2B273C;font-family:'Open Sans',Helvetica,Arial,sans-serif;font-size:16px;font-weight:normal;line-height:24px;text-align: center;"><a href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd99978a8b3808905b906e00016fb84392d0b0fa086d5a1628e550e02727b46d0bd70064c184aa4909fbd50617ab4d8e3d460833e49acbcd0a" target="_blank" style="text-decoration:underline; color: #F03939;">Claim your page</a> to manage the categories, specialties, and services for your business.
+                  </p>                  
+                </td>
+              </tr>
+              <tr><td height="40" style="line-height:40px;">&nbsp;</td></tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<!--/module 15b: 1 container centered--></td></tr></table>
+                                       
+                                    </td>
+                                  </tr>
+                                </table>
+                                <!-- module 16: divider-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td align="center" style="padding:40px 0 20px;">
+                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
+                                          <tbody>
+                                            <tr>
+                                              <td align="center" style="border-top:1px solid #dcdfe5;line-height:0;font-size:0;">&nbsp;
+                                              </td>
+                                            </tr>
+                                          </tbody>
+                                        </table>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--/module 16: divider-->
+                                
+                                <!--footer-->
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#ffffff;width:100%;">
+                                  <tbody>
+                                    <tr>
+                                      <td>
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color:#ffffff;width:100%;">
+  <tr>
+    <td align="center">
+      <table align="center" border="0" cellspacing="0" cellpadding="0" role="presentation" style="width:90%;">
+        <tr>
+          <td align="center" style="padding:30px 0;">
+            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:45%;" class="w96">
+              <tr>
+                <td align="center">
+                  <a style="text-decoration: underline; color: #2B273C; margin: 0px 10px; font-size: 14px;" href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cddde6ab4ecd1bc825976976546a71b05516252258f9f4b3f019693baa9cb3152c75cbd814f590879a4b33ab540b31b42b8">  <img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/4/574ae3f9-a0a1-4818-8275-2f21898322b8.png" alt="Twitter" width="27" style="display: inline-block;padding:0;border:0;outline: 0;color:#333333;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;width:27px;"></a>
+                </td>
+                <td align="center">
+                  <a style="text-decoration: underline; color: #2B273C; margin: 0px 10px; font-size: 14px;" href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd58772f23626b75c9204132f5ca45f2feac85747658906d0166296d56d3b6e9ec1cdb86a9028920e9482501f259c76fc8"> <img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/4/6f6d3860-427a-40c4-8e91-513c6c5146d3.png" alt="Facebook" width="25" style="display: inline-block;padding:0;border:0;outline: 0;color:#333333;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;width:25px;"></a>
+                </td>
+                <td align="center">
+                  <a style="text-decoration: underline; color: #2B273C; margin: 0px 10px; font-size: 14px;" href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd4019b5511f518379eca26d91a1e3fb73e8614574d00926e477e999cf95ec2a9f51e945db96f26fc6438d8faeee60d436"><img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/4/ca557aaf-9b0a-463f-9d25-d8eb33c3060e.png" alt="Instagram" width="25" style="display: inline-block;padding:0;border:0;outline: 0;color:#333333;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;width:25px;"></a>
+                </td>
+                <td align="center">
+                  <a style="text-decoration: underline; color: #2B273C; margin: 0px 10px; font-size: 14px;" href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd607337281ebf60644a59b80ad4d71a9438aa77461129f492b456d4e7b2e26630bf3e24b8a3df7555173f097beed0958c"><img src="https://image.e.yelp-business.com/lib/fe5915707c6207757012/m/4/77bbd8eb-094e-4c1c-9253-c9465a0c61bc.png" alt="Blog" width="25" style="display: inline-block;padding:0;border:0;outline: 0;color:#333333;font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px;width:25px;"></a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td align="center" style="padding-bottom:25px;">
+            <p style="padding:0;margin:0;color: #757280;font-family:Arial,sans-serif;font-size:14px;line-height:20px;">This email was sent to contact@makeastride.com 
+              <br>
+              Don’t want to receive these emails for this account anymore? 
+              <a href="https://click.e.yelp-business.com/?qs=ddcd6a99533b9cdd5ddc4f898ccbbe3a113f5a35a071c9eaa7f30d013764598c078e70a9aaaeddd12f43d1652fa322a20e222c9c5577f4e6" style="text-decoration: underline; color: #757280"  target="_blank">Unsubscribe</a> </p>
+            <p style="padding:0;margin:0;margin-top:16px;font-family:Arial,sans-serif;font-size:14px;line-height:20px;color: #757280;">Copyright © 2025 Yelp, 350 Mission Street San Francisco, CA 94105, US
+              <br>business.yelp.com
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>  
+</table> 
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                                <!--/footer-->                                
+
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!--[if (gte mso 9)|(IE)]>                         </td>                         </tr>                         </table>                         <![endif]-->
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </center>
+    <img src="https://click.e.yelp-business.com/open.aspx?ffcb10-fe931672736d077e76-fe2416777763027a711371-fe5915707c6207757012-ff6a157475-fe3516707067057a721471-ff2e16777067&d=10184&bmt=0" width="1" height="1" alt="">
+  </body>
+</html>
+
+--hj1gkWRlpqGJ=_?:--
+

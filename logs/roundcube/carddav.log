@@ -1,0 +1,13 @@
+[07-Mar-2025 23:54:06 -0500]: <7402f57e> [5 ERR] Database::get (SELECT "filename" FROM carddav_migrations) ERROR: [1] no such table: carddav_migrations 
+[01-Apr-2025 13:35:26 -0400]: <c09dd28a> [5 ERR] Database::get (SELECT "filename" FROM carddav_migrations) ERROR: [1] no such table: carddav_migrations 
+[01-Apr-2025 13:35:46 -0400]: <0191c55e> [5 ERR] sync-collection REPORT produced exception {"exception":{}}
+[11-Apr-2025 12:55:25 -0400]: <4ba954fd> [5 ERR] sync-collection REPORT produced exception {"exception":{}}
+[18-Apr-2025 20:47:50 -0400]: <7bfa1f16> [5 ERR] sync-collection REPORT produced exception {"exception":{}}
+[10-Jul-2025 21:34:09 -0400]: <2651ca47> [5 ERR] Cannot update name of addressbook 1: Expected Multistatus HTTP request was not successful (401 Unauthorized): <html>Authorization Required</html>
+ 
+[11-Jul-2025 21:26:48 -0400]: <d5863d3b> [5 ERR] Cannot update name of addressbook 1: Expected Multistatus HTTP request was not successful (401 Unauthorized): <html>Authorization Required</html>
+ 
+[11-Jul-2025 21:29:43 -0400]: <5543cdc9> [5 ERR] Cannot update name of addressbook 1: Expected Multistatus HTTP request was not successful (401 Unauthorized): <html>Authorization Required</html>
+ 
+[22-Jul-2025 16:06:07 -0400]: <64f07452> [5 ERR] Cannot update name of addressbook 1: Expected Multistatus HTTP request was not successful (401 Unauthorized): <html>Authorization Required</html>
+ 

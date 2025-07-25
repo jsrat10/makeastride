@@ -1,0 +1,296 @@
+Return-Path: <anjaliwebservices1@outlook.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id WK/zBJRFXWjPhhEAM7Pthw
+	(envelope-from <anjaliwebservices1@outlook.com>)
+	for <contact@makeastride.com>; Thu, 26 Jun 2025 09:05:24 -0400
+Return-path: <anjaliwebservices1@outlook.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 26 Jun 2025 09:05:24 -0400
+Received: from [198.54.122.200] (port=48122 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <anjaliwebservices1@outlook.com>)
+	id 1uUmI7-00000004pWR-0qbW
+	for contact@makeastride.com;
+	Thu, 26 Jun 2025 09:05:23 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=outlook.com header.s=selector1 header.b=uR9wIBuq;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of anjaliwebservices1@outlook.com designates 52.103.74.83 as permitted sender) smtp.mailfrom=anjaliwebservices1@outlook.com;
+	arc=pass ("microsoft.com:s=arcselector10001:i=1");
+	dmarc=pass (policy=none) header.from=outlook.com
+Received: from SEYPR02CU001.outbound.protection.outlook.com (mail-koreacentralazolkn19013083.outbound.protection.outlook.com [52.103.74.83])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange ECDHE (secp384r1) server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bSf6z1NJvzFyh4
+	for <contact@makeastride.com>; Thu, 26 Jun 2025 13:05:15 +0000 (UTC)
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=v7DW58RvXBkuyEtWwr4jWJHE72GLhfPvtrcU8r+S2DCT6YEduhsvxYfog9aRXoo6LDgqm5v4LiuWrEK+AvIZ7jkNapYJyOZtrdctnX3dhOayKnSKukWR4+Wi2lEJHVmqzI1wvvv3osjkvRjH5+FwD65HtFHdh8uvdTvg7O/7QEspgWTH6vOqezuteZ8dLrwJhz+Bjt9Xp3xp+Aihl9wSQUCQ2F+bLoMVO/SxBjRkM6xRuWSsi+KiwEcoOdN6JvPGc2w1oVQXMeHOfL58P7pviA6w5xY+11hCGlseYPrcqz+qsBcC9DLORSeFdGmWS6r7Uybpz+du4V81DGJguVQD+g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=hx1o2wmbiBrvhOhrngQThU87VwHWLxAE4T9f9YNeKQg=;
+ b=SIl5KNKYbpMi+fzhif244Ikhva3Cdv+oZOEP+8WV6Q38brlg+AuRwC1U/81k2dpA4caqtnk5D89Xe3/YxSBaYG1rQOnRnaceR5wA2MkA/AJnQ4UT8Rbw8T1VceTiqbGx+lVhQ9HNtEN5YnCtDAvGfv/jf4fTuzZ2QJOv1vYBPZetOme3buWqwMS9evK5975/v4q+DIGyYMTxIqn9vozyDqa1jMWyLK6v2ArUPWRI/sYE3s1r+QMMj5M/KduaFQq8RsfhT0u+Qb15AI6nAbLfHtT+3I9kn1bBBljF8HXT2KKE3SV9S+4XwTJemLrIA/Jl/I6RczCypLkJgqGio1rxzA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none;
+ dkim=none; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=outlook.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=hx1o2wmbiBrvhOhrngQThU87VwHWLxAE4T9f9YNeKQg=;
+ b=uR9wIBuq642C+kRIY6JJoZR6fanRIoMTrjbIjMbvKcpD67NDucKddGVAMd456firC9S1TbXgzEr3MBc1xN297KxjQvcRr3xCGz9CluHOWo1PI0qOm8vi8zgTnfoXlP3cn/2KN++J8Z65plWtbkdhbg9vWFYynSmmEpQFDhgd2B6kB4vxjSfEbFGu4W9ZY35tJAYWkN2Xruy8/aKWsBMl1Vli6tkTR8takyEfREnNv8fMDc4IIYOLk6dM8QEqbbZgYVYyTXZVZiR3RWiz0DWvTPtX3PtQiaqxje/zI5ig/DX3bIkx7yd40edYifJjxF0N7gjoX4Rzq0xrXQIvf0rdlA==
+Received: from SEZPR01MB4325.apcprd01.prod.exchangelabs.com
+ (2603:1096:101:49::14) by TYZPR01MB5304.apcprd01.prod.exchangelabs.com
+ (2603:1096:400:341::6) with Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8880.18; Thu, 26 Jun
+ 2025 13:04:25 +0000
+Received: from SEZPR01MB4325.apcprd01.prod.exchangelabs.com
+ ([fe80::3ea2:81a:a361:8d2c]) by SEZPR01MB4325.apcprd01.prod.exchangelabs.com
+ ([fe80::3ea2:81a:a361:8d2c%3]) with mapi id 15.20.8857.026; Thu, 26 Jun 2025
+ 13:04:25 +0000
+From: anjali Kumari <anjaliwebservices1@outlook.com>
+Subject: Re: Site Ideas
+Thread-Topic: Site Ideas
+Thread-Index: AQHb3FIv0VgnbN+O6UezxgpZ61d1GrQVfItt
+Date: Thu, 26 Jun 2025 13:04:23 +0000
+Message-ID:
+ <SEZPR01MB432520576E0CEC7F266AA2EC927AA@SEZPR01MB4325.apcprd01.prod.exchangelabs.com>
+References:
+ <SEZPR01MB4325FA3431CADDB1AE2A51979277A@SEZPR01MB4325.apcprd01.prod.exchangelabs.com>
+In-Reply-To:
+ <SEZPR01MB4325FA3431CADDB1AE2A51979277A@SEZPR01MB4325.apcprd01.prod.exchangelabs.com>
+Accept-Language: en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+msip_labels:
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: SEZPR01MB4325:EE_|TYZPR01MB5304:EE_
+x-ms-office365-filtering-correlation-id: fa045964-369a-4abc-242c-08ddb4b1f940
+x-ms-exchange-slblob-mailprops:
+ SoURN12IA8sz6yVpa9tFZdZCLkZwpBCzjPp3iJT9CS6iSCSlZM78Lmt0Ycy3RSYcsZ2CTyJJaLmr+Bq7mA/7pb3O7Y+mNs39rwu09Ry1AX4gNmUxSF+vOnn9iwsMTsebUceobDyHmpjEb42LLytCwb+aK8zp05VlVdb7KlN84M9mlWfH6Bz6/62baJTFyPJwh2DL7np5AZWHafyKgPqqXCkLnTEIdrSfjwjMQj/TyQZAd3tTAuGXVIzty2PXJqWk/6PK+U64XpreMbejhVVJDvb94VFpFZYkmJGG0gJKAVjj/bGx5MKs1MLjyYsAp1U2DATZGQR6lEbVxPqQmBYQqaXHPF3KDDgjGUTUz8ytz2w88TtaHlDnumZMKHJTieugvSFri8j6iWvj9ymtyv/+LBmI9oai6KfmrF2fonkAypeXhgOJFzGR6gLl7dFn1tTvk2w7uex2FB5ecEtCDoTTrs8k6EN2zpovTh6nrOrlt2JHIRQ2MyuS1BbnHlnEujfywJpvmY6Vyhzv8eXdJtshjcKEHS5fNHuSpm+oxwBKYvWEnOTbCNES9Pezf8d/uqEP3QuTadxt50Ydo+iyEIxUpoeSmdEf/OKhGBNf437fYnUbU35BxN8JJGKmFBgRKoN/Tq7BrQWPuYcVxcq+Rn/uDgzPtbXFvlBO
+x-microsoft-antispam:
+ BCL:0;ARA:14566002|19110799006|15080799009|8062599006|7092599006|15030799003|8060799009|461199028|51005399003|3412199025|39105399003|440099028|40105399003|43065399003|31055399003|102099032;
+x-microsoft-antispam-message-info:
+ =?Windows-1252?Q?/WiO7PxrO+N2FP04hyDUsuyAsT3Bqcsfg/2Qt6oetAX+roBMuUiaX5YP?=
+ =?Windows-1252?Q?loCM0XZSA6IN2ePjxnscBT37YqIArcYOD0cz94LvoUn0xh7dBBfUWHGy?=
+ =?Windows-1252?Q?Vx6Q3QcNWsUZTcMsdY/wW9Lm0C6mJhTYJfvyo9r0ks19ejANX3CNGfwT?=
+ =?Windows-1252?Q?+/X3YZFHpYH3hthEK3Y41qRbHN3alNt32W7sAD0ZIpT7SgNl0bLA+H1A?=
+ =?Windows-1252?Q?TE7sYWxglWqDuGw9TI7btLcNxgOjPvhrYOTgQg9librEfDcIGFkMlCMA?=
+ =?Windows-1252?Q?kqbOss+TToOSwjosbCvj4Bf8FXagHdA77ILCjTluF5n1al+HSdW7xUyu?=
+ =?Windows-1252?Q?y8b/EEZzek9Uny0yZWwMLNpvoPzcIJB/cTDxaOh4RXScFF89giBLrXhx?=
+ =?Windows-1252?Q?7dboFQTfgjvIIchN6fab2gcR0ICverMVsp8X9C1O4DIdPqE4Kn/4S12Y?=
+ =?Windows-1252?Q?jyZ5zZ7Bdd1xiJnYw21ckxWI4GLqrZfcm8qhlUhW9PYcZHiNJ4VJ6DA2?=
+ =?Windows-1252?Q?oSa1o3jmoNkjGtMlYaf1fBlFV5VS/WBR2TTprPh2WvWfbyv8nG5yvEeB?=
+ =?Windows-1252?Q?j7ERa12KrSGRUQC/OFXYa3jYe3bofZfHaIgVtiYN8aGCDgRP8WS2XyeN?=
+ =?Windows-1252?Q?Rvrfc8lOMdF5MsFK9Bz6ydjZEO+r7znQJNCGYTbyr+CgPeUhiYEGgWi/?=
+ =?Windows-1252?Q?dJHzFXaxSzyt4aEofwn6PKy4WjPTS1ayknMXX5oMqTc1Kn4N25GP1MsB?=
+ =?Windows-1252?Q?QyRwbZnVtzR6pa9ofhZWbGDWCgijn7SmiP+mV7JUtRx+WPgmn7713qX6?=
+ =?Windows-1252?Q?WMCFyqO8iLHq0pdf2rZtmy+FIv+2pGVdwo1VsaKqW7fFv6QKi+U03CQ7?=
+ =?Windows-1252?Q?fmK5LnFm6aDB01WlKJ/tQ2oRVj1BmFEa+FwnvoJNWgXjCz+vEqoS7RGT?=
+ =?Windows-1252?Q?jDADfOGju6bv8Sqza9BBsXKJILFIuhqhi6Mo1InQ4VsJWv7WWJQykwCm?=
+ =?Windows-1252?Q?syESTgwu7olo0FCAr2NDmYynp/BbH1mQuU4bYzOPAOBFWyfQE6/H1Md8?=
+ =?Windows-1252?Q?iDZaYj4wHiqSopxajrNNNfxXO8at0EXb9VRWow44lDi3Jgeev/+WbRB9?=
+ =?Windows-1252?Q?O7zXBzaqQpSP1BEJuXWl7ODAXmRPDt56hRGKjFo+p7GEKvdpk6OsxwA6?=
+ =?Windows-1252?Q?d6nM/tht0r3PDYUdN/2mntK9V6bIsSUpVh0hTkQa4U+0sxDDbXTgAE8M?=
+ =?Windows-1252?Q?zqrnkqpF41zbE1QURQPDopeSVGy8WKOe/u2Pg+HxEW1LXj6kdML/jUfu?=
+ =?Windows-1252?Q?hT7x3GgXVcvqZMtws4gPRsP4szx/cbdprM+eol1ZtrhZruDLdx2lCYrV?=
+ =?Windows-1252?Q?FT4y8U9RhM6usblQZaqCh+2TaBISNkBkv64=3D?=
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?Windows-1252?Q?VWcwk4WfqddbT+sL0vMs3I/8SWLsUiqvB9FGtvTwXfsOfx7uEO5UgZWb?=
+ =?Windows-1252?Q?UHf7iEcAx/1Iy8T7W6bP6pC0+k9opp2d0qy8JnMlLJOND13cDCZo7S/2?=
+ =?Windows-1252?Q?OsE6iuS/Lfu45/iYPRYi/ONFoSxcbh1+vNGI/ZdVSmQKoM2TXgC68/vB?=
+ =?Windows-1252?Q?YXrLkmJWs+XRw/o8ajoNGR3+d0ABZPAZpXaTST6bdb+2C2DKxi9HO8Ds?=
+ =?Windows-1252?Q?g/fRAmQQjrCWXYthjq5lBRSUDJLSZUTV2RvW08foD84LngHUso3sorpA?=
+ =?Windows-1252?Q?DlWpsQGvKuuNAT5h4bdAkxaJrFr7WSQLJp6RlDFsNapmrpf26/mVIi/z?=
+ =?Windows-1252?Q?8n4wwUBS9gjRMz8Ve/9QqPiSGKSfsJC7oYDTXH7VSiCImrrt0OmKAlTi?=
+ =?Windows-1252?Q?yl5RTNSZBNVAgKM7sl3ILskYpYk4XCqWvYW1AFN4OQPBksXv9BPBijNV?=
+ =?Windows-1252?Q?mESYW+7dlFVtxcA2xjXiCHYJchnHA1UZLy3PP76ab5s5ndzFylxLfm1I?=
+ =?Windows-1252?Q?ZKfkRPMXt35TUgfoBjtCZgUscMqRgslSj1m3+tQQyIc2Jr/lybpTKQQv?=
+ =?Windows-1252?Q?I+pb07DjeV4I/kmIsr1XvwjpDHVrL5CTE8zU55HgbCkZzsh2aRqenTeT?=
+ =?Windows-1252?Q?t4zMsPj2ByiBxgYvESBqCQqFO80RYdYtlJayzuADZ7Os5acFXG4T8oLP?=
+ =?Windows-1252?Q?FVYod3fnz+tS/D4irg+656b80jG47NDLl/CNwbcriWuThvAMtAk19bHT?=
+ =?Windows-1252?Q?IcKjqAlq+47+FHqEIytt4SoR2HFfkMg5f+qMBxnptIca57u+MIBMd++d?=
+ =?Windows-1252?Q?eBX+7tPMPIWHu6BVvgi+JHpcE9AjW4ZAdpG6HZ28vOjRvanZLfvDRl9T?=
+ =?Windows-1252?Q?trq8T5/+bbIIOhFk9iB9MJogUATxe4uv1TlTmK5E8B4ToStggPYz9PDx?=
+ =?Windows-1252?Q?+KMUcaKSCZSZptuT2Y+3WeKdAeeOlbodvA1BNWH3GDanA5rrgcNVxFIW?=
+ =?Windows-1252?Q?1yYd0GZvPGng7B8RE9JsJ1UucGOTIdn86AwFU5290ieVUMSMxQOJJwEz?=
+ =?Windows-1252?Q?Xu9XwRRBrXV8c2XqjbKY8G2WpbXCRkJooCF0RtOIgcCv0KUeJ8K9YQCq?=
+ =?Windows-1252?Q?XcNHtdSQoFcc8Y7KM0J1DhmLmTI6KA0mPiU6R6w9lwEJEEEhuEqn+FZo?=
+ =?Windows-1252?Q?YZjpu0P+cvyI5CHnVs1J+8pgLibVeCGmUYgnT2Cru+Bk/S9lxG+nqoAB?=
+ =?Windows-1252?Q?x2eggWNve7H91GKtlnk3HD8LqpnOak0nx/3pD6Is+UBjk2XV8t9ECHM8?=
+ =?Windows-1252?Q?y3l3HCeFxUn91WvV+OtZQRfc5rNhQy7tyBh4bvnjAeViUnFosxFawRQi?=
+ =?Windows-1252?Q?iTZzW2QLObPtW57y3lPo3omHBI8q8ZXzQW/SBrkEAoUBVdecB4z6beAv?=
+Content-Type: multipart/alternative;
+	boundary="_000_SEZPR01MB432520576E0CEC7F266AA2EC927AASEZPR01MB4325apcp_"
+MIME-Version: 1.0
+X-OriginatorOrg: outlook.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: SEZPR01MB4325.apcprd01.prod.exchangelabs.com
+X-MS-Exchange-CrossTenant-RMS-PersistedConsumerOrg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-CrossTenant-Network-Message-Id: fa045964-369a-4abc-242c-08ddb4b1f940
+X-MS-Exchange-CrossTenant-originalarrivaltime: 26 Jun 2025 13:04:23.9916
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 84df9e7f-e9f6-40af-b435-aaaaaaaaaaaa
+X-MS-Exchange-CrossTenant-rms-persistedconsumerorg: 00000000-0000-0000-0000-000000000000
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: TYZPR01MB5304
+
+--_000_SEZPR01MB432520576E0CEC7F266AA2EC927AASEZPR01MB4325apcp_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+Hi,
+
+I wanted to check if you had a chance to consider the email I sent earlier.=
+ Are you interested in discussing Website Development / eCommerce Website /=
+ Mobile App for your business?
+
+Please share your whatsapp number and let me know if you'd like to schedule=
+ a quick call to discuss your website development needs.
+
+I look forward to your response
+
+Thanks
+  Anjali Kumari
+=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=
+=85=85=85=85=85=85=85=85=85=85=85=85=85.
+From:  Anjali Kumari
+Sent: Thursday, May, 29 2025 04:26 PM
+Subject: Site Ideas
+
+Hi,
+
+Do you have any plans to build or redesign your website?
+
+I=92d be happy to schedule a call via Zoom or Google Meet to discuss the de=
+tails and explore how we can bring your ideas to life. Could you kindly sha=
+re your preferred date and time for the schedule a call?
+
+
+
+
+
+--_000_SEZPR01MB432520576E0CEC7F266AA2EC927AASEZPR01MB4325apcp_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div id=3D"appendonsend"></div>
+<div id=3D"divRplyFwdMsg"></div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Hi,</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+I wanted to check if you had a chance to consider the email I sent earlier.=
+ Are you interested in discussing Website Development / eCommerce Website /=
+ Mobile App for your business?</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; margin: 0cm 0cm 0.0001pt; font-family: Aptos,=
+ Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; f=
+ont-size: 12pt; color: rgb(0, 0, 0);">
+Please share your whatsapp number and let me know if you'd like to schedule=
+ a quick call to discuss your website development needs.</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+I look forward to your response</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Thanks</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;&nbsp;Anjali Kumari</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=85=
+=85=85=85=85=85=85=85=85=85=85=85=85=85.</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;&nbsp;Anjali Kumari</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<b>Sent:</b>&nbsp;Thursday, May, 29 2025 04:26 PM</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<b>Subject:</b>&nbsp;Site Ideas</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Hi,</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+Do you have any plans to build or redesign your website?</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+I=92d be happy to schedule a call via Zoom or Google Meet to discuss the de=
+tails and explore how we can bring your ideas to life. Could you kindly sha=
+re your preferred date and time for the schedule a call?</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; line-height: normal; margin: 0cm 0cm 0.0001pt=
+; font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, Calibri, Hel=
+vetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+&nbsp;</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+</body>
+</html>
+
+--_000_SEZPR01MB432520576E0CEC7F266AA2EC927AASEZPR01MB4325apcp_--

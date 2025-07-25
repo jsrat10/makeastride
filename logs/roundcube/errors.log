@@ -1,0 +1,215 @@
+[07-Mar-2025 23:54:06 -0500]: <7402f57e> DB Error: [1] no such table: carddav_migrations (SQL Query: SELECT "filename" FROM carddav_migrations) in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_db.php on line 577 (POST /cpsess6295842764/3rdparty/roundcube/index.php?login=1&post_login=71356155352873)
+[07-Mar-2025 23:54:11 America/New_York] [CPANELICSIMPORT: Touch file created for contact@makeastride.com]
+[07-Mar-2025 23:54:11 America/New_York] [CPANELVCFIMPORT: Touch file created for contact@makeastride.com]
+[07-Mar-2025 23:55:17 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[07-Mar-2025 23:55:17 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3908): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_covxfwe8r...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_covxfwe8r...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_covxfwe8r...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1890): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1935): rcube_imap->get_message_headers('20', 'INBOX')
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_message.php(106): rcube_imap->get_message('20')
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/show.php(63): rcube_message->__construct('20', 'INBOX', false)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_show->run(Array)
+#12 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#13 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[01-Apr-2025 13:35:26 -0400]: <c09dd28a> DB Error: [1] no such table: carddav_migrations (SQL Query: SELECT "filename" FROM carddav_migrations) in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_db.php on line 577 (GET /cpsess7078089072/3rdparty/roundcube/index.php)
+[01-Apr-2025 13:35:28 America/New_York] [CPANELICSIMPORT: Touch file created for admin@makeastride.com]
+[01-Apr-2025 13:35:28 America/New_York] [CPANELVCFIMPORT: Touch file created for admin@makeastride.com]
+[18-Apr-2025 23:18:55 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[18-Apr-2025 23:18:55 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3908): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_conhyow29...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[19-Apr-2025 13:43:25 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[19-Apr-2025 13:43:25 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3908): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_conhyow29...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[21-Apr-2025 02:45:30 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[21-Apr-2025 02:45:30 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3908): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_conhyow29...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_conhyow29...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[10-Jul-2025 21:34:08 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[10-Jul-2025 21:34:08 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 20:45:11 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 20:45:11 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 20:59:09 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 20:59:09 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 21:26:47 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 21:26:47 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 21:27:26 -0400]: <d5863d3b> PHP Error: Request security check failed (POST /cpsess8392786107/3rdparty/roundcube/index.php?_task=mail&_action=refresh)
+[11-Jul-2025 21:28:09 -0400]: <d5863d3b> PHP Error: Request security check failed (POST /cpsess8392786107/3rdparty/roundcube/index.php?_task=mail&_unlock=loading1752283689045&_framed=1&_action=send)
+[11-Jul-2025 21:29:43 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 21:29:43 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[11-Jul-2025 21:30:17 -0400]: <5543cdc9> PHP Error: Request security check failed (POST /cpsess8392786107/3rdparty/roundcube/index.php?_task=mail&_action=refresh)
+[11-Jul-2025 21:30:26 -0400]: <5543cdc9> PHP Error: Request security check failed (POST /cpsess8392786107/3rdparty/roundcube/index.php?_task=mail&_unlock=loading1752283826259&_framed=1&_action=send)
+[13-Jul-2025 05:24:11 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[13-Jul-2025 05:24:11 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3978): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_co5akw711...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[13-Jul-2025 14:11:38 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[13-Jul-2025 14:11:38 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3978): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_co5akw711...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[13-Jul-2025 20:20:58 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[13-Jul-2025 20:20:58 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3978): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_co5akw711...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[14-Jul-2025 13:19:58 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[14-Jul-2025 13:19:58 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[14-Jul-2025 16:36:57 -0400]: <8a2d1d3b> IMAP Error: Login failed for contact@makeastride.com against localhost from 72.201.34.150 (X-Forwarded-For: 72.201.34.150). AUTHENTICATE PLAIN: Internal error occurred. Refer to server log for more information. in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php on line 211 (POST /cpsess8392786107/3rdparty/roundcube/index.php?_task=mail&_action=refresh)
+[14-Jul-2025 17:33:49 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[14-Jul-2025 17:33:49 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3978): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_co5akw711...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[14-Jul-2025 21:21:20 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[14-Jul-2025 21:21:20 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[14-Jul-2025 22:07:32 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[14-Jul-2025 22:07:32 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[15-Jul-2025 05:42:29 America/New_York] Unexpected condition from IMAP server, closed or corrupt connection to IMAP. Possible mailbox corruption.
+[15-Jul-2025 05:42:29 America/New_York] PHP Fatal error:  Uncaught TypeError: fclose(): Argument #1 ($stream) must be of type resource, null given in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php:234
+Stack trace:
+#0 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(234): fclose(NULL)
+#1 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(251): rcube_imap_generic->readLine(4096)
+#2 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(3978): rcube_imap_generic->readFullLine(4096)
+#3 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(756): rcube_imap_generic->execute('AUTHENTICATE PL...', Array, 14)
+#4 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php(1002): rcube_imap_generic->authenticate('', 'cpses_co5akw711...', 'PLAIN')
+#5 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(172): rcube_imap_generic->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', Array)
+#6 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(243): rcube_imap->connect('localhost', 'contact@makeast...', 'cpses_co5akw711...', 143, false)
+#7 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(750): rcube_imap->check_connection()
+#8 /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap.php(1348): rcube_imap->countmessages('INBOX', 'ALL', true, true, true)
+#9 /usr/local/cpanel/base/3rdparty/roundcube/program/actions/mail/check_recent.php(88): rcube_imap->folder_status('INBOX', NULL)
+#10 /usr/local/cpanel/base/3rdparty/roundcube/program/include/rcmail.php(282): rcmail_action_mail_check_recent->run(Array)
+#11 /usr/local/cpanel/base/3rdparty/roundcube/index.php(280): rcmail->action_handler()
+#12 {main}
+  thrown in /usr/local/cpanel/base/3rdparty/roundcube/program/lib/Roundcube/rcube_imap_generic.php on line 234
+[22-Jul-2025 16:06:06 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[22-Jul-2025 16:06:06 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[22-Jul-2025 22:24:20 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[22-Jul-2025 22:24:20 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 20:21:10 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 20:21:10 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 21:37:02 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 21:37:02 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 22:15:40 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[23-Jul-2025 22:15:40 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 21:11:41 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 21:11:41 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 21:56:17 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 21:56:17 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 22:50:14 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 22:50:14 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 23:45:16 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[24-Jul-2025 23:45:16 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 00:11:24 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 00:11:24 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 00:23:56 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 00:23:56 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 06:16:49 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 06:16:49 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 09:12:27 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 09:12:27 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 10:26:05 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 10:26:05 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 11:38:55 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 11:38:55 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 13:22:30 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 13:22:30 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 13:25:32 America/New_York] [CPANELICSIMPORT: Touch file /home/makerjbm/.cpanel/icals/.cpanel_ics_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]
+[25-Jul-2025 13:25:32 America/New_York] [CPANELVCFIMPORT: Touch file /home/makerjbm/.cpanel/vcards/.cpanel_vcf_import_contact@makeastride.com exists for contact@makeastride.com and cpanel_run_once is true, exiting]

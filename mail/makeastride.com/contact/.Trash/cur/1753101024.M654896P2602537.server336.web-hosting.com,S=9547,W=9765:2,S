@@ -1,0 +1,218 @@
+Return-Path: <lilavati@smartseostrategist.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id iLoPJuAyfmgpticAM7Pthw
+	(envelope-from <lilavati@smartseostrategist.com>)
+	for <contact@makeastride.com>; Mon, 21 Jul 2025 08:30:24 -0400
+Return-path: <lilavati@smartseostrategist.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Mon, 21 Jul 2025 08:30:24 -0400
+Received: from [198.54.122.200] (port=35976 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <lilavati@smartseostrategist.com>)
+	id 1udpey-0000000B9gF-1vOj
+	for contact@makeastride.com;
+	Mon, 21 Jul 2025 08:30:23 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=smartseostrategist-com.20230601.gappssmtp.com header.s=20230601 header.b=XsnNYP19;
+	dmarc=pass (policy=none) header.from=smartseostrategist.com;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of lilavati@smartseostrategist.com designates 209.85.215.194 as permitted sender) smtp.mailfrom=lilavati@smartseostrategist.com
+Received: from mail-pg1-f194.google.com (mail-pg1-f194.google.com [209.85.215.194])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bm0904X32z17wM
+	for <contact@makeastride.com>; Mon, 21 Jul 2025 12:30:12 +0000 (UTC)
+Received: by mail-pg1-f194.google.com with SMTP id 41be03b00d2f7-b3be5c0eb99so3133147a12.1
+        for <contact@makeastride.com>; Mon, 21 Jul 2025 05:30:12 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=smartseostrategist-com.20230601.gappssmtp.com; s=20230601; t=1753101012; x=1753705812; darn=makeastride.com;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=nWYaGr5+3BI7Vc7p9iHg9xr8hlHYuMb9v8wk+R1clpM=;
+        b=XsnNYP19iWARmrO7MnodUB9nSGnMMeoCcGcUqEjZjN3JzcdZEohoqmgq4DWy7v0zFN
+         tTYZgeq/97vS21rjy+k8KvMBwt1x5aVUcKamfm+X17BCwTeYnsrgcVifRl/8JEoQ1mnX
+         RlMlmUHNEUhegR7KAalHkQVSpacp5miD7TyPrQeCkqS67leVEWAaKm5aumo758/hApN8
+         zNCchAXM6hKSLhJqbrgmtA3F3a2gVtmLBMH05Uw8X49UQen7LxcKO47rHd2g56PsyJS/
+         tCKpoIoyCKPBg8mS44pjx8yHnDQ+b3UmC9SFIMSkVL8VQBrzroMnHfRgdzmJ0q+Gvnus
+         bnqw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1753101012; x=1753705812;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=nWYaGr5+3BI7Vc7p9iHg9xr8hlHYuMb9v8wk+R1clpM=;
+        b=uNCzpd33seibCAJ48+YPFkEnJ7NQ2gG4ZcILC3vBCHRIkyrGoyAVBMEOZL+2C1JQjd
+         PcnS1pc0r7Te/mqp4IE51W3hkRPKB3pTK/xtxMs2lTGbFCErum8scqi7xTdaALAN0uJp
+         YVCkOA4luKUnQ8PJDMkMd6WZoTy197LNDpuizzMCK64x1B1XExGcN0OWsI4/sHrZmvRr
+         re9reqjAjMgAWlVg3014oFiaFhfmo/8vFAVPWPaDED1QBvKY0WaLk+y2rm/oxzi7vaVD
+         DmuNLJN5TbCRzn5H+SLw4wrDz/r2gjz1PfzkIi+E2d6/XGtNzdq8sl+N/wZw5wTZ6JgJ
+         HPCA==
+X-Gm-Message-State: AOJu0YyXkUFsbX41j/zg6oFm+5QSuKVNGNR3EUCqwOgt7XgCmD/mMhSW
+	tcK65kslfSGCZyaiqFo1d9bFZsMy5APF4gp8Vz9Rsl8ewRcsMQ3oHFH4yEFvtJYLk4p6x9eRWSm
+	qmVNe4SU=
+X-Gm-Gg: ASbGncuYs4KMBLU6WaNC++6gJX0JgUxmXYqeoBCqiyHwXUcbbLya2am1XFFCeAgNy0Q
+	+LzzOhSZ1ePWEz1iWPygqZFtCvgUfGkavrxD3e/ro9hwvi7N7+KIbTheIR8N1FDH9lJLNj1I5aL
+	6gwiFF0NEmFCx5v0b2imONvl4GZ2YLzCfGEFxeJsPOGjVEZU9FgA9ReHPtU4175c9akdqNIVTiO
+	HtsmOSGE3iOOFqFYuZaUWOxX1h+Si0dhr6wu4r8oc6qd610R82gD0Rf8mMQdp5GMviql18q+SPj
+	MiTY746+UrWCgqQPuHmv/1Evor6it/ujkdfnDp9tFb7DHz5dh2OnEPD8JvlO270zS5W79OnQkf5
+	vAne5EeGbgzVEggeVzemaMFaYnzlj1wl3bxNes5RoHUVkwslHB8f+8lc=
+X-Google-Smtp-Source: AGHT+IFqUhGWRAms89nHTlOeSa8sOa4EqFQarzCe3CKllMdpLwM3ZaCcBmlSJnSTTIbTXFu7qdSO1w==
+X-Received: by 2002:a17:90b:1810:b0:313:271a:af56 with SMTP id 98e67ed59e1d1-31cc2608a57mr15079701a91.30.1753101011406;
+        Mon, 21 Jul 2025 05:30:11 -0700 (PDT)
+Received: from Mobrilz ([2405:201:404f:1085:19c9:8b8:2383:ebc3])
+        by smtp.gmail.com with ESMTPSA id 98e67ed59e1d1-31c9f287be2sm9962825a91.23.2025.07.21.05.30.08
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 21 Jul 2025 05:30:11 -0700 (PDT)
+From: "Lilavati" <lilavati@smartseostrategist.com>
+To: <contact@makeastride.com>
+Subject: 1st Page On Google
+Date: Mon, 21 Jul 2025 17:02:31 +0530
+Message-ID: <2225401dbfa3b$31dc3090$959491b0$@com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_22255_01DBFA69.4B946C90"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: Adv6F2JrN+9lTFVTRJyQ4MHNpw3ETw==
+Content-Language: en-us
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_22255_01DBFA69.4B946C90
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+ 
+
+Do you need a new website or want to improve your current one? We're a team
+from India, ready to provide customized solutions for your business.
+
+ 
+
+I'd love to share our portfolio and work with you to create something that
+fits your needs perfectly. Share your ideas, or let me know your WhatsApp
+number for quick communication.
+
+ 
+
+Looking forward to connecting with you!
+
+ 
+
+Best regards,
+Lilavati.
+
+P.S.: If you'd prefer not to receive further emails from me, simply reply
+with "NO" in the subject line.
+
+ 
+
+
+------=_NextPart_000_22255_01DBFA69.4B946C90
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 12 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:10.0pt;
+	font-family:"Calibri","sans-serif";}
+p
+	{mso-style-priority:99;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.m9198689149867960164v1msonormal1, li.m9198689149867960164v1msonormal1, =
+div.m9198689149867960164v1msonormal1
+	{mso-style-name:m_9198689149867960164v1msonormal1;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+p.xmsonormal, li.xmsonormal, div.xmsonormal
+	{mso-style-name:x_msonormal;
+	mso-style-priority:99;
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-size:10.0pt;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-US><div =
+class=3DWordSection1><p style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Hi,</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>&nbsp;</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Do you need a new website =
+or want to improve your current one? We&#8217;re a team from India, =
+ready to provide customized solutions for your business.</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>&nbsp;</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>I&#8217;d love to share our =
+portfolio and work with you to create something that fits your needs =
+perfectly. Share your ideas, or let me know your WhatsApp number for =
+quick communication.</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>&nbsp;</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Looking forward to =
+connecting with you!</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>&nbsp;</span></p><p =
+style=3D'margin:0in;margin-bottom:.0001pt'><span =
+style=3D'font-family:"Calibri","sans-serif"'>Best =
+regards,<br>Lilavati.</span></p><p><span =
+style=3D'font-family:"Calibri","sans-serif";color:red'>P.S.: If you'd =
+prefer not to receive further emails from me, simply reply with =
+&quot;NO&quot; in the subject line.</span></p><p =
+class=3DMsoNormal><o:p>&nbsp;</o:p></p></div></body></html>
+------=_NextPart_000_22255_01DBFA69.4B946C90--
+

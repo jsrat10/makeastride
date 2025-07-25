@@ -1,0 +1,438 @@
+Return-Path: <1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id IE4XNsDuf2iACQwAM7Pthw
+	(envelope-from <1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net>)
+	for <contact@makeastride.com>; Tue, 22 Jul 2025 16:04:16 -0400
+Return-path: <1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net>
+Envelope-to: contact@makeastride.com
+Delivery-date: Tue, 22 Jul 2025 16:04:16 -0400
+Received: from [198.54.122.200] (port=62254 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net>)
+	id 1ueJDi-00000003JIS-0wDv
+	for contact@makeastride.com;
+	Tue, 22 Jul 2025 16:04:14 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=bf03.na3.hubspotemail.net header.s=hs1 header.b=VmTNLUbv;
+	dkim=pass header.d=mastra.ai header.s=hs1-47815345 header.b=bXqbgQXm;
+	dmarc=pass (policy=quarantine) header.from=mastra.ai;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of "1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net" designates 216.139.80.32 as permitted sender) smtp.mailfrom="1axcktweihzebteonmmznyqqar6y8quw33j2se-contact=makeastride.com@bf03.na3.hubspotemail.net"
+Received: from byc99pu.bf03.na3.hubspotemail.net (byc99pu.bf03.na3.hubspotemail.net [216.139.80.32])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bmpBG3jf0zFyXy
+	for <contact@makeastride.com>; Tue, 22 Jul 2025 20:04:06 +0000 (UTC)
+Received: by 172.16.3.69 with SMTP id a089896hoz7450hx2n01fk8xc6kn466d7lyljvcgxx;
+        Tue, 22 Jul 2025 20:04:05 GMT
+DKIM-Signature: v=1; s=hs1; d=bf03.na3.hubspotemail.net; 
+        i=@bf03.na3.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=jlc1AOmnDLGwdNpcLfTXIpaqY0I21p3QPZ864Yr97Ew=; 
+        b=VmTNLUbvjgL4i3gWpWBOpUoa77Q0zyoVoxklGlsKm6N5ezN/TvpNFq/GQmcbeZ
+         Kj+/vw52x0ZehuLwEAuNeg+b/xGF805OqWPdjjIUkqxcZUBCCp1TKN233R7TJ24
+         iPtn7P+gA/NLEU4/aWpKjrI7rwm5TAm4vrjxOHm+j6AfDn3VpMa1eImqTtehgsJ
+         2WrswI21NOG1qttQPSL0vgiYzN+4RSLMGsoB6gsnoYjeqTAKK7vxfrAAY8nYgx7
+         LHmBOqrrUR3oBplQuJg8kHPRcLs0aX3oqgJMMDz4Rx/1JJLf/F1f6Q+VIycn6/W
+         gCmvMKNPUp9q8zGQmJryUUOPJo6g==; q=dns/txt; t=1753214645; 
+        x=1753477445;
+DKIM-Signature: v=1; s=hs1-47815345; d=mastra.ai; i=@mastra.ai; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=jlc1AOmnDLGwdNpcLfTXIpaqY0I21p3QPZ864Yr97Ew=; 
+        b=bXqbgQXmjctc4bhFLzrF3wrkprD9V89sDC5BdB5P/plDav3a+wc+zPw1QU+rs+
+         iJ3wWS/5WiJPyRZFy+oTe4QhuO6nHczQgEiYb5rQkv1SVz9bp4gpULGVrQyOIg6
+         OdsiD0LaIptvY7adHCZnr1mUYCg+oCrZgV1JF+cL9rO6yafnC41lri7FBiZVr+r
+         /EqmWLZuUTHhlhh1+wgR3JVxqW7MpZjjnwdS47w+BUHqCjczO61k7N7VHjkcgjp
+         /3HSOxiQyiXEJ5sAovT5+Ryu3EroDHBUIQcsCpxFrtyTNa8AjJsrwyCs07rRi3A
+         BWHfUchI8BwYDxv63P32GapIvZrA==; q=dns/txt; t=1753214645; 
+        x=1753477445;
+X-HS-Cid: 1axfrkh48mpgo0e38z6fapsc0bqao95zklcffi
+List-Unsubscribe: <mailto:1axdjqnsxc8skk7xwh231gsp1nrwef5xld71zy-contact=makeastride.com@bf03.na3.hubspotemail.net?subject=unsubscribe>, <https://hs-47815345.s.hubspotemail.net/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-GNW2qD2cC49PHzdW45pS0l1SdDK-W43JRy045wfVfW2vZk7X365P-cW1ZfNSC2HB5vqW30Dtyk3S_FQHW43xdcH49NkCfW3_Mg7r1_3B5pW3SRYfg2-s3-gW1LxJ2N45DwTbW1Zbscl1Lhq6GW4t6pS02Hp-g7W2p7v2F2MPqYFW2-FVfK3jdflpW1LrkYw1XggQyW4kvPwk2-L4VgW2-BdYc41S52xW38dHBj1X84cHW3grhjn3y_chkW2C_Cml3gqX_3W2D1lGy49TngzW1LHBKK3GRKCXW2MQcr13zdWFGW3F4Bv12TxsfhW3P8Nrn3VQn69W34l30r3T4GnpW49tCt72qNLFrW2KTkbk30sn14W3DZ-y33_tMZ9W3Qzt9B4hJPDbW2zt_3p3Swnb8W3GS-2C41BS1TW4rCQHh3ZZJMZW1ZvHW34ksjLsW3DNC7S3-0KDZW2CCV0r3-14tKW24-ndQ3bj8s0W3DYLtn1BqSGBW3M8Cp923hDVdW3_SJFB1Qg_R5W38vqkn2vD0rtW3H9RZ72-rMdnW2CDCrJ1S1sHQW4fRhK92Pz89wW3Fbt_F1BtM9RW2Ws3L247v76gW2HVmvl2-v96vW36Fw9B4kM__DW23pqrk2vBkB2W1LBcGn3ZC9pg0>
+Date: Tue, 22 Jul 2025 16:04:05 -0400
+From: Sam Bhagwat <sam@mastra.ai>
+Reply-To: sam@mastra.ai
+To: contact@makeastride.com
+Message-ID: <1753214645220.b8153d67-9252-4514-8043-55ee6f0240a0@bf03.na3.hubspotemail.net>
+Subject: Your copy of Principles of Building AI Agents
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_2303429_1834777843.1753214645572"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+------=_Part_2303429_1834777843.1753214645572
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hey there, Sam from Mastra here! =F0=9F=91=8B
+
+Thanks for requesting a copy of my new book, Principles of Building AI Agen=
+ts. As promised, here=E2=80=99s your copy (https://d5DGBm04.na1.hubspotlink=
+s.com/Ctc/ZY+113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_CP3lcq-=
+W95jsWP6lZ3p3W5W2rDm50Bbz3N3K8VvfLymVHW28Gldg5CZX37W1SKs8X1v_BN1W6jBlPv5FyX=
+GlW39c2YY5hTvn5W1zKWhM7z6rsLN2b_0kKF9GB2W4sT3d92BG8NlW36hpj11fYKT5W6GjfCK7-=
+klHqW2H1h1p7ylXR0W6SQrMC88Q4fLW7V-TH95wj5wfW1Ngn627T2VNkW7b6b_H5-FyjPW7zrQ4=
+R5wY1ryN2ND7sFbDn8GN5s0LsQsrJmXVwsWCr2-SYVGW7VWD7h9fhr6jW3yHFFT8vMSF8W6QwDt=
+67QHVsTW4GMGhP38KqYxW6mk9hh42tGf8W53fsY22FyPgmW8XB4n63F2bVVW5Zlckg42GtJjW1N=
+p-pB5RyWnQW2PsP5r92ZRRkf6W5kvM04 ) (in the 2nd edition.)
+
+As someone who's been at the frontier of software for a long time (first wi=
+th Gatsby, now with Mastra), I wanted to create something practical that cu=
+ts through the hype around AI. Given the right tools and knowledge, anyone =
+can and should be able to build a simple agent in just 5 minutes. That=E2=
+=80=99s why this book is intentionally short: it=E2=80=99s meant to get you=
+ building in as quickly as possible.
+
+You'll find that I've broken everything down into digestible pieces =E2=80=
+=93 from choosing the right LLM to structuring workflows and implementing R=
+AG. The code examples are meant to be something you can actually use to get=
+ a simple, complete project working in just a day or two.
+
+In the 2nd edition, you'll also find new sections on MCP, image generation,=
+ voice, A2A, web browsing and computer use, workflow streaming, code genera=
+tion, agentic RAG, and deployment.
+
+We're all figuring this out together since the field is moving so quickly (=
+it's been just over 30 months since ChatGPT launched!). I hope this serves =
+as a useful starting point. I=E2=80=99ll be posting more updates in the fut=
+ure and am looking forward to seeing what you build with these principles i=
+n mind.
+
+Go forth and build,
+
+Sam Bhagwat
+
+Co-founder and CEO, Mastra.ai (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY=
++113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_Bj3lcq-W69sMD-6lZ3l=
+_W51TZcl30chBtW16N3PR5Hs37mW79cvFd2TlqtgW31cVFh4HrV-_W8PDtQ05sT_5KW81Rfrw4h=
+mxgNW5t3jrX4Pn5qzW3SBcr71mNZtXW4dsm6V2CLYmJW16nF6s7g7g8nN4WPJCydK3TMW7LhlMD=
+9k6006VPM87B2jtVmCW4ryTfY85sCSWV84CsM2mm7BbW60g3GR4BkzfXW8fXbK54Qkp5YVty4nc=
+60kq1YN5Nwq5_4DJlMW2g7kQY6lZ-t8f7XPZM404 )
+
+Connect with me: X (@calcsam) (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY=
++113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_Bj3lcq-W69sMD-6lZ3p=
+lW2Bkl848JzFcqW5CRZY-7tlBtKV72TDV1c3hGKW5M0XkP3Rs_lbW7JTsx9358shwW5Xs35Y4Yy=
+Br3W3z-7nX6BHrlXW4TTjhN4JGS8JW21NcwM41dCDxW6smv0w7kTfc1W24bFDd2sTLt2W3KqGTp=
+7_Zj4mVLWLPV1hY4hdN1ZH458VzKnBW7rkVJQ7Dyg3YW4rzvRP5H26yVW2Zf4BH1XYv-GW7XD3g=
+28ldMhhW6wb6Gx89rJHgW6xKkJT3BtxKZf2CLkPs04 ) | LinkedIn (https://d5DGBm04.n=
+a1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjB=
+gGN8kT_BW3lcq-W7lCdLW6lZ3nXVqC9Td8qxjChW3PDG6p1lGQRxW8Zfrsp7dL2KxW32ttGm8Nv=
+fd4W1hnTyt8V-bV4W5KgD-W204LlDW6tP9Q15j9SCPW2VmTSZ4TSGBTW6x4HGT4G8g6tW7cFtvh=
+5M2Q55W5xnKF0543csBN7t2zlYfjsBlW4x0KPq7t3FlKW8j9XBg1rjxvtW59wHx87DScN0N3v-t=
+TC7CTzdW8Y10y64Ch7KkW7yTxzV17xlSmW12kyQ88pSC9xW2gt2KY5kw3FpW6Dh5jJ4srjkCW5Q=
+RDLD3R57wSW19BHkD90X1MDW7hvl2d2M73Njf74Wl2R04 )
+
+Kepler Software, Inc, 2261 Market Street, STE 5559, San Francisco, CA 94114=
+, United States, +1 510-240-9383=E2=81=A9
+
+Unsubscribe (https://hs-47815345.s.hubspotemail.net/hs/preferences-center/e=
+n/direct?data=3DW2nXS-N30h-FXW4rlMWv1LmtJMW3W4VGN2Cw1SyW1BFvHX2RvdldW43y3Hc=
+1BtpGcW4ms3g-3dcnNkW2MMNnV1W_N96W3T3qMy2YxSnTW3R2mZ54tz_SHW4fxv0w3_WJmkW3V_=
+Qph2YnbMTW32rHCc3XsvYHW3LS4JH2Cw0PCW2KCdtF4pBq-hW3gpdTw3R0f1sW4mGpnb1VjfzgW=
+3C354045qfpjW3LTmh12TsH2nW3H5HnF2xy4RFW2FFh1Z3dx7g4W21pHMF3JSjR6W41S8cP1VnN=
+0zW49KpLG1Sf33HW32kTd92TNQV3W2Hstcm3P4fgGW1BCTDZ2KrYj7W4cv75125jBMXW43CmWm2=
+17YcrW3C6shq4hN7_-W1ZpJby1V9yYNW2HWzL21BfgbhW1Zg9TY3bk00nW36wWRJ38jTntW34n_=
+hq3Zt8w0W3NQcKG38b9RsW1V1g2L34gPxXW1BGLc92qXfq0W3LTQw64fh8RYW1Xr32z3y-QqGW3=
+ZFK0F1ZqvYwW1ZgvyJ45TlbVW49n8br3NPT2QW3dcqJ33_rff8W3K5q8j4rgX4ZW1Lks7R2Yxqy=
+-W4fxxGL2HzLnCW1Xx3gF23lXGQW1LlJzM3LS613W3XFVtY1Z4bj1W1QlfLJ38t5R5W47FWjK41=
+D0fff1X62cG04&_hsenc=3Dp2ANqtz-_inXlToytOR1E4o7fJuAWoiO4Ejnx-wDu1GlnCaCj2eD=
+Vr5j2ayHVmg111Vv0TF94eud7AESeG0xlD1vI3R9eMwxR8xA&_hsmi=3D351492573 )
+Manage preferences (https://hs-47815345.s.hubspotemail.net/hs/preferences-c=
+enter/en/page?data=3DW2nXS-N30h-FXW4rlMWv1LmtJMW3W4VGN2Cw1SyW1BFvHX2RvdldW4=
+3y3Hc1BtpGcW4ms3g-3dcnNkW2MMNnV1W_N96W3T3qMy2YxSnTW3R2mZ54tz_SHW4fxv0w3_WJm=
+kW3V_Qph2YnbMTW32rHCc3XsvYHW3LS4JH2Cw0PCW2KCdtF4pBq-hW3gpdTw3R0f1sW4mGpnb1V=
+jfzgW3C354045qfpjW3LTmh12TsH2nW3H5HnF2xy4RFW2FFh1Z3dx7g4W21pHMF3JSjR6W41S8c=
+P1VnN0zW49KpLG1Sf33HW32kTd92TNQV3W2Hstcm3P4fgGW1BCTDZ2KrYj7W4cv75125jBMXW43=
+CmWm217YcrW3C6shq4hN7_-W1ZpJby1V9yYNW2HWzL21BfgbhW1Zg9TY3bk00nW36wWRJ38jTnt=
+W34n_hq3Zt8w0W3NQcKG38b9RsW1V1g2L34gPxXW1BGLc92qXfq0W3LTQw64fh8RYW1Xr32z3y-=
+QqGW3ZFK0F1ZqvYwW1ZgvyJ45TlbVW49n8br3NPT2QW3dcqJ33_rff8W3K5q8j4rgX4ZW1Lks7R=
+2Yxqy-W4fxxGL2HzLnCW1Xx3gF23lXGQW1LlJzM3LS613W3XFVtY1Z4bj1W1QlfLJ38t5R5W47F=
+WjK41D0fff1X62cG04&_hsenc=3Dp2ANqtz-_inXlToytOR1E4o7fJuAWoiO4Ejnx-wDu1GlnCa=
+Cj2eDVr5j2ayHVmg111Vv0TF94eud7AESeG0xlD1vI3R9eMwxR8xA&_hsmi=3D351492573 )
+------=_Part_2303429_1834777843.1753214645572
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Your copy of Principles of Building AI Agents</title>
+    <meta property=3D"og:title" content=3D"Your copy of Principles of Build=
+ing AI Agents">
+    <meta name=3D"twitter:title" content=3D"Your copy of Principles of Buil=
+ding AI Agents">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #ffffff;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"http://47815345.hs-sites.com/-temporary-slug-19fafa97-f869-465f-84=
+16-9b9473bdaa10"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !=
+((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (max-=
+width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stre=
+tch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #ccc !important;border-right:1px solid #ccc !important;box-sizing:border=
+-box}
+.hse-border-bottom-m{border-bottom:1px solid #ccc !important}.hse-border-to=
+p-m{border-top:1px solid #ccc !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_=
+main a[x-apple-data-detectors]{color:inherit !important;text-decoration:non=
+e !important;font-size:inherit !important;font-family:inherit !important;fo=
+nt-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#ffffff" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+3496d; word-break:break-word">
+   =20
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table hse-full=
+-width-template" cellpadding=3D"0" cellspacing=3D"0" style=3D"margin:0; pad=
+ding:0; width:100% !important; min-width:320px !important; height:100% !imp=
+ortant" width=3D"100%" height=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-wor=
+d">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_email_flex_area" style=3D"color: inherit=
+; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"wi=
+dget" data-hs-cos-type=3D"email_flex_area">  <div id=3D"builtin_section-0" =
+class=3D"hse-section hse-section-full-width" style=3D"padding-left:0px; pad=
+ding-right:0px; background-color:#ffffff" bgcolor=3D"#ffffff">
+   =20
+     =20
+      <!--[if gte mso 9]><table align=3D"center" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" role=3D"presentation" width=3D"100%" style=3D"widt=
+h:100%" bgcolor=3D"#ffffff"><tbody><tr><td valign=3D"top"><![endif]-->
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:100%; Margin-left:0; Margin-right:0">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:100%;" cellpadding=3D"0" cells=
+pacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:100%;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:100%">
+<![endif]-->
+<div id=3D"builtin_column_0-0" class=3D"hse-column">
+  <div id=3D"hs_cos_wrapper_primary_rich_text_module" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_primary_rich_t=
+ext_module_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_t=
+ype_rich_text" style=3D"color: inherit; font-size: inherit; line-height: in=
+herit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text">=
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Hey there, Sam =
+from Mastra here! =F0=9F=91=8B</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><br>Thanks for =
+requesting a copy of my new book, <em>Principles of Building AI Agents</em>=
+. As promised, here=E2=80=99s <a href=3D"https://d5DGBm04.na1.hubspotlinks.=
+com/Ctc/ZY+113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_zK5kBVzW5=
+0kH_H6lZ3p1W6ZQmHy9bMbBSW4HdS-C49VSfJW3KZBkm3d3j8rW2zftph8-jLYmW7GTTw78BbTp=
+CN2hG9yjdz0ZZW42C1Hg7cT__dW1tWX0G3yzhhdW4ZNby23gZQPpW2S0Gf31yGGhSW9fJ5hW29v=
+qdWW4yyHd34NYM6bW8WSLq36xjl96W1bc85P6v03wLW33Kn617mnB3DW8hnWlF77WYDzW76hWWb=
+7m4GvdW5jz0xz4Xt26bN6fnZ7RgJbzMW71nVDm666Xf_W6vSrsj58FmcKW46HsFT9lm-FCW4w9t=
+3_3Q8_xZW3SwTRp6k76VkN33_ZzsbHhFVN6nk8v2kY_XHW5Kcd0Y8gkQjxW1CMzR-13c7pcW7x3=
+_vT4h5tvMVSR2Xy5_8JGWW7cW2Mp8Yjr6bV1vDmS4Z_vwtf5YCYGq04" rel=3D"noopener" d=
+ata-hs-domain-rewrite=3D"true" style=3D"color:#00a4bd" data-hs-link-id=3D"0=
+" data-hs-link-id-v2=3D"/lvc+K13" target=3D"_blank">your copy</a> (in the 2=
+nd edition.)</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><br>As someone =
+who's been at the frontier of software for a long time (first with Gatsby, =
+now with Mastra), I wanted to create something practical that cuts through =
+the hype around AI. Given the right tools and knowledge, anyone can and sho=
+uld be able to build a simple agent in just 5 minutes. That=E2=80=99s why t=
+his book is intentionally short: it=E2=80=99s meant to get you building in =
+as quickly as possible.<br><br></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">You'll find tha=
+t I've broken everything down into digestible pieces =E2=80=93 from choosin=
+g the right LLM to structuring workflows and implementing RAG. The code exa=
+mples are meant to be something you can actually use to get a simple, compl=
+ete project working in just a day or two.<br><br>In the 2nd edition, you'll=
+ also find new sections on MCP, image generation, voice, A2A, web browsing =
+and computer use, workflow streaming, code generation, agentic RAG, and dep=
+loyment.<br><br></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">We're all figur=
+ing this out together since the field is moving so quickly (it's been just =
+over 30 months since ChatGPT launched!). I hope this serves as a useful sta=
+rting point. I=E2=80=99ll be posting more updates in the future and am look=
+ing forward to seeing what you build with these principles in mind.<br><br>=
+</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Go forth and bu=
+ild,<br>Sam Bhagwat<br>Co-founder and CEO, <a href=3D"https://d5DGBm04.na1.=
+hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN=
+8kT_BC3m2nnW6N1vHY6lZ3n7M3H2xsnqWkrW2Dj1QX6lvhZbW8r5KjW1m8Qf5W5dnHR21dDP9NW=
+1YWLwC3CLJ-hW6RrrhF32SwrlW8b-MmL2GYGyQW9jvDDs1C64DPVBc5T_12b7qMW2Hbfr74LWtG=
+6W7t51634clQl8W5Y4wTy3WCp0-W23KZcb6CTrNWW3GDDpb8JlMDlVqZg878X_2Y-W4vtTV38xM=
+m3QW1_k33J4_j4K_W3ZXJsJ9431DfW8FMDzB2GMCwxW7gSgzs3Plp3dW2kL1Tj4TwCtFW2M_D13=
+7h34gVf5gHbg404" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link=
+-id-v2=3D"I5guL1a6" target=3D"_blank">Mastra.ai</a><br>Connect with me: <a =
+href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWNLg_3Pm=
+9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_BC3m2nnW6N1vHY6lZ3m3VjT9TQ5Zn-82W6SjHR74SB=
+xMwN22H-yyflWYMW2jmdZC3FBggzW567Nmh8DrY1_V6C2bk2GZ2gwW2KT8Tq1JZmyxW1p-MWk8L=
+HFz0W6kSd0p6cn_BGW5Jx2gp3mcPZhW7BxfHh3_M4QSW45lRY15wZ7PtW4LmMzR8-X8jkW6W_Gx=
+D1DY18RVbLqJd2qT8ScW3HZhgD67sc16W5wFBCX2PmN2DVt5Z_M1y-mGCVMTxfX4TMnkLW6bFTd=
+V6dS9qrW4g433V4Z_BJNMl7Zhr-C_pff2Mrzr604" rel=3D"noopener" style=3D"color:#=
+00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"5ubwUHC/" target=3D"_bl=
+ank">X (@calcsam)</a> | <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ct=
+c/ZY+113/d5DGBm04/VWNLg_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGN8kT_BW3m2nnW7lCdLW6=
+lZ3nJW3kStWX14t421W4YTrkg5_XRC1W8W4r7y5XvwTfW6lvHRz7nCt-6W8T0Zcw8V_l8QW893_=
+178DCVm0W6Yjnnr9l8lv3W761RRC5M1QYzW7wkHQk1Bf7vnW5XDPVk3Y1Rc-W1HLTt68791L7W4=
+-0kSG44-nyxF5MnwbL6xkrW5SLrTx1NcM31W2GCWzK4PNrTWN6PRlXP2fb1zW2v04__64t0xfW1=
+l8kXH4qW2KjVlz-416vJcJpW1V-L571_rs0sW2zSjnZ6XlsM6W3LJYcp13TTgzV7Xtbr5kwW_TW=
+7-0xMR8f0djbf1m7Q-404" rel=3D"noopener" style=3D"color:#00a4bd" data-hs-lin=
+k-id=3D"0" data-hs-link-id-v2=3D"6xw1SHII" target=3D"_blank">LinkedIn</a></=
+p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+0c102a10-c3cd-4958-a1ec-77d2fca53966 --></p></div></div>
+<div id=3D"hs_cos_wrapper_footer_module" class=3D"hs_cos_wrapper hs_cos_wra=
+pper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size:=
+ inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-h=
+s-cos-type=3D"module"><table role=3D"presentation" class=3D"hse-footer hse-=
+secondary" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font=
+-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496d;=
+ margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"left" valign=3D"top" style=3D"font-family:Arial, sans-se=
+rif; font-size:15px; color:#23496d; word-break:break-word; text-align:left;=
+ margin-bottom:0; line-height:135%; padding:10px 0px">
+        <p style=3D"font-family:Arial, sans-serif;font-size:12px;font-weigh=
+t:normal;text-decoration:none;font-style:normal;color:#23496d">
+          Kepler Software, Inc, 2261 Market Street, STE 5559, San Francisco=
+, CA 94114, United States, +1 510-240-9383=E2=81=A9
+        </p>
+        <p>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-47815345.s.hubspo=
+temail.net/hs/preferences-center/en/direct?data=3DW2nXS-N30h-FXW4rlMWv1LmtJ=
+MW3W4VGN2Cw1SyW1BFvHX2RvdldW43y3Hc1BtpGcW4ms3g-3dcnNkW2MMNnV1W_N96W3T3qMy2Y=
+xSnTW3R2mZ54tz_SHW4fxv0w3_WJmkW3V_Qph2YnbMTW32rHCc3XsvYHW3LS4JH2Cw0PCW2KCdt=
+F4pBq-hW3gpdTw3R0f1sW4mGpnb1VjfzgW3C354045qfpjW3LTmh12TsH2nW3H5HnF2xy4RFW2F=
+Fh1Z3dx7g4W21pHMF3JSjR6W41S8cP1VnN0zW49KpLG1Sf33HW32kTd92TNQV3W2Hstcm3P4fgG=
+W1BCTDZ2KrYj7W4cv75125jBMXW43CmWm217YcrW3C6shq4hN7_-W1ZpJby1V9yYNW2HWzL21Bf=
+gbhW1Zg9TY3bk00nW36wWRJ38jTntW34n_hq3Zt8w0W3NQcKG38b9RsW1V1g2L34gPxXW1BGLc9=
+2qXfq0W3LTQw64fh8RYW1Xr32z3y-QqGW3ZFK0F1ZqvYwW1ZgvyJ45TlbVW49n8br3NPT2QW3dc=
+qJ33_rff8W3K5q8j4rgX4ZW1Lks7R2Yxqy-W4fxxGL2HzLnCW1Xx3gF23lXGQW1LlJzM3LS613W=
+3XFVtY1Z4bj1W1QlfLJ38t5R5W47FWjK41D0fff1X62cG04&amp;utm_source=3Dhs_automat=
+ion&amp;utm_medium=3Demail&amp;utm_content=3D351492573&amp;_hsenc=3Dp2ANqtz=
+-9hDka3dnLon96a3ffE9tlh0RaygJ9Uk82nlD0qomPLItCLwfgqR3mC8rqTvSQSW62ibi5-eBqe=
+iRGgFsGgGJndsR3H3Q&amp;_hsmi=3D351492573" style=3D"font-family:Helvetica,Ar=
+ial,sans-serif; font-size:12px; color:#00a4bd; font-weight:normal; text-dec=
+oration:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"SFRZzEXk" target=3D"_blank">Unsubscribe</a>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-47815345.s.hubspo=
+temail.net/hs/preferences-center/en/page?data=3DW2nXS-N30h-FXW4rlMWv1LmtJMW=
+3W4VGN2Cw1SyW1BFvHX2RvdldW43y3Hc1BtpGcW4ms3g-3dcnNkW2MMNnV1W_N96W3T3qMy2YxS=
+nTW3R2mZ54tz_SHW4fxv0w3_WJmkW3V_Qph2YnbMTW32rHCc3XsvYHW3LS4JH2Cw0PCW2KCdtF4=
+pBq-hW3gpdTw3R0f1sW4mGpnb1VjfzgW3C354045qfpjW3LTmh12TsH2nW3H5HnF2xy4RFW2FFh=
+1Z3dx7g4W21pHMF3JSjR6W41S8cP1VnN0zW49KpLG1Sf33HW32kTd92TNQV3W2Hstcm3P4fgGW1=
+BCTDZ2KrYj7W4cv75125jBMXW43CmWm217YcrW3C6shq4hN7_-W1ZpJby1V9yYNW2HWzL21Bfgb=
+hW1Zg9TY3bk00nW36wWRJ38jTntW34n_hq3Zt8w0W3NQcKG38b9RsW1V1g2L34gPxXW1BGLc92q=
+Xfq0W3LTQw64fh8RYW1Xr32z3y-QqGW3ZFK0F1ZqvYwW1ZgvyJ45TlbVW49n8br3NPT2QW3dcqJ=
+33_rff8W3K5q8j4rgX4ZW1Lks7R2Yxqy-W4fxxGL2HzLnCW1Xx3gF23lXGQW1LlJzM3LS613W3X=
+FVtY1Z4bj1W1QlfLJ38t5R5W47FWjK41D0fff1X62cG04&amp;utm_source=3Dhs_automatio=
+n&amp;utm_medium=3Demail&amp;utm_content=3D351492573&amp;_hsenc=3Dp2ANqtz-9=
+hDka3dnLon96a3ffE9tlh0RaygJ9Uk82nlD0qomPLItCLwfgqR3mC8rqTvSQSW62ibi5-eBqeiR=
+GgFsGgGJndsR3H3Q&amp;_hsmi=3D351492573" style=3D"font-family:Helvetica,Aria=
+l,sans-serif; font-size:12px; color:#00a4bd; font-weight:normal; text-decor=
+ation:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v=
+2=3D"qjPJqCop" target=3D"_blank">Manage preferences</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+      <!--[if gte mso 9]></td></tr></table><![endif]-->
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d5DGBm04.na1.hubspotlinks.com/Cto/ZY+113/d5DGBm04/VWNLg=
+_3Pm9n1VMsjLw8KsdJFW5SJqyG5zjBgGW8kT_lK8fYCkB320z1" alt=3D"" width=3D"1" he=
+ight=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!impo=
+rtant;width:1px!important;border-width:0!important;margin-top:0!important;m=
+argin-bottom:0!important;margin-right:0!important;margin-left:0!important;p=
+adding-top:0!important;padding-bottom:0!important;padding-right:0!important=
+;padding-left:0!important"></body></html>
+------=_Part_2303429_1834777843.1753214645572--
+

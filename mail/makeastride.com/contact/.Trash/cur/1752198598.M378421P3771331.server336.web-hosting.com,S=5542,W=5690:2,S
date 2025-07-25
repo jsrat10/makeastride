@@ -1,0 +1,148 @@
+Return-Path: <>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id 6J0JFsZtcGjDizkAM7Pthw
+	(envelope-from <>)
+	for <contact@makeastride.com>; Thu, 10 Jul 2025 21:49:58 -0400
+Return-path: <>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 10 Jul 2025 21:49:58 -0400
+Received: from mailnull by server336.web-hosting.com with local (Exim 4.98.2)
+	id 1ua2tf-0000000FybE-0wcM
+	for contact@makeastride.com;
+	Thu, 10 Jul 2025 21:49:55 -0400
+X-Failed-Recipients: adele.tenison@gmail.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@server336.web-hosting.com>
+To: contact@makeastride.com
+References: <ybXCvUenXgBxnNqNXjFdsFsOEgVftlTxXPx1fLe0@makeastride.com> <0bcb011333fd58cd323787000b1af4dc@makeastride.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1752198595-eximdsn-1372523543
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1ua2tf-0000000FybE-0wcM@server336.web-hosting.com>
+Date: Thu, 10 Jul 2025 21:49:55 -0400
+
+--1752198595-eximdsn-1372523543
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  adele.tenison@gmail.com
+    host gmail-smtp-in.l.google.com [173.194.208.26]
+    SMTP error from remote mail server after RCPT TO:<adele.tenison@gmail.com>:
+    550-5.1.1 The email account that you tried to reach does not exist. Please try
+    550-5.1.1 double-checking the recipient's email address for typos or
+    550-5.1.1 unnecessary spaces. For more information, go to
+    550 5.1.1  https://support.google.com/mail/?p=NoSuchUser 5614622812f47-4141bfbc884si1524436b6e.182 - gsmtp
+
+--1752198595-eximdsn-1372523543
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; server336.web-hosting.com
+
+Action: failed
+Final-Recipient: rfc822;adele.tenison@gmail.com
+Status: 5.0.0
+Remote-MTA: dns; gmail-smtp-in.l.google.com
+Diagnostic-Code: smtp; 550-5.1.1 The email account that you tried to reach does not exist. Please try
+ 550-5.1.1 double-checking the recipient's email address for typos or
+ 550-5.1.1 unnecessary spaces. For more information, go to
+ 550 5.1.1  https://support.google.com/mail/?p=NoSuchUser 5614622812f47-4141bfbc884si1524436b6e.182 - gsmtp
+
+--1752198595-eximdsn-1372523543
+Content-type: message/rfc822
+
+Return-path: <contact@makeastride.com>
+Received: from [::1] (port=51728 helo=server336.web-hosting.com)
+	by server336.web-hosting.com with esmtpa (Exim 4.98.2)
+	(envelope-from <contact@makeastride.com>)
+	id 1ua2td-0000000FyW9-2maF
+	for adele.tenison@gmail.com;
+	Thu, 10 Jul 2025 21:49:53 -0400
+MIME-Version: 1.0
+Date: Thu, 10 Jul 2025 21:49:53 -0400
+From: contact@makeastride.com
+To: adele.tenison@gmail.com
+Subject: Re: Enquire from the web page
+In-Reply-To: <ybXCvUenXgBxnNqNXjFdsFsOEgVftlTxXPx1fLe0@makeastride.com>
+References: <ybXCvUenXgBxnNqNXjFdsFsOEgVftlTxXPx1fLe0@makeastride.com>
+User-Agent: Roundcube Webmail/1.6.11
+Message-ID: <0bcb011333fd58cd323787000b1af4dc@makeastride.com>
+X-Sender: contact@makeastride.com
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hi Natadha,
+
+Thank you for reaching out and for your kind words about my website.
+
+I’m open to learning more about the ad opportunities you’re offering. 
+Before moving forward, could you please share additional details, such 
+as:
+
+A list of some of the premium advertisers you work with
+
+Typical eCPM ranges and payment terms
+
+How the integration process works
+
+Any examples or case studies from sites similar to mine
+
+Looking forward to your response.
+
+Regards,
+Jo
+
+
+
+On 2025-07-02 08:41, no-reply@makeastride.com wrote:
+> Name:
+> 		Adele Tenison
+> 
+> 		E-mail:
+> 		adele.tenison@gmail.com
+> 
+> 		Message:
+> 
+> Hey, I visited your site and I think that your content is amazing! It
+> is really engaging and original, you must have worked so hard to
+> generate such a quality content.
+> 
+> My name is Natasha from ForeMedia and I help website owners with great
+> websites to maximize the revenue they make from their website.
+> 
+> I would love to buy Ad Spaces on your website and pay you per each
+> impression of the ads on your site. We are Google Ad Exchange Premium
+> partners and we work with more than 100 Ad Network & thousands of
+> premium direct advertisers who would LOVE to buy Ads directly from
+> your site and we can guarantee to increase your revenue by at least
+> 45% compared to other advertising solutions you are currently using.
+> 
+> You deserve to earn more for your content and maximize your earning
+> potential and I will help you unlock that potential!
+> 
+> There is no cost, you can register to our monetization platform for
+> free on this link: https://foremedia.pro/CU4W6
+> I will be available for you on the Live Chat if you need any help, or
+> you can email me back to: natasha@foremedia-ads.net if you have any
+> questions.
+> 
+> I have at least 17 Premium Advertisers that have asked me to approach
+> you because they would like to advertise on your website on Premium
+> eCPM [cost per impressions] basis.
+> 
+> Have a good day & feel free to ping me for any question!
+> 
+> Click the link here for 1 minute registration to our platform [it's
+> free!]:
+> https://foremedia.pro/CU4W6
+> 
+> ForeMedia - Earn Money With Your Website
+> https://foremedia.pro/CU4W6
+
+--1752198595-eximdsn-1372523543--

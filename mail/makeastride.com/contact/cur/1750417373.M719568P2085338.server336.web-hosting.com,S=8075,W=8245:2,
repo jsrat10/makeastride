@@ -1,0 +1,170 @@
+Return-Path: <sunny@applicationdevelopmet.net>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id yIb8J90/VWja0R8AM7Pthw
+	(envelope-from <sunny@applicationdevelopmet.net>)
+	for <contact@makeastride.com>; Fri, 20 Jun 2025 07:02:53 -0400
+Return-path: <sunny@applicationdevelopmet.net>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 20 Jun 2025 07:02:53 -0400
+Received: from [198.54.122.200] (port=47328 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <sunny@applicationdevelopmet.net>)
+	id 1uSZWG-00000008uHH-1mzI
+	for contact@makeastride.com;
+	Fri, 20 Jun 2025 07:02:52 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=applicationdevelopmet-net.20230601.gappssmtp.com header.s=20230601 header.b=ZZ7eJ3Yy;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of sunny@applicationdevelopmet.net designates 209.85.214.177 as permitted sender) smtp.mailfrom=sunny@applicationdevelopmet.net;
+	dmarc=none
+Received: from mail-pl1-f177.google.com (mail-pl1-f177.google.com [209.85.214.177])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bNvhQ4WMJzFwtY
+	for <contact@makeastride.com>; Fri, 20 Jun 2025 11:02:46 +0000 (UTC)
+Received: by mail-pl1-f177.google.com with SMTP id d9443c01a7336-234b9dfb842so15162115ad.1
+        for <contact@makeastride.com>; Fri, 20 Jun 2025 04:02:46 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=applicationdevelopmet-net.20230601.gappssmtp.com; s=20230601; t=1750417366; x=1751022166; darn=makeastride.com;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=Hm4U4X7okEHqHb0l3OtrE1xAHVSO4RNjGGm7W2oWjoI=;
+        b=ZZ7eJ3Yybj6JG46u/pCr8U16KfW4hyWOrcRQ8pg5Wkgyv1rZ9NFcECYBLVKm89/qyb
+         3ODB2vJeRBdCL0mXpuBFEJjGTMYEeofx2aigTmCxtkV3WClkGfWOEtfIlp0HKeblzbn1
+         E82bfRred8BtuI038KBFJkF7AFOKnDFFM5c9JqOXDUEMEAqq/i8kzT7Wzq6/esdK8xCr
+         xgei44SySkBimslpQZB33y/KGItCkoGljGhtYvjXBy85J4HBGvW/roXXLGI9UaGUPQim
+         mbfsRhqCjTcWTnQwXmcuSgx27bOIjKpswedafOXqfNqRPzWtSqwn4FJd+SO6mBE7vuEw
+         H1WA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1750417366; x=1751022166;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=Hm4U4X7okEHqHb0l3OtrE1xAHVSO4RNjGGm7W2oWjoI=;
+        b=Sg74GJR+JTWf05zqVV9ejg/TiLWKlBpiJ7xAAJr/RPOisqwOkpYbNAvBeEaiuXiNOS
+         zRdlW0iqYmH6KbKkpUaqS7/VA9kLlq/6sh2S21sYclVxsOVYyUC8cWBhiSd2Yvvy5/Jp
+         cEhaKuZnDojrRgmLnaqyJ1ljAkHkI3LLKeeFu8RybsclKtkfeCScrLHcP5qt6/Z970kh
+         ykjP+t6s9kEvv6gvCRrZ76JyBwHSMLsqM87atZqSaZ4vqZVGhD7QVPAnzHiik5NV341o
+         BMG+9gmj/DrKyOi92H/cWdDeC3de6ooZifIH4JIATV+Bubm5KlXFubxoD206LfiWGq26
+         pTBg==
+X-Gm-Message-State: AOJu0Yw0VwHH6kYvuYsth7TbqdAE/fcSlxYWAESubGzJaS/XKyfzsL0D
+	P7qhOu9kEV+dlSMCPkm+DydwhKxq5GRKnZT56/JW5AGQfulsogX9uH7BVZGYpKuRXshgmMJK8UO
+	oLLXY
+X-Gm-Gg: ASbGncvI+o9opGxhsw5Wr1bR6zhoTojAkZaFKvsfdwZ5knWCOEH1r2zvwMcOQfrxpm3
+	k7KdvwMmGa+x1d38/nBmeYq5ameR1BdgyP/3ZEeK3AFOJcrOdmVe/GP14WrTj080FHYnMdFtypb
+	vcmNeNxZ/vWFvjmaYVlZf7ClvyS2bAQZTigFVJupu3zQ3t4SW8RmmkLrLdNwlh800+lY49OeBlH
+	TLf++bnLmgeE+h8jMFE4sOqaoOyms+byTOoWwMJ7wKalDe0U76x750p1prZ+EZiqfu9tkd/+zy+
+	prmwALKvLNa3mUDzy39H98U2ngNVUP0b0lLg/b7SaFF1cLEtjmATfs4+A85CquWVPIXMFrtozWE
+	LlTS2UndvjO82oBhK
+X-Google-Smtp-Source: AGHT+IHDkgdhcTuZ26q/uwtThkT1dmJ6bidVSL4IvoW3VgX/3lZXUydsrug12r2dq8VkjZuAh+82TQ==
+X-Received: by 2002:a17:903:2f4b:b0:234:a139:120a with SMTP id d9443c01a7336-237d9a71c4fmr32518515ad.32.1750417365614;
+        Fri, 20 Jun 2025 04:02:45 -0700 (PDT)
+Received: from DESKTOP7FITTC8 ([2401:4900:1c64:64d0:a89d:8f42:e91e:fe52])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-237d875382bsm14675325ad.254.2025.06.20.04.02.44
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Fri, 20 Jun 2025 04:02:45 -0700 (PDT)
+From: "Sunny Singh" <sunny@applicationdevelopmet.net>
+To: <contact@makeastride.com>
+Subject: Ref:Organic Traffic Growth for Your Website
+Date: Fri, 20 Jun 2025 16:19:34 +0530
+Message-ID: <85a801dbe1d2$d9f6e620$8de4b260$@applicationdevelopmet.net>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_85A9_01DBE200.F3AFE570"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AdvhzSretC8chJm8QKK8bA83HP7UxQ==
+Content-Language: en-us
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_85A9_01DBE200.F3AFE570
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+I noticed your competitors are ranking ahead of you on Google, which means
+they're getting most of the traffic and leads.
+
+We are an India-based digital marketing and web development company with a
+team of 70+ highly skilled professionals providing 24/7 global customer
+support. We help businesses like yours rank higher, drive more traffic, and
+grow online.
+
+If you're open, I'd be happy to share a few quick SEO opportunities I've
+found for your website.
+
+Looking forward to your response.
+
+Thanks & Regards,
+
+Sunny Singh
+
+
+------=_NextPart_000_85A9_01DBE200.F3AFE570
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Comic Sans MS";
+	panose-1:3 15 7 2 3 3 2 2 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style></head><body lang=3DEN-US><div class=3DWordSection1><p =
+class=3DMsoNormal><span style=3D'font-family:"Comic Sans =
+MS"'>Hi,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-family:"Comic Sans MS"'>I noticed your competitors are =
+ranking ahead of you on Google, which means they&#8217;re getting most =
+of the traffic and leads.<o:p></o:p></span></p><p =
+class=3DMsoNormal><span style=3D'font-family:"Comic Sans MS"'>We are an =
+India-based digital marketing and web development company with a team of =
+70+ highly skilled professionals providing 24/7 global customer support. =
+We help businesses like yours rank higher, drive more traffic, and grow =
+online.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-family:"Comic Sans MS"'>If you're open, I&#8217;d be happy =
+to share a few quick SEO opportunities I&#8217;ve found for your =
+website.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-family:"Comic Sans MS"'>Looking forward to your =
+response.<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-family:"Comic Sans MS"'>Thanks &amp; =
+Regards,<o:p></o:p></span></p><p class=3DMsoNormal><span =
+style=3D'font-family:"Comic Sans MS"'>Sunny =
+Singh<o:p></o:p></span></p></div></body></html>
+------=_NextPart_000_85A9_01DBE200.F3AFE570--
+

@@ -1,0 +1,1087 @@
+Return-Path: <1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id SEtGJmthSGgIsg4AM7Pthw
+	(envelope-from <1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net>)
+	for <contact@makeastride.com>; Tue, 10 Jun 2025 12:46:35 -0400
+Return-path: <1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net>
+Envelope-to: contact@makeastride.com
+Delivery-date: Tue, 10 Jun 2025 12:46:35 -0400
+Received: from [198.54.122.200] (port=56599 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net>)
+	id 1uP27J-000000049kt-2u83
+	for contact@makeastride.com;
+	Tue, 10 Jun 2025 12:46:29 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=bf10x.hubspotemail.net header.s=hs2 header.b="Uh/4QH/L";
+	dkim=pass header.d=leanix.net header.s=hs2 header.b=jTzPvDob;
+	dmarc=pass (policy=quarantine) header.from=leanix.net;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of "1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net" designates 143.244.89.112 as permitted sender) smtp.mailfrom="1axca70xp13nvv7gg17xje28tcggxisau1ii22-contact=makeastride.com@bf10x.hubspotemail.net"
+Received: from bd77f8y.bf10x.hubspotemail.net (bd77f8y.bf10x.hubspotemail.net [143.244.89.112])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bGvnS08Kdz55PG
+	for <contact@makeastride.com>; Tue, 10 Jun 2025 16:46:20 +0000 (UTC)
+Received: by 172.16.116.30 with SMTP id a089896hoz745zzw7x1sakkakc8s3ui6qz8y26ycwa;
+        Tue, 10 Jun 2025 16:46:19 GMT
+DKIM-Signature: v=1; s=hs2; d=bf10x.hubspotemail.net; 
+        i=@bf10x.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ASvqa4f8XFgTg0iTDoqPDFZT2nwO4X8l9q2paVvwhpo=; 
+        b=Uh/4QH/LgZ5Fb29aIBgyFVXJzbJRej6Zjt+fWpQqnVNSeET1htTXxid/6xM3K/
+         HRPCe6J/i/t4NhgdLZcUtglfLOw95ydMKp22zAmF5btQiyd0QRIQT6ae/vFiIl/
+         tcg+/LyLzXllA0etNKQ+WdnzwGqbC73/DmlyrKwpBZpRCyIiKQAPNaTrB5gkmyp
+         diBkfj8UakJLoXIcPapVZ7bbcqnnBjxPVzXTj4wJiEaWSfoUO9khMeKvbCiA4NP
+         XBA/mEMHSR98YVl4jl+D7zFesPl+4DpM+8jCSn76P0JaLF+PRRrrRAGgX+6YtX0
+         B/SKwr1XV6thGDo/UVVv2+zukyMA==; q=dns/txt; t=1749573979; 
+        x=1749836779;
+DKIM-Signature: v=1; s=hs2; d=leanix.net; i=@leanix.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ASvqa4f8XFgTg0iTDoqPDFZT2nwO4X8l9q2paVvwhpo=; 
+        b=jTzPvDobH4w7cGWLZKX/UT087ywfNW4Z6EsoyYcN0Z7zoh0rzMo+4O6rUs5w3B
+         aPDOW1L3JfpVLmBO4cFU/qMrD0EGFUptj/Z5wfK13PIUbNh4bcA2LjgiPysWB36
+         Pb2+2G+xHs9Wk/jTnikTX2mLYbFyPunPXXsw1Ibku4ijLqJkh2/MUao0UcOejMz
+         JuMB71lYVWyCGoehnGVP/lGE1xUDTqDLrtg5RnxLVd7JuplFwkqIQlUEtcgaTN1
+         GuInlxVB5BPj2LOwwORhhVG25uvktpcw97oUtw4Kcy9lK7Pxtjv6SLQDLI2TFQH
+         BWQD9VPvrygbCJ60ijV8Lt4gATWA==; q=dns/txt; t=1749573979; 
+        x=1749836779;
+X-HS-Cid: 1axf3afmht8wxwpldgte3bd1ktbh6wdza9mo7i
+List-Unsubscribe: <mailto:1axc7b6n64tgfxgnhiihdzskbly0wthhns1fku-contact=makeastride.com@bf10x.hubspotemail.net?subject=unsubscribe>, <https://info.leanix.net/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-RpW2qRbm849NM3VW4kHTLj1Zd2HLW2HKh4g20VMLWW3R4sw032lJ3QW365lnr2FSY39W3z96Kq45CDqyW4fGxSR47F3KkW2Ft8gg3jcv4TW2FM5kt2WKDgMW2w4pRN4chLGRW2RQblm3C6XS7W2MP0rK2MRsvXW4cGP2Q38xxQXW4tj0Yq3W16ZnW4fQ4GQ1_mhD7W4rDJTz21rl_ZW1Sx0XZ2HBCglW1XsjyZ1BqqLCW1_3ywZ49LLv1W1XwbFJ3d82r_W4px5Zb3G-7yQW3QFL_04pz5k6W3JT6L74fHRpNW2C_CF42G0fnLW2Kn_Yc2r15-VW3_-T4S4cj7JfW2KYY5f21jbmCW3Vz4NX2145hFW2CZ_gw3dpp6FW3JQ-Y11Lj7FPW4tgPvn4hKdwmW1SwHp_32kpt5W2t4Cb02-CVgpW43RX6T4fvRhVW2335Q32Cxh9KW3T4DQF3LWQ7BW2sJTkL4rCQRXW3LXhcj25mXsBW3DMMJh3M1r3tW1W_Q9N3gxgLwW2t53S12FvpqBW1Vk4rm3VGzW5W3b1dl61NBrY6W1Zgxdz3R1-9LW1_pngd2WFVZV0>
+Date: Tue, 10 Jun 2025 18:46:19 +0200
+From: SAP LeanIX Team <marketing@leanix.net>
+Reply-To: marketing@leanix.net
+To: contact@makeastride.com
+Message-ID: <1749573978973.16e20408-7680-4ec0-92fe-6c8f5ec868a0@bf10x.hubspotemail.net>
+Subject: =?utf-8?Q?How_to_navigate_risk_in_busin?=
+ =?utf-8?Q?ess_transformation_management=C2=A0?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_673155_411260332.1749573979242"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+------=_Part_673155_411260332.1749573979242
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Jyothi, Bridge the gap between risk perception and reality in your transfor=
+mation journey
+
+View in browser (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2=
+W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv5m_5PW8wM7ks6lZ3p5W83KYqk88d1ZdW48PPjj6wfc=
+16W2ZkT-l76l8LnW47dR3v5k4RV2W372wTZ79MRFpN3X9PBZHdHF1VYD_D_7pnT94N5jF4MV8py=
+BbW61YMDJ253HrnW5HlPfk6R9lz4W7PzB-g5k_38yW4q_XQF6t60sYW4M05Y68B8jPTW50Kmh74=
+Pn7CPVqklx87dlpBTW3PY6rB1cFlx0N8bPbDq4t3yxW2wyHHZ7ZfjcJN2q6q7P8LDF1W4W35F-9=
+f23smW3tj57C7VdcRnW6Fv9yw77FjVnW34dbNf6__vjLN2MlmhcR9N71W4wzYP78_0n2kW7-rl1=
+L11NzYjN85zyB18DvRmVw7Dv36PkmP5W9lMBDR8yQffhW7kwc3w8qZ_FdW27bmxP4HG-Q0W9bPL=
+m63-mfy6W7x9M_b6k3LmbW8RrQK92Xx4MRW6S2f7H55-NsQW6jB4pj4sbkjlVsbWJR2XNB_WW6z=
+30245qKqJvW8W91mb2kdyGGW3nY70T8xMgdJM1pVsQv7w-dW2KYf9Z2L_V1XN4mjqhp1jkLjV_5=
+Bdx52X9R5f23MMSY04 )
+
+SAP LeanIX - Webpage (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmP=
+jJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3prCCW8wLKSR6lZ3mVW821vht8pRlvLW4rjDB=
+s7klvtZVb1FQ97WSKD6W1FbfNJ5f0CN6W5G5ZH-8N9FdDW8ww_326-9x_rVGzr0f3dzD0WW6VKX=
+WN7DBxXRW2dmpdN8Y-_wFW1_KlNR6gsjFQF858DRPs2GMW1TCFTp7xH4cmW2jFg_y48G5-2N76g=
+JX8Hrg0VN8jvdmvcgWZlW5nJTzl2XjKh8W1P-F1J6dGmr8W7dZT-Y3mtGl1W1WSrlY1RrGhlW1w=
+BX_Y3Xt1-5W5MhX0v2h3ytsW4466LY4lNpS-W9bgVMT19yQbzW4PP_b935qqZ6W6B2rgX2JHc2S=
+W2LVpk_2kHCgdW1T0h7Y8vx7rjW3VJ_hM5mdLHzf5dMd4s04 )
+
+Dear Jyothi,
+
+Managing business transformations comes with risks, and achieving success d=
+epends on understanding, anticipating, and managing these challenges.
+
+Recent research from SAP and Oxford Economics highlights an interesting con=
+tradiction: even though nearly 75% of people feel confident about assessing=
+ transformation-related risks, the reality shows significant gaps in how ri=
+sks are actually managed.
+
+So, what's causing this =E2=80=9Cperception-performance=E2=80=9D gap, and h=
+ow can you avoid falling into it during your transformation journey?
+
+The white paper, The confidence conundrum: navigating risk in business tran=
+sformation, (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-=
+4hF5dVBbMW5SJqyG5xFgghN3pwdD05m_5PW5BWr2F6lZ3n5W6YHCMd7njKbbVV2VZr7vYlN5W2f=
+QJVX9bDx9jW1ng8qk21Xwc7W2tnzgt6JsSkCVtKN0F7j9ZMNW47YHTW1FShtcW6FBTBG8TMhgNW=
+5jNtBj2ByBk0N5sS5yjXjDq4W5Zx7S653yYKxW2FFcqQ5WbgK1W74J-Sx4SBxCHW1HjvnG8dKcy=
+jV6j1-q7MzQJcW35_TbY8KnSL2W3TTy-X8YN-zwMFYnNtN5YXjW5rK9Yn5VNm0fW421R432F6Vd=
+LW2V-Bmd2R1NtvW8VM7Ks25GTThW4f2DQJ4nzTBcW1bV1ls1x00JRW9dD7wd4-wBXfVW4Z4r7wG=
+__lW72Lgy41YJ28TW7R0B047LG6lpW98Z0rC8H03S_W63xSf954gTfWW2hzpT958gFwMN21tkqj=
+r2RZ7W2GqbPX7nWSL8W3hPY6b2FMRCWf6xyRxW04 ) explores:
+
+- Three categories of risk to identify and manage throughout transformation=
+ initiatives
+- Risk-informed practices that help ensure more predictable transformation =
+outcomes
+- Practical steps to close the gap between risk awareness and execution cap=
+ability in business transformation
+
+This paper (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4=
+hF5dVBbMW5SJqyG5xFgghN3pwdD05m_5PW5BWr2F6lZ3n5W6YHCMd7njKbbVV2VZr7vYlN5W2fQ=
+JVX9bDx9jW1ng8qk21Xwc7W2tnzgt6JsSkCVtKN0F7j9ZMNW47YHTW1FShtcW6FBTBG8TMhgNW5=
+jNtBj2ByBk0N5sS5yjXjDq4W5Zx7S653yYKxW2FFcqQ5WbgK1W74J-Sx4SBxCHW1HjvnG8dKcyj=
+V6j1-q7MzQJcW35_TbY8KnSL2W3TTy-X8YN-zwMFYnNtN5YXjW5rK9Yn5VNm0fW421R432F6VdL=
+W2V-Bmd2R1NtvW8VM7Ks25GTThW4f2DQJ4nzTBcW1bV1ls1x00JRW9dD7wd4-wBXfVW4Z4r7wG_=
+_lW72Lgy41YJ28TW7R0B047LG6lpW98Z0rC8H03S_W63xSf954gTfWW2hzpT958gFwMN21tkqjr=
+2RZ7W2GqbPX7nWSL8W3hPY6b2FMRCWf6xyRxW04 ) offers you insights, guidance, an=
+d best practices for navigating risks in business transformation.
+
+Get the insights
+(https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5dVBbMW5S=
+JqyG5xFgghN3pwdD05m_5PW5BWr2F6lZ3n5W6YHCMd7njKbbVV2VZr7vYlN5W2fQJVX9bDx9jW1=
+ng8qk21Xwc7W2tnzgt6JsSkCVtKN0F7j9ZMNW47YHTW1FShtcW6FBTBG8TMhgNW5jNtBj2ByBk0=
+N5sS5yjXjDq4W5Zx7S653yYKxW2FFcqQ5WbgK1W74J-Sx4SBxCHW1HjvnG8dKcyjV6j1-q7MzQJ=
+cW35_TbY8KnSL2W3TTy-X8YN-zwMFYnNtN5YXjW5rK9Yn5VNm0fW421R432F6VdLW2V-Bmd2R1N=
+tvW8VM7Ks25GTThW4f2DQJ4nzTBcW1bV1ls1x00JRW9dD7wd4-wBXfVW4Z4r7wG__lW72Lgy41Y=
+J28TW7R0B047LG6lpW98Z0rC8H03S_W63xSf954gTfWW2hzpT958gFwMN21tkqjr2RZ7W2GqbPX=
+7nWSL8W3hPY6b2FMRCWf6xyRxW04 )
+
+All the best
+
+The SAP LeanIX team
+
+Want to learn more about SAP LeanIX? See what people are saying on G2 (http=
+s://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5dVBbMW5SJqyG5=
+xFgghN3pwdFP3prCCW95jsWP6lZ3lKW9ccGzh5l_m7gW7tldf-6GdcdYN3ymvf1rFMY2W8bRbH7=
+92TBCrW15XQDq79wxsqV_DC9H6nfn63W44bjq08v4pk8W2bCPwN7JyLCxW7XyqF12LxWgjW6SXN=
+h84-zBvwW93Wqtd1tF2PdW5Qn4yK24ZLVLN24FCjl26NJnW4Wl4bz68T2ShW8Nf6px3q_XfPW2t=
+p5WM6HyqG6W2lR6s58RbCG_N1JqKm7Ww9cKW8kjc-35Kb81-W58g2t18kMBphW4D2w6H6S5BlbW=
+4xzh8R3MT1nxN99lFzW6HYGxW1_GC3x7t09s0W8ZpWws2kC00SW2hRfLG7hGKF5W3DnF8q3k7rD=
+bW6qQVB71VBVtBW2vrgrj7QmTj1W4jxKQT2Q--Ptf1kVjT-04 ) :
+
+SAP LeanIX G2 Review (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmP=
+jJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFP3prCCW95jsWP6lZ3kwW6-Yx9x22zjk8W8gpkb=
+T1KFDDmW934TSW6h5f-rW7rrCS37Q9vCPW5jgKJh7FlwpDW1KMYT-5XcJMLW4pBhGD4vkdz2W2K=
+yjyB6jlw_5N2Np0NNJVdZRW62lnTP6RmZ9SW1xbgT78lLfw8W1yjtCW2nzWmQW917-Hg2X4dN4W=
+7mPLn54p047dW7bYfqw5B79rPW4vLYzc65PGRCV_5Q865ln0QBW2GFf-g70NHYRW3ymT4V8L5N8=
+MW2rCMKm4X07yzW7gxKbJ8RdD3fW7NvqLk6L6__RW37YXMZ5sKpb4W7Wn_XC4HN-bjW4G3t9y4-=
+YLzXW6dSQ5z6sNzQ_W3WlChm7y-HzHW8MJq2x4wJkbbW5Q6W0B7x1tlNW6MXmqV4FfY0Sf39Ml2=
+x04 )
+
+LinkedIn (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF=
+5dVBbMW5SJqyG5xFgghN3pwdFv3prCCW8wLKSR6lZ3pxW7d3tHb7Zgd6wW2d2C2V72z63fW4Kg7=
+6T3sLVWsW8K-TyM2y--0GW6ncL9P2M1GKHN4LBl2lNDVmDW3cYZYY95kPh2W3vzbMB5cKjX4N87=
+QhcF2jcwcW2fxT786nXT9CW77_wjZ1DPhDxW4wCvTP8GCVJ4W6shMcW3V7zv1W8dSvlm2kb0YwW=
+6t-75p7ZbTZ9W8PwVkG3Q1nDGN7kR_-1Kz3b0W8PzjPL85-Jn8W6F_dwB2W3ZdFW5Tz0nz6T10R=
+sW3QCbD-7gB3TMW9l1g8L4c-MJQW8z-Q-K9gl-bTW4J4XDV73d3BrW2jftLn3TV4SRN26r-kVkr=
+QG6N1Kl_1NT6KWDW5VLWpj95yn1Df1_kt4x04 )
+
+X (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5dVBbMW=
+5SJqyG5xFgghN3pwdFv3prCCW8wLKSR6lZ3m6W8jRKjm1Qs8G5N5L6z5CxQrZwW2s7Ym_57j1R_=
+W9lWLCf17xfbCW2m4dfV1JGnr4W4K74Tr8z-v2rW5tpD7y51tXRcW3ThXZJ7XTNxmW6DsCRy5YR=
+zSdW4Mn-JQ983VdmN6WcHH08D7BvW5_DS005hL6-sW2_5txQ6Z40tJW8x3twk5HpfbDW6plk-q2=
+8ncH1VXZXv53FSHT6W23FG7897z3LjW8W3cB21H0KswW6tLccr1l1wrCW2H_qYn5yCTLxW8qnY5=
+q7wvB0RW24zKrf6LvdVQW5Wrd5V4zYq9xVG2HBl35SzLPW5xTNZH2PtPMGW7kJh1N5P_VpDVRP1=
+7n8h8CCLW8-NRFd2Sd9G8f1nnm-x04 )
+
+YouTube (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5=
+dVBbMW5SJqyG5xFgghN3pwdFP3prCCW95jsWP6lZ3lkW8kjVyC1dVdB7W43ZgQX8_9hplW7K10G=
+m5qZpj7W4wjf9T6M_TCZW5NPf834Yl9b3W4p40N97zDHGXW6v87588cWNFTW7jJZch23qGknVBt=
+6y-2cqYGCMVKFhP3ZWR5VjTdbL9hL_n9W5JypSf4dk2hLW4492qs6vcbYKW3SFV1M13QHQ-W1LK=
+bgn8Dz4cRVhl1_74GTDc4W79_bg91N3d9tN40N_7lB0H64W9kxbBg4F0wQQW6D5xZF1RPLcyW3z=
+ck8281MxSrW29SNQ76yNVHHW6QgcRJ2ClK1MW2nD90Q1hlRSgW87qj4f8MT3znW5S7Jr66P6drT=
+W95p0-g4p2wBtW1GmksV8FG5QHW56YRt0146XZ6W6Fsvwk4k3Pc-f20jdVK04 )
+
+Facebook (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF=
+5dVBbMW5SJqyG5xFgghN3pwdFv3prCCW8wLKSR6lZ3lKW32h-wd3trQ2wW80QczR2XvTy8Vj_X3=
+c7BXchYW4wx7DR6G7tLtW8SRwkD7_VNWSW6RzYL06wJlnvW67cMJp5wLKZ3W1zBt-S3PHVb9MrN=
+85gn4dtwW6CsJ7w5n9m_zW9k8V3Q9ldzjLW4xSPQ64qfz3HW59ThgD6RV0hWV5M08z5bDVYQW93=
+wwXK4h5g33VmMT5r4_WhLqMx3KngMF1stW6jTN3t6J1V6KW2c1Xls5brZ-XW32C9bP6pChyMW6W=
+4Bmf4C6vGyW3-ylY04NLf0yW887jC919Kr8MW4HxXxY92XPfsW7jSP9v7WWTT2N47tDBHLNRLFN=
+65tTS5qKDvKW1n-w2W7WX0Fbf4gxPMM04 )
+
+
+
+
+
+LeanIX GmbH, Friedrich-Ebert-Allee 37-39, Bonn, NRW 53113, +49 228 28629920
+
+Unsubscribe (https://info.leanix.net/hs/preferences-center/en/direct?data=
+=3DW2nXS-N30h-R-W4rF_Y324W_ykW3VRgqB2sK94fW4pqfLJ30rWQwW2MvCDl2r60SSW36wQpn=
+2Yp0GRW2F_2N24cQKKGW3P4cCy2FS2p7W3bsv0W3VHKmGW2qPBxT3y-lM9W3LZmkf1_8wbCW4rl=
+GD04th963W3ZxpyD32m_jsW34DW591ShDqlW2-F-4b3dtb-yW3SNybt47P2dzW2KS1St47Nzq-W=
+49BnBM4kx0-SW2zNMsT2MQJR_W3KcfZb1VjzPlW34frSH4pkKskW3dzbvX1_bGxSW3ZVDYG36jd=
+XQW21qvsv43BxZJW2B2PDc2YNndLW4prWC14tyLmJW4fkcKV1SB09SW1SC9Bh3Kbqj3W38f64T3=
+QBmmKW3zbpL82p2398W21nkxh1VbPdsW3z985X1BHy_xW2Pkgf536k3xyW41Qrlq34z7phW4fJg=
+D14hJqwDW2-MMrv4chM_9W4kCcpw1Bgz-HW2KXKJh366930W2t1gvn2HVM_zW2xH4-b4rpzBHW2=
+t76PF3VZnvQW45LG5B4fvnwsW4rwrkM1XrWmhW3C6RSc1BhmDQW2KXLv01LCvnXW3GLJDr3Xxbz=
+Gf4rfg7G04&_hsenc=3Dp2ANqtz-8rYW1AF02OPJGgSC0GshK55lBZnXZSROQ9WrCwAZ4jPyc-z=
+BjHbwPL0sI_jKAk6GkFuGUWQ73BFXN4BKN7ciDIACuZPg&_hsmi=3D365763676 )
+
+Manage preferences (https://info.leanix.net/hs/preferences-center/en/page?d=
+ata=3DW2nXS-N30h-R-W4rF_Y324W_ykW3VRgqB2sK94fW4pqfLJ30rWQwW2MvCDl2r60SSW36w=
+Qpn2Yp0GRW2F_2N24cQKKGW3P4cCy2FS2p7W3bsv0W3VHKmGW2qPBxT3y-lM9W3LZmkf1_8wbCW=
+4rlGD04th963W3ZxpyD32m_jsW34DW591ShDqlW2-F-4b3dtb-yW3SNybt47P2dzW2KS1St47Nz=
+q-W49BnBM4kx0-SW2zNMsT2MQJR_W3KcfZb1VjzPlW34frSH4pkKskW3dzbvX1_bGxSW3ZVDYG3=
+6jdXQW21qvsv43BxZJW2B2PDc2YNndLW4prWC14tyLmJW4fkcKV1SB09SW1SC9Bh3Kbqj3W38f6=
+4T3QBmmKW3zbpL82p2398W21nkxh1VbPdsW3z985X1BHy_xW2Pkgf536k3xyW41Qrlq34z7phW4=
+fJgD14hJqwDW2-MMrv4chM_9W4kCcpw1Bgz-HW2KXKJh366930W2t1gvn2HVM_zW2xH4-b4rpzB=
+HW2t76PF3VZnvQW45LG5B4fvnwsW4rwrkM1XrWmhW3C6RSc1BhmDQW2KXLv01LCvnXW3GLJDr3X=
+xbzGf4rfg7G04&_hsenc=3Dp2ANqtz-8rYW1AF02OPJGgSC0GshK55lBZnXZSROQ9WrCwAZ4jPy=
+c-zBjHbwPL0sI_jKAk6GkFuGUWQ73BFXN4BKN7ciDIACuZPg&_hsmi=3D365763676 )
+
+Imprint (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5=
+dVBbMW5SJqyG5xFgghN3pwdFv3prCCW8wLKSR6lZ3ppW7lB6fL3xVSjsW7p7_lQ3j003HN6_ZPs=
+BND_nMW14CN0K4RFRVDW4yfrr388Vy15W5wRCbq87qmLGW7Ry6CC1bhFgmW4JS-5C5MyTYCW8jD=
+29-4hQkvMW1cMKt37RPNpZW4Qb7Gm3Dr8ZFW5yRp5c82fLMYMHXKypxx6_GW1qjMNJ7cKHTcW7W=
+Mc-d8B_TvZW3Kfmvy6nbSX4W76SpRB5ZmgwvW35ZXgn20t9TmVTB7R476-XglVmmt-g7nK5t4W1=
+bMwjs5kH3lCVKFlXx6zmWvFW5_h93m4yB-brW1RBYq89dr1PRW3SnZ9Q2ygCShN4fClw9fTFp2W=
+27XkXD3RL0sbW1xz1Zk6lpdnzf5mnQFs04 )
+------=_Part_673155_411260332.1749573979242
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>How to navigate risk in business transformation management&nbsp;=
+</title>
+    <meta property=3D"og:title" content=3D"How to navigate risk in business=
+ transformation management&nbsp;">
+    <meta name=3D"twitter:title" content=3D"How to navigate risk in busines=
+s transformation management&nbsp;">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #F5F6F7;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://info.leanix.net/how-to-navigate-risk-in-business-transform=
+ation-management"><meta name=3D"robots" content=3D"noindex,follow"><!--[if =
+!((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (max=
+-width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-str=
+etch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #eaf0f6 !important;border-right:1px solid #eaf0f6 !important;box-sizing:=
+border-box}
+.hse-border-bottom-m{border-bottom:1px solid #eaf0f6 !important}.hse-border=
+-top-m{border-top:1px solid #eaf0f6 !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section_1736863563088 .hse-column-container{background-color:transparent !=
+important}
+#section_1736863563088 .hse-column-container{background-color:transparent !=
+important}
+}@media screen and (max-width:639px){.social-network-cell{display:inline-bl=
+ock} }
+@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-botto=
+m:20px !important}
+#section-8 .hse-column-container{background-color:#223548 !important} }</st=
+yle><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_main =
+a[x-apple-data-detectors]{color:inherit !important;text-decoration:none !im=
+portant;font-size:inherit !important;font-family:inherit !important;font-we=
+ight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#F5F6F7" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+22f4b; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#F5F=
+6F7;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Jyothi, Bridge the gap between risk perception and reality in=
+ your transformation journey</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#f5f6f7" bgcolor=3D"#f5f6f7">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1736863563088" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1736863563088_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17368635630876" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#222f4b; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPj=
+JJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv5nR32W8wM7ks6lZ3pHW829M_V5PKLKtF98JY7h=
+gjFHW4CRGcW6Ssp26W36584884D_3RW7x5XWV80RlNWW7dtjTL6jvjLMVG8Jct1lYf6gW188RGq=
+8cdKj-W256GVT5fLN5pW2jCP0T4W8PvPW1StVg_3rmq7wW2xbRzk5V6cp7Vl7H5C10zh4tVh0HR=
+S2YRCD_W7H4zcs8161ZLW5xLpJZ8N-YmqW2_JZVv36ndf3W3NSMgY272mcRW5Pf8HG8W2L30W2X=
+2ywD79YFDkW7RkfyH1bjrstW3q8Zf75JRr95W8ffYBl622jcnW2Xvp_B2m-v3-W8Qn-Pm94W1rr=
+W4NSwmH4NClh_F167Pfj9McCN1yHCP3rv5L1N5_jP9Wywlz6W8HNtM34YKwcCW41jyJ461ff9ZW=
+5Kzdx94JdZXHW4ZW-sX27-9JtW4BKxj-3Q91v_W2YjBHW5fmvYZW2JFb1873QPN7W4yPQjX5CTz=
+NKW92z8fq1K4hlHW8Pt6Qb6Rq6zxW4z6k6n2vrw0HW81JbjT4LwKjjW4lfxxc80d9VVW8JF1Xn4=
+8QsbRW6V8cH04v6RKSf53PffT04" style=3D"color:#166BFF; font-weight:bold; text=
+-decoration:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"82fENzb3" target=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module-1-0-0" class=3D"hs_cos_wrapper hs_cos_wr=
+apper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size=
+: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-=
+hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"presentat=
+ion" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; color:#222f4b; word-break:break-word; text-align:center; padding:0px=
+; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJ=
+j2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3qgyTW8wLKSR6lZ3mHW1-gHvc6HMmRwN60ssb49R=
+9x-W9gvVRn8CbN7wW8qc-DQ1kk-pnW70Bs7r4_zxbMN26hzQPcdDV0N4_5FzMmy1WnVWxDm21VV=
+dYNW3fwyzW6ZZ8MdW4DzbLw8KKTSdW3vkYX81PgnGpW5YS93P1qg5LdW1GbHvy50zCkxW3pBvhk=
+1BShbwW4zcwHX8gmm4jW8Sh-jh6p3MSHW7KMVfp4bylz-W2sx5Qy5SL6kKW6gBY6v3LzK10W6pS=
+R9q7v2M5vW7dndhq662FTfW1hLdvD4wsb1QW2PRtTd1g5FkMN30c_fw3SBvxMpqYyg88-vVV4Z8=
+NG4PX2lTW4skS8b5FKYH3VW-lv54t_Y2qf8V5FyY04" target=3D"_blank" style=3D"colo=
+r:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"0TpictGX">
+        <img alt=3D"SAP LeanIX - Webpage" src=3D"https://info.leanix.net/hs=
+-fs/hubfs/Imported%20images/Email%20Header%202020.png?width=3D1200&amp;upsc=
+ale=3Dtrue&amp;name=3DEmail%20Header%202020.png" style=3D"outline:none; tex=
+t-decoration:none; border:none; max-width:100%; font-size:16px" width=3D"60=
+0" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1743154508851" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1743154508851_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17431545088281" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; color:#222f4b; word-break:break-word; text-align:center; padding:0px=
+; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJ=
+j2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdD05nR32W5BWr2F6lZ3kwW6HwB7x5JlSNFW48sRNp5X=
+5stGW60ClH_2_qnFhW2HkZQV8B39LJW4-ZCH61hsKBVW5ND3t-9lyQMJVv8C1J3Mg-JBW3D6Jjx=
+61Vwm1W4j8nbz8mlq6DW8ykk__5-JBN7W820sJk5hlkQKW1rB1tD7JWxPxM1GPQbw4Bd7W1G7s8=
+J7SWDwdW4b66Jt37VlLKW1B5Kpq5HWW6bW4ZSdFm5-ZV2kW80Bbbc8KnPBFW4l5rzp2zlnMJW5f=
+RFjZ6py86yN1bY212Zscw8N2Zs11F-ggm2W5SX3Lm8rPyfxW7yXZvj32l6PKVhfk3k6Q4kc_W1h=
+Pjyl3Yf39_W638w5G7TvyyLW8N1rGr30hJCYW6hWFv02sD5vkVVr4ZB6KZVN0W5mDVTZ4CSGCjW=
+8mFf7_66Rwx9W8QmPDK7hPcL7W1rMs2H4c0MrZf8WHGPs04" target=3D"_blank" style=3D=
+"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"s/YFATbA">
+        <img alt=3D"" src=3D"https://info.leanix.net/hs-fs/hubfs/Email-Nurt=
+ure-Oxford-Economics-EN.png?width=3D1200&amp;upscale=3Dtrue&amp;name=3DEmai=
+l-Nurture-Oxford-Economics-EN.png" style=3D"outline:none; text-decoration:n=
+one; border:none; max-width:100%; font-size:16px" width=3D"600" align=3D"mi=
+ddle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-3" class=3D"hse-section" style=3D"padding-left:10px; p=
+adding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-3-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-3-0-0" class=
+=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapp=
+er_module-3-0-0_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrap=
+per_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heigh=
+t: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_t=
+ext"><p style=3D"mso-line-height-rule:exactly; line-height:175%">Dear Jyoth=
+i,&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Managing busine=
+ss transformations comes with risks, and achieving success depends on under=
+standing, anticipating, and managing these challenges.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Recent research=
+ from SAP and Oxford Economics highlights an interesting contradiction: eve=
+n though nearly 75% of people feel confident about assessing transformation=
+-related risks, the reality shows significant gaps in how risks are actuall=
+y managed.&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%; font-weight:bol=
+d">So, what's causing this =E2=80=9Cperception-performance=E2=80=9D gap, an=
+d how can you avoid falling into it during your transformation journey?</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">The white paper=
+,<a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4=
+hF5dVBbMW5SJqyG5xFgghN3pwdD05nR32W5BWr2F6lZ3kJW72Hkj468JMzzW1fNKBd1stG2yW4J=
+RdTb6d65-3W4HR02243wWcCW26yh_H91x1_3W5ZM-P-6CWxxgW98L_pB7-tg90VN0-D52bwlHTW=
+3sy5Nr1nNPgwW2c83Zd71FH7TW8y58dZ7F5N6BW7sQ03j9hDdmvW5n7M2j6JRTMLVy8XYz1Vr3v=
+MVkh0Hl2CKvfdW8Hb8KL10CpWZW4GYsFn7hjCgbW4BPrPw8ZZbpyW2G-XJq1Dmbb_W3LXBYz4Yc=
+WGQW6nwZ5N71W0SWVRwSzv8XdLm6W1_DQZ92NyshrW3ftSdj5PlZwHW7NXZf681t05HW5mz72C1=
+YT_CWW3StdGc12g5Z-W8tqGfp4WHWZ1W8R5QM93JWyNBN9610_sT6jTMW4LnpCv5dKjRNN6Tc6n=
+6TCNcWW8Q44W32KfnTdW2dztbn8wnjrtd1Jb2H04" rel=3D"noopener" style=3D"color:#=
+166bff; font-weight:bold" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"yk1Kq=
+F9U" target=3D"_blank"> The confidence conundrum: navigating risk in busine=
+ss transformation,</a> explores:&nbsp;</p>
+<ul style=3D"mso-line-height-rule:exactly; line-height:175%">
+<li>Three categories of risk to identify and manage throughout transformati=
+on initiatives&nbsp;</li>
+<li>Risk-informed practices that help ensure more predictable transformatio=
+n outcomes&nbsp;</li>
+<li>Practical steps to close the gap between risk awareness and execution c=
+apability in business transformation&nbsp;</li>
+</ul>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><a href=3D"http=
+s://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5dVBbMW5SJqyG5=
+xFgghN3pwdD05nR32W5BWr2F6lZ3p4W871rQp2f5vQkW4QM-s47Ysr9rN8j0G3m3QFXgW528tMB=
+4ZXCHzW2npBcv6XXLLFV6dV4d5-QGyBVrwNq048xSKmW36s8Ts3g182ZV8S7SV8ZQ-kXW4YX3Dg=
+1YB0ZdW8S6Dg33j8wh9W7gVhlG5bymd5N2TmBcWtwpxpW5krjDv2k8fkWW6rz1vt3XrJFjW2Y17=
+3h4pdXPQW5xF1VY6m9p1bN6J37Wjpg_P5W6S9xCD4MqmWmN40bjTS6NrG9W6bfn-0162NqZW86g=
+Zxt4prcvxW2nl68d7NDthcVCjq7B8DN8qXW8hy7Cw9cn28MVjkWZx5pzF9bW4Spxc31tQD9LMmB=
+RsKHXDvGW1FclbH4R3BsrN7VbDz46rpJWVZrvcs8sq3xVN1QMD1kM-Y4YV_Zb7T7BjpWhW7X7Tv=
+V1shFhPf3WRHBK04" rel=3D"noopener" style=3D"color:#166bff; font-weight:bold=
+" data-hs-link-id=3D"2" data-hs-link-id-v2=3D"GfdmpA8H" target=3D"_blank">T=
+his paper</a> offers you insights, guidance, and best practices for navigat=
+ing risks in business transformation.&nbsp;</p></div></div></td></tr></tbod=
+y></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17345270794838" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1734527079483-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_174281083207=
+02" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table align=3D=
+"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"border-collapse:separate!important">
+    <tbody><tr>
+      <td align=3D"center" valign=3D"middle" bgcolor=3D"#0070F2" style=3D"f=
+ont-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:bre=
+ak-word; border-radius:8px; cursor:auto; background-color:#0070F2; mso-padd=
+ing-alt:12px 18px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJ=
+j2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdD05nR32W5BWr2F6lZ3m-W8r68Sh580cCpW90cH5k2P=
+jRMbW1yF3Nd7Cs-3sW9fs5gL4hMRjlW5knLrx5NFHQRW6xw5WJ1CndjcW1zCPnY4sTBc2N2mn7X=
+6k6ND4N8-gQdX7PfCDW8BXL127297zSW208xg87B2PC7W6qVfQt87gcL0W1BrZ7q8pfFsrW4YW9=
+Wf7X0cFDW2tMV2c1qxHYMW3XfKpQ3Xp7gwW5J5gxP7vGg4xW6j60K53q5cjNW8rJzKM2ZHRZGVS=
+D1ny93z1h_W92mH8n5SXcZJW72C1r33TBZ5MW1zGKhG3XkxF-VNQnFv5wmKS4W5-F2Pl7rfr8dW=
+5Gtd0X7359bqW9dVD2D6gwn1GW5jsB305YTYXKW4llLnG3-2sybW8fnZRs4Z0wf0W5bgdFV1J9T=
+3XW3344_d3DzdWsW7h0mgt7b6R1VW1jNHW65Wht_rf6JK5Jz04" target=3D"_blank" style=
+=3D"color:#00a4bd; font-size:18px; font-family:Arial, sans-serif; Margin:0;=
+ text-transform:none; text-decoration:none; padding:12px 18px; display:bloc=
+k" data-hs-link-id=3D"3" data-hs-link-id-v2=3D"UpeZqC07">
+          <strong style=3D"color:#ffffff;font-weight:bold;text-decoration:n=
+one;font-style:normal;">Get the insights&nbsp;</strong>
+        </a>
+      </td>
+    </tr>
+  </tbody></table></div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17345270794837"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module_17345270794837_" class=3D"hs_cos_wrapper hs_cos_wrapper_widg=
+et hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-=
+type=3D"rich_text"><p style=3D"mso-line-height-rule:exactly; font-weight:bo=
+ld; font-size:15px; line-height:175%">All the best</p>
+<p style=3D"mso-line-height-rule:exactly; font-weight:bold; font-size:15px;=
+ line-height:175%">The SAP LeanIX team</p></div></div></td></tr></tbody></t=
+able>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17345270762383" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1734527076238-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_173452707623=
+82" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"=
+none" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" style=3D"vertical-al=
+ign:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995AF;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995AF;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17345270780186" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1734527078018-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_173452707801=
+84" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module_17345270780184_" class=3D"hs_cos_wrapper hs_cos_wrapper_w=
+idget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: in=
+herit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-c=
+os-type=3D"rich_text"><p style=3D"mso-line-height-rule:exactly; line-height=
+:175%; text-align:center" align=3D"center">Want to learn more about SAP Lea=
+nIX? See what people are saying on <a href=3D"https://info.leanix.net/e3t/C=
+tc/WY+113/cjkwq04/MVxFmPjJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFP3qgyTW95jsWP6=
+lZ3p4W6y5Hw44ffD_wW8ktRBc31d5kWW6hf7-745DXNwW8kjHqX2LGnX-W94WXJy4chFybW5Kgn=
+NN8vRmJDW2tNrxj3-z08rW1bsjmQ7K8_ZyW3pknts4PmVJFN2rJgbHkQBt-W3Bk2dr2dBs8mW7Q=
+LF0z2sWRSkW4jWbfj30c7DkVc-Q632C0QkTW7FpBqQ5Tt21_W8m0Vhf2b2Z_WW7pV5V08J7qGlW=
+3-y_XQ1RfW2JW2VR25l4p0qY2N2TkTZ08PwY8W7ZH5Y33dB1rqW5jH9NV6vRnHtN2321506MpY0=
+W80Z_tt4qyfC2VwPfMT2THlMmW5Z5sVC8Mlj2PW8sBjcd5GHcCPW2LZKcH53GLflW3HR8rl1nld=
+bmW5mL6Kh55Ys_tf1-jwc204" rel=3D"noopener" style=3D"color:#166bff; font-wei=
+ght:bold" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"HG8PXqRb" target=3D"_=
+blank">G2</a>:</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module_17345270780185" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"pr=
+esentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#222f4b; word-break:break-word; text-align=
+:center; padding:0px 20px 10px; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPjJJ=
+j2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFP3qgyTW95jsWP6lZ3pvW94jxb-6GnHgtW83mvjW5l=
+VZ7kW4WwZ6v4KPT1NW3XJnsw91FnjJW7bDd4j8nKD52W57y1K28MTbNyW44hyMP6T8cdxW1m8DH=
+F7KV37fW2ybSvT2vZPckVMRjPJ4-Wr_7W3W72y_5P71nvW6zCnd67p_sRFW8XBB4L7-b8glVlqC=
+Fd7nQYkYW23Vwxr3_XR-zW85bCGs5g-kZGW7VG00m1GSH7mW1KglML2wtxNWV7f2ZN1Mws74N7t=
+kK9xDmcKwW7sS0zT7G9RLdW5sxzNG8qxm3vW6_Z9Hy51M0x2W1hfXWL4H253DW5TM8ZC83BXBcW=
+7zthX35DbTBkW4ZWd7G6bKdjYW4gXxLx1z-R5KW14wx9m1DNHFPW6ctMR06sZXmJf3nd4fY04" =
+target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"tFAcMjoZ">
+        <img alt=3D"SAP LeanIX G2 Review" src=3D"https://info.leanix.net/hs=
+-fs/hubfs/G2%20Email%20Image%20GIF%202.gif?width=3D1120&amp;upscale=3Dtrue&=
+amp;name=3DG2%20Email%20Image%20GIF%202.gif" style=3D"outline:none; text-de=
+coration:none; border:none; max-width:100%; font-size:16px" width=3D"560" a=
+lign=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-8" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#223548" bg=
+color=3D"#223548">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#223548">
+      <tr style=3D"background-color:#223548;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-8-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:b=
+reak-word; padding:20px 20px 0px"><div id=3D"hs_cos_wrapper_module-8-0-0" c=
+lass=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" st=
+yle=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-c=
+os-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"prese=
+ntation" align=3D"center" style=3D"width: auto; text-align: center;" class=
+=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr align=3D"center">
+      <td class=3D"social-network-cell" style=3D"font-family:Arial, sans-se=
+rif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/M=
+VxFmPjJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3qgyTW8wLKSR6lZ3lgW672jmn2kSQ1tW=
+1pKLJc1gb2w1Vq_9Qc5cYzJJW3QCx-P82yBSFW3Y1kWG6lS8BFW3hP8PC4kKZzSW7vg-6h3-JNp=
+GW6Pv0BB50ymh6W5gQkgX1w8WL-W79rRZb32zVQ0W5G1VKS8jzXWDN2504-HX48cgVFLv4-8sKx=
+RwW8tp5_v3Cf3FFVj8gds45pqszVq8lcQ4FskZCW8zTq5F4WX_9SW4Tqv1j4dS4fZW6v5W5_99n=
+gvSW3HtJR13wSr89W3ck7tN8s4HgDW4WB_DK2kNkhsW639Nls92GTswW39QHYw2G5sJ1W3N7yDX=
+17FyNgW8Jd6M_5qmbmtW7pzZjB59CfWSW1G_nKY8BDcGpf4QShkK04" style=3D"color:#00a=
+4bd; text-decoration:none !important" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"BH2QLouz" target=3D"_blank"><img src=3D"https://info.leanix.net/hs/h=
+sstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/=
+Follow+Me+-+Email/linkedin_original_white.png" alt=3D"LinkedIn" height=3D"3=
+2" style=3D"outline:none; text-decoration:none; border:none; width:auto!imp=
+ortant; height:32px!important; vertical-align:middle" valign=3D"middle" wid=
+th=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/M=
+VxFmPjJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3qgyTW8wLKSR6lZ3pqW1lCmks4bSKzYW=
+70nGlN2wyy_TW3cTLZP7vXbq5W6TcB6C8jJx2JW6s0dWj2Z6XpqW1-DbTW1mmnn6W7Ff6-14ZJM=
+stW2-DD9k4THDWJW72sSFw7XpcTwW5Z4BgD2s4q7qW37Cr5318wffKW3s9hFs7GvTyRW40_70v2=
+Qk1dKVny-Vy45RbG5W8SK4rJ8s6M0hW469gDn1gLMhXW6WTfrm2sJ8wyW4hZfrM8HT0yNW4gGqR=
+b4rV-9pW7Z-mcd3btz95W5-Qm7B6FJsYjW88JD4855wNl8W6cth1Z4zdtVXW76TyHd7Psl4_W6Z=
+B_Pc5YtGnnW6sjqJL8wbvLLW6dTPD_4qW7r0W2vjdFK1HpZYbf4gcWld04" style=3D"color:=
+#00a4bd; text-decoration:none !important" data-hs-link-id=3D"0" data-hs-lin=
+k-id-v2=3D"IxPlyZFg" target=3D"_blank"><img src=3D"https://info.leanix.net/=
+hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modu=
+les/Follow+Me+-+Email/twitter_original_white.png" alt=3D"X" height=3D"32" s=
+tyle=3D"outline:none; text-decoration:none; border:none; width:auto!importa=
+nt; height:32px!important; vertical-align:middle" valign=3D"middle" width=
+=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/M=
+VxFmPjJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFP3qgyTW95jsWP6lZ3m0W97Vtzr6HryBNW=
+4bmsCq30fx0BW7GpWDQ7WMnCQW7Qf_S15whXC0W8lVJdw6FF9RtW1KXV-p7L4NRJW1983jG4yGf=
+7TW1cZ1rm9cRF-kVSzLZR8Xq-8JW4Q7MMW1JfLQJVzxrTs70dH1cW7c3WpP1Vjj8WW9kMSnZ7Qd=
+k85W3R5CmM2pfrDpW4pJmMn6wBkDsW57xRrX85wl3PW6HHdst8b3KZmW2WpYvj7wNn-zW4M933P=
+5Q8d-xW6VxCXR3KczrFW2mhV2_2-DfpzW8LZfQ45RRtc4W3w2ZKG7mdSWWW1tRd5H11zZS0W8Zt=
+wjY5FxWLzN1zprmTMVk1NW1kVC7Q6LSBnPW5m0KZS5wbJmwN5VLS7yHGwZTW2qrxGG730RRbf22=
+495T04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-li=
+nk-id=3D"0" data-hs-link-id-v2=3D"5ZryPzvB" target=3D"_blank"><img src=3D"h=
+ttps://info.leanix.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_defau=
+lt_template_images/modules/Follow+Me+-+Email/youtube_original_white.png" al=
+t=3D"YouTube" height=3D"32" style=3D"outline:none; text-decoration:none; bo=
+rder:none; width:auto!important; height:32px!important; vertical-align:midd=
+le" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/M=
+VxFmPjJJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3qgyTW8wLKSR6lZ3n3W5G0wHy583r-5W=
+2GmQW78yRzGsW5H0tVL8pRjfTW4xKMpz5RjydXW4F2fg45x9CWWW5qfC8S2rgghJW59PrSj49PQ=
+g_W16l9YB1pFg4CVSwQNF1j5H7wW472Spx4gRpVMW7MLF3976jGZbN66sWJ15BCvPW2C9RdC3p-=
+vY6W1QTsTh6Q9v5QW4hqmD43fwV19W637qBz5FfwwRN2b6V8cmqJkWW3G0ly72cx_TfW5yPgLZ5=
+NVZbwW2V_VZW7BdM8cN34Vp_D7YdTZW3QGSmq1Z1BCWW7lWzxW103sVHW8MT2cK6YjK5tW5zj3W=
+B8659NNN1cQ1539kBFQW3Bp3K95kwNyFW59zH_p6hv0Bvf4bMFZq04" style=3D"color:#00a=
+4bd; text-decoration:none !important" data-hs-link-id=3D"0" data-hs-link-id=
+-v2=3D"vOZllbyl" target=3D"_blank"><img src=3D"https://info.leanix.net/hs/h=
+sstatic/TemplateAssets/static-1.262/img/hs_default_template_images/modules/=
+Follow+Me+-+Email/facebook_original_white.png" alt=3D"Facebook" height=3D"3=
+2" style=3D"outline:none; text-decoration:none; border:none; width:auto!imp=
+ortant; height:32px!important; vertical-align:middle" valign=3D"middle" wid=
+th=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:brea=
+k-word; padding:10px 20px 0px"><div id=3D"hs_cos_wrapper_module-8-0-1" clas=
+s=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=
+=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-=
+general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapp=
+er_module-8-0-1_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrap=
+per_type_rich_text" style=3D"color: inherit; font-size: inherit; line-heigh=
+t: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_t=
+ext"></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module-8-0-2" class=3D"hs_cos_wrapper hs_cos_wrap=
+per_widget hs_cos_wrapper_type_module" style=3D"color: inherit; font-size: =
+inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs=
+-cos-type=3D"module">
+<table role=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-se=
+rif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padd=
+ing:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; text-align:cen=
+ter; margin-bottom:0; line-height:135%; padding:20px 20px">
+        <p style=3D"font-family:Arial, sans-serif;font-size:14px;font-weigh=
+t:normal;text-decoration:none;font-style:normal;color:#F5F6F7;">
+          LeanIX GmbH, Friedrich-Ebert-Allee 37-39, Bonn, NRW 53113, +49 22=
+8 28629920
+        </p>
+        <p>
+         =20
+          <a data-unsubscribe=3D"true" href=3D"https://info.leanix.net/hs/p=
+references-center/en/direct?data=3DW2nXS-N30h-R-W4rF_Y324W_ykW3VRgqB2sK94fW=
+4pqfLJ30rWQwW2MvCDl2r60SSW36wQpn2Yp0GRW2F_2N24cQKKGW3P4cCy2FS2p7W3bsv0W3VHK=
+mGW2qPBxT3y-lM9W3LZmkf1_8wbCW4rlGD04th963W3ZxpyD32m_jsW34DW591ShDqlW2-F-4b3=
+dtb-yW3SNybt47P2dzW2KS1St47Nzq-W49BnBM4kx0-SW2zNMsT2MQJR_W3KcfZb1VjzPlW34fr=
+SH4pkKskW3dzbvX1_bGxSW3ZVDYG36jdXQW21qvsv43BxZJW2B2PDc2YNndLW4prWC14tyLmJW4=
+fkcKV1SB09SW1SC9Bh3Kbqj3W38f64T3QBmmKW3zbpL82p2398W21nkxh1VbPdsW3z985X1BHy_=
+xW2Pkgf536k3xyW41Qrlq34z7phW4fJgD14hJqwDW2-MMrv4chM_9W4kCcpw1Bgz-HW2KXKJh36=
+6930W2t1gvn2HVM_zW2xH4-b4rpzBHW2t76PF3VZnvQW45LG5B4fvnwsW4rwrkM1XrWmhW3C6RS=
+c1BhmDQW2KXLv01LCvnXW3GLJDr3XxbzGf4rfg7G04&amp;utm_campaign=3D5820530-FY25-=
+Q1-BTMA-BTMC-GM-GL-ALL-LX-ATR-OE_report_promotion&amp;utm_source=3Dhs_email=
+&amp;utm_medium=3Demail&amp;utm_content=3D365107955&amp;_hsenc=3Dp2ANqtz-8X=
+r-t24Fm1oB1L2NUFIuUG_Ey3gPywSKeWDOY2OupVW_FWxui52m2MOpVQuYQxP-zoX-Y_5t1xSqz=
+rjbgTgYvIyVFJbg&amp;_hsmi=3D365763676" style=3D"font-family:Helvetica,Arial=
+,sans-serif; font-size:14px; color:#8995af; font-weight:normal; text-decora=
+tion:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"SFRZzEXk" target=3D"_blank">Unsubscribe</a>
+         =20
+          <a data-unsubscribe=3D"true" href=3D"https://info.leanix.net/hs/p=
+references-center/en/page?data=3DW2nXS-N30h-R-W4rF_Y324W_ykW3VRgqB2sK94fW4p=
+qfLJ30rWQwW2MvCDl2r60SSW36wQpn2Yp0GRW2F_2N24cQKKGW3P4cCy2FS2p7W3bsv0W3VHKmG=
+W2qPBxT3y-lM9W3LZmkf1_8wbCW4rlGD04th963W3ZxpyD32m_jsW34DW591ShDqlW2-F-4b3dt=
+b-yW3SNybt47P2dzW2KS1St47Nzq-W49BnBM4kx0-SW2zNMsT2MQJR_W3KcfZb1VjzPlW34frSH=
+4pkKskW3dzbvX1_bGxSW3ZVDYG36jdXQW21qvsv43BxZJW2B2PDc2YNndLW4prWC14tyLmJW4fk=
+cKV1SB09SW1SC9Bh3Kbqj3W38f64T3QBmmKW3zbpL82p2398W21nkxh1VbPdsW3z985X1BHy_xW=
+2Pkgf536k3xyW41Qrlq34z7phW4fJgD14hJqwDW2-MMrv4chM_9W4kCcpw1Bgz-HW2KXKJh3669=
+30W2t1gvn2HVM_zW2xH4-b4rpzBHW2t76PF3VZnvQW45LG5B4fvnwsW4rwrkM1XrWmhW3C6RSc1=
+BhmDQW2KXLv01LCvnXW3GLJDr3XxbzGf4rfg7G04&amp;utm_campaign=3D5820530-FY25-Q1=
+-BTMA-BTMC-GM-GL-ALL-LX-ATR-OE_report_promotion&amp;utm_source=3Dhs_email&a=
+mp;utm_medium=3Demail&amp;utm_content=3D365107955&amp;_hsenc=3Dp2ANqtz-8Xr-=
+t24Fm1oB1L2NUFIuUG_Ey3gPywSKeWDOY2OupVW_FWxui52m2MOpVQuYQxP-zoX-Y_5t1xSqzrj=
+bgTgYvIyVFJbg&amp;_hsmi=3D365763676" style=3D"font-family:Helvetica,Arial,s=
+ans-serif; font-size:14px; color:#8995af; font-weight:normal; text-decorati=
+on:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"qjPJqCop" target=3D"_blank">Manage preferences</a>
+         =20
+          <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/MVxFmPj=
+JJj2W71-4hF5dVBbMW5SJqyG5xFgghN3pwdFv3qgyTW8wLKSR6lZ3pWW3hMSzT3jTR4CW5cp1C9=
+5JZL0ZVlZpKS1LDZnmW661nHm4z77N-W8qK8H85W2GMVW4SX0Yf3tSMCJW7PG8qC1wr8BXW5gpf=
+nq71gVHgW2dwK0v9j27mbVLJJn9697N9RW1mS9qx1x3LGtW3XSMxL7vk8CxW2tny3B1RjgkxW4C=
+rXLW6yHFY-VssvMR1tg3qjW312npd5FcgMSW8Vks_R6Hqh7JW8YnyFL6JnzrvW6VL0Qw3Bnq6qW=
+5n_LzK6n-z5VW6_9ryS3BXHhtW3-166H83L0r0W4cP9gv9c50T8W8w_1FF1rwblSW26R3Kb82tc=
+dzW4fzHC63p22QhW10F5mD5cGprjW7s9PQz5hVVKnf87MQPM04" target=3D"_blank" style=
+=3D"font-family:Helvetica,Arial,sans-serif; font-size:14px; color:#8995af; =
+font-weight:normal; text-decoration:underline; font-style:normal" data-hs-l=
+ink-id=3D"0" data-hs-link-id-v2=3D"qewU1wN6">Imprint</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://info.leanix.net/e3t/Cto/WY+113/cjkwq04/MVxFmPjJJj2W71-4=
+hF5dVBbMW5SJqyG5xFgghW3pwdnJ3Db8z8112" alt=3D"" width=3D"1" height=3D"1" bo=
+rder=3D"0" style=3D"display:none!important;min-height:1px!important;width:1=
+px!important;border-width:0!important;margin-top:0!important;margin-bottom:=
+0!important;margin-right:0!important;margin-left:0!important;padding-top:0!=
+important;padding-bottom:0!important;padding-right:0!important;padding-left=
+:0!important"></body></html>
+------=_Part_673155_411260332.1749573979242--
+

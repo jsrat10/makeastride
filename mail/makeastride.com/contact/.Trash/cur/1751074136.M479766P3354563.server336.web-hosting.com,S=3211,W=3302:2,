@@ -1,0 +1,91 @@
+Return-Path: <no-reply@makeastride.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id 0EnQGlhFX2jDLzMAM7Pthw
+	(envelope-from <no-reply@makeastride.com>)
+	for <contact@makeastride.com>; Fri, 27 Jun 2025 21:28:56 -0400
+Return-path: <no-reply@makeastride.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 27 Jun 2025 21:28:56 -0400
+Received: from makerjbm by server336.web-hosting.com with local (Exim 4.98.2)
+	(envelope-from <no-reply@makeastride.com>)
+	id 1uVKND-0000000EArZ-2JsG
+	for contact@makeastride.com;
+	Fri, 27 Jun 2025 21:28:55 -0400
+To: contact@makeastride.com
+Subject: Enquire from the web page
+Date: Sat, 28 Jun 2025 01:28:55 +0000
+From: no-reply@makeastride.com
+Reply-To: info@makeastride.com
+Message-ID: <wQZpZfZbwGgZwhRJQ1uhCbAoXUA7H06QEfZmhrHjTU@makeastride.com>
+X-Mailer: PHPMailer 6.5.0 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="b1_wQZpZfZbwGgZwhRJQ1uhCbAoXUA7H06QEfZmhrHjTU"
+Content-Transfer-Encoding: 8bit
+Sender:  <makerjbm@server336.web-hosting.com>
+
+This is a multi-part message in MIME format.
+
+--b1_wQZpZfZbwGgZwhRJQ1uhCbAoXUA7H06QEfZmhrHjTU
+Content-Type: text/plain; charset=us-ascii
+
+Name: Cecelia
+
+E-mail: info@makeastride.com
+
+Message: Morning 
+
+I wanted to reach out and let you know about our new dog harness. It's really easy to put on and take off - in just 2 seconds - and it's personalized for each dog. 
+Plus, we offer a lifetime warranty so you can be sure your pet is always safe and stylish.
+
+We've had a lot of success with it so far and I think your dog would love it. 
+
+Get yours today with 50% OFF: https://caredogbest.com
+
+FREE Shipping - TODAY ONLY! 
+
+Cheers, 
+
+Cecelia
+
+
+--b1_wQZpZfZbwGgZwhRJQ1uhCbAoXUA7H06QEfZmhrHjTU
+Content-Type: text/html; charset=us-ascii
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+	<html>
+		<head>
+			<title>Enquire from the web page</title>
+			<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+			<style><!--
+* { font: 12px Arial; }
+strong { font-weight: bold; }
+--></style>
+		</head>
+		<body><table cellspacing="0" cellpadding="5"><tr><td style="vertical-align: top;"><strong>Name: </strong></td><td style="vertical-align: top;">Cecelia</td></tr>
+</tr>
+<tr><td style="vertical-align: top;"><strong>E-mail: </strong></td><td style="vertical-align: top;">info@makeastride.com</td></tr>
+</tr>
+<tr><td style="vertical-align: top;"><strong>Message: </strong></td><td style="vertical-align: top;"><div style="max-width: 400px;">Morning <br />
+<br />
+I wanted to reach out and let you know about our new dog harness. It's really easy to put on and take off - in just 2 seconds - and it's personalized for each dog. <br />
+Plus, we offer a lifetime warranty so you can be sure your pet is always safe and stylish.<br />
+<br />
+We've had a lot of success with it so far and I think your dog would love it. <br />
+<br />
+Get yours today with 50% OFF: https://caredogbest.com<br />
+<br />
+FREE Shipping - TODAY ONLY! <br />
+<br />
+Cheers, <br />
+<br />
+Cecelia</div></td></tr>
+</tr>
+</table></body>
+	</html>
+
+
+--b1_wQZpZfZbwGgZwhRJQ1uhCbAoXUA7H06QEfZmhrHjTU--
+

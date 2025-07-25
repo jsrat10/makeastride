@@ -1,0 +1,86 @@
+Return-Path: <>
+Delivered-To: makerjbm@server336.web-hosting.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id 2HyiJkvL42YUASsAM7Pthw
+	(envelope-from <>)
+	for <makerjbm@server336.web-hosting.com>; Fri, 13 Sep 2024 01:19:07 -0400
+Return-path: <>
+Envelope-to: makerjbm@server336.web-hosting.com
+Delivery-date: Fri, 13 Sep 2024 01:19:07 -0400
+Received: from mailnull by server336.web-hosting.com with local (Exim 4.96.2)
+	id 1soyi3-00BqlR-1x
+	for makerjbm@server336.web-hosting.com;
+	Fri, 13 Sep 2024 01:19:07 -0400
+X-Failed-Recipients: contact@makeastrice.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@server336.web-hosting.com>
+To: makerjbm@server336.web-hosting.com
+References: <E1soyi3-00BqlF-12@server336.web-hosting.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1726204747-eximdsn-168185500
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1soyi3-00BqlR-1x@server336.web-hosting.com>
+Date: Fri, 13 Sep 2024 01:19:07 -0400
+
+--1726204747-eximdsn-168185500
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  contact@makeastrice.com
+    The mail server could not deliver mail to contact@makeastrice.com.  The account or domain may not exist, they may be blacklisted, or missing the proper dns entries.
+
+--1726204747-eximdsn-168185500
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; server336.web-hosting.com
+
+Action: failed
+Final-Recipient: rfc822;contact@makeastrice.com
+Status: 5.0.0
+
+--1726204747-eximdsn-168185500
+Content-type: message/rfc822
+
+Return-path: <makerjbm@server336.web-hosting.com>
+Received: from makerjbm by server336.web-hosting.com with local (Exim 4.96.2)
+	(envelope-from <makerjbm@server336.web-hosting.com>)
+	id 1soyi3-00BqlF-12
+	for contact@makeastrice.com;
+	Fri, 13 Sep 2024 01:19:07 -0400
+To: contact@makeastrice.com
+Subject: =?UTF-8?B?TmV3IEluc3RhbGxhdGlvbiBvZiBBYmFudGVDYXJ0?=
+X-PHP-Originating-Script: 0:mail_functions.php
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+From: Softaculous <softaculous@server336.web-hosting.com>
+Reply-To: softaculous@server336.web-hosting.com
+X-Mailer: PHP/8.1.28
+Message-Id: <E1soyi3-00BqlF-12@server336.web-hosting.com>
+Sender:  <makerjbm@server336.web-hosting.com>
+Date: Fri, 13 Sep 2024 01:19:07 -0400
+
+A new installation of AbanteCart 1.4.0 has been completed. The details of the installation are shown below:
+Path : /home/makerjbm/public_html/sc
+URL : https://makeastride.com/sc
+Admin URL : https://makeastride.com/sc/index.php?s=scadmin
+Admin Username : n0cdl
+Admin Password : ********
+Admin Email: admin@makeastride.com
+MySQL Database : makerjbm_aban252
+MySQL DB User : makerjbm_aban252
+MySQL DB Host : localhost
+MySQL DB Password : ********
+Update Notification : Enabled
+Auto Upgrade : Disabled
+Automated Backups : Disabled
+Time of Installation : September 13, 2024, 1:19 am
+
+If you wish to unsubscribe from such emails, go to your Control Panel -> Softaculous -> Email Settings
+
+
+--1726204747-eximdsn-168185500--

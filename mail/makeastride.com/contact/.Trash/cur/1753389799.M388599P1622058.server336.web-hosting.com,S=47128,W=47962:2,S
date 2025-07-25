@@ -1,0 +1,834 @@
+Return-Path: <1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id cIRPFueagmgqwBgAM7Pthw
+	(envelope-from <1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net>)
+	for <contact@makeastride.com>; Thu, 24 Jul 2025 16:43:19 -0400
+Return-path: <1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 24 Jul 2025 16:43:19 -0400
+Received: from [198.54.122.200] (port=57508 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.2)
+	(envelope-from <1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net>)
+	id 1uf2mc-00000006qRl-1Im8
+	for contact@makeastride.com;
+	Thu, 24 Jul 2025 16:43:18 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=bf03.hubspotemail.net header.s=hs1 header.b=VHS0hO2O;
+	dkim=pass header.d=mastra.ai header.s=hs1-47815345 header.b="Zu5/E84t";
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of "1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net" designates 143.244.90.20 as permitted sender) smtp.mailfrom="1axbisobfgmr2cpsvsnsh44th4hb6vploco05q-contact=makeastride.com@bf03.hubspotemail.net";
+	dmarc=pass (policy=quarantine) header.from=mastra.ai
+Received: from bd77gdi.bf03.hubspotemail.net (bd77gdi.bf03.hubspotemail.net [143.244.90.20])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4bp2yS5j3Xz17mZ
+	for <contact@makeastride.com>; Thu, 24 Jul 2025 20:43:12 +0000 (UTC)
+Received: by 172.16.28.112 with SMTP id a0b9znrox27ui21doh3hlt3cjggmo0mvmfmtvzl6v1u;
+        Thu, 24 Jul 2025 20:43:12 GMT
+DKIM-Signature: v=1; s=hs1; d=bf03.hubspotemail.net; 
+        i=@bf03.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ARk3YVM3kmfQaHH0oS6JayfVIyQm2e9OLi1E+T7T7hI=; 
+        b=VHS0hO2On14RJSufjjzAikLuvAXBMrUdvyZDg5rWqbnEZ5uoB0x45iYzNEltqQ
+         ujWK6LlSt+rOJir06sQ26lzQIP39ZHuRsP2kQ6sILMdw51oIJLv75bpYVU1US1R
+         hViC1+a+NyLy6eoaW2Kyiv7I7f99kAB7wxkpqIqG6leu3omsacTkxb4JYCrLIy+
+         kpJrCOalOSgBOTGsvyFNXAtJIOY8LWjvR+JwGApisxljMpRsR8HC8Ek45xaW6po
+         6lqQNS8MHb46UAtaallZ/Ri39iP0sdocX8gfd/+H7Xr5QhgLvULdo0kuNx6pxQ9
+         As87PHMRvcpxCrt5oA42k1zfflFw==; q=dns/txt; t=1753389792; 
+        x=1753652592;
+DKIM-Signature: v=1; s=hs1-47815345; d=mastra.ai; i=@mastra.ai; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ARk3YVM3kmfQaHH0oS6JayfVIyQm2e9OLi1E+T7T7hI=; 
+        b=Zu5/E84t7I8KtmrPCACcqeWyq6Sk7j8sMmTYRJ0g4hYQV5IfFzpqzI4gVRIKc6
+         wPF6W4QN2mR81ocBcZZRfpD18HqBNUpnxKFoQ5ZEsuhHGet6OoaQQN6S9IbRGdz
+         CSQO+cS70c8xN0a9fX/X5JXquP0TNh69ixruocnOzkdNtL/kHxNZBR9N0Qw/f5X
+         S+XLMjirq7UfbdK4GsxtUoz15bO/rwNHeDJeRyxzHGPIdNRHz5us8jWPgv/etZw
+         ZLQVVxC8bLNUSf9u2VTvUiz9JPjJEc+iqF/YEepyQDsa/7PBQ8PHUbgmENjhtUl
+         wXa3sPPBYUKRVVpgXbQWW6ym3GNA==; q=dns/txt; t=1753389792; 
+        x=1753652592;
+X-HS-Cid: 1axfaf9p1ycld6lnvjvzoomnio03cp0rn4uiou
+List-Unsubscribe: <mailto:1axcuqv9mcccibeq23z3kju5o0na3ip9jql2vy-contact=makeastride.com@bf03.hubspotemail.net?subject=unsubscribe>, <https://hs-47815345.s.hubspotemail.net/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-GjW25q5LN3z242HW4ktDXF3XxGCTW2zGVxN22WRT9W21sBrJ2PRd00W2Mv-WV4rBD8cW41VfgW4cwqgZW4kzZQx2Tx17kW2YgQ1h386VkMW3Y28YL43XZ5SW2FTR4h21rf6KW3LRCL945qJgcW2vZMBt1_364yW256J_34kN1j8W4mdt8l34wf_1W1_62_X1SvR79W3W171v2vwd7DW3ZM8bS2sF3f9W3NVlsq3F5tkGW2WMQx_45S6xQW45mLj02-C26RW2TQXpN2Pn-30W1Bm42y3CdJf4W38DtkW2xyWS1W2qBMqN2FZPQrW4r7qQ34kfZMKW2zG5pz4twF6kW4pjPqt1Zkvl-W49TScj2WdS98W2zG5k321hqYbW47xfB943PTwJW47xFRq45zCswW3VWWg_1Lv97KW3bq4Dm22RCwYW3H35pJ1LlcY9W2YxTff3K27w-W4kBStJ2p5SbkW2qPx1D3Z-F3zW3JT8p62nPqrcW1Xhd9d43wVYNW2Yym5y2HTbDPW3yN4ln30qh60W3f__Z94mF_BZW4pJb-d3XP14kW30bBbL2zwG6DW3jcvms4pK2-MW2YDxc83BV7s_W4htMTx3ddDtMW3SKdn54mq4lVW2PNlrW3jqcfrW4frwtG45Y54r0>
+Date: Thu, 24 Jul 2025 16:43:12 -0400
+From: Abhi Aiyer <abhi@mastra.ai>
+Reply-To: abhi@mastra.ai
+To: contact@makeastride.com
+Message-ID: <1753389788047.81fd482b-f36c-48d6-b275-621bebb457e0@bf03.hubspotemail.net>
+Subject: Mastra Changelog #25: Come build Mastra Templates with us for our
+ second hackathon
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_690410_1475707972.1753389791906"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+------=_Part_690410_1475707972.1753389791906
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+... it starts Monday but it's all virtual + async so you can definitely mak=
+e it!
+
+Mastra Changelog #25
+
+Another big week for Mastra! We're thrilled to announce Mastra Templates an=
+d our second hackathon, plus major improvements to Memory, Evals, and more.
+
+Introducing Mastra Templates + MASTRA.BUILD Hackathon
+
+Mastra Templates are here! Bootstrap your AI projects instantly with pre-bu=
+ilt starting points for common agentic use cases.
+
+npx mastra@latest create --template [template-name]
+
+Browse our templates library (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+=
+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz3lcq-W69sMD-6lZ3q=
+7V6MTrn1lzl8RW4wbwpQ5Bj9B_W5x0qsw6j8vJHW8_sb2L3TRfqsW1KTtLW10VqmJW33lSWL60m=
+1hDW7NBbz_1dsq3yW3t-vCH4gbhd5VVRlhf45m-0YN59l0sysrdwWW7RjTRS44_YCQW8NJLw14W=
+Tk02W452vk84vsDd2W8QPlbK3gtR8sW23d5SR1mfkMGW1tNwDY21tlTSW3ltqQk4TvBfBW2Df5X=
+Y2Mr3xdT77dK8WV0hHW8YL71H97fR14f2c71zW04 ) featuring ready-to-use projects =
+for PDF chatbots, text-to-SQL, browser agents, CSV analysis, docs chatbots,=
+ and more. Skip the boilerplate and get straight to building.
+
+Join MASTRA.BUILD Templates Hackathon (July 28 - August 11)
+
+Our second virtual hackathon is focused entirely on building Mastra Templat=
+es! Cash prizes, feature slots in our templates library, and judges from Ch=
+roma, Arcade, WorkOS, Smithery, Browserbase,  and Recall await.
+
+Kickoff ceremony livestreamed Monday, July 28th at noon PT.
+
+Register now (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWm=
+cyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz3lcq-W69sMD-6lZ3pqW6Z-vDb5JKZ9DW5=
+Hrm_z1Cp54BW1mj4wD7v3FKMW40Z7Cf63zkbWVCYPMd3rDV9RW2_x9MT6gX2FNW1PxxXZ54z00y=
+W50nJ1S9fcz9SN5j-DbFH8KD4W2269GM6BVlgkW7__2qG5dNpb4W6n282_5Z3JYCW5dJ5nC1vwc=
+D5W7h1MDM72HtSqW5Byr282-62BbW6tx7Z51K0B2BW9l13Vm6lsbF-W6yD2s59gjTxPW5lhvXz6=
+NTvjkW3PbdlN4nn37qf7XFjJl04 ) | Learn more (https://d5DGBm04.na1.hubspotlin=
+ks.com/Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz3lc=
+q-W69sMD-6lZ3lKW8h9SBb6Kys6cW7fJsLc4XzsHRVy3K8c91wD7DW8xPg3N6zNbZzW75bTSn8D=
+vtq_N3FmZnJqzFb7VYz_mc5bb5QZW2xJjQ95BB2xSVrb6Nn7s80z1N8JM6dHjw9qrW7-354t8s7=
+Q3ZW7FCTCh7hhtbnW419Q6b2gTphGVSRZbR8n1XknW4QFmL320yhXfW5gGw9s7DMKZsMYt0HJrB=
+bHVN5FZgjSF5qqnW29XnRF8z_dvXW4-xwj66Fb48Sf31n92004 )
+
+Other updates from this week
+
+- StreamVNext Protocol. We've shipped a new unified streaming protocol that=
+ enables nested streaming and usage tracking for all Mastra primitives=E2=
+=80=94agents, tools, and workflows.
+- Complete Eval Scores System. Major new evals infrastructure with code and=
+ LLM-based scoring, scorer hooks for agents and workflows, and support for =
+all major databases.
+- New MSSQL memory provider. Microsoft SQL Server is now supported as a bac=
+kend for memory storage, complete with implementation and tests.
+- Auth improvements. The dev playground now bypasses authentication for loc=
+al development, making testing much easier when auth is enabled.
+- Enhanced MongoDB performance. Improved query performance by pre-filtering=
+ on properties before vector search and fixed multi-property filter bugs.
+- Memory in Playground. Memory features are now available in the playground=
+ with semantic recall and configurable options. Test and develop memory-ena=
+bled agents directly in the UI.
+
+Find the full release log here (https://d5DGBm04.na1.hubspotlinks.com/Ctc/Z=
+Y+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yQ83lcq-W7lCdLW6lZ=
+3kPW6DtZ8027nRk9W6rpzLG56qWs5W8ZbfJ28H58G_W1pRGdH4tcD7MW6kxwkR3cXcWkW18gt-N=
+50rh9lW3zmMgQ6VQzJpW8TGtPm6qrcw4W121C8m7y7qZBW8BNtxq7yY06gW8DkNBk12LPCFW93J=
+lGp1-d3X2W3nSG6z8QXl_jN2_pCzmNGNtRW5ktDQg3jWkSpW1pQKt_4qDQ-kW84-3qL7XZs63W6=
+vN2Mk2Kh4NhVhj8Kt1HvcJSW5NfVsY99K9PMW3YMdD74nyXsMW5JmcLC7l3VLNW99yYHK5c579m=
+W5kV7Hp3YNhzWf9jWGzC04 ) .
+
+Events and workshops
+
+Upcoming
+
+- July 28th: MASTRA.BUILD Templates Hackathon (https://d5DGBm04.na1.hubspot=
+links.com/Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz=
+3lcq-W69sMD-6lZ3pqW6Z-vDb5JKZ9DW5Hrm_z1Cp54BW1mj4wD7v3FKMW40Z7Cf63zkbWVCYPM=
+d3rDV9RW2_x9MT6gX2FNW1PxxXZ54z00yW50nJ1S9fcz9SN5j-DbFH8KD4W2269GM6BVlgkW7__=
+2qG5dNpb4W6n282_5Z3JYCW5dJ5nC1vwcD5W7h1MDM72HtSqW5Byr282-62BbW6tx7Z51K0B2BW=
+9l13Vm6lsbF-W6yD2s59gjTxPW5lhvXz6NTvjkW3PbdlN4nn37qf7XFjJl04 )
+
+Tweet of the week
+
+Screenshot 2025-07-24 at 3.28.40 PM (https://d5DGBm04.na1.hubspotlinks.com/=
+Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz3lcq-W69sM=
+D-6lZ3pTW42NtfF5fY8t4N1X6WSwzx5qBW67SM_f3YnNr_W6RW3gR3_7CLvW8-mq6Y51KS6CW3X=
+nQcH21LLZ5W2k70qR1YdhVXW4vwLp75FdWvKW98zNvN9hFKTnW2Qgt6W3rvfpYW8mWgyn3Ss23Q=
+W3bx1K01FDTTfW1_8MSx3Gh9n7W2V5vW-4zhBs1W3fvTc59lFQDwW4Cwm504bZpBRW5vctjk9cS=
+NlXW53NF1R5bDFbgW4YKMPs1kGnnZW17MZn41DCJF8f6J7-6-04 )
+
+Keep on building in the cloud and bussin' in the streets,
+
+Abhi Aiyer
+
+CTO at Mastra.ai
+
+abhiaiyer 1 (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWmc=
+yq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPz3lcq-W69sMD-6lZ3lZW8R6r_s1KVzpdW7X=
+vgpm8HgdLmW6gPCwM9jKL91W6Zd46N1T4VmHN8GphqG41QfLW2mH2Dz82nymbW5dc9Hn4tqDslW=
+3yQVsD1D99cZVvFYDY85jQlLW7sHsFt7qKVh1N4cTYHqhj1kNVfd7wl9cBLQSW4kqDR36xByLHW=
+8yk_MW1yCxj5W3qplsK4p3FGSW1dnrfq3cm02yW4_YMJG6vvbn_W7RjW0M8J-1pvW94S7KN5Y_d=
+GbW2LM19R2lpTvfdZNMRj04 )
+
+PS: We want Mastra to only get better. Take a few mins to reply to this ema=
+il with some thoughts, ideas, or feedback?
+
+LinkedIn (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWmcyq1=
+CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3lcq-W6N1vHY6lZ3nWVxfT097sFz4pW9c1K4J=
+3vdxjNW2wQSsP47J3JqW8YPyVM1WcpXdW7hBJVb8GyGh8W9j_67w53DrhPN8lxvBFB-NldW3cXh=
+rz1-BFdPW3TMW-17FFchlW8Z6rMY2VpxC-W7-Cktq4HXbBtW4DTbRX6SrpRbW1lfxYr3zvxtYW8=
+9CvBW3gZc6ZW5JV9nV7QKFVwW969ljt28x7vGW3g-GMY3YbrpfW4xZ7nc7YH4p6N2fDGJ9F4VFy=
+N4mLsG2cC0-dW36jBrj5YsX4wW7c4NRs4f8b3zf7pK_NK04 )
+
+X (https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW7=
+SDbxb114SZXW89-nNw5znXW7N5d8yPz3lcq-W69sMD-6lZ3pdW4JfpNP9fgK-bW71xJ8z6FxKfP=
+V14Rx_5YFcWlW1tLF1s8xQcL6W6FfxXw50WVn7W2RSTJN6qhm_JW2MN51115Wvt2N7Yw3xq-bh9=
+SW15vRkK72nTTBN1d3sKGJMQY_W7S24G77_Rs4LW6PBMzW4shyDwW7D3ZC64ZvrwqW8mGRx167g=
+Qt0W4tMthR8p1nczW8XKvnM4j7CbQW3sGJ3Y4Dtpn5W5WLzrw3s44xgW83f21g3y6_MXW79Ts4t=
+8K3flTf6BlBVv04 )
+
+Kepler Software, Inc, 2261 Market Street, STE 5559, San Francisco, CA 94114=
+, United States, +1 510-240-9383=E2=81=A9
+
+Unsubscribe (https://hs-47815345.s.hubspotemail.net/hs/preferences-center/e=
+n/direct?data=3DW2nXS-N30h-S2W24_8DQ2nPSJKW4mk4Gt4cjds6W30LH7l1LhN9hW2PCG18=
+3H61KpW2qGTCs1YZ13xW3z4Bwn1LF4fzW3jvRB93_RsGFW3R3ZLq45RFrCW2xGKZj2CCphZW2nF=
+Vkf3SywmwW1QC1D71T_YvMW1NgkS04mDJmbW47NchN1ZlJXRW3QRHFp2p9dBjW1SqhFY2zDsWbW=
+3GXbpb49Rl0xW4knb502HywPnW3JL56k2HSjJRW2Wg4HS41K42qW2RKGY01Vk3FbW2CHzpw383w=
+9vW49ykZq2PyLs4W2PV9yj2MBDgZW3VRJ3R2RC0qgW49lvh-2Px2M-W4kDw0K2qNlhBW2p6f2K1=
+ZtMf0W2qSw7p2KBPrSW3NWG6p1Qxgn6W2KMYV73XDGFFW38j0gV2qBJVmW2sB5Kp3LTnT5W3Fcc=
+r038xrPZW2Mm7dK4rBfjpW3yXp7c45n5TpW2nYJ5D4mkwB6W4pyng13dcV4mW49Q4Zd3K22JYW3=
+R65gl1VnlKRW32lhpr2CJP3SW3bqrGQ3C39_QW349LJV384p0BW2TMYtq47Gk6DW4mzmtl1VpHr=
+ZW3R6YGw3zh0m6W47WGhj3gdSpCW3ZGv2M1BClZBW43xh_72PzwHzW1BwPQ72PQrxLW36Cv8b4c=
+N_dcf3XHytm04&_hsenc=3Dp2ANqtz-_iL6WcrJ7seAFWOson7LoItbspwneaQbrHjtxQDqvioX=
+TWp5UtuktqmOTwy3nIbBpcgyGrD0CTuM454x69NPXhBLk3Vg&_hsmi=3D372886982 )
+Manage preferences (https://hs-47815345.s.hubspotemail.net/hs/preferences-c=
+enter/en/page?data=3DW2nXS-N30h-S2W24_8DQ2nPSJKW4mk4Gt4cjds6W30LH7l1LhN9hW2=
+PCG183H61KpW2qGTCs1YZ13xW3z4Bwn1LF4fzW3jvRB93_RsGFW3R3ZLq45RFrCW2xGKZj2CCph=
+ZW2nFVkf3SywmwW1QC1D71T_YvMW1NgkS04mDJmbW47NchN1ZlJXRW3QRHFp2p9dBjW1SqhFY2z=
+DsWbW3GXbpb49Rl0xW4knb502HywPnW3JL56k2HSjJRW2Wg4HS41K42qW2RKGY01Vk3FbW2CHzp=
+w383w9vW49ykZq2PyLs4W2PV9yj2MBDgZW3VRJ3R2RC0qgW49lvh-2Px2M-W4kDw0K2qNlhBW2p=
+6f2K1ZtMf0W2qSw7p2KBPrSW3NWG6p1Qxgn6W2KMYV73XDGFFW38j0gV2qBJVmW2sB5Kp3LTnT5=
+W3Fccr038xrPZW2Mm7dK4rBfjpW3yXp7c45n5TpW2nYJ5D4mkwB6W4pyng13dcV4mW49Q4Zd3K2=
+2JYW3R65gl1VnlKRW32lhpr2CJP3SW3bqrGQ3C39_QW349LJV384p0BW2TMYtq47Gk6DW4mzmtl=
+1VpHrZW3R6YGw3zh0m6W47WGhj3gdSpCW3ZGv2M1BClZBW43xh_72PzwHzW1BwPQ72PQrxLW36C=
+v8b4cN_dcf3XHytm04&_hsenc=3Dp2ANqtz-_iL6WcrJ7seAFWOson7LoItbspwneaQbrHjtxQD=
+qvioXTWp5UtuktqmOTwy3nIbBpcgyGrD0CTuM454x69NPXhBLk3Vg&_hsmi=3D372886982 )
+------=_Part_690410_1475707972.1753389791906
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Mastra Changelog #25: Come build Mastra Templates with us for ou=
+r second hackathon</title>
+    <meta property=3D"og:title" content=3D"Mastra Changelog #25: Come build=
+ Mastra Templates with us for our second hackathon">
+    <meta name=3D"twitter:title" content=3D"Mastra Changelog #25: Come buil=
+d Mastra Templates with us for our second hackathon">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+    <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+    </o:OfficeDocumentSettings>
+    <w:WordDocument xmlns:w=3D"urn:schemas-microsoft-com:office:word">
+      <w:DontUseAdvancedTypographyReadingMail/>
+    </w:WordDocument>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #ffffff;}
+</style>
+<![endif]-->
+<!--[if mso | IE]>
+  <style type=3D"text/css">
+    .hse-column-container { border: none !important; padding: 0 !important;=
+ }
+  </style>
+<![endif]-->
+   =20
+     =20
+ =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"http://47815345.hs-sites.com/-temporary-slug-49d00126-334b-4607-bb=
+5d-8d81b84712cf"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !=
+((mso)|(IE))]><!-- --><style type=3D"text/css">@media only screen and (max-=
+width:639px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stre=
+tch-cta .hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}@media only screen and (max-width:639px){.hse-border-m{border-left:1px sol=
+id #ccc !important;border-right:1px solid #ccc !important;box-sizing:border=
+-box}
+.hse-border-bottom-m{border-bottom:1px solid #ccc !important}.hse-border-to=
+p-m{border-top:1px solid #ccc !important}
+.hse-border-top-hm{border-top:none !important}.hse-border-bottom-hm{border-=
+bottom:none !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-12{max-width:600px !important;width:600px !impo=
+rtant}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-12=
+{max-width:600px !important;width:600px !important}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-top:=
+20px !important}
+#section-0 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important}
+#section-0 .hse-column-container{background-color:#fff !important} }@media =
+screen and (max-width:639px){.social-network-cell{display:inline-block}
+}@media only screen and (max-width:639px){.hse-body-wrapper-td{padding-bott=
+om:20px !important}
+#section-1 .hse-column-container{padding-top:0px !important;padding-bottom:=
+0px !important;background-color:transparent !important}
+#section-1 .hse-column-container{background-color:transparent !important} }=
+</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wrapper_m=
+ain a[x-apple-data-detectors]{color:inherit !important;text-decoration:none=
+ !important;font-size:inherit !important;font-family:inherit !important;fon=
+t-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#ffffff" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+3496d; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#fff=
+fff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">... it starts Monday but it's all virtual + async so you can =
+definitely make it!</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#ffffff" bgcolor=3D"#ffffff">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-wor=
+d; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section-0" class=3D"hse-section h=
+se-section-first" style=3D"padding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-0-0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_174665117581=
+91" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module_17466511758191_" class=3D"hs_cos_wrapper hs_cos_wrapper_w=
+idget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: in=
+herit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-c=
+os-type=3D"rich_text"><h1 style=3D"margin:0; mso-line-height-rule:exactly; =
+line-height:175%; font-size:28px">Mastra Changelog #25</h1>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Another big wee=
+k for Mastra! We're thrilled to announce Mastra Templates and our second ha=
+ckathon, plus major improvements to Memory, Evals, and more.</p>
+<h2 style=3D"margin:0; mso-line-height-rule:exactly; line-height:175%; font=
+-size:22px"><!-- notionvc: b71fdf9d-d003-4981-927a-1cfe22401c7f --></h2></d=
+iv></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1746651213601" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1746651213601_0" class=3D"hse-column hse-size-12">
+    <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=
+=3D"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D=
+"font-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:b=
+reak-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_174665129747=
+53" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_modul=
+e" style=3D"color: inherit; font-size: inherit; line-height: inherit;" data=
+-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_c=
+os_wrapper_module_17466512974753_" class=3D"hs_cos_wrapper hs_cos_wrapper_w=
+idget hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: in=
+herit; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-c=
+os-type=3D"rich_text"><h2 style=3D"margin:0; mso-line-height-rule:exactly; =
+line-height:175%; font-size:22px"><!-- notionvc: 8e7d2e11-c8bd-4dc7-95c9-82=
+eddf20e90f --></h2>
+<h2 style=3D"margin:0; mso-line-height-rule:exactly; line-height:175%; font=
+-size:22px">Introducing Mastra Templates + MASTRA.BUILD Hackathon</h2>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><strong>Mastra =
+Templates are here!</strong> Bootstrap your AI projects instantly with pre-=
+built starting points for common agentic use cases.</p>
+<div style=3D"mso-line-height-rule:exactly; line-height:175%">
+<div style=3D"mso-line-height-rule:exactly; line-height:175%">
+<div style=3D"mso-line-height-rule:exactly; line-height:175%">
+<pre style=3D"white-space:pre-wrap">npx mastra@latest create --template [te=
+mplate-name]</pre>
+</div>
+</div>
+</div>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+00536d57-cdec-43fe-9307-282caa34d185 --></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+d00ff82c-b949-4c3e-ab89-9cc90ec85e07 --></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+80ed7e10-7721-453f-9e7b-2fdc643b2828 --></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+7aabb1e6-c158-4e29-8724-cf37a0255519 --></p></div></div></td></tr></tbody><=
+/table>
+<div id=3D"hs_cos_wrapper_module_17521676079201" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"pr=
+esentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#23496d; word-break:break-word; text-align=
+:center; padding:10px 20px; font-size:0px">
+        <img alt=3D"deepresearch" src=3D"https://hs-47815345.f.hubspotemail=
+.net/hub/47815345/hubfs/deepresearch.gif?width=3D1120&amp;upscale=3Dtrue&am=
+p;name=3Ddeepresearch.gif" style=3D"outline:none; text-decoration:none; max=
+-width:100%; font-size:16px" width=3D"560" align=3D"middle">
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17486187245802"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module_17486187245802_" class=3D"hs_cos_wrapper hs_cos_wrapper_widg=
+et hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-=
+type=3D"rich_text"><div style=3D"mso-line-height-rule:exactly; line-height:=
+175%">
+<p style=3D"mso-line-height-rule:exactly; line-height:175%; font-weight:nor=
+mal">Browse our <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113=
+/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3lXW8=
+-FxVs3dkxH6W6DfycL6X-3gjW6z4zKc1rhRldN3MKRb51FkDKF32MT6HvpCXW4PMlct3BqgJPW4=
+HMpwJ3JyQQrW3T5Q2l6KFrj_W89pd3w1_PkBpW2vWl3q48QGC-W3W19wd316G4FW1qdg-13gXmr=
+qW5q0m0b8Mg6lQW6x8N5y8g4b8FW5PD7l22-fnRpW47n7nC9f-l9XW4ykjH81BfS2jW5jrfsz4D=
+xR2fW7srs8D7mr1T9W1MQb7s912rhSW1XS0LX24LChtW3dbXND2VZg9gf5v8wWn04" style=3D=
+"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"oUZWjj5t" targe=
+t=3D"_blank">templates library</a> featuring ready-to-use projects for PDF =
+chatbots, text-to-SQL, browser agents, CSV analysis, docs chatbots, and mor=
+e. Skip the boilerplate and get straight to building.</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><strong>Join MA=
+STRA.BUILD Templates Hackathon (July 28 - August 11)</strong></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Our second virt=
+ual hackathon is focused entirely on building Mastra Templates! Cash prizes=
+, feature slots in our templates library, and judges from Chroma, Arcade, W=
+orkOS, Smithery, Browserbase,&nbsp; and Recall await.<br><br></p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Kickoff ceremon=
+y livestreamed Monday, July 28th at noon PT. <br><br><a href=3D"https://d5D=
+GBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89=
+-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3lsW56DTH11qJS__W6rgv4f4QkFBVW1bLm2Z5sH-FLV=
+1tgFt4gQm0sW7qQ_rb3_rXcWW5fdRL47rDkl8VsGGN88_3dP2V5D4q96N9_CkW5Tg4q96whVVhW=
+75PvNh8m52Z2W3t7x9z8M73n8W1GdNwF3GyhKyW1FS4H848zqYPW8cMmpR3gcz52W36RwSy8rCc=
+xqW2ljDMf5V9z1fW2_v4Z38lBmp0N10hHMSfFw2hVzmJV86-ZHzWW5yHTG43l5_LkW1v5Vnm91Y=
+prgN2Tbs-BN0sg8f7B43CH04" style=3D"color:#00a4bd" data-hs-link-id=3D"0" dat=
+a-hs-link-id-v2=3D"Jf285mKK" target=3D"_blank">Register now</a> | <a href=
+=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm04/VWmcyq1CKQvjW=
+7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3nLN9hf5cfqkkfQVhxVKh9cMHv5W=
+5jnK9W6wczqkMw1_nWrT-P9W3PfSZq5RxnggW6k13jV7J9PKsW7B2Lly7cv0FkW4f-ZqL8bg67J=
+W10v3Gk66cNGrW15xRJJ9j3VBSW1196z73nkF8QW736yFF1HK5HZW5_wmhD4DCT5hW7zhtBF4Kl=
+M64W2h7ZWn22lM26W57N0yf5TMDyzW47bdfr1kcxx3N7JCgfpD921nW8Y07qF82y0whW24WkcC3=
+2h8b3W4Zslrq5NRpwnW62K5004SxgCHf4Q1mLl04" style=3D"color:#00a4bd" data-hs-l=
+ink-id=3D"0" data-hs-link-id-v2=3D"bxuovR/s" target=3D"_blank">Learn more</=
+a></p>
+<div style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</div>
+<strong><span style=3D"font-size: 22px;">Other updates from this week</span=
+></strong></div>
+<ul style=3D"mso-line-height-rule:exactly; line-height:175%">
+<li><strong>StreamVNext Protocol. </strong>We've shipped a new unified stre=
+aming protocol that enables nested streaming and usage tracking for all Mas=
+tra primitives=E2=80=94agents, tools, and workflows.</li>
+<li><strong>Complete Eval Scores System. </strong>Major new evals&nbsp;infr=
+astructure with code and LLM-based scoring, scorer hooks for agents and wor=
+kflows, and support for all major databases.</li>
+<li><strong>New MSSQL memory provider. </strong>Microsoft SQL Server is now=
+ supported as a backend for memory storage, complete with implementation an=
+d tests.</li>
+<li><strong>Auth improvements. </strong>The dev playground now bypasses aut=
+hentication for local development, making testing much easier when auth is =
+enabled.</li>
+<li><strong>Enhanced MongoDB performance. </strong>Improved query performan=
+ce by pre-filtering on properties before vector search and fixed multi-prop=
+erty filter bugs.</li>
+<li><strong>Memory in Playground.</strong>&nbsp;Memory features are now ava=
+ilable in the playground with semantic recall and configurable options. Tes=
+t and develop memory-enabled agents directly in the UI.</li>
+</ul>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Find the full r=
+elease log <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DG=
+Bm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yQ83m2nnW7lCdLW6lZ3kNW4CxRgX=
+2QWXnlVM1F765QLKr-W7bRLCx3QVJb-W5ft28643VK6QW7Xt9LL20CMZjN8xffXJt1LJ_W5fG8F=
+d6SmfpFN1JNcZc9Bfd1W8ccKB64gbc8HW723Wtd8z9-DQN2FtrZz8DDCTW41Yn7J3c9WlzW53M5=
+8l7K230CW8VNNN-6ncXMYN8X70PHXmptCW3NRPrj677tHkVZ2sXN3sZqVBVdHt8T5819hLW5Q0b=
+sd4MqB7KW2W6yhD33q6DjW26Zrq_6mtQwdVsKtvS86-_5qVNRqrQ5y9cRYW6RPCSj3HnjZPf3-N=
+Yn804" rel=3D"noopener" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-=
+hs-link-id-v2=3D"KeWaYk1g" target=3D"_blank">here</a>.<br><br></p>
+<h2 style=3D"margin:0; mso-line-height-rule:exactly; line-height:175%; font=
+-size:22px">Events and workshops</h2>
+<h3 style=3D"font-size:17px; margin:0; mso-line-height-rule:exactly; line-h=
+eight:175%">Upcoming</h3>
+<ul style=3D"mso-line-height-rule:exactly; line-height:175%">
+<li>July 28th: <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/=
+d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3kvN1K=
+-yjwmz9jJN1NcTqSc8Zw3W7lbVpK1DMz2DW64DWkm5QtXMFW7910qz3KKgDgW2FJj8Q6gdt97W2=
+qj5Zm2JbtclW8lSr229b8bXDW5RWTZ65Hg_8qW3MXfTy2pVg9MW2w08NP3J8hfPW12zBnb2SWNy=
+MW1mKq0C6VFwgnN7GGWWz2bgG7W7mXdpT3-By8qW3YHg8Y33bJXVW5ZWnrB53qdDSW8xt8SR5cV=
+cnVVPXdnn3Cn5-NW26X5cl82L6wSW38LxcN8J3_-8VrdcMX1GrG12f9kddkP04" rel=3D"noop=
+ener" style=3D"color:#00a4bd" data-hs-link-id=3D"1" data-hs-link-id-v2=3D"7=
+9roz7+r" target=3D"_blank">MASTRA.BUILD Templates Hackathon</a></li>
+</ul>
+<h2 style=3D"margin:0; mso-line-height-rule:exactly; line-height:175%; font=
+-size:22px">Tweet of the week</h2></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module_17466514183824" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"pr=
+esentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#23496d; word-break:break-word; text-align=
+:center; padding:10px 20px; font-size:0px">
+        <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm0=
+4/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3ppW4b1fqT6Wf=
+Gm0W5mt3bv7d4qsxVcLRnT91x0QRW9jZm554zy92MVk1GZZ4sYy_tW1cG9Yl3W71YyW6L1Qsm3F=
+q43zN4Jt1qtJ95LXW8sDZtZ6Bs5jDW4PCrtM3Rc8vvW8TNxt88FFhbWW2WLtry5-512cW7SqcrB=
+7tyvF-W6yNgM-5WlWn5W2pqX1M19XDW_W7l15f_1-cdlzW5z9PSQ5W8fWQW90q-RP4DXt88W3Sy=
+-8_1krjhyW98zqXB6ZfPPLW2N5cbT1M70t1W20Sx3l6qBNzJf28F6Fd04" target=3D"_blank=
+" style=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"W+a2v=
+aIZ">
+        <img alt=3D"Screenshot 2025-07-24 at 3.28.40 PM" src=3D"https://hs-=
+47815345.f.hubspotemail.net/hub/47815345/hubfs/Screenshot%202025-07-24%20at=
+%203.28.40%20PM.png?width=3D1120&amp;upscale=3Dtrue&amp;name=3DScreenshot%2=
+02025-07-24%20at%203.28.40%20PM.png" style=3D"outline:none; text-decoration=
+:none; border:none; max-width:100%; font-size:16px" width=3D"560" align=3D"=
+middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17466514723435"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module_17466514723435_" class=3D"hs_cos_wrapper hs_cos_wrapper_widg=
+et hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-=
+type=3D"rich_text"><p style=3D"mso-line-height-rule:exactly; line-height:17=
+5%">Keep on building in the cloud and bussin' in the streets,<br>Abhi Aiyer=
+<br>CTO at Mastra.ai</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%"><!-- notionvc: =
+f5494a6f-472f-4577-8fc2-3692eb947aff --></p></div></div></td></tr></tbody><=
+/table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section-1" class=3D"hse-section hse-section-last" style=3D"pad=
+ding-left:10px; padding-right:10px">
+   =20
+   =20
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto">
+   =20
+    <!--[if (mso)|(IE)]>
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17531157893881" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"left" valign=3D"top" style=3D"font-f=
+amily:Arial, sans-serif; color:#23496d; word-break:break-word; text-align:l=
+eft; padding:10px 20px; font-size:0px">
+        <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113/d5DGBm0=
+4/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3nVW4CK5pH5DF=
+Qx3W89Mc9x5BpYQ_N3TKcrNw7BlyW6dGqgx7vdkN-N6B-Y-WHYtTxW4k1bFL8jLPLGW2rpv_J79=
+wCKnW2-J-hT96XJpKW3gbtzv2j_zpLVjPj4J8GhsYfW3l8LY58y1bp2N1hLXkHJ9k92W2TXjfv1=
+L1qDcVtd9vm4qWDy4N78r0DdxyFvYW2pwhpQ4Q-qGhW2scl2l5v3WM0W8LVjJ-4l1ykyW4DFBgf=
+28rQtDVNTCy03sP49bN5QT7mHK6qHmW73l8P98_pgx3f1G0p_g04" target=3D"_blank" sty=
+le=3D"color:#00a4bd" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"rORl9HQW">
+        <img alt=3D"abhiaiyer 1" src=3D"https://hs-47815345.f.hubspotemail.=
+net/hub/47815345/hubfs/abhiaiyer%201.png?width=3D150&amp;upscale=3Dtrue&amp=
+;name=3Dabhiaiyer%201.png" style=3D"outline:none; text-decoration:none; bor=
+der:none; max-width:100%; font-size:16px" width=3D"75" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17531158468652"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_=
+wrapper_module_17531158468652_" class=3D"hs_cos_wrapper hs_cos_wrapper_widg=
+et hs_cos_wrapper_type_rich_text" style=3D"color: inherit; font-size: inher=
+it; line-height: inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-=
+type=3D"rich_text"><p style=3D"mso-line-height-rule:exactly; line-height:17=
+5%"><strong data-stringify-type=3D"bold"><em data-stringify-type=3D"italic"=
+>PS: We want Mastra to only get better. Take a few mins to reply to this em=
+ail with some thoughts, ideas, or feedback?</em></strong></p></div></div></=
+td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module_17527871435061"=
+ class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" =
+style=3D"color: inherit; font-size: inherit; line-height: inherit;" data-hs=
+-cos-general-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"pre=
+sentation" align=3D"center" style=3D"width: auto; text-align: center; margi=
+n: 0 auto; " class=3D"hs_cos_wrapper_type_social_module">
+  <tbody>
+    <tr>
+      <td class=3D"social-network-cell" align=3D"center" style=3D"font-fami=
+ly:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-word"=
+>
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Arial, sans-serif; font-size:15px; color:#23496d; wor=
+d-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" =
+valign=3D"middle">
+                <a href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+113=
+/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yQ83m2nnW7lCdLW6lZ3msW3=
+czDgW19KqZvW8v-6-p3GlCpmN76gkKMyBHtRW3Qz9xK73mDMlW5xs3h97QNZWJN6sc7HshV38cW=
+4K1z3h1pq3YDW45182P4D9lF1N8m78Z4MgdVQW24SmCs97fm1fW8HBc7s3pCJTvW7SYj775nsDv=
+gW8tFr0Q5gy5JNW15CkNG3jBRz6W5nLDxh1p_0YRN505dCD_5t46W6VqC-Q56ZbTmN6J2R-SnnX=
+KRVcc33Z3KLwVxW90dps-8L-Q2rVg0_3k1LmBflN6KzXB-kS-n9W1lJDfl7hL1npW1hsF-M1cJB=
+pcf5ChvB604" style=3D"color:#00a4bd; text-decoration:none !important" data-=
+hs-link-id=3D"0" data-hs-link-id-v2=3D"BnimDkS4" target=3D"_blank"><img src=
+=3D"https://hs-47815345.f.hubspotemail.net/hs/hsstatic/TemplateAssets/stati=
+c-1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/linkedin_c=
+ircle_color.png" alt=3D"LinkedIn" height=3D"25" style=3D"outline:none; text=
+-decoration:none; border:none; width:auto!important; height:25px!important;=
+ vertical-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" align=3D"center" style=3D"font=
+-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:break-=
+word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center; margin: 0 auto; " class=3D"hs_cos_wrapper_type_social_=
+module_single">
+          <tbody>
+            <tr>
+              <td class=3D"display_block_on_small_screens" align=3D"center"=
+ style=3D"font-family:Arial, sans-serif; font-size:15px; color:#23496d; wor=
+d-break:break-word; padding:8px 5px; line-height:1; vertical-align:middle" =
+valign=3D"middle">
+                <a  href=3D"https://d5DGBm04.na1.hubspotlinks.com/Ctc/ZY+11=
+3/d5DGBm04/VWmcyq1CKQvjW7SDbxb114SZXW89-nNw5znXW7N5d8yPT3m2nnW6N1vHY6lZ3nPN=
+79GXQntqm4qW7b4z4Y7F_2qqW45Z1zm8KGHJxV5Cp1w1WDvvmVP8B8G6V1klnN3XrVwcLwxBlW1=
+ZkTjF8tT0kbW2z0J311yCRldN7Nyk1bGQHXLW5vxBdB7nsxgqW6q96df338qhHW8_HRqX5Dbbqy=
+W3MXF0h6dK1WFW4Ljxw88CFqWgW5PPKBc7H09wnN4zmD1GGjgF7W1XRJ0g94dY0qW7WRc3c752l=
+hMW32DgHj89WwFKVdzS-65zsQvJW2z80107fbgXlW6ktt7t2zHl9Tf1bf7VF04" style=3D"co=
+lor:#00a4bd; text-decoration:none !important" data-hs-link-id=3D"0" data-hs=
+-link-id-v2=3D"t4XAO8g5" target=3D"_blank"><img src=3D"https://hs-47815345.=
+f.hubspotemail.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_t=
+emplate_images/modules/Follow+Me+-+Email/twitter_circle_color.png" alt=3D"X=
+" height=3D"25" style=3D"outline:none; text-decoration:none; border:none; w=
+idth:auto!important; height:25px!important; vertical-align:middle" valign=
+=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%" class=3D"" style=3D""><tbody><tr><td class=3D"hs_padded" style=3D"fo=
+nt-family:Arial, sans-serif; font-size:15px; color:#23496d; word-break:brea=
+k-word; padding:10px 20px"><div id=3D"hs_cos_wrapper_module-1-0-0" class=3D=
+"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"=
+color: inherit; font-size: inherit; line-height: inherit;" data-hs-cos-gene=
+ral-type=3D"widget" data-hs-cos-type=3D"module"><table role=3D"presentation=
+" class=3D"hse-footer hse-secondary" width=3D"100%" cellpadding=3D"0" cells=
+pacing=3D"0" style=3D"font-family:Arial, sans-serif; font-size:12px; line-h=
+eight:135%; color:#23496d; margin-bottom:0; padding:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#23496d; word-break:break-word; text-align:cen=
+ter; margin-bottom:0; line-height:135%; padding:10px 20px">
+        <p style=3D"font-family:Arial, sans-serif;font-size:12px;font-weigh=
+t:normal;text-decoration:none;font-style:normal;color:#999999">
+          Kepler Software, Inc, 2261 Market Street, STE 5559, San Francisco=
+, CA 94114, United States, +1 510-240-9383=E2=81=A9
+        </p>
+        <p>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-47815345.s.hubspo=
+temail.net/hs/preferences-center/en/direct?data=3DW2nXS-N30h-S2W24_8DQ2nPSJ=
+KW4mk4Gt4cjds6W30LH7l1LhN9hW2PCG183H61KpW2qGTCs1YZ13xW3z4Bwn1LF4fzW3jvRB93_=
+RsGFW3R3ZLq45RFrCW2xGKZj2CCphZW2nFVkf3SywmwW1QC1D71T_YvMW1NgkS04mDJmbW47Nch=
+N1ZlJXRW3QRHFp2p9dBjW1SqhFY2zDsWbW3GXbpb49Rl0xW4knb502HywPnW3JL56k2HSjJRW2W=
+g4HS41K42qW2RKGY01Vk3FbW2CHzpw383w9vW49ykZq2PyLs4W2PV9yj2MBDgZW3VRJ3R2RC0qg=
+W49lvh-2Px2M-W4kDw0K2qNlhBW2p6f2K1ZtMf0W2qSw7p2KBPrSW3NWG6p1Qxgn6W2KMYV73XD=
+GFFW38j0gV2qBJVmW2sB5Kp3LTnT5W3Fccr038xrPZW2Mm7dK4rBfjpW3yXp7c45n5TpW2nYJ5D=
+4mkwB6W4pyng13dcV4mW49Q4Zd3K22JYW3R65gl1VnlKRW32lhpr2CJP3SW3bqrGQ3C39_QW349=
+LJV384p0BW2TMYtq47Gk6DW4mzmtl1VpHrZW3R6YGw3zh0m6W47WGhj3gdSpCW3ZGv2M1BClZBW=
+43xh_72PzwHzW1BwPQ72PQrxLW36Cv8b4cN_dcf3XHytm04&amp;utm_source=3Dhs_email&a=
+mp;utm_medium=3Demail&amp;utm_content=3D372886982&amp;_hsenc=3Dp2ANqtz-9YLe=
+IgRKEp-Kj-eN98LH7a6klwMoHSEOe6zgKHxeAq0NxKm5sUidqBHxHx-nIzf6Dt--qTbN83WF-KR=
+soQesWi3pXyzg&amp;_hsmi=3D372886982" style=3D"font-family:Helvetica,Arial,s=
+ans-serif; font-size:12px; color:#999999; font-weight:normal; text-decorati=
+on:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=
+=3D"SFRZzEXk" target=3D"_blank">Unsubscribe</a>
+          <a data-unsubscribe=3D"true" href=3D"https://hs-47815345.s.hubspo=
+temail.net/hs/preferences-center/en/page?data=3DW2nXS-N30h-S2W24_8DQ2nPSJKW=
+4mk4Gt4cjds6W30LH7l1LhN9hW2PCG183H61KpW2qGTCs1YZ13xW3z4Bwn1LF4fzW3jvRB93_Rs=
+GFW3R3ZLq45RFrCW2xGKZj2CCphZW2nFVkf3SywmwW1QC1D71T_YvMW1NgkS04mDJmbW47NchN1=
+ZlJXRW3QRHFp2p9dBjW1SqhFY2zDsWbW3GXbpb49Rl0xW4knb502HywPnW3JL56k2HSjJRW2Wg4=
+HS41K42qW2RKGY01Vk3FbW2CHzpw383w9vW49ykZq2PyLs4W2PV9yj2MBDgZW3VRJ3R2RC0qgW4=
+9lvh-2Px2M-W4kDw0K2qNlhBW2p6f2K1ZtMf0W2qSw7p2KBPrSW3NWG6p1Qxgn6W2KMYV73XDGF=
+FW38j0gV2qBJVmW2sB5Kp3LTnT5W3Fccr038xrPZW2Mm7dK4rBfjpW3yXp7c45n5TpW2nYJ5D4m=
+kwB6W4pyng13dcV4mW49Q4Zd3K22JYW3R65gl1VnlKRW32lhpr2CJP3SW3bqrGQ3C39_QW349LJ=
+V384p0BW2TMYtq47Gk6DW4mzmtl1VpHrZW3R6YGw3zh0m6W47WGhj3gdSpCW3ZGv2M1BClZBW43=
+xh_72PzwHzW1BwPQ72PQrxLW36Cv8b4cN_dcf3XHytm04&amp;utm_source=3Dhs_email&amp=
+;utm_medium=3Demail&amp;utm_content=3D372886982&amp;_hsenc=3Dp2ANqtz-9YLeIg=
+RKEp-Kj-eN98LH7a6klwMoHSEOe6zgKHxeAq0NxKm5sUidqBHxHx-nIzf6Dt--qTbN83WF-KRso=
+QesWi3pXyzg&amp;_hsmi=3D372886982" style=3D"font-family:Helvetica,Arial,san=
+s-serif; font-size:12px; color:#999999; font-weight:normal; text-decoration=
+:underline; font-style:normal" data-hs-link-id=3D"0" data-hs-link-id-v2=3D"=
+qjPJqCop" target=3D"_blank">Manage preferences</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://d5DGBm04.na1.hubspotlinks.com/Cto/ZY+113/d5DGBm04/VWmcy=
+q1CKQvjW7SDbxb114SZXW89-nNw5znXW7W5d8yy-8fYCkB320z1" alt=3D"" width=3D"1" h=
+eight=3D"1" border=3D"0" style=3D"display:none!important;min-height:1px!imp=
+ortant;width:1px!important;border-width:0!important;margin-top:0!important;=
+margin-bottom:0!important;margin-right:0!important;margin-left:0!important;=
+padding-top:0!important;padding-bottom:0!important;padding-right:0!importan=
+t;padding-left:0!important"></body></html>
+------=_Part_690410_1475707972.1753389791906--
+

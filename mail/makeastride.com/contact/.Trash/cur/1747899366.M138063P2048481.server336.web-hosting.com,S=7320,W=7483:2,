@@ -1,0 +1,163 @@
+Return-Path: <bhavya@technowebbest.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id cLaDBebTLmjhQR8AM7Pthw
+	(envelope-from <bhavya@technowebbest.com>)
+	for <contact@makeastride.com>; Thu, 22 May 2025 03:36:06 -0400
+Return-path: <bhavya@technowebbest.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Thu, 22 May 2025 03:36:06 -0400
+Received: from [198.54.122.200] (port=47507 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <bhavya@technowebbest.com>)
+	id 1uI0TG-000000097oW-0E99
+	for contact@makeastride.com;
+	Thu, 22 May 2025 03:36:05 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=technowebbest-com.20230601.gappssmtp.com header.s=20230601 header.b=oyZE82bV;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of bhavya@technowebbest.com designates 209.85.216.65 as permitted sender) smtp.mailfrom=bhavya@technowebbest.com;
+	dmarc=temperror reason="server fail" header.from=technowebbest.com (policy=temperror)
+Received: from mail-pj1-f65.google.com (mail-pj1-f65.google.com [209.85.216.65])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4b30T93Qlfz184y
+	for <contact@makeastride.com>; Thu, 22 May 2025 07:35:57 +0000 (UTC)
+Received: by mail-pj1-f65.google.com with SMTP id 98e67ed59e1d1-30e8daea8c6so4838149a91.0
+        for <contact@makeastride.com>; Thu, 22 May 2025 00:35:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=technowebbest-com.20230601.gappssmtp.com; s=20230601; t=1747899356; x=1748504156; darn=makeastride.com;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=RK/UqqefbN6lqqc6uyZgtkf5yTM9iRPeQUPW+EdCn4c=;
+        b=oyZE82bVoI7Qur2EI/xTGeUDgfHAAnNyWadGDvnkb0i6gnC2HHDYmWNTRzZdbFDhqI
+         JtmJe9S0y0VNn8WHCveDQBMGv7jUhx9ox0Itspl1dFvyjRQi7iLY2L5ULH/TBZOiRZe9
+         aZrdWNQubOHxXZ17UbyoJCs8QetxU5lb2PaSij4yEmTe81YDOhUytZmbKrJA/84u3MTz
+         tV4LzllY5F/AZrC5NLi0ltEYTfAlrxN07aWrIv5G9T4j5qVmMgxfDmg9BzhBU6M6CqjJ
+         I+O9RKh4vRtG6FCO/DDuu74N69nItoGjy6se/M3LIxw2p0GgKq8ggn0fzRbhhecCHCqj
+         8coQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1747899356; x=1748504156;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=RK/UqqefbN6lqqc6uyZgtkf5yTM9iRPeQUPW+EdCn4c=;
+        b=Cf5mokjnSpnIKjDU1l/kijQPZ5qqk7Tjzen+9d+5H+nRXHlIn697rbTFLuw0ZqatMI
+         aKrEhNXiJhW17+csXVHOE/CcWj/RDLT/2MPEdU7Wf2gZruFU7FDDidAVr5NF43sffm1g
+         7JXqOWkclUmkOxjkfN3pTmz4mTi0+A+++6Q2GuibTIbg5zmEKIRDVF1arpwMOpu+aFLr
+         MIvxNmjxaBTdiHohJMJwmNlhuXW5kFQcbfN3993Iq8dVjYPL5wakcTPpXElN+ToZdwML
+         SLmQFnK4VefXHStkAvg+H+DZ7qlUrwjiEIL0b/mER+A7MuEfFJKHYrBIt5DMlSD/5AON
+         Nx2w==
+X-Gm-Message-State: AOJu0YwNlbSYZi51zFLMQlUvazpW1Iip/LJ9PNQ1smAt003r/pgPkgGB
+	LDSWAapOt0bvM8KgbIlk8waLWnq6xzhYBH6xjL5T+VXIv8yyBkpYjVYSeXi6+YE2VWpkXd2CfGN
+	GOhuP6/F37w==
+X-Gm-Gg: ASbGncvLdAt/ux6SJ6d1Rv/8/dxrFxHGVxttQxe99uC1feV9tk8Mz43tM/qEjf3c6ol
+	51JCIZ71ciAy7hV0/uQY8FogFvomXtFH5y+V/26xxztnf2ODw4uMIrczQRvVculFTZjynT9/25R
+	8DUd4zju5C+lw4Zaiky756A/w1Dfy8Q31rEzFPypXdeZ5zC1VsVbxYJN+2KlkW3Xv/+2DCNZ6yz
+	FDpxjYjaD7pVBIl6llUqYLfIDkEN57cdnVYampSCtsmWidabI5DSjN2dhBGDDtzkA2bzbV1W9LA
+	3NYqacBAI8nHbkVUQ02qIRgk3GchfAmFtq00AgM2cMrxNA2QhXqNqRAECHhde67cBNeYDPSp
+X-Google-Smtp-Source: AGHT+IEwkCzBUtJ7RxdHbIDEG/Taf4qxzrpl8jIOtFvX2ArI/1Qk7PJMXC0dZcMEbAGMrMUOVbOGIQ==
+X-Received: by 2002:a17:90b:2ecb:b0:2fa:f8d:65de with SMTP id 98e67ed59e1d1-30e7d5b7515mr32181142a91.22.1747899356408;
+        Thu, 22 May 2025 00:35:56 -0700 (PDT)
+Received: from DESKTOP3AGUK9K ([2401:4900:1c62:bf98:fdf9:35a7:9536:5393])
+        by smtp.gmail.com with ESMTPSA id 98e67ed59e1d1-30f365f5bd2sm4894386a91.46.2025.05.22.00.35.54
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 22 May 2025 00:35:56 -0700 (PDT)
+From: "Bhavya" <bhavya@technowebbest.com>
+To: <contact@makeastride.com>
+Subject: Quote?
+Date: Thu, 22 May 2025 13:02:42 +0530
+Message-ID: <abd601dbcaec$2753fd70$75fbf850$@technowebbest.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_ABDD_01DBCB1A.41635A20"
+X-Mailer: Microsoft Outlook 14.0
+Thread-Index: AdvK5pgN0c+VgTNXToS2Af+mfhwmJw==
+Content-Language: en-us
+
+This is a multipart message in MIME format.
+
+------=_NextPart_000_ABDD_01DBCB1A.41635A20
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi,
+
+
+
+Are you planning to have a Web-design, re-design, update, Web development,
+clone, or new website?
+
+
+
+Please let me know what you think.
+
+
+
+Thanks,
+
+Bhavya
+
+
+------=_NextPart_000_ABDD_01DBCB1A.41635A20
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 14 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:10.0pt;
+	margin-left:0in;
+	line-height:115%;
+	font-size:11.0pt;
+	font-family:"Calibri","sans-serif";}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri","sans-serif";}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:10.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in 1.0in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-US><div =
+class=3DWordSection1><p class=3DMsoNormal =
+style=3D'margin-bottom:0in;margin-bottom:.0001pt;line-height:normal'>Hi,<=
+br><br></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0in;margin-bottom:.0001pt;line-height:normal'>Are =
+you planning to have a Web-design, re-design, update, Web development, =
+clone, or new website?<br><br></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0in;margin-bottom:.0001pt;line-height:normal'>Plea=
+se let me know what you think.<br><br></p><p class=3DMsoNormal =
+style=3D'margin-bottom:0in;margin-bottom:.0001pt;line-height:normal'>Than=
+ks,</p><p class=3DMsoNormal =
+style=3D'margin-bottom:0in;margin-bottom:.0001pt;line-height:normal'>Bhav=
+ya</p></div></body></html>
+------=_NextPart_000_ABDD_01DBCB1A.41635A20--
+

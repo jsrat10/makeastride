@@ -1,0 +1,609 @@
+Return-Path: <bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id qHWoG91Y+WffJxYAM7Pthw
+	(envelope-from <bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com>)
+	for <contact@makeastride.com>; Fri, 11 Apr 2025 14:01:01 -0400
+Return-path: <bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 11 Apr 2025 14:01:01 -0400
+Received: from [198.54.122.200] (port=53076 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com>)
+	id 1u3IgX-00000006GpN-1NZH
+	for contact@makeastride.com;
+	Fri, 11 Apr 2025 14:01:00 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=accounts.jobot.com header.s=s1 header.b=KoP2nDB8;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of "bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com" designates 168.245.93.103 as permitted sender) smtp.mailfrom="bounces+19058589-4ff6-contact=makeastride.com@em2526.accounts.jobot.com";
+	dmarc=pass (policy=none) header.from=jobot.com
+Received: from o39.ptr7602.accounts.jobot.com (o39.ptr7602.accounts.jobot.com [168.245.93.103])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4ZZ4HF2lb2z27pC
+	for <contact@makeastride.com>; Fri, 11 Apr 2025 18:00:57 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=accounts.jobot.com;
+	h=content-type:from:mime-version:subject:to:cc:content-type:from:
+	subject:to;
+	s=s1; bh=x9niYaru3/9n/njxVmlwdx7Gpn4/1gk5WpHsvN4D2qg=;
+	b=KoP2nDB8DlYWpTSyX/uVaji24ZN+heMmifBP65RnPw8bBwAC3Zb6eGj84CpCrUh/oFS0
+	J9wf7zZdmoEX/tSPCMS7E+K7HebtWz7WjhPzDXjmN+MVloXgGVtGv2yzk+sXl3Vs21MmUn
+	ck8VFUi4R1/yVd+gDNV8ZJk9IxrppLNIbITbMT2bL7Djrr56fozN/xMWd0NWCNTfupuL8P
+	lAfdCgOt7rx57Ijqro1xVD1uh/6q5uveWbY0cKfbex4JFR3LN0ZrR7Xi4M2XajpW3tjssW
+	kmS/oQWcMiH4S3GdqDoMvAn0/AKJ0TnUt5JjWV91Fm58vsx+ZzwTXDBAvObKe5OQ==
+Received: by recvd-545d4d4647-bzs6t with SMTP id recvd-545d4d4647-bzs6t-1-67F958D8-90
+	2025-04-11 18:00:56.63858033 +0000 UTC m=+244354.927408843
+Received: from MTkwNTg1ODk (unknown)
+	by geopod-ismtpd-18 (SG) with HTTP
+	id RjjFv_V1QxW-lX6MaoDuDA
+	Fri, 11 Apr 2025 18:00:56.601 +0000 (UTC)
+Content-Type: multipart/related; boundary=ff1fbe1e349d939bdd52cfdcd03406d7df90cddc4975f8da7e8bcfcccaee
+Date: Fri, 11 Apr 2025 18:00:56 +0000 (UTC)
+From: Jobot <alerts@jobs.jobot.com>
+Mime-Version: 1.0
+Message-ID: <RjjFv_V1QxW-lX6MaoDuDA@geopod-ismtpd-18>
+Subject: Application Received! IT Project Manager (PMP / DoT Industry)
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E22hWPKzRaCQ3QmZYepm83uZaa6KFbbfmv6AntHUB4LEnqXHqrlosA8lw8?=
+ =?us-ascii?Q?a71TCrkBFFJz3IkPgCbXdF9gxXH2IzD3+VGnfGA?=
+ =?us-ascii?Q?HpqywWTfoW2DpPQvJ+yHvokI53qSunggNHX64Ta?=
+ =?us-ascii?Q?xlbFOi7dRvRfSsqBbWpC8cuDf7y8Khu3+VNjdQw?=
+ =?us-ascii?Q?MRdqXL8vpay2llJAG1ACEhVj9m0etmgRlR1l8U7?=
+ =?us-ascii?Q?pkjSWnoRqsziyNHCmIBzE+204401ezoZSfj+yRA?= =?us-ascii?Q?whzT?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3Br+FkGDNwHelEDiTju02HuNevXK6DcXgwCn62?=
+ =?us-ascii?Q?cqqF7oSggEyv7CRbLGEPXrYS6i0F7G=2FaOyMEx79?=
+ =?us-ascii?Q?KWxPPAZvKPs=3D?=
+To: Jyothi Krishnan <contact@makeastride.com>
+X-Entity-ID: u001.TX4g/DE/doFeg1hr4BuINA==
+
+--ff1fbe1e349d939bdd52cfdcd03406d7df90cddc4975f8da7e8bcfcccaee
+Content-Type: multipart/alternative; boundary=6efdf7451acb304db9e09b0d3dde83f67d965fdce1e1f2c4be9685d5e31c
+
+--6efdf7451acb304db9e09b0d3dde83f67d965fdce1e1f2c4be9685d5e31c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Jobot
+    -> Jyothi Krishnan
+    http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughgqk=
+A80PoY6EQdw2eG3QF8K41H34Zpn8-3DPpbU_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95=
+BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdNwTBr2DOm1axcwN0-2Fp1cw0B=
+yZQno2-2BdIXDUywEkqrNyzvSZgq-2BWJ8vQ50aBc9dECuyvGtMKnWhqxIoTtluxLF2j9Gim6sp=
+kiEBm-2FgqI-2BHy40a4JWE-2BVCsl2A7l0PDfVkRRPhrpW21CQVMxD1egg-2B47XFSJok2x3NU=
+vuwtqv-2F0ZaJ5xs-2BF6O0ouqhqvrjuRDPFy-2B8asA-3D-3D
+    =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+
+    IT Project Manager (PMP / DoT Industry)
+    Application Received! Thank you for applying to the IT Project Manager =
+(PMP / DoT Industry) position on Jobot.com.
+    Complete Your Application:
+    http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughgqk=
+A80PoY35u6AEm56EkVz4NQxSZll50U2pv-2BCzbHQfMvTd7KO74VkOyYcwioJZk8MyrGok6naBs=
+NbAPAqVtpAwdg-2BZbagPSNHG4n1qQlvqgO9CePVKd8pgKftc43RR4idVTbS49WoJyAMt1p2649=
+wyDLJpaLYJTFPp73c0K1SnKDPnnc9sbw6gyXzgEbtLsM4wQ722G1g-3D-3DEuPS_M7561dTk8oP=
+SP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RRe=
+ipdNwTBr2J4giE49rTooO9RZTjEACrO0KD-2Bcp-2FnKsBuvyuvLgRldHmctl0Hi54DdBprRMhw=
+JNmTGbxxYtl-2Ba0jChTzyrUgCBRSEiQfN0QFVZkKqGVJjQ420kBAtB-2FaFAqqOnTNyLilMEC2=
+ol91NliGxvYgAIDv5R-2BmnWsj66nWU9dABp8SYOE8m7-2FJOUZ7BnGPW-2FTWgbNw-3D-3D
+
+    -------------------------
+    Your Application Details
+    -------------------------
+
+    Job: IT Project Manager (PMP / DoT Industry)
+    Location: Remote / Phoenix, AZ
+
+    Resume: CTO_Jyothi_Krishnan_04052025.docx =E2=9C=85
+    Most Recent Employer: AI Startup in Stealth Mode =E2=9C=85
+    Most Recent Job Title: CTO (Part-Time) =E2=9C=85
+    Elevator Pitch: =F0=9F=93=9D =E2=9C=85
+
+    Status: Pending Review =F0=9F=94=B5
+   =20
+   =20
+
+    =3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=3D=
+=3D=3D
+    =C2=A92022 Jobot LLC. All rights reserved.
+    3101 West Pacific Coast Hwy, Newport Beach, CA 92663
+
+    About Us: http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2B=
+CmZVughgqkA80PoY1S57qf4YeLoceh49JuGcUWdC1uiTEoZrHvS4R6yi2G37-2Bayws0angDhDs=
+qhin1yRqoJyDOi9-2BV-2FjvWMW3-2F7Nv4-3DipwA_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDK=
+oV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdNwTBr2EMNm7C4XRUyw=
+7hCqAR-2BdzMNov-2FGwBrd4KblTM60AsvJCeUTpSXWts7TkmaDmgyW-2BRz6Ey-2BR53ED70oc=
+stU5SidDb6NOomI9jq2cgjMGtc2mEEKJyKFXk-2FUDFVInklL8gxvqpLXt0vtZxTKQeStFqfO-2=
+FgqfasMTAfgWeLf4mNsc92uLxe0VpCsGka91NB33QSg-3D-3D
+    Contact Us: http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-=
+2BCmZVughgqkA80PoY4wGhNiZvPGYR4tLHE9b2LRC-2BZeCLSEKIdcFfPJ6SGDs-2BQ-2Fy5CSz=
+LrF7ANBXWJTtWt0M7-2B93PJIOLPL3aieQMMs-3DAFeO_M7561dTk8oPSP7-2FkK3w4hbSHxTXj=
+DKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdNwTBr2N09faLOB2d=
+FENj9gJRlEYavmykca13Snt7YH0c5W7MyKOOqBwYVBIn9YV3wAORV2g0nZNFk7VgvifedNvJKTh=
+RREWHyMobQmkTZZn3vi7EuK1K8xt4jxhyKNQbiJqHt2OHJRCRLts9m6xoyCGtIoK8GRRtt4CmD-=
+2FPtkXaFJ9kblvlEV2ekHLQS2pChU1mCyxA-3D-3D
+    My Email Preferences: http://url3836.accounts.jobot.com/ls/click?upn=3D=
+u001.C53A-2BCmZVughgqkA80PoYwh-2BS3EH0vbdLmqqppF1Dbw7Msv26wxd-2F1C3Tkq6d44z=
+uobN-2F-2B-2BwiVw8N8mPtQXHKpoyRyctn8wZG-2FA5wlWiTTyteIsrfBVAe1GpsvK5lV0Hf04=
+WoA0jjjbsDzVLM92WLg-3D-3DXpmB_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvS=
+tR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdNwTBr2E10-2Fz6Fl9VXkmG0VA54AWQ8=
+f4I5i5hU72mE20VB1FMI5A-2BjCVppwUk3EXzbGKIYLUJqMhkRXcGhX3PnuFzfISlMaOhdh-2BB=
+YX7-2FnjHdBlTHke1AbJBJ0rFqtuK81lBdcrPHWkZgyrM7W-2B9XAhqceq-2FsEr7aZvFIb2ee6=
+7qYbaT3ZpX0JT3l0vKpL6wEWKbE3hA-3D-3D
+
+    Connect With Us on Social Media
+    - http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughg=
+qkA80PoY-2F54hTvjIjj-2Bp2d768dwoc5vLkUrP-2F2ij60SMw1YBvakIFSW_M7561dTk8oPSP=
+7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReip=
+dNwTBr2F9-2FJE1fyTbna97FkXJHMrAHVRUOzutq6inly1w81MMj5JHu-2FyRc-2F4MZghnhpLi=
+a2pOg-2FfaUq7vqZ0AUXh0Yw-2BMD4J5wwHynqQy1CQgOTq56WYHmjYCU5APy-2BTksxD4Hf9Wb=
+PrZBzsanaGn4A6UPFFzNC3O4I8QoB4GBIXH8sqOE9Ll-2FNNZWrkY9c64apxCrpg-3D-3D
+    - http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughg=
+qkA80PoY3xViu3Qlb3-2BZwO9ib-2FDuXeLygRyBGqLBMRwofjIvNpX6ws6_M7561dTk8oPSP7-=
+2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdN=
+wTBr2KaCqK-2BDwrBglyfj7NBob9NYrOSakZwjJOUL8Ozkfp1hv7qNQySpoX-2BlpliA6qzMdp-=
+2BeUBoiZN7FIyD4q-2FvcNCCpb40pmWRw1vyZxbmdc599SjIgRjhj6QxT-2BkqCpJn67K2z-2FH=
+faECFCZKfoIj1TEIPDXJStV1MxVGWjCWobbPVgQW4KlPA2ImZWvePpprpWqA-3D-3D
+    - http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughg=
+qkA80PoY-2FUIObHa5UFLtR8TuyKW27c7HU-2F0rawJFUYup9W1sX37j9TPr1rzo2ush8QUnNp2=
+gQ-3D-3D9OM3_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2=
+-2BeTfT2rJ1pRc-2BPvo7RReipdNwTBr2MACOPN-2FztzU3aKshL7XR7gGaHqOYp8JpKmmbVhH-=
+2F2pDwGwI-2FlFBxUdx-2FPW7oc4MdUjh5EnQ2sFyGMv7BhgtdwN83XP-2F8DlFf-2FODrGLSiB=
+BcuuT4ke3Tvu05Ib4mSSa-2BYoj7GkFBYylvVRNvS6n-2BciOSj5WadnmiJ3-2FOLRcjVKhYndW=
+nTZXg-2FkXCliap-2FxFkXQ-3D-3D
+    - http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughg=
+qkA80PoY46T158v7nBZYOLSELSYyCJ-2BEz8kzfivphNfwqzV-2B2HbxAja_M7561dTk8oPSP7-=
+2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJ1pRc-2BPvo7RReipdN=
+wTBr2IEux2KRnkhnpQsE27Je7ah-2FHl2tIGFYK6bTDPgMALfS-2FzeaBmN5GkVyBtdpcNKhYP5=
+9b4-2FexL0eFswTs4HDIxOPSPYICH1lSzs-2BBOrnjzChiGiG59JU7t7eEvbcgo7J9508piHk-2=
+FEWGcms8F857xAYra-2BLLJDkABWisStetfh-2B-2BHSmf71dcg8NUMGk6Ih7fpw-3D-3D
+--6efdf7451acb304db9e09b0d3dde83f67d965fdce1e1f2c4be9685d5e31c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html><head>
+     =20
+      <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF=
+-8">
+      <meta name=3D"x-apple-disable-message-reformatting">
+      <meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scal=
+e=3D1.0">
+    <style>/* Google font import Lato */
+/* hotmail background + line height fixes */.ExternalClass,.ExternalClass p=
+,.ExternalClass span,.ExternalClass font,
+                                            /* image borders + formatting *=
+/
+                                        img {outline: none; text-decoration=
+: none; -ms-interpolation-mode: bicubic;}
+a img {border: none;}
+/* re-style iPhone automatic links */
+body {padding:0; margin:0; -webkit-text-size-adjust:none; -ms-text-size-adj=
+ust:100%; font-family: 'Lato', sans-serif;}
+/* button */.ApplyComplete a{text-decoration:none;outline:none;color:#23b3e=
+7}@media(max-width: 649px){.ApplyComplete .o_hide-lg{display:inline-block !=
+important;font-size:inherit !important;max-height:none !important;line-heig=
+ht:inherit !important;overflow:visible !important;width:auto !important;vis=
+ibility:visible !important}.ApplyComplete .o_hide-xs,.ApplyComplete .o_hide=
+-xs.o_col_i{display:none !important;font-size:0 !important;max-height:0 !im=
+portant;width:0 !important;line-height:0 !important;overflow:hidden !import=
+ant;visibility:hidden !important;height:0 !important}.ApplyComplete .o_xs-c=
+enter{text-align:center !important}.ApplyComplete h2.o_heading{font-size:26=
+px !important;line-height:37px !important}.ApplyComplete .o_xs-py-md{paddin=
+g-top:24px !important;padding-bottom:24px !important}.ApplyComplete .o_xs-p=
+b-xs{padding-bottom:8px !important}}@media screen{@font-face{font-family:"R=
+oboto";font-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-=
+Regular"),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOz=
+Y.woff2) format("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+202=
+0,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-fa=
+mily:"Roboto";font-style:normal;font-weight:400;src:local("Roboto"),local("=
+Roboto-Regular"),url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1M=
+u4mxK.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U=
++02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2=
+193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Roboto";font-style:=
+normal;font-weight:700;src:local("Roboto Bold"),local("Roboto-Bold"),url(ht=
+tps://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) for=
+mat("woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20A=
+B,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Roboto=
+";font-style:normal;font-weight:700;src:local("Roboto Bold"),local("Roboto-=
+Bold"),url(https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.=
+woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-=
+02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+=
+2212,U+2215,U+FEFF,U+FFFD}.ApplyComplete .o_sans,.ApplyComplete .o_heading{=
+font-family:"Roboto",sans-serif !important}.ApplyComplete .o_heading,.Apply=
+Complete strong,.ApplyComplete b{font-weight:700 !important}}.ApplyComplete=
+ td{font-family:Helvetica,Arial,sans-serif}.ApplyComplete .field-label{marg=
+in-top:0px;margin-bottom:4px;font-size:14px;line-height:21px;background-col=
+or:#fff;color:#82899a}.ApplyComplete .field-value{color:#242b3d;margin-top:=
+0px;margin-bottom:0px;font-size:14px;line-height:21px;background-color:#ebf=
+5fa;border-radius:4px;padding-left:8px;padding-right:8px;padding-top:16px;p=
+adding-bottom:16px}@media screen{@font-face{font-family:"Roboto";font-style=
+:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),url(htt=
+ps://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) format("=
+woff2");unicode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+2=
+0AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Roboto";fon=
+t-style:normal;font-weight:400;src:local("Roboto"),local("Roboto-Regular"),=
+url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxK.woff2) form=
+at("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6=
+,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215=
+,U+FEFF,U+FFFD}@font-face{font-family:"Roboto";font-style:normal;font-weigh=
+t:700;src:local("Roboto Bold"),local("Roboto-Bold"),url(https://fonts.gstat=
+ic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfChc4EsA.woff2) format("woff2");unic=
+ode-range:U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2=
+113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:"Roboto";font-style:norm=
+al;font-weight:700;src:local("Roboto Bold"),local("Roboto-Bold"),url(https:=
+//fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmWUlfBBc4.woff2) format("wo=
+ff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02D=
+A,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEF=
+F,U+FFFD}}</style></head>
+    <body>
+      <div data-server-rendered=3D"true" class=3D"ApplyComplete" style=3D"w=
+idth:100%;margin:0px;padding:0px;-webkit-text-size-adjust:100%;-ms-text-siz=
+e-adjust:100%;background-color:#dbe5ea;"><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td =
+align=3D"center" class=3D"o_hide" style=3D"display:none;font-size:0;max-hei=
+ght:0;width:0;line-height:0;overflow:hidden;mso-hide:all;visibility:hidden;=
+"> Application Received! Thank you for applying to the IT Project Manager (=
+PMP / DoT Industry) position on Jobot.com. </td></tr></tbody></table><table=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation"><tbody><tr><td align=3D"center" class=3D"o_bg-light o_px-xs" st=
+yle=3D"background-color:#dbe5ea;padding-left:8px;padding-right:8px;"><table=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pr=
+esentation" class=3D"o_block-lg" style=3D"max-width:800px;margin:0 auto;"><=
+tbody><tr><td align=3D"center" class=3D"o_bg-white o_px-md o_py o_sans o_te=
+xt-xs o_text-light" style=3D"margin-top:0px;margin-bottom:0px;font-size:14p=
+x;line-height:21px;background-color:#ffffff;padding-top:16px;padding-bottom=
+:16px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" role=3D"presentation"><tbody><tr><td>&nbsp;</td><td align=3D"left" widt=
+h=3D"" class=3D"o_bg-light o_px-xs" style=3D"font-family:Helvetica, Arial, =
+sans-serif;"><div style=3D"text-align:center;"><a href=3D"http://url3836.ac=
+counts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughgqkA80PoYwpHKN-2FT3u5hFq=
+IVvRapfGRo-2F6ZYm9Z5dq3j8fs8upX4Xpjsn-2B8Wjgm6fsamYWCIrd-2BjJQR-2F2lUXiZIZG=
+cjEbwHLmKq-2Fz-2F5YItK-2F3eTvlLhuw2gS_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F=
+95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akk-2FA-2BoJZwggOHzCm=
+-2Fu3HRNBzypIoehV6E9vhees4D6RB8xkQDvDlHpJc7enO6Z1yOujwzEbkutWh8ZwGRCX3sQd-2=
+FDPz9jpAZKba4RFxXUpTfDG8gpKzp-2FDJMSYqoM0nCvkznEMZHPjsIO4aqmA6fvCJCYIxAeD5e=
+tzhdr2-2Bicvrfmbd-2FeHmWUbtK2KsEZvdrXQ-3D-3D" class=3D"o_text-primary" styl=
+e=3D"text-decoration:none;outline:none;color:#23b3e7;"><img src=3D"https://=
+media.jobot.com/email/logo-email-header.png" width=3D"188" height=3D"59" al=
+t=3D"Jobot.com" style=3D"max-width:136px;-ms-interpolation-mode:bicubic;ver=
+tical-align:middle;border:0;line-height:100%;height:auto;outline:none;text-=
+decoration:none;"></a></div></td><td>&nbsp;</td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table><table width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr>=
+<td align=3D"center" class=3D"o_bg-light o_px-xs" style=3D"background-color=
+:#dbe5ea;padding-left:8px;padding-right:8px;"><table width=3D"100%" cellspa=
+cing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" class=3D"o_=
+block-lg" style=3D"max-width:800px;margin:0 auto;"><tbody><tr><td align=3D"=
+center" class=3D"o_bg-ultra_light o_px-md o_py-xl o_xs-py-md" style=3D"back=
+ground-color:#ebf5fa;padding-left:24px;padding-right:24px;padding-top:16px;=
+padding-bottom:16px;"><div class=3D"o_col-6s o_center o_sans o_text-md o_te=
+xt-light" style=3D"font-family:Helvetica, Arial, sans-serif;margin-top:0px;=
+margin-bottom:0px;font-size:19px;line-height:28px;max-width:584px;color:#82=
+899a;text-align:center;"><!----><h2 class=3D"o_heading o_text-dark o_mb-xxs=
+" style=3D"font-family:Helvetica, Arial, sans-serif;font-weight:bold;margin=
+-top:0px;margin-bottom:4px;color:#242b3d;font-size:30px;line-height:39px;">=
+ IT Project Manager (PMP / DoT Industry) </h2><!----><p style=3D"margin-top=
+:0px;margin-bottom:24px;">Thank you for applying to the IT Project Manager =
+(PMP / DoT Industry) position on <a href=3D"http://url3836.accounts.jobot.c=
+om/ls/click?upn=3Du001.C53A-2BCmZVughgqkA80PoYwpHKN-2FT3u5hFqIVvRapfGRo-2F6=
+ZYm9Z5dq3j8fs8upX4Xpjsn-2B8Wjgm6fsamYWCIrcwPxwMQm0lNj-2FLMKwV-2FAqNanrMm4Ov=
+PgwhEs1sipRC-2FnEuc_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2B=
+vKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akv-2BpQP0MGxsGHCqFCcINHZk5njy0-2Bdg-2F=
+s-2BVhaWGZZ6UZd-2F6gWNqeLIII5WQaMOWwAVHw0OFGSvZyFQSF2-2Fe-2BZwUH7RRG8KjlYjp=
+2WERxjANCKSVhP5fE3BSsIEjwPuTsCrfFMaCMjlrQk5bt9f9N6K3Q08TMRT02OURz0yzfLXrgfK=
+os3ycVSI2bHfVeH6pOTQ-3D-3D" style=3D"color:#23b3e7;">Jobot.com</a>.</p><tab=
+le align=3D"center" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><!----><td width=3D"200" align=3D"center" clas=
+s=3D"o_btn o_bg-primary o_br o_heading o_text" style=3D"font-family:Helveti=
+ca, Arial, sans-serif;font-weight:bold;margin-top:0px;margin-bottom:0px;fon=
+t-size:14px;line-height:18px;mso-padding-alt:6px 12px;background-color:#23b=
+3e7;border-radius:4px;"><a href=3D"http://url3836.accounts.jobot.com/ls/cli=
+ck?upn=3Du001.C53A-2BCmZVughgqkA80PoY35u6AEm56EkVz4NQxSZll50U2pv-2BCzbHQfMv=
+Td7KO74VkOyYcwioJZk8MyrGok6naBsNbAPAqVtpAwdg-2BZbagPSNHG4n1qQlvqgO9CePVKd8p=
+gKftc43RR4idVTbS49WoJyAMt1p2649wyDLJpaLYJTFPp73c0K1SnKDPnnc9sbw6gyXzgEbtLsM=
+4wQ722G1g-3D-3DGy2Q_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2B=
+vKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akm6BG1NTr64SDPGDl-2F3b-2BBj-2BdukFVd5M=
+Op9YyyJrGLJa0fuWEpcJkoqFLdr1T0PhvPr9sNzKq5iOm9ygrjfo5t7qiztH99lp-2BbJtPQQY4=
+O6eNPd9Ifh1KyPIGaqNITUf1g5OSon3ukYhZ8f5s45AmntJJhuUWjG-2BVhWxF8uNvn9PzSoXAG=
+ZDt2FesLKlalqS8g-3D-3D" class=3D"o_text-white" style=3D"text-decoration:non=
+e;outline:none;color:#ffffff;display:block;padding:6px 12px;mso-text-raise:=
+2px;">View Application</a></td></tr></tbody></table></div></td></tr></tbody=
+></table></td></tr></tbody></table><!----><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td =
+align=3D"center" class=3D"o_bg-light o_px-xs" style=3D"background-color:#db=
+e5ea;padding-left:8px;padding-right:8px;"><table width=3D"100%" cellspacing=
+=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" class=3D"o_bloc=
+k-lg" style=3D"max-width:800px;margin:0 auto;"><tbody><tr><td align=3D"cent=
+er" class=3D"o_bg-white o_px-md o_py o_sans o_text-xs o_text-light" style=
+=3D"margin-top:0px;margin-bottom:0px;font-size:14px;line-height:21px;backgr=
+ound-color:#ffffff;padding-top:16px;padding-bottom:16px;"><table width=3D"1=
+00%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"=
+><tbody><tr><td>&nbsp;</td><td align=3D"left" width=3D"355" class=3D"o_bg-l=
+ight o_px-xs" style=3D"font-family:Helvetica, Arial, sans-serif;width:355px=
+;"><table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" class=3D"field-label"><tbody><tr><td width=3D"355" align=3D"center" =
+class=3D"o_bg-ultra_light o_br o_text-xs o_sans o_px-xs o_py" style=3D"font=
+-family:Helvetica, Arial, sans-serif;"><strong>Job Title</strong></td></tr>=
+</tbody></table><table role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" class=3D"field-value"><tbody><tr><td width=3D"355" alig=
+n=3D"center" class=3D"o_bg-ultra_light o_br o_text-xs o_sans o_px-xs o_py" =
+style=3D"font-family:Helvetica, Arial, sans-serif;"><strong>IT Project Mana=
+ger (PMP / DoT Industry)</strong></td></tr></tbody></table></td><td>&nbsp;<=
+/td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tabl=
+e><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" ro=
+le=3D"presentation"><tbody><tr><td align=3D"center" class=3D"o_bg-light o_p=
+x-xs" style=3D"background-color:#dbe5ea;padding-left:8px;padding-right:8px;=
+"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" ro=
+le=3D"presentation" class=3D"o_block-lg" style=3D"max-width:800px;margin:0 =
+auto;"><tbody><tr><td align=3D"center" class=3D"o_bg-white o_px-md o_py o_s=
+ans o_text-xs o_text-light" style=3D"margin-top:0px;margin-bottom:0px;font-=
+size:14px;line-height:21px;background-color:#ffffff;padding-top:16px;paddin=
+g-bottom:16px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" b=
+order=3D"0" role=3D"presentation"><tbody><tr><td>&nbsp;</td><td align=3D"le=
+ft" width=3D"355" class=3D"o_bg-light o_px-xs" style=3D"font-family:Helveti=
+ca, Arial, sans-serif;width:355px;"><table role=3D"presentation" cellspacin=
+g=3D"0" cellpadding=3D"0" border=3D"0" class=3D"field-label"><tbody><tr><td=
+ width=3D"355" align=3D"center" class=3D"o_bg-ultra_light o_br o_text-xs o_=
+sans o_px-xs o_py" style=3D"font-family:Helvetica, Arial, sans-serif;"><str=
+ong>Location</strong></td></tr></tbody></table><table role=3D"presentation"=
+ cellspacing=3D"0" cellpadding=3D"0" border=3D"0" class=3D"field-value"><tb=
+ody><tr><td width=3D"355" align=3D"center" class=3D"o_bg-ultra_light o_br o=
+_text-xs o_sans o_px-xs o_py" style=3D"font-family:Helvetica, Arial, sans-s=
+erif;"><strong>Remote / Phoenix, AZ</strong></td></tr></tbody></table></td>=
+<td>&nbsp;</td></tr></tbody></table></td></tr></tbody></table></td></tr></t=
+body></table><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" role=3D"presentation"><tbody><tr><td align=3D"center" class=3D"o_b=
+g-light o_px-xs" style=3D"background-color:#dbe5ea;padding-left:8px;padding=
+-right:8px;"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" role=3D"presentation" class=3D"o_block-lg" style=3D"max-width:800p=
+x;margin:0 auto;"><tbody><tr><td align=3D"center" class=3D"o_bg-white o_px-=
+md o_py o_sans o_text-xs o_text-light" style=3D"margin-top:0px;margin-botto=
+m:0px;font-size:14px;line-height:21px;background-color:#ffffff;padding-top:=
+16px;padding-bottom:16px;"><table width=3D"100%" cellspacing=3D"0" cellpadd=
+ing=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td>&nbsp;</td><td =
+align=3D"left" width=3D"355" class=3D"o_bg-light o_px-xs" style=3D"font-fam=
+ily:Helvetica, Arial, sans-serif;width:355px;"><table width=3D"100%" role=
+=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" border=3D"0"><tbody><=
+tr><td width=3D"51%" align=3D"left" class=3D"o_pt-xs" style=3D"padding-top:=
+8px;"><p class=3D"o_sans o_text o_text-secondary" style=3D"font-family:Helv=
+etica, Arial, sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;li=
+ne-height:24px;color:#424651;"><strong>Resume</strong></p></td><td width=3D=
+"49%" align=3D"right" class=3D"o_pt-xs" style=3D"padding-top:8px;"><p class=
+=3D"o_sans o_text o_text-secondary" style=3D"font-family:Helvetica, Arial, =
+sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;line-height:24px=
+;color:#424651;"><span>CTO_Jyothi_Krishnan_04052025.docx =E2=9C=85</span><!=
+----></p></td></tr><tr><td width=3D"51%" align=3D"left" class=3D"o_pt-xs" s=
+tyle=3D"padding-top:8px;"><p class=3D"o_sans o_text o_text-secondary" style=
+=3D"font-family:Helvetica, Arial, sans-serif;margin-top:0px;margin-bottom:0=
+px;font-size:14px;line-height:24px;color:#424651;"><strong>Most Recent Empl=
+oyer</strong></p></td><td width=3D"49%" align=3D"right" class=3D"o_pt-xs" s=
+tyle=3D"padding-top:8px;"><p class=3D"o_sans o_text o_text-secondary" style=
+=3D"font-family:Helvetica, Arial, sans-serif;margin-top:0px;margin-bottom:0=
+px;font-size:14px;line-height:24px;color:#424651;"><span>AI Startup in Stea=
+lth Mode =E2=9C=85</span><!----></p></td></tr><tr><td width=3D"51%" align=
+=3D"left" class=3D"o_pt-xs" style=3D"padding-top:8px;"><p class=3D"o_sans o=
+_text o_text-secondary" style=3D"font-family:Helvetica, Arial, sans-serif;m=
+argin-top:0px;margin-bottom:0px;font-size:14px;line-height:24px;color:#4246=
+51;"><strong>Most Recent Job Title</strong></p></td><td width=3D"49%" align=
+=3D"right" class=3D"o_pt-xs" style=3D"padding-top:8px;"><p class=3D"o_sans =
+o_text o_text-secondary" style=3D"font-family:Helvetica, Arial, sans-serif;=
+margin-top:0px;margin-bottom:0px;font-size:14px;line-height:24px;color:#424=
+651;"><span>CTO (Part-Time) =E2=9C=85</span><!----></p></td></tr><tr><td wi=
+dth=3D"51%" align=3D"left" class=3D"o_pt-xs" style=3D"padding-top:8px;"><p =
+class=3D"o_sans o_text o_text-secondary" style=3D"font-family:Helvetica, Ar=
+ial, sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;line-height=
+:24px;color:#424651;"><strong>Elevator Pitch</strong></p></td><td width=3D"=
+49%" align=3D"right" class=3D"o_pt-xs" style=3D"padding-top:8px;"><p class=
+=3D"o_sans o_text o_text-secondary" style=3D"font-family:Helvetica, Arial, =
+sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;line-height:24px=
+;color:#424651;"><span>=F0=9F=93=9D =E2=9C=85</span><!----></p></td></tr><t=
+r><td width=3D"51%" align=3D"left" class=3D"o_pt-xs" style=3D"padding-top:8=
+px;"><p class=3D"o_sans o_text o_text-secondary" style=3D"font-family:Helve=
+tica, Arial, sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;lin=
+e-height:24px;color:#424651;"><strong>Instant Interview (I2)</strong></p></=
+td><td width=3D"49%" align=3D"right" class=3D"o_pt-xs" style=3D"padding-top=
+:8px;"><p class=3D"o_sans o_text o_text-secondary" style=3D"font-family:Hel=
+vetica, Arial, sans-serif;margin-top:0px;margin-bottom:0px;font-size:14px;l=
+ine-height:24px;color:#424651;"><span>=F0=9F=92=AC =E2=9C=85</span><!----><=
+/p></td></tr><tr><td class=3D"o_pt o_bb-light" style=3D"border-bottom:1px s=
+olid #d3dce0;padding-top:16px;">&nbsp; </td><td class=3D"o_pt o_bb-light" s=
+tyle=3D"border-bottom:1px solid #d3dce0;padding-top:16px;">&nbsp; </td></tr=
+><!----><tr><td width=3D"51%" align=3D"left" class=3D"o_pt" style=3D"paddin=
+g-top:16px;"><p class=3D"o_sans o_text o_text-secondary" style=3D"font-fami=
+ly:Helvetica, Arial, sans-serif;margin-top:0px;margin-bottom:0px;font-size:=
+16px;line-height:24px;color:#424651;"><strong>Status</strong></p></td><td w=
+idth=3D"49%" align=3D"right" class=3D"o_pt" style=3D"padding-top:16px;"><p =
+class=3D"o_sans o_text o_text-primary" style=3D"font-family:Helvetica, Aria=
+l, sans-serif;margin-top:0px;margin-bottom:0px;font-size:16px;line-height:2=
+4px;"> Pending Review =F0=9F=94=B5 </p></td></tr></tbody></table></td><td>&=
+nbsp;</td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody>=
+</table><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D=
+"0" role=3D"presentation"><tbody><tr><td align=3D"center" class=3D"o_bg-lig=
+ht o_px-xs" style=3D"background-color:#dbe5ea;padding-left:8px;padding-righ=
+t:8px;"><table width=3D"100%" height=3D"62" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation" style=3D"max-width:800px;"><tbody=
+><tr><td width=3D"50%"><table width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" role=3D"presentation"><tbody><tr height=3D"27"><td></td=
+></tr><tr height=3D"6" style=3D"background-color:#2fb2e7;font-size:6px;line=
+-height:6px;"><td>&nbsp;</td></tr><tr height=3D"27"><td></td></tr></tbody><=
+/table></td><td><table width=3D"100%" height=3D"62" cellspacing=3D"0" cellp=
+adding=3D"0" border=3D"0" role=3D"presentation"><tbody><tr><td>&nbsp;&nbsp;=
+&nbsp;</td><td valign=3D"middle" style=3D"white-space:nowrap;font-family:He=
+lvetica, Arial, sans-serif;font-weight:bold;font-size:18px;"> Recommended&n=
+bsp;Jobs </td><td>&nbsp;&nbsp;&nbsp;</td></tr></tbody></table></td><td widt=
+h=3D"50%"><table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=
+=3D"0" role=3D"presentation"><tbody><tr height=3D"27"><td></td></tr><tr hei=
+ght=3D"6" style=3D"background-color:#2fb2e7;font-size:6px;line-height:6px;"=
+><td>&nbsp;</td></tr><tr height=3D"27"><td></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table><!----><table width=3D"100%" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation"><tbo=
+dy><tr><td align=3D"center" class=3D"o_bg-light o_px-xs" style=3D"backgroun=
+d-color:#dbe5ea;padding-left:8px;padding-right:8px;"><table width=3D"100%" =
+cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" clas=
+s=3D"o_block-lg" style=3D"max-width:800px;margin:0 auto;"><tbody><tr><td al=
+ign=3D"center" class=3D"o_bg-white o_px-md o_py o_sans o_text-xs o_text-lig=
+ht" style=3D"margin-top:0px;margin-bottom:0px;font-size:14px;line-height:21=
+px;background-color:#ffffff;padding-top:16px;padding-bottom:16px;"><table w=
+idth=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=3D"pres=
+entation"><tbody><tr><td>&nbsp;</td><td align=3D"left" width=3D"95%" class=
+=3D"o_bg-light o_px-xs" style=3D"font-family:Helvetica, Arial, sans-serif;w=
+idth:95%;"><div class=3D"EmailJobListings"></div></td><td>&nbsp;</td></tr><=
+/tbody></table></td></tr></tbody></table></td></tr></tbody></table><!----><=
+table width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" border=3D"0" role=
+=3D"presentation"><tbody><tr><td align=3D"center" class=3D"o_bg-light o_px-=
+xs o_pb-lg o_xs-pb-xs" style=3D"background-color:#dbe5ea;padding-left:8px;p=
+adding-right:8px;padding-bottom:32px;"><table width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0" border=3D"0" role=3D"presentation" class=3D"o_block-l=
+g" style=3D"max-width:800px;margin:0 auto;"><tbody><tr><td class=3D"o_bg-wh=
+ite o_br-b o_sans" style=3D"font-size:8px;line-height:8px;height:8px;font-f=
+amily:Helvetica, Arial, sans-serif;margin-top:0px;margin-bottom:0px;backgro=
+und-color:#ffffff;border-radius:0px 0px 4px 4px;">&nbsp; </td></tr><tr><td =
+align=3D"center" class=3D"o_re o_px o_pb-lg" style=3D"font-size:0;vertical-=
+align:top;padding-left:16px;padding-right:16px;padding-bottom:32px;"><div c=
+lass=3D"o_col o_col-4" style=3D"display:inline-block;vertical-align:top;wid=
+th:100%;max-width:400px;"><div style=3D"font-size:32px;line-height:32px;hei=
+ght:32px;">&nbsp; </div><div class=3D"o_px-xs o_sans o_text-xs o_text-light=
+ o_left o_xs-center" style=3D"font-family:Helvetica, Arial, sans-serif;marg=
+in-top:0px;margin-bottom:0px;font-size:14px;line-height:21px;color:#82899a;=
+text-align:left;padding-left:8px;padding-right:8px;"><p class=3D"o_mb-xs" s=
+tyle=3D"margin-top:0px;margin-bottom:8px;">=C2=A9 2025 Jobot LLC. All right=
+s reserved.</p><p class=3D"o_mb-xs" style=3D"margin-top:0px;margin-bottom:8=
+px;">3101 West Pacific Coast Hwy, Newport Beach, CA 92663</p><p style=3D"ma=
+rgin-top:0px;margin-bottom:0px;"><a href=3D"http://url3836.accounts.jobot.c=
+om/ls/click?upn=3Du001.C53A-2BCmZVughgqkA80PoY1S57qf4YeLoceh49JuGcUWdC1uiTE=
+oZrHvS4R6yi2G37-2Bayws0angDhDsqhin1yRvPRXUM0WoLUhz2dK2BmLZWJrqPAM8GHtqTqWpY=
+ryJl4oZc__M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2B=
+eTfT2rJuEJEizDyFJKo6rceib5akp1QeYg32pgRqZLaGEGA-2FrPmsCF80cevqH-2Fegmeliioe=
+TXCM-2FbieyhZqHPXnum01tw72CbOC7HZ1ucM3Sq55Hvb0P37-2BhcIEYFm97Gnauq5351Hxo7u=
+gJnCuGy9e-2Fo11OxkQDoOnjwcAqblcke1yQGNjTo45-2BXAlbnw6C3IORJDck4ZiGPJpvIz7qn=
+t5he-2FYAg-3D-3D" class=3D"o_text-light o_underline" style=3D"text-decorati=
+on:underline;outline:none;color:#82899a;">About Us</a> <span class=3D"o_hid=
+e-xs">&nbsp; =E2=80=A2 &nbsp;</span><br class=3D"o_hide-lg" style=3D"displa=
+y:none;font-size:0;max-height:0;width:0;line-height:0;overflow:hidden;mso-h=
+ide:all;visibility:hidden;"><a href=3D"http://url3836.accounts.jobot.com/ls=
+/click?upn=3Du001.C53A-2BCmZVughgqkA80PoY4wGhNiZvPGYR4tLHE9b2LRC-2BZeCLSEKI=
+dcFfPJ6SGDs-2BQ-2Fy5CSzLrF7ANBXWJTtWiSe4ST1-2BzqUyHqJFyou0ZGRGFAdqsHBulsesp=
+D2Rl4qDWIVWD5ThkaHbZCpkCKk9A-3D-3DQtBn_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2=
+F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akp7mLNYl-2F3TW1hYJl=
+DZSLdk-2B0EQwa-2FA706ftclXQe5J8NpYQbRvw2ZAhwW-2FnsmSCTAixi-2F5AZPlMVv7ANJ2K=
+GVy4Np-2FERDUMwlj4BYRoV22tayMstx-2BtM3FMwiJk-2FkeXWq15eQAkyv6-2BJRmWoKmbXJ4=
+ahMe-2FceSvU941oVh8SbBRcsleZzxOdwAbx29gzK2l-2Fw-3D-3D" class=3D"o_text-ligh=
+t o_underline" style=3D"text-decoration:underline;outline:none;color:#82899=
+a;">Contact Us</a> <span class=3D"o_hide-xs">&nbsp; =E2=80=A2 &nbsp;</span>=
+<br class=3D"o_hide-lg" style=3D"display:none;font-size:0;max-height:0;widt=
+h:0;line-height:0;overflow:hidden;mso-hide:all;visibility:hidden;"><a href=
+=3D"http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2BCmZVughgqk=
+A80PoYwh-2BS3EH0vbdLmqqppF1Dbw7Msv26wxd-2F1C3Tkq6d44zuobN-2F-2B-2BwiVw8N8mP=
+tQXHKpoyRyctn8wZG-2FA5wlWiTTyteIsrfBVAe1GpsvK5lV0HFhmepCGZKWF1eyaNcAvXwTQUh=
+EmO8H4ke2hu3Y8qnoM9i-2BDWl8Vv1ffqbl83mtzcql-k_M7561dTk8oPSP7-2FkK3w4hbSHxTX=
+jDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akqTd9avko6bf=
+BHY2Y4XIA8-2F5maroaKVpwP7dND-2FJCg-2Fx7wb97iqaQSS1bTW7aVm5i-2FBH5MZqFMXKyI2=
+lHu49y588QqhEi2BgPdP6-2FRzWjzjC9wK61RpLPcXoTn-2FRpmFG-2BJgCPoaT4LR8giEws5-2=
+B40EnLt3IXMlfI1UXS3qgPUbzSIWaEg7zEWOsVXXPhFudlaA-3D-3D" class=3D"o_text-lig=
+ht o_underline" style=3D"text-decoration:underline;outline:none;color:#8289=
+9a;">My Email Preferences</a></p></div></div><div class=3D"o_col o_col-2" s=
+tyle=3D"display:inline-block;vertical-align:top;width:100%;max-width:200px;=
+"><div style=3D"font-size:32px;line-height:32px;height:32px;">&nbsp; </div>=
+<div class=3D"o_px-xs o_sans o_text-xs o_text-light o_right o_xs-center" st=
+yle=3D"font-family:Helvetica, Arial, sans-serif;margin-top:0px;margin-botto=
+m:0px;font-size:14px;line-height:21px;color:#82899a;text-align:right;paddin=
+g-left:8px;padding-right:8px;"><p style=3D"margin-top:0px;margin-bottom:0px=
+;"><a href=3D"http://url3836.accounts.jobot.com/ls/click?upn=3Du001.C53A-2B=
+CmZVughgqkA80PoY-2FUIObHa5UFLtR8TuyKW27c7HU-2F0rawJFUYup9W1sX37j9TPr1rzo2us=
+h8QUnNp2gQ-3D-3Df0EE_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2=
+BvKkV3s2-2BeTfT2rJuEJEizDyFJKo6rceib5akomWY1Ad2o3T415fwZdysatC9BhO9M4ZwKzyJ=
+YALfnbiEcG6FO4Bw2QBlllNqIfRdGmTkOi-2BjKExt2mIYLspdjeNkfcnbGSXZAQJb69VSo5F9-=
+2F8JT423HPxjdztEP6OjBYOb9rdEEgeMjNhmOjTwBzFKuGUxZW3VvxOlRgshKVySgrM09ieth-2=
+BmAdyHEMHfvHA-3D-3D" class=3D"o_text-light" style=3D"text-decoration:none;o=
+utline:none;color:#82899a;"><img src=3D"cid:img1" width=3D"36" height=3D"36=
+" alt=3D"[LI]" style=3D"max-width:36px;-ms-interpolation-mode:bicubic;verti=
+cal-align:middle;border:0;line-height:100%;height:auto;outline:none;text-de=
+coration:none;"></a><a href=3D"http://url3836.accounts.jobot.com/ls/click?u=
+pn=3Du001.C53A-2BCmZVughgqkA80PoY46T158v7nBZYOLSELSYyCJ-2BEz8kzfivphNfwqzV-=
+2B2HbrXft_M7561dTk8oPSP7-2FkK3w4hbSHxTXjDKoV-2F95BJrpvStR5DhjI-2BvKkV3s2-2B=
+eTfT2rJuEJEizDyFJKo6rceib5akpgmCKR7tevxQmZPFwL5SeFEKji9VNeBB3jpfNLRaGk7sxwZ=
+wZ-2Ft1b99JqlHGY0fXm4weryCD6V1po7Suxfm2jsu9vaIbOxNXAh9mum4CwetXc-2FT-2Fm859=
+57xppIalbA2PZzidlucTv-2FLHofeoICThMctxGu-2Bbb4rZSjjSGVlo21zPlm7aHXdsIqSGrko=
+srUm7A-3D-3D" class=3D"o_text-light" style=3D"text-decoration:none;outline:=
+none;color:#82899a;"><img src=3D"cid:img2" width=3D"36" height=3D"36" alt=
+=3D"ig" style=3D"max-width:36px;-ms-interpolation-mode:bicubic;vertical-ali=
+gn:middle;border:0;line-height:100%;height:auto;outline:none;text-decoratio=
+n:none;"></a><span> &nbsp;</span></p></div></div></td></tr></tbody></table>=
+<div class=3D"o_hide-xs" style=3D"font-size:64px;line-height:64px;height:64=
+px;">&nbsp; </div></td></tr></tbody></table><span>
+    <!--[if mso]>
+      <style>
+        table { border-collapse: collapse; }
+        .o_col { float: left; }
+      </style>
+      <xml>
+        <o:OfficeDocumentSettings>
+          <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+      </xml>
+      <![endif]--> =20
+  </span></div>
+   =20
+  <img src=3D"http://url3836.accounts.jobot.com/wf/open?upn=3Du001.mBCQ8pya=
+ZD9BnEzbTSwzlgeHyMZGKI0nUiWKhhdz8MZ-2BMD023NwqtfChJP3mJdvJk7nV-2BsgIFx-2Bmr=
+ZQ9ic1bk8-2FQ8NGebXJRynO5Djmy6bOZWjGQkuQdOyRuEVYDy78L7j29Fo5sp9XK7Ogo2IWlh-=
+2B5jIf6zS79hiunwNkUOuGzKuHliS-2BmT7CKSK4rOz5R5YknGsF1pqWIXWEymITOmHlDZSw9yW=
+Zm2uN3quiit9k7MSOIKfP9SeBlTaQI7MW8PgpJ2AnP-2BqrKIGo7yD3AIKg-3D-3D" alt=3D""=
+ width=3D"1" height=3D"1" border=3D"0" style=3D"height:1px !important;width=
+:1px !important;border-width:0 !important;margin-top:0 !important;margin-bo=
+ttom:0 !important;margin-right:0 !important;margin-left:0 !important;paddin=
+g-top:0 !important;padding-bottom:0 !important;padding-right:0 !important;p=
+adding-left:0 !important;"/></body></html>
+--6efdf7451acb304db9e09b0d3dde83f67d965fdce1e1f2c4be9685d5e31c--
+
+--ff1fbe1e349d939bdd52cfdcd03406d7df90cddc4975f8da7e8bcfcccaee
+Content-Disposition: inline; filename="img2.png"
+Content-ID: <img2>
+Content-Transfer-Encoding: base64
+Content-Type: image/png; name="img2.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAYFBMVEUAAACCiZqCiZqCiZqCiZqC
+iZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqCiZqC
+iZqCiZqCiZqCiZqCiZqCiZqCiZqCiZo2S8pHAAAAH3RSTlMA9xBl3TvRG+4j58qVBbmwjk0zakYL
+o3ryWYdzKlHCNoq2yAAAAkBJREFUWMPtV8eSwyAMNeCGe69J+P+/XAs8AWbXoD1kcvE7iUAe6sjB
+jRs3voiENXUeZikRBkiahXFVsATLUrJcOJGzEsMThcKLMPLzMCIQIMzH06tz1T48OE8oIAioBOeP
+bli3l6LqPXYRoNmoMxKFvMtpXQn+Sb0OGBbwk8vjTF/lZgLFXW6Kj/0tQACsi6+3OSjk9M+ckWkE
+P4FK3GlZHXhMFxNIFdjmVHh3EVUyXlK1Qyic59rAwtjORbGxh1rVQJSB1B5C5fR1ZzltIkIhlvX1
+fKdi5/Q2ZFFiZNVmlksMV+xhzN5xCS+JMouIVsLCYlqdSBuvkB679M2Tn/WZhcspDfoohRK4JCIm
+0aR6z3MEjzTSyJRbROSSSBhErd0teAzr2iISTqLRiKB4GrbIHyI80SlGIDfm5oOorFYosUQNuIT+
+yvvl3TuwRLm83kIH2x2eSGcC+yOoK55Ii+0f+dr/k8i+3dQST6TLblaiFfEBT6QbxsveXYVRiiM2
+IXszRDqQMT4h6XmQwN9GY3OH3R1HtBi1Vsja0kwr0SmqixbRRmgmu1l0rhoBYHYbwTW2gag+Mq9t
+Py1SnlCNTbdabYyNqjRKGFottvkPmcVTKB7dHWL0c0QLrVRujwRP0PAfDyTt65CING9MGv1Aup9s
+FF4QQ98QgYAaIj451uAHLT0hMt/otwxenlSOfv5htHEO97QhUnHceDy3EeeUUl21xyLhXTtXRI/H
+nx/Y8Z8QH/6owX9m5XXDkuDGjRvfww+9XWcmuqciRAAAAABJRU5ErkJggg==
+--ff1fbe1e349d939bdd52cfdcd03406d7df90cddc4975f8da7e8bcfcccaee
+Content-Disposition: inline; filename="img1.png"
+Content-ID: <img1>
+Content-Transfer-Encoding: base64
+Content-Type: image/png; name="img1.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAALHRFWHRDcmVhdGlvbiBUaW1lAFR1
+ZSAzMCBOb3YgMjAyMSAxOToxOToyNyAtMDgwMJ13ajAAAAAHdElNRQflDAEDFST+4RZpAAAACXBI
+WXMAAAsSAAALEgHS3X78AAAABGdBTUEAALGPC/xhBQAAAyhJREFUeNrtm7trFUEUxuf6xBeKIkQb
+H2gRUQMiGAtFUJGAhUFBJCCiEP8DxUaIlRaCjYKxSizEwmujnWKw0kIESdRGQorEJ0J8RNKo32E3
+slx2Mntm77kzi+cHH3N3Z+becz52dmdn9xqjKIqiKIqiKIqitJpamc6XrvQvQnESOgpthRaX/c4m
+8Aeagoahe9DgxfO9v1puEMzZheIOtCGwIS5GoRMw6blPZy+DYE4nikfQktDZF+QndAAmPeN2ZBsE
+c8iUEWhd6KyZjEFbYNIUp9Mcjx86bapnjkljPsPt5GPQsdCZloAdu49B20NnWYJt3A4+BlXlxJzH
+Um4HH4P+K+YJf/93qA59gHZC+0MnzEXSIJoKHMJldXxmB6YI3SjuQvNDJ14UySF2KmsOge37KK6H
+TpqDlEHvoReWugehk+YgZVDNsy46pAxqgzotdd2hk+YgeQ4awEl548wGPtegHnw8GzppDpJXsc3Q
+MEx5aJJzEl3md4dOmIv0PIgW1Jp170ZzKVq2WAGtEo77H5JDrNckR0yj6pk2ry1t9qX1k9A5aC0J
+04RNKFdD66EL0Fdpg0QninkLVBhyHzObPyxt6Mh7Bx1E/Wi2Dtu0pEprO5fR7jZKGsIdUknEei/2
+GzrcaE4j6US0C/osFUiUBiHxaehtwbZ0AeiTikX6JF0KmhqYZPishF7BjC+WpjTUrkILmx1DlEdQ
+ag6ZMgS9hB5DY9h3JK8tjPuGwuupRWUNAtegvZlteubWD5MWWNq/kQgiSoNgAi2HHM+pokv8Dku3
+TxKxRGmQSc6NtiOlzbJ/WiKQWA2ajZYutlXRoJaiBjlQgxyoQQ7UIAdqkAM1yIEa5EDybr4Dtwxz
+c/avyXxehjZ7ctrMdlfebukj8s6SpEE3CrRph54yv7fPCK7/NKJDzIEa5EANcuBjEOst0chgx+5j
+0EjoLEvAjt3HoLpHn1hgx+5j0C2TPGuvGhNp7CzYBqVPEOgtDZElTiEo1p40dhZeVzH80BOTPNGs
+wpFEMXYh5iGfzmX/DrXcJO/7ZP8OFQPZv0PdhDmToQNSFEVRFEVRFEVRivMXXtmnCRttvdUAAAAA
+SUVORK5CYII=
+--ff1fbe1e349d939bdd52cfdcd03406d7df90cddc4975f8da7e8bcfcccaee--

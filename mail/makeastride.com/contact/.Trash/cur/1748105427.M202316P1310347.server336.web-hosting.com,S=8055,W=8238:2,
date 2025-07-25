@@ -1,0 +1,183 @@
+Return-Path: <sarita@laravel.digital>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id QHuXB9P4MWiL/hMAM7Pthw
+	(envelope-from <sarita@laravel.digital>)
+	for <contact@makeastride.com>; Sat, 24 May 2025 12:50:27 -0400
+Return-path: <sarita@laravel.digital>
+Envelope-to: contact@makeastride.com
+Delivery-date: Sat, 24 May 2025 12:50:27 -0400
+Received: from [198.54.122.200] (port=44582 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98.1)
+	(envelope-from <sarita@laravel.digital>)
+	id 1uIs4n-00000005gC7-2Sn4
+	for contact@makeastride.com;
+	Sat, 24 May 2025 12:50:25 -0400
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=laravel.digital header.s=google header.b="C/fh9NV7";
+	dmarc=pass (policy=quarantine) header.from=laravel.digital;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of sarita@laravel.digital designates 209.85.214.195 as permitted sender) smtp.mailfrom=sarita@laravel.digital
+Received: from mail-pl1-f195.google.com (mail-pl1-f195.google.com [209.85.214.195])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits)
+	 key-exchange X25519 server-signature RSA-PSS (2048 bits) server-digest SHA256)
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4b4Sgv4dTNz4w7y
+	for <contact@makeastride.com>; Sat, 24 May 2025 16:50:19 +0000 (UTC)
+Received: by mail-pl1-f195.google.com with SMTP id d9443c01a7336-23274dbcbc2so5465065ad.1
+        for <contact@makeastride.com>; Sat, 24 May 2025 09:50:19 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=laravel.digital; s=google; t=1748105418; x=1748710218; darn=makeastride.com;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:from:to:cc:subject:date:message-id:reply-to;
+        bh=1vEInePE1tBM3w7bjp9QduXv845Oobsa+bpsNoKirZY=;
+        b=C/fh9NV7erIIhiL37RKN5mBVV4SvbUGf1v4zEjGZ8H0ev7G/98nCVEqwJl8+8zm2Cg
+         7GPc0UiqiZdw4BYwvsOmGJcxnkabkun8iY2cZsWyXtzKs7CRkaxwM9q1fnxyTk2xP7QC
+         /Gu219Avjx/HHLrdCXUPaYcqigW9Z+HQeST8I=
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1748105418; x=1748710218;
+        h=content-language:thread-index:mime-version:message-id:date:subject
+         :to:from:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=1vEInePE1tBM3w7bjp9QduXv845Oobsa+bpsNoKirZY=;
+        b=SofEcslKeOmKgk/E6owUJBy4YQREtSFRPNZCMS+s3EhRWWI1FD/zYO8OSkvKzhWsrh
+         KOrO7UaqU2wPk8DtVvC4A1oadFDAZTpR2EvPURLxeQT8fEFR6oRas49Dto9qKOJ/PBJI
+         JtHj1czpo57oSlaxrCGuPVD4/Ika2Gl9WJ3svzpDOGIOgsQ/luwIV9gsH2ru5t4GEQtx
+         IsvxILOVA1vKLYOs7Z3jdQ0LKTUoeHTKKETMiamZroKBlki3fxnkpBbEBjrvZ6S4CNsi
+         2A5CwAtilKk9jwMIIARCh8ekOUXHwdV4PErSelWLV+N/85PyJPyT/SuclVSumDKs+rbm
+         QTFw==
+X-Gm-Message-State: AOJu0Yw2ig49wCssh9wPftq8KUfEw40FS2SkfTaGI66yD2zWQFcWp6or
+	ItajKJ9xkOwRMVD1EvQ79KhwfOyXH1xZ2U7erHEtZtaz8XT5gQdxiUi/S3pHGFvoDFZ7FdBXnHJ
+	00+xG25Y=
+X-Gm-Gg: ASbGnctfPUs4qmnybVjLF8SFO3bg0liITejVCGpm0H/1bMxIAwH1Dt46VOOmFlmnmdZ
+	kEp2Wcv1oRksT2aRUhGo4vAf4XN/ppoiCSJ89a5wEBVyzs9164V7e1Xq7iLK6fl86JPwMtE5EJ/
+	4vYalJc26D4GWFaSE4m6tf9V2zq5xyUgnvDnHhl04IqSy8MsMbApZmAAGOoll6yYTzmNl9c1IZG
+	SW1iezAVWcZGLI8vUuTKBfY+NpS85fu2MERrVYjSwnkTzsAQJ9kjM3cgQzObEixibweI/CisPwV
+	oyX7H13/TSkcuVo7qxUPwkYWXTD8jR+pdaeCq6cXwtMvrb0DfSMMaH2sLPygIGg=
+X-Google-Smtp-Source: AGHT+IGtn1YqZ7zvpVV9YYveKvxN2sYphjsoafueLe37QBMh4V4ZHGB0enOd+4QYnovVB3y0y1ATPg==
+X-Received: by 2002:a17:902:e544:b0:22f:bf03:8dac with SMTP id d9443c01a7336-23414f739edmr50991475ad.26.1748105418456;
+        Sat, 24 May 2025 09:50:18 -0700 (PDT)
+Received: from BhatiSahab ([2409:40d2:10e0:154b:e09e:553:812e:cb09])
+        by smtp.gmail.com with ESMTPSA id d9443c01a7336-231d4edb063sm141006335ad.255.2025.05.24.09.50.16
+        for <contact@makeastride.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 24 May 2025 09:50:17 -0700 (PDT)
+From: "Sarita" <sarita@laravel.digital>
+To: <contact@makeastride.com>
+Subject: Ist Page of Google
+Date: Sat, 24 May 2025 22:04:50 +0530
+Message-ID: <67ed01dbcccb$ed956560$c8c03020$@digital>
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_67EE_01DBCCFA.074DA160"
+X-Mailer: Microsoft Office Outlook 12.0
+Thread-Index: AdvMroaBCZZAqC9QS8KxvQA2tAXIDg==
+Content-Language: en-in
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_67EE_01DBCCFA.074DA160
+Content-Type: text/plain;
+	charset="us-ascii"
+Content-Transfer-Encoding: 7bit
+
+Hi there
+
+ 
+
+I was going through your website from your email account & I personally see
+a lot of potential in your website & business. With your permission I would
+like to send you prices showing you a few things to greatly improve these
+search results for you.
+
+ 
+
+We can place your website on Google's 1st page (Yahoo, etc.).
+
+ 
+
+These things are not difficult, and my report will be very specific. It will
+show you exactly what needs to be done to move you up in the rankings
+dramatically.
+
+ 
+
+May I send you a quote and prices? If interested.
+
+ 
+
+Thanks,
+
+Sarita,
+
+Business Consultant (INDIA)
+
+
+------=_NextPart_000_67EE_01DBCCFA.074DA160
+Content-Type: text/html;
+	charset="us-ascii"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" =
+xmlns:o=3D"urn:schemas-microsoft-com:office:office" =
+xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:m=3D"http://schemas.microsoft.com/office/2004/12/omml" =
+xmlns=3D"http://www.w3.org/TR/REC-html40"><head><META =
+HTTP-EQUIV=3D"Content-Type" CONTENT=3D"text/html; =
+charset=3Dus-ascii"><meta name=3DGenerator content=3D"Microsoft Word 15 =
+(filtered medium)"><style><!--
+/* Font Definitions */
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+/* Style Definitions */
+p.MsoNoSpacing, li.MsoNoSpacing, div.MsoNoSpacing
+	{mso-style-priority:1;
+	margin:0cm;
+	font-size:12.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-fareast-language:EN-US;}
+.MsoPapDefault
+	{mso-style-type:export-only;
+	margin-bottom:8.0pt;
+	line-height:115%;}
+@page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:72.0pt 72.0pt 72.0pt 72.0pt;}
+div.WordSection1
+	{page:WordSection1;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]--></head><body lang=3DEN-IN =
+style=3D'word-wrap:break-word'><div class=3DWordSection1><p =
+class=3DMsoNoSpacing>Hi there<o:p></o:p></p><p =
+class=3DMsoNoSpacing><o:p>&nbsp;</o:p></p><p class=3DMsoNoSpacing>I was =
+going through your website from your email account &amp; I personally =
+see a lot of potential in your website &amp; business. With your =
+permission I would like to send you prices showing you a few things to =
+greatly improve these search results for you.<o:p></o:p></p><p =
+class=3DMsoNoSpacing><o:p>&nbsp;</o:p></p><p class=3DMsoNoSpacing>We can =
+place your website on Google's 1st page (Yahoo, etc.).<o:p></o:p></p><p =
+class=3DMsoNoSpacing><o:p>&nbsp;</o:p></p><p class=3DMsoNoSpacing>These =
+things are not difficult, and my report will be very specific. It will =
+show you exactly what needs to be done to move you up in the rankings =
+dramatically.<o:p></o:p></p><p =
+class=3DMsoNoSpacing><o:p>&nbsp;</o:p></p><p class=3DMsoNoSpacing>May I =
+send you a quote and prices? If interested.<o:p></o:p></p><p =
+class=3DMsoNoSpacing><o:p>&nbsp;</o:p></p><p =
+class=3DMsoNoSpacing>Thanks,<o:p></o:p></p><p =
+class=3DMsoNoSpacing><b>Sarita,<o:p></o:p></b></p><p =
+class=3DMsoNoSpacing>Business Consultant (INDIA)</p></div></body></html>
+------=_NextPart_000_67EE_01DBCCFA.074DA160--
+

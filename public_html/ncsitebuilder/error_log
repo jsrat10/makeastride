@@ -1,0 +1,41 @@
+[12-Sep-2023 03:24:34 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[12-Sep-2023 03:24:43 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/6.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/6.php on line 57
+[12-Sep-2023 03:24:44 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/7.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/7.php on line 57
+[12-Sep-2023 03:24:45 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/8.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/8.php on line 57
+[30-Oct-2023 07:43:58 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[24-Nov-2023 08:17:41 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[26-Nov-2023 11:07:55 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[01-Jan-2024 12:38:50 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[25-Aug-2024 16:18:52 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[25-Aug-2024 16:19:19 UTC] PHP Fatal error:  Uncaught Error: Class "StoreCartElement" not found in /home/makerjbm/public_html/ncsitebuilder/1.php:57
+Stack trace:
+#0 {main}
+  thrown in /home/makerjbm/public_html/ncsitebuilder/1.php on line 57
+[26-Sep-2024 18:03:01 UTC] PHP Parse error:  Unclosed '(' in /home/makerjbm/public_html/ncsitebuilder/functions.inc.php on line 1120

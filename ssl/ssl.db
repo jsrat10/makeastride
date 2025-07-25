@@ -1,0 +1,97 @@
+--- 
+files: 
+  certificate: 
+    makeastride_com_9a319_ce78f_1783123199_21ebbca7c3c90e8b88a9e26249db88c4: 
+      created: '1748968357'
+      domains: 
+        - makeastride.com
+        - www.makeastride.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: 30830900
+      id: makeastride_com_9a319_ce78f_1783123199_21ebbca7c3c90e8b88a9e26249db88c4
+      is_self_signed: 0
+      issuer.commonName: Sectigo Public Server Authentication CA DV R36
+      issuer.organizationName: Sectigo Limited
+      key_algorithm: rsaEncryption
+      modulus: 9a319ad18e400c2a58136d94e26121787616c24867c47e9ff4d6cf671f84b4b853c06c54b760cf8d7952793a3ba964db9116587550be6539d476cbfe886668b4acc2dea9b92f4db57d9e59411c9bd3f7a04939023038680b1d7c669a8e7b9f325d35edc33fccdfdc4fae488b866cfc98ff422c397acb59afa9aa8433ebeffeb61a35db9fa69da279a40bd87f92cb0d285affa7414e1c5debb816e58caab93a9889e56c27b62a4fd7f417ca3f9b45c6fc07385e55e336fd2e57c24a050bc01851bc8259b053692fae89b590c0b976f178824411a7e6c2672ad636538de4418886197fb769cf4cce010c852d1465d99bff214840cc7816a7cc3e049e52237ce78f
+      modulus_length: 2048
+      not_after: '1783123199'
+      not_before: '1748908800'
+      serial: c8ce67b061854e1866038273df9b82a6
+      signature_algorithm: sha384WithRSAEncryption
+      subject.commonName: makeastride.com
+      validation_type: dv
+    makeastride_com_c9eb6_8308b_1751587199_ed96292755341acd115275a2d543a516: 
+      created: '1717466478'
+      domains: 
+        - makeastride.com
+        - www.makeastride.com
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: 26760541
+      id: makeastride_com_c9eb6_8308b_1751587199_ed96292755341acd115275a2d543a516
+      is_self_signed: 0
+      issuer.commonName: Sectigo RSA Domain Validation Secure Server CA
+      issuer.organizationName: Sectigo Limited
+      key_algorithm: rsaEncryption
+      modulus: c9eb6fb5c6377261758aa67336fe1b5228ec0199519e67a487c2f3dbeb676cfa4bf239d9dca687283abf01c95ab03b1042bc67d0c926a0ae4b08cd08a3483fff17e9190928fa146ea1f08b9689f9a8610a8583beeb3fded0ff6de458559e163e5bf323a13c28f8535ee3823006dc5f3cc35742a9abe7490f08364e88bb95654e0d05d3e51239d063a88ebd846a7dce97f29cf43daeee8417f6062f5842a2e92bdde44997aedf61a0b800bed42e04f318413f19e6aaf64f708a23a352a8cdd077a5f5c9e35b30c960e713af61a733d4370382e5f15844abf91873bfeff23dd10f8de009f7a1546b7b97518404e5d25eaa83ecb9c53dc93dbb4215e3549d88308b
+      modulus_length: 2048
+      not_after: '1751587199'
+      not_before: '1717459200'
+      serial: 8339e3a594e66c04b9682b4ef333687f
+      signature_algorithm: sha256WithRSAEncryption
+      subject.commonName: makeastride.com
+      validation_type: dv
+  csr: {}
+
+  key: 
+    9a319_ce78f_507c65b79c3d362f3d359c1898735be9: 
+      created: '1748967967'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: nc_module_key_30830900
+      id: 9a319_ce78f_507c65b79c3d362f3d359c1898735be9
+      key_algorithm: rsaEncryption
+      modulus: 9a319ad18e400c2a58136d94e26121787616c24867c47e9ff4d6cf671f84b4b853c06c54b760cf8d7952793a3ba964db9116587550be6539d476cbfe886668b4acc2dea9b92f4db57d9e59411c9bd3f7a04939023038680b1d7c669a8e7b9f325d35edc33fccdfdc4fae488b866cfc98ff422c397acb59afa9aa8433ebeffeb61a35db9fa69da279a40bd87f92cb0d285affa7414e1c5debb816e58caab93a9889e56c27b62a4fd7f417ca3f9b45c6fc07385e55e336fd2e57c24a050bc01851bc8259b053692fae89b590c0b976f178824411a7e6c2672ad636538de4418886197fb769cf4cce010c852d1465d99bff214840cc7816a7cc3e049e52237ce78f
+      modulus_length: 2048
+    c9eb6_8308b_03e0234be1bd0eda0865f5336bf3c89e: 
+      created: '1717466087'
+      ecdsa_curve_name: ~
+      ecdsa_public: ~
+      friendly_name: nc_module_key_26760541
+      id: c9eb6_8308b_03e0234be1bd0eda0865f5336bf3c89e
+      key_algorithm: rsaEncryption
+      modulus: c9eb6fb5c6377261758aa67336fe1b5228ec0199519e67a487c2f3dbeb676cfa4bf239d9dca687283abf01c95ab03b1042bc67d0c926a0ae4b08cd08a3483fff17e9190928fa146ea1f08b9689f9a8610a8583beeb3fded0ff6de458559e163e5bf323a13c28f8535ee3823006dc5f3cc35742a9abe7490f08364e88bb95654e0d05d3e51239d063a88ebd846a7dce97f29cf43daeee8417f6062f5842a2e92bdde44997aedf61a0b800bed42e04f318413f19e6aaf64f708a23a352a8cdd077a5f5c9e35b30c960e713af61a733d4370382e5f15844abf91873bfeff23dd10f8de009f7a1546b7b97518404e5d25eaa83ecb9c53dc93dbb4215e3549d88308b
+      modulus_length: 2048
+indexes: 
+  certificate: 
+    modulus: 
+      9a319ad18e400c2a58136d94e26121787616c24867c47e9ff4d6cf671f84b4b853c06c54b760cf8d7952793a3ba964db9116587550be6539d476cbfe886668b4acc2dea9b92f4db57d9e59411c9bd3f7a04939023038680b1d7c669a8e7b9f325d35edc33fccdfdc4fae488b866cfc98ff422c397acb59afa9aa8433ebeffeb61a35db9fa69da279a40bd87f92cb0d285affa7414e1c5debb816e58caab93a9889e56c27b62a4fd7f417ca3f9b45c6fc07385e55e336fd2e57c24a050bc01851bc8259b053692fae89b590c0b976f178824411a7e6c2672ad636538de4418886197fb769cf4cce010c852d1465d99bff214840cc7816a7cc3e049e52237ce78f: 
+        makeastride_com_9a319_ce78f_1783123199_21ebbca7c3c90e8b88a9e26249db88c4: ~
+      c9eb6fb5c6377261758aa67336fe1b5228ec0199519e67a487c2f3dbeb676cfa4bf239d9dca687283abf01c95ab03b1042bc67d0c926a0ae4b08cd08a3483fff17e9190928fa146ea1f08b9689f9a8610a8583beeb3fded0ff6de458559e163e5bf323a13c28f8535ee3823006dc5f3cc35742a9abe7490f08364e88bb95654e0d05d3e51239d063a88ebd846a7dce97f29cf43daeee8417f6062f5842a2e92bdde44997aedf61a0b800bed42e04f318413f19e6aaf64f708a23a352a8cdd077a5f5c9e35b30c960e713af61a733d4370382e5f15844abf91873bfeff23dd10f8de009f7a1546b7b97518404e5d25eaa83ecb9c53dc93dbb4215e3549d88308b: 
+        makeastride_com_c9eb6_8308b_1751587199_ed96292755341acd115275a2d543a516: ~
+    subject.commonName: 
+      makeastride.com: 
+        makeastride_com_9a319_ce78f_1783123199_21ebbca7c3c90e8b88a9e26249db88c4: ~
+        makeastride_com_c9eb6_8308b_1751587199_ed96292755341acd115275a2d543a516: ~
+  csr: 
+    commonName: {}
+
+    modulus: {}
+
+uniques: 
+  certificate: 
+    friendly_name: 
+      26760541: makeastride_com_c9eb6_8308b_1751587199_ed96292755341acd115275a2d543a516
+      30830900: makeastride_com_9a319_ce78f_1783123199_21ebbca7c3c90e8b88a9e26249db88c4
+  csr: 
+    friendly_name: {}
+
+  key: 
+    friendly_name: 
+      nc_module_key_26760541: c9eb6_8308b_03e0234be1bd0eda0865f5336bf3c89e
+      nc_module_key_30830900: 9a319_ce78f_507c65b79c3d362f3d359c1898735be9
+    modulus:ecdsa_curve_name:ecdsa_public: 
+      9a319ad18e400c2a58136d94e26121787616c24867c47e9ff4d6cf671f84b4b853c06c54b760cf8d7952793a3ba964db9116587550be6539d476cbfe886668b4acc2dea9b92f4db57d9e59411c9bd3f7a04939023038680b1d7c669a8e7b9f325d35edc33fccdfdc4fae488b866cfc98ff422c397acb59afa9aa8433ebeffeb61a35db9fa69da279a40bd87f92cb0d285affa7414e1c5debb816e58caab93a9889e56c27b62a4fd7f417ca3f9b45c6fc07385e55e336fd2e57c24a050bc01851bc8259b053692fae89b590c0b976f178824411a7e6c2672ad636538de4418886197fb769cf4cce010c852d1465d99bff214840cc7816a7cc3e049e52237ce78f: 9a319_ce78f_507c65b79c3d362f3d359c1898735be9
+      c9eb6fb5c6377261758aa67336fe1b5228ec0199519e67a487c2f3dbeb676cfa4bf239d9dca687283abf01c95ab03b1042bc67d0c926a0ae4b08cd08a3483fff17e9190928fa146ea1f08b9689f9a8610a8583beeb3fded0ff6de458559e163e5bf323a13c28f8535ee3823006dc5f3cc35742a9abe7490f08364e88bb95654e0d05d3e51239d063a88ebd846a7dce97f29cf43daeee8417f6062f5842a2e92bdde44997aedf61a0b800bed42e04f318413f19e6aaf64f708a23a352a8cdd077a5f5c9e35b30c960e713af61a733d4370382e5f15844abf91873bfeff23dd10f8de009f7a1546b7b97518404e5d25eaa83ecb9c53dc93dbb4215e3549d88308b: c9eb6_8308b_03e0234be1bd0eda0865f5336bf3c89e

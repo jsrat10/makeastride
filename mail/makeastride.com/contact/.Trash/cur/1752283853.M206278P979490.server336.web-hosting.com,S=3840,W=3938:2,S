@@ -1,0 +1,98 @@
+Return-Path: <>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id oBAyCc26cWgi8g4AM7Pthw
+	(envelope-from <>)
+	for <contact@makeastride.com>; Fri, 11 Jul 2025 21:30:53 -0400
+Return-path: <>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 11 Jul 2025 21:30:53 -0400
+Received: from mailnull by server336.web-hosting.com with local (Exim 4.98.2)
+	id 1uaP4k-00000004BGT-16QN
+	for contact@makeastride.com;
+	Fri, 11 Jul 2025 21:30:50 -0400
+X-Failed-Recipients: nigel.laseron@msn.com
+Auto-Submitted: auto-replied
+From: Mail Delivery System <Mailer-Daemon@server336.web-hosting.com>
+To: contact@makeastride.com
+References: <6f1f32a8e47670dcf62d18132abcbf9c@makeastride.com>
+Content-Type: multipart/report; report-type=delivery-status; boundary=1752283850-eximdsn-986683822
+MIME-Version: 1.0
+Subject: Mail delivery failed: returning message to sender
+Message-Id: <E1uaP4k-00000004BGT-16QN@server336.web-hosting.com>
+Date: Fri, 11 Jul 2025 21:30:50 -0400
+
+--1752283850-eximdsn-986683822
+Content-type: text/plain; charset=us-ascii
+
+This message was created automatically by mail delivery software.
+
+A message that you sent could not be delivered to one or more of its
+recipients. This is a permanent error. The following address(es) failed:
+
+  nigel.laseron@msn.com
+    host msn-com.olc.protection.outlook.com [52.101.194.14]
+    SMTP error from remote mail server after pipelined MAIL FROM:<contact@makeastride.com> SIZE=2323:
+    550 5.7.1 Unfortunately, messages from [162.254.39.101] weren't sent. Please contact your Internet service provider since part of their network is on our block list (S3150). You can also refer your provider to http://mail.live.com/mail/troubleshooting.as[truncated]
+
+--1752283850-eximdsn-986683822
+Content-type: message/delivery-status
+
+Reporting-MTA: dns; server336.web-hosting.com
+
+Action: failed
+Final-Recipient: rfc822;nigel.laseron@msn.com
+Status: 5.0.0
+Remote-MTA: dns; msn-com.olc.protection.outlook.com
+Diagnostic-Code: smtp; 550 5.7.1 Unfortunately, messages from [162.254.39.101] weren't sent. Please contact your Internet service provider since part of their network is on our block list (S3150). You can also refer your provider to http://mail.live.com/mail/troubleshooting.aspx#errors. [Name=Protocol Filter Agent][AGT=PFA][MxId=11BB81C12A93C5CF] [CH3PEPF00000016.namprd21.prod.outlook.com 2025-07-12T01:30:50.201Z 08DDC0E0954BA079]
+
+--1752283850-eximdsn-986683822
+Content-type: message/rfc822
+
+Return-path: <contact@makeastride.com>
+Received: from [::1] (port=60306 helo=server336.web-hosting.com)
+	by server336.web-hosting.com with esmtpa (Exim 4.98.2)
+	(envelope-from <contact@makeastride.com>)
+	id 1uaP4g-00000004B5p-2vP1
+	for nigel.laseron@msn.com;
+	Fri, 11 Jul 2025 21:30:46 -0400
+MIME-Version: 1.0
+Date: Fri, 11 Jul 2025 21:30:46 -0400
+From: contact@makeastride.com
+To: nigel.laseron@msn.com
+Subject: Re: Enquire from the web page
+User-Agent: Roundcube Webmail/1.6.11
+Message-ID: <6f1f32a8e47670dcf62d18132abcbf9c@makeastride.com>
+X-Sender: contact@makeastride.com
+Content-Type: text/plain; charset=UTF-8;
+ format=flowed
+Content-Transfer-Encoding: 8bit
+
+Hi Nigel,
+
+Thank you for reaching out. I’d be happy to learn more and explore how 
+we might work together.
+
+Could you please share a bit more about your company, your current 
+needs, and what kind of support or services you're looking for? That 
+will help me better prepare for a productive discussion.
+
+Looking forward to hearing from you!
+Thank you
+Jo
+
+
+On 2025-07-08 14:42, no-reply@makeastride.com wrote:Name:
+         Nigel Laseron
+
+         E-mail:
+         nigel.laseron@msn.com
+
+         Message:
+
+Hello
+We are looking for company that can help us, lets discuss cooperation
+on Whatsapp, send me message:+44 740 491 5834
+
+--1752283850-eximdsn-986683822--

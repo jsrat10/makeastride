@@ -1,0 +1,1595 @@
+Return-Path: <1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net>
+Delivered-To: contact@makeastride.com
+Received: from server336.web-hosting.com
+	by server336.web-hosting.com with LMTP
+	id eCuqFjtSgWfh2iEAM7Pthw
+	(envelope-from <1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net>)
+	for <contact@makeastride.com>; Fri, 10 Jan 2025 12:00:43 -0500
+Return-path: <1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net>
+Envelope-to: contact@makeastride.com
+Delivery-date: Fri, 10 Jan 2025 12:00:43 -0500
+Received: from [63.250.43.69] (port=34275 helo=asp-relay-shared.jellyfish.systems)
+	by server336.web-hosting.com with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net>)
+	id 1tWIN4-009KDH-1X
+	for contact@makeastride.com;
+	Fri, 10 Jan 2025 12:00:30 -0500
+Authentication-Results: asp-relay-shared.jellyfish.systems;
+	dkim=pass header.d=bf10x.hubspotemail.net header.s=hs1 header.b=zPBJsZK5;
+	dkim=pass header.d=leanix.net header.s=hs1 header.b=MYg86srG;
+	spf=pass (asp-relay-shared.jellyfish.systems: domain of "1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net" designates 158.247.18.35 as permitted sender) smtp.mailfrom="1axcf48e5dpwy2k14eqrxqkix0qq53k8onng9a-contact=makeastride.com@bf10x.hubspotemail.net";
+	dmarc=pass (policy=quarantine) header.from=leanix.net
+Received: from bid46lx.bf10x.hubspotemail.net (bid46lx.bf10x.hubspotemail.net [158.247.18.35])
+	(using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+	(No client certificate requested)
+	by asp-relay-shared.jellyfish.systems (Postfix) with ESMTPS id 4YV7FJ6M0Cz55mn
+	for <contact@makeastride.com>; Fri, 10 Jan 2025 17:00:20 +0000 (UTC)
+Received: by 172.16.116.30 with SMTP id a089896hoz745x69h8rjab1creunh73pkcuklgk60m;
+        Fri, 10 Jan 2025 17:00:20 GMT
+DKIM-Signature: v=1; s=hs1; d=bf10x.hubspotemail.net; 
+        i=@bf10x.hubspotemail.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ubsrMDOJvLs4bsHbaOBkHoDXmkxuDZ5i773LQe7im7E=; 
+        b=zPBJsZK5+8JrWJu0gmyxQy/agC8okFvmYSdTWBbFT4lyseS8pxhmIDicxGm5YU
+         lQL/Y92y1yDpTKHUl5/VZNYnBBOzrFdCOPaHZ27hPDWHxvmp2bhxTenPC5K0JnO
+         /mrH8P+Kl8B938Nt+O2hv2V8xKUrLZ5ADv9RuVZC5cuvCxLQq7liPLl8SFvmK9b
+         l8X6QMr1N/DxvRUi90LxmJnobVNVVxhCTk5N56/4PgcZz3sKFdhZaEEMoF5P/9r
+         G6dfx+gg7RJ9WmWKsVyNK+b8ebgxUs9ILOjZYrEdIPZyObW7tWoBpp7Boirvjt4
+         jufVlLUrxc7Gtnz1uosMVYYQj3Tg==; q=dns/txt; t=1736528420; 
+        x=1736791220;
+DKIM-Signature: v=1; s=hs1; d=leanix.net; i=@leanix.net; 
+        h=sender:from:from:reply-to:to:to:cc:cc:subject:subject:list-unsubscribe:form-sub:feedback-id:list-unsubscribe-post; 
+        a=rsa-sha256; c=relaxed/relaxed; 
+        bh=ubsrMDOJvLs4bsHbaOBkHoDXmkxuDZ5i773LQe7im7E=; 
+        b=MYg86srGg94jrIgE3FZpVdGlJBViLDbL5C7Y+gtA6st6GdaHUultkXdFcth6FF
+         Tsk63PdQveoukDb7Jyft4T5lXNVZYEvoYIobCdGDJ5bu2gyD1O+BlOm1rS0VGbQ
+         v4G6HwrT76UkGmxbetBT0a3OaKftmkhauVww2ta1+jEvBDgt/91E75C9dengfQ9
+         nt8+fcQHdbNpaI/2Sjaw/HZ02ENti669MlsROf4dj9EZhHbs3tp7g9ufNX0DD02
+         RV6trHljGbtBinLI2YWmeOoskKjoNLsrxkPXal69k/TqY0Tr/shSUgUViY9xdie
+         4WQRrqeKvozMszvtaRBUDqcwP5Ow==; q=dns/txt; t=1736528420; 
+        x=1736791220;
+X-HS-Cid: 1axfoitbmah74g3uwyutcffojyjbjjysrvzhge
+List-Unsubscribe: <mailto:1axdn2otsy82n9tusrp62mxmqswd2x73o7uha2-contact=makeastride.com@bf10x.hubspotemail.net?subject=unsubscribe>, <https://info.leanix.net/hs/subscription-preferences/v2/unsubscribe-all?data=W2nXS-N30h-G7W1V9ZX941FHprW38vl_l3bdXWhW1BNyx31_7D-rW47DGqd25fHmfW2qFL7W2TGB6zW4fPcP82s-qG-W2-thQV49QrmtW3F1Jpx43HDp2W36d08J1Zq4ggW2PNN9n3FcGcgW3ZY-0432gvjVW2PnCjk4hJ3cfW24VMWj2qLG9bW3bjJ8k24-Lh0W1XwhGQ49LlYdW2w5cy02FK342W49Mxzz2HWBdzW49z8tl2r66yvW1NlyRq43Hb76W36j_3g43JQXVW3NW_hQ1V96T5W1Lyz4_4mC2qQW4tpmJq1-ZH3LW25716q3NLXJgW21lgWm30K2l3W3VRbR747znZFW3z9ZM_4t8x3gW4chQJH45BrGxW1LDc5h3VZQdyW1ZnnVW4fQV7zW3T293d32b0xVW2qz4JH2y0rCMW1Nvn_s3DWdV9W4tgkKM1Bp92TW3VRbR24kG6_3W49CDtT2RrDJfW41Hjxw3T0s4cW4rzL1J239QHCW3zgwL-3dr48QW1VrK0L49C8VXW41ZKsP3W0bQPW43q0SK4kn5fRW4pt8-p36lgN9W1_3-0j2CwncfW2WQFFj3LTmPp0>
+Date: Fri, 10 Jan 2025 18:00:20 +0100
+From: SAP LeanIX Team <marketing@leanix.net>
+Reply-To: marketing@leanix.net
+To: contact@makeastride.com
+Message-ID: <1736528419364.dbdf6cf3-cae2-4ee1-a318-fc656ec59b49@bf10x.hubspotemail.net>
+Subject: Drive IT Efficiency with These Expert Resources
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_3821_471767403.1736528419974"
+X-Report-Abuse-To: abuse@hubspot.com (see
+ https://policy.hubspot.com/abuse-complaints)
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+
+------=_Part_3821_471767403.1736528419974
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Jyothi See these resources that can make a difference in your IT strategy.
+
+View in browser (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c4=
+2W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF5m_5PW7Y9pgv6lZ3l3N4ZQ5tq-tv9sW3F5k-r1HSv=
+4gW258mWQ6Z5w20W10DdH94-5sPJW7GMdfC7HKppBW4W5MtH7fzZstW1v5lhm2HdPYJW5DYdyG6=
+psJTSN7BdrB8QqDDrW2Lmv2J1N0wkRW4j8v4R4sFWMxW8PdKgw28sdSHW6vJvkw8x_9BpW5HGRs=
+L488gYpW5TLl0s7ZJvFZW88z5vt1Ny1DPVYR0Xg7KP4SlW3m_Lwk31VKvFW4LW0jx3PgdjtVzNx=
+PN6vGFhJW1Wkmh95dHqXLMGfXC9Z5SFfW8Ynb_N7CjNRTW5z_sgm8RtxzLW7-J8pd17RtxxW6HJ=
+_fL3lWycHMpc51v81MCbW91Gz2v77K7d1W6qwC7G9gZZXQW80Rwjn8l5NBLW3HK8bS6G2r9XW87=
+mfGH7FXRjqW5jLcrC5fLPKxW5W3SB23DqNZCW8_rv7t4g4SD_W2Fp3YV5JcF4SW1NthfS6yZrPL=
+F8rJJpqmflYW3Gp_fg7D2FDsW5rvGWS3M05wbW7NHm2M3_8NXqW1rtKDf1fNZp2f1zCfkq04 )
+
+SAP LeanIX - Webpage (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx=
+8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF3prCCW7Y8-PT6lZ3mHW4_24Y78j1gngW7_2Q=
+7k5g3MlLW2dJ4751_p2FlW5_rxy552r2mXW8DS_758HVL6sN9jNjmxfvy63M2PmdJRc4ryVcnwc=
+w7p0jz4W2z_DJs84TcPbW8CrHXc3S0qTxW3P1tkS76ngHQW4y2bfj2KvFnwW5LyBQM2-tXBsW69=
+zP248JT8LzW3BnnDC1gqy9HN79knmgX3bJxN6f6BWTGmx4DW7y7Ls81ph_YvTqdlZ1K9Vc_W52M=
+Qx347vXYsW8mvQDs3fDWkKW9hjLtN5C2ZfLW6nClzv2PMnj_W1SKtp42zS4tQW8Q8F935Htw3dW=
+6D65jt96Yltnf6qXXkg04 )
+
+Drive IT Efficiency with These Expert Resources (https://info.leanix.net/e3=
+t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YY3prCCW8wL=
+KSR6lZ3pZW2Wnbrv2JGkw2W4npDdb3jygNPW2_5x-m1ddtZzW6LkJ1T84F9SGW5wT4R76H3Wl-W=
+96bfxx2fnW8xW4yZq3M1HCFLXW3wpK6k9hFRZXVCRn3P8RKngXW553f006jV6MgW5V6BZb5L24F=
+tW9bZg9X1T6McKW2m3MZG4hX1vsW8Nlxvd7WbctWW3dqTLd1dcrQNW7ND8MG6Pq-S0W7Zk1Py3L=
+GcSJW4KZzYb5GP0RYW1JDgVF8YDshRW1GDXVS7x54KnW3M_Xtq6FF2tQW2dNnKS4x0j5-W3CgC4=
+S114pKMW8tnKyx5C-rkvW6V5N8q3v91hzW2n3tXy2yV6zXN7QwYs2sK2QzW2_QQ2h3n7wW1f1bd=
+Xwb04 )
+
+Hey Jyothi,
+
+We hope this email finds you well. You recently downloaded our [Poster] SAP=
+ LeanIX Business Capability Map. As an IT Professional  at your organizatio=
+n we thought you=E2=80=99d find these additional resources valuable.
+
+Many IT Professional 's have used these assets to optimize their IT landsca=
+pes and drive digital transformation. We hope they provide similar insights=
+ for you and your team.
+
+Poster - TOGAF (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42=
+W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24XM5m_5PW69t95C6lZ3q4W7j8qpy3pDWtZW54hdk41RwW=
+9tW5pSPlx1HwY8tW7BddQd33jy0YW89dwHr51h1qPW48Syk12dtnQCW6cbxWL3VMXWPW2jmLg62=
+jHZnfN8mQ4HhM5p8_W1DqLLp930RcCW5BZdSq95rpccW4_WLMN7dKS9CW5sJhX748FCfXW2rgP5=
+S85kKfVW5c0Dgs8lkn1WW16Z3lg1PG4knW7g7-qM5WTqYxV6RQ9383S6vbVVWrl14phB58W4QBY=
+dw4TDBW1W7dq-Nc2ftMvjW5jQ8rB5GNlldW6CZ2Mq5CyVjJW8_DpQw9fKMKmW3j2VK-2gL1sjW8=
+yw0_X6rpS14W6y6Zjj4R4NqcW77qVRJ3flvMYW2Gq-Ls4vNG65W7svQcb7JFbP8W2DZd_83b5R4=
+KN3Q6bZ8YpLxqW6J6NdH8WhC4-W1Qgxd67Cc8mnN3q6Jv3z4YsCW17z2K729fxXbf9bgTkF04 )
+
+Agile Framework for TOGAF Implementation  (https://info.leanix.net/e3t/Ctc/=
+WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24XM5m_5PW69t95C6lZ=
+3q4W7j8qpy3pDWtZW54hdk41RwW9tW5pSPlx1HwY8tW7BddQd33jy0YW89dwHr51h1qPW48Syk1=
+2dtnQCW6cbxWL3VMXWPW2jmLg62jHZnfN8mQ4HhM5p8_W1DqLLp930RcCW5BZdSq95rpccW4_WL=
+MN7dKS9CW5sJhX748FCfXW2rgP5S85kKfVW5c0Dgs8lkn1WW16Z3lg1PG4knW7g7-qM5WTqYxV6=
+RQ9383S6vbVVWrl14phB58W4QBYdw4TDBW1W7dq-Nc2ftMvjW5jQ8rB5GNlldW6CZ2Mq5CyVjJW=
+8_DpQw9fKMKmW3j2VK-2gL1sjW8yw0_X6rpS14W6y6Zjj4R4NqcW77qVRJ3flvMYW2Gq-Ls4vNG=
+65W7svQcb7JFbP8W2DZd_83b5R4KN3Q6bZ8YpLxqW6J6NdH8WhC4-W1Qgxd67Cc8mnN3q6Jv3z4=
+YsCW17z2K729fxXbf9bgTkF04 )
+
+Master an agile framework to implement TOGAF using the SAP LeanIX tool. Str=
+eamline (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM=
+3K7hpNW2H1VMy5qFFy4N1k24XM5m_5PW69t95C6lZ3q4W7j8qpy3pDWtZW54hdk41RwW9tW5pSP=
+lx1HwY8tW7BddQd33jy0YW89dwHr51h1qPW48Syk12dtnQCW6cbxWL3VMXWPW2jmLg62jHZnfN8=
+mQ4HhM5p8_W1DqLLp930RcCW5BZdSq95rpccW4_WLMN7dKS9CW5sJhX748FCfXW2rgP5S85kKfV=
+W5c0Dgs8lkn1WW16Z3lg1PG4knW7g7-qM5WTqYxV6RQ9383S6vbVVWrl14phB58W4QBYdw4TDBW=
+1W7dq-Nc2ftMvjW5jQ8rB5GNlldW6CZ2Mq5CyVjJW8_DpQw9fKMKmW3j2VK-2gL1sjW8yw0_X6r=
+pS14W6y6Zjj4R4NqcW77qVRJ3flvMYW2Gq-Ls4vNG65W7svQcb7JFbP8W2DZd_83b5R4KN3Q6bZ=
+8YpLxqW6J6NdH8WhC4-W1Qgxd67Cc8mnN3q6Jv3z4YsCW17z2K729fxXbf9bgTkF04 ) your e=
+nterprise architecture processes for better adaptability and efficiency.
+
+Whitepaper - The Definitive Guide to Business Capabilities (https://info.le=
+anix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24=
+X85m_5PW50kH_H6lZ3nHW8z-bHj7WPzs0W7qR4gx33MGKJW9hsQgR1FCgVzW1-HCZG5zgWnqW2f=
+PBd7911WG_W6L18WW4nJBwfN4yCyN25XGDYW5Mr7C56pcxlnW73zmxW1kkRGXW44dH8S4mCPnPN=
+6nnk-2YF4NmW2SdSTB6RqZwnW2C_h1h1SC8PfW3VcJ4F9kM52mW3kdJNm1HDTcVW9kPWD17X3yZ=
+BW3FB9GW3CpBZtW4QPcrX66XmydW4XtrZb70qy7RW8qgfRr7xDN-7W25_YcS1Y357BW44nZ9J5_=
+l26zW4FXHjS6Ws86ZW6T2KyM7QSY6bW6Sn67D6BpNmFW8wT71P83xC_LW3jTKBY1Nd-rBW2gK3x=
+B74L955W1hrBwQ3S6bbBW40xZBr8Vz6t0W7gjbz953hy3MW7c3-KP94fmjbdl2JsR04 )
+
+The Definitive Guide to Business Capabilities (https://info.leanix.net/e3t/=
+Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85m_5PW50kH_=
+H6lZ3nHW8z-bHj7WPzs0W7qR4gx33MGKJW9hsQgR1FCgVzW1-HCZG5zgWnqW2fPBd7911WG_W6L=
+18WW4nJBwfN4yCyN25XGDYW5Mr7C56pcxlnW73zmxW1kkRGXW44dH8S4mCPnPN6nnk-2YF4NmW2=
+SdSTB6RqZwnW2C_h1h1SC8PfW3VcJ4F9kM52mW3kdJNm1HDTcVW9kPWD17X3yZBW3FB9GW3CpBZ=
+tW4QPcrX66XmydW4XtrZb70qy7RW8qgfRr7xDN-7W25_YcS1Y357BW44nZ9J5_l26zW4FXHjS6W=
+s86ZW6T2KyM7QSY6bW6Sn67D6BpNmFW8wT71P83xC_LW3jTKBY1Nd-rBW2gK3xB74L955W1hrBw=
+Q3S6bbBW40xZBr8Vz6t0W7gjbz953hy3MW7c3-KP94fmjbdl2JsR04 )
+
+Business capability modeling enhances enterprise efficiency, reducing costs=
+ and risks. This guide (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2D=
+Fx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85m_5PW50kH_H6lZ3nHW8z-bHj7WPzs0W7q=
+R4gx33MGKJW9hsQgR1FCgVzW1-HCZG5zgWnqW2fPBd7911WG_W6L18WW4nJBwfN4yCyN25XGDYW=
+5Mr7C56pcxlnW73zmxW1kkRGXW44dH8S4mCPnPN6nnk-2YF4NmW2SdSTB6RqZwnW2C_h1h1SC8P=
+fW3VcJ4F9kM52mW3kdJNm1HDTcVW9kPWD17X3yZBW3FB9GW3CpBZtW4QPcrX66XmydW4XtrZb70=
+qy7RW8qgfRr7xDN-7W25_YcS1Y357BW44nZ9J5_l26zW4FXHjS6Ws86ZW6T2KyM7QSY6bW6Sn67=
+D6BpNmFW8wT71P83xC_LW3jTKBY1Nd-rBW2gK3xB74L955W1hrBwQ3S6bbBW40xZBr8Vz6t0W7g=
+jbz953hy3MW7c3-KP94fmjbdl2JsR04 ) discusses mapping strategies, practical a=
+pplications, and includes case studies for effective implementation.
+
+Success Kit  Application Rationalization: Free Success Kit (https://info.le=
+anix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24=
+X85m_5PW50kH_H6lZ3lBW9f5nk989xjvdW6x691f3fmGrRW8V0DC53XfsH1V7lh584D6hZGW7rG=
+Xhx4ftbMfVsc_g55R2JFfW3h_ZNY68mWt8W8BfVH_7XtWPgW6gCvd-94W36PW4JjGpG1-9mNJW3=
+7bHTw7PnbJFW9bfHgl4kj1PGW4Sp2wb5-Kl38V2V8Hk1Ld1f9W2pCb_S9fYC18W192zC56THSXT=
+W7Ks4k996h3z5W2cSkjB4H5R1hW2QYdWR511sc3N1G9GbcQ3V9BW4lxYBg6tjlRWVnZsbn9dTxn=
+bW4Kb8NF1Ywz8jW4l0jVQ1-2ZDqW4l3hK-4XvbX_W7S4xw38mv_jqW35z0DW78ntTcW7RhfTF6v=
+Cc7DW5VKXc45kjKj0W9gNH8t7HKMGsVmwRV_6BFn7XMjWwvGqMNBFf7f1-5v04 )
+
+Application Rationalization Success Kit (https://info.leanix.net/e3t/Ctc/WY=
++113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85m_5PW50kH_H6lZ3l=
+BW9f5nk989xjvdW6x691f3fmGrRW8V0DC53XfsH1V7lh584D6hZGW7rGXhx4ftbMfVsc_g55R2J=
+FfW3h_ZNY68mWt8W8BfVH_7XtWPgW6gCvd-94W36PW4JjGpG1-9mNJW37bHTw7PnbJFW9bfHgl4=
+kj1PGW4Sp2wb5-Kl38V2V8Hk1Ld1f9W2pCb_S9fYC18W192zC56THSXTW7Ks4k996h3z5W2cSkj=
+B4H5R1hW2QYdWR511sc3N1G9GbcQ3V9BW4lxYBg6tjlRWVnZsbn9dTxnbW4Kb8NF1Ywz8jW4l0j=
+VQ1-2ZDqW4l3hK-4XvbX_W7S4xw38mv_jqW35z0DW78ntTcW7RhfTF6vCc7DW5VKXc45kjKj0W9=
+gNH8t7HKMGsVmwRV_6BFn7XMjWwvGqMNBFf7f1-5v04 )
+
+Reduce IT costs and complexity with our Application Rationalization Success=
+ Kit. Find out (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42=
+W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85m_5PW50kH_H6lZ3lBW9f5nk989xjvdW6x691f3fmG=
+rRW8V0DC53XfsH1V7lh584D6hZGW7rGXhx4ftbMfVsc_g55R2JFfW3h_ZNY68mWt8W8BfVH_7Xt=
+WPgW6gCvd-94W36PW4JjGpG1-9mNJW37bHTw7PnbJFW9bfHgl4kj1PGW4Sp2wb5-Kl38V2V8Hk1=
+Ld1f9W2pCb_S9fYC18W192zC56THSXTW7Ks4k996h3z5W2cSkjB4H5R1hW2QYdWR511sc3N1G9G=
+bcQ3V9BW4lxYBg6tjlRWVnZsbn9dTxnbW4Kb8NF1Ywz8jW4l0jVQ1-2ZDqW4l3hK-4XvbX_W7S4=
+xw38mv_jqW35z0DW78ntTcW7RhfTF6vCc7DW5VKXc45kjKj0W9gNH8t7HKMGsVmwRV_6BFn7XMj=
+WwvGqMNBFf7f1-5v04 ) how to get started and see results in a matter of week=
+s.
+
+Thanks again for your download!
+
+The SAP LeanIX team
+
+Want to learn more about SAP LeanIX? See what people are saying on G2 (http=
+s://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy=
+5qFFy4N1k24YY3prCCW8wLKSR6lZ3pZW4hLZmC716Fv4VXPJv0491KDWW76fJr22kRF52W5h4DQ=
+G8G86ZHW1w5wjK11y1RXN87GqJn6rLZPW6rfMDN6nlFgdVRqV_G8HVvS6N67BKmSY5BNnW4DZ4n=
+X4D-2SgM1DVkxv0zdGW3d7zdT1RRSRCN9bN9dqVpJptW3-MdL032x996W1yZCny2pp5Z2V96f12=
+97KXV5VpS-X91hb5xdW1QG1DZ6sZWzgW3qP-d65wW0LbW4-4GX05gM7s4W2zVZRQ172pPpW4dL_=
+FF7RqWKmW1FYvht30LKX6W1Qmj5J6ndNmGW1fnHZR8YtLf8W7G2t3q1HPffhW30mZMl6vbl3vW5=
+t3DHG5Wl77pf8fx94-04 ) :
+
+SAP LeanIX G2 Review (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx=
+8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24Zd3prCCW95jsWP6lZ3mbN17fdwBzm2kwW5B5L3=
+93KqGJCW5yCs_Q42HcjDN440p8S98B5nW5bG7WV6cFVGHN4xVTzvGYfKpVF05gM3Pv1xGW858yK=
+f39w4F2W95yT-161fzdHW4qb9N7520SfkVNzygq2mH5BGN12GgqFml9brW4sK5vx602lGSW6-pP=
+Lg7DHYrdVGtyy64-t-mwW6Fjd4W6JjNRKW81Pbnq1QVCWzW68QqfJ9bZVCPW5L3NGy6T-5l6W75=
+smwF4Wl5lDN7b8NNDz1GxKW6dWt2B7_sM9pW7X4mft1zxSHCW9gz33Q42xsq0W7ckFx17cBfxnW=
+7Kf4Sd7XYS26W5Hq8qW4kdL9MW3N6CJX1l05KwW2w6mzD3_6VS2W7R7CtF8KhCbDf8CchVY04 )
+
+LinkedIn (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQR=
+M3K7hpNW2H1VMy5qFFy4N1k24YY3prCCW8wLKSR6lZ3pmW5lDHLb89z7FfW5PsyVC1KX41ZW3jk=
+1jQ8HhWvJVRHDV_7LmWdWW6TcP-z5L6pNVW8cVzRv3Yhh4lVJgkvv3wXw_qW8GBcKT9204hFW76=
+hhq-7Q_1y9W7tx_BR6WwjnBVKqXNM7PlmnFW1GBHDg7xkStHW7gmSSd1Fz2SHW65BTlv2JblThV=
+Vf1WJ3bRC5_W1V__Bb3d1F9tW38Mj403f2vPyW635G0y4pZDzXW8LJsrY5Cggv4V2Mf-v2sHqmH=
+W7CfJWq2hQxCpW8Tjb1Q3sq2zSW1jGB1-2Dw3JBW86SRdY6npgM8W8zgpr83gScr5W2rh79l6W8=
+DQlW2c7zrt3Z6-qmW36f1VM8Ls2nRf5f8Vbs04 )
+
+X (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpN=
+W2H1VMy5qFFy4N1k24YF3prCCW7Y8-PT6lZ3kqW7C_8pY6Mb19ZW83nYQH80HvPYW277pMD2rqV=
+LLW7Y2RYV4Vm6cyW88x1Zn13Yw9vW1vYXS27pMpw1W8TgY4T25fJGrW440vQl8hccVHW2R4LW_2=
+rRB-JW3X72-L7R8rzDN21r7QChyJtlW67JB8R86LSRGW4-qGjt8C44ZgW5KWBQ94n-cxGVWhC8q=
+21-j9DW4rlt5v7Z4Vh6W1YKrp66tsX5JW1Nxql-1MjCNcVTYkb924wJ7zW51kQrg8P7PTWW3wBn=
+_93HXPVwW5v5zdr2zmMjMW7L-hX79h0gltW4fgbyG4n9cZMW6wtDgq2PF0-9N1RNBJSXScRqf8X=
+GJ5K04 )
+
+YouTube (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM=
+3K7hpNW2H1VMy5qFFy4N1k24Zd3prCCW95jsWP6lZ3nLW5FbzvT4s9jmbW469h2G83v-gDW1zxB=
+Kv55DcdcW2Bzxl336vCCTW4v32cF37wTJtV2zgp48W3fYdN85395FbkBGgW7Dv9633BV9FPW3pr=
+1RD4Xk2g5W5d1d9N2F9gLKW3N1nVH8vJjBmW4dFVxF8bymtpW3K-pps32V3FwW3XnCKD15Hp_XW=
+58t-dK2wRCgtW2JJJJh14sZnPW5RSkl_3nVP6LW5QzQWl3RGrLMW94PQ3G3r5M3GVrxmzg1TLcw=
+MW82KQLS1Cdx_MW51J_T67qtb8XN25VYq9MvmtJW4VwCFd6Hsp8tW3vSrpf8X-PHBW42HyFY29Q=
+hNMW2mVcln1MhVvFW19d2p-7-YtYMW3DW1hZ47c42hW63m6_x3SWDn0f5r_sRj04 )
+
+Facebook (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQR=
+M3K7hpNW2H1VMy5qFFy4N1k24YF3prCCW7Y8-PT6lZ3p_W7Bbgyb1S1yP8N6pD-KnWjRBdN40mk=
+2vphSCTN989YlbYj4pnW5gsWcX1X0XmcW7vsF5M5fzRJJW1T24kg80wygZW5Q8DpZ7LxmbyW7MX=
+_Xz43MCbyW3NBKZc2B2HjGV8BWM-2wR1NSW6K25NX2XBPxXVjwpCV6d_dGqW2QsfYB4hL_FWW2v=
+cnQ82T363fN5BBxPshT5GXN4_2fJ73QF3YW37kZMw8TJsBdN3SJ_B-CMwpBW6vq8R36bWNv0W8h=
+td589d7DWCW6xx6CY6zM9N8W6nnY4s6cVr_YN1pyXJPF9fktW2qlmDk1JDqlZN4tFmVfPHfbWf8=
+bxwKW04 )
+
+
+
+
+
+LeanIX GmbH, Friedrich-Ebert-Allee 37-39, Bonn, NRW 53113, +49 228 28629920
+
+Unsubscribe (https://info.leanix.net/hs/preferences-center/en/direct?data=
+=3DW2nXS-N30h-GVW47pF5d1QBFPJW2Y9MfW3bq244W4pnBtz4kM6GSW2TjSMp2vNkGnW1Sc1Cf=
+2WrgDwW2TKRmd3GSxCZW4pCHjH1BKgVmW2HTb9X4myzQ0W2FG4Td3Hf4DQW2r8_J11VbqzsW3XK=
+JVk43ZzKDW3ZM_Yn4hKHbDW1Vdq0S2RMmTvW3Fg6jj4hhMJKW3dcVP_2FshnXW3F1jP51W--k9W=
+2MPpJ21VnRr_W2y3q3-23jsG6W3bwV8K3ChdVGW1Nt5gw36BfkKW4fJGwZ2FCy_cW4m9yL-2w0g=
+_BW2KS7yB1LhMShW2t1l4G1L71MPW2r8b6T213m8GW2p0XlQ1QxLGRW1XwFmR3293PhW2KG3dR3=
+fYJK-W4hgZqq21kVklW2Wtpgp237fwbW3bjf0f2B1ZkHW4kHMYS3blH3CW3GV7Zh1Syj67W2zFg=
+lJ2KMVDWW213Q233JXTyMW3LP5Pq4t6126W2Kyklv3LNh4_W1BJVFx1QsW0wW3NR2fl3ZNMvDW1=
+Nlytr1VwSgmW1Zw39K1XsM9jW400rZ62FFDGCW2YvSY71QBF9WW2-m5BC45M-pFW1LByz32nQ7H=
+kf2-kq0f04&_hsenc=3Dp2ANqtz-8u__OjZdQEptcWKFBoX-8M3BbUM3a6UZ3zqBe39orc8EpRK=
+F147-8aReXy8vQXIfn7yv2Nccbeh4w2F68NgJldrDwUbA&_hsmi=3D326412867 )
+
+Manage preferences (https://info.leanix.net/hs/preferences-center/en/page?d=
+ata=3DW2nXS-N30h-GVW47pF5d1QBFPJW2Y9MfW3bq244W4pnBtz4kM6GSW2TjSMp2vNkGnW1Sc=
+1Cf2WrgDwW2TKRmd3GSxCZW4pCHjH1BKgVmW2HTb9X4myzQ0W2FG4Td3Hf4DQW2r8_J11VbqzsW=
+3XKJVk43ZzKDW3ZM_Yn4hKHbDW1Vdq0S2RMmTvW3Fg6jj4hhMJKW3dcVP_2FshnXW3F1jP51W--=
+k9W2MPpJ21VnRr_W2y3q3-23jsG6W3bwV8K3ChdVGW1Nt5gw36BfkKW4fJGwZ2FCy_cW4m9yL-2=
+w0g_BW2KS7yB1LhMShW2t1l4G1L71MPW2r8b6T213m8GW2p0XlQ1QxLGRW1XwFmR3293PhW2KG3=
+dR3fYJK-W4hgZqq21kVklW2Wtpgp237fwbW3bjf0f2B1ZkHW4kHMYS3blH3CW3GV7Zh1Syj67W2=
+zFglJ2KMVDWW213Q233JXTyMW3LP5Pq4t6126W2Kyklv3LNh4_W1BJVFx1QsW0wW3NR2fl3ZNMv=
+DW1Nlytr1VwSgmW1Zw39K1XsM9jW400rZ62FFDGCW2YvSY71QBF9WW2-m5BC45M-pFW1LByz32n=
+Q7Hkf2-kq0f04&_hsenc=3Dp2ANqtz-8u__OjZdQEptcWKFBoX-8M3BbUM3a6UZ3zqBe39orc8E=
+pRKF147-8aReXy8vQXIfn7yv2Nccbeh4w2F68NgJldrDwUbA&_hsmi=3D326412867 )
+
+Imprint (https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM=
+3K7hpNW2H1VMy5qFFy4N1k24YF3prCCW7Y8-PT6lZ3p1W8X_Y4x2GCz2QW1VvJ9h3j0CSqN6y23=
+mp4vzSsW5cS0-P3jh1cDVP4hNH89nldHW3VfWDQ70MFB8N6GhlPsRnwJkW5_hG3P7fKZSmV5R0B=
+41d8qD3W4FmW8T1twDGQVb54Ny6r4B9XW62khPt5T2J3JW5jYWx58P8CKkN5-xm4tnLVNzW6P8c=
+_M1Q-CF3N86f9yH41L8lW8rc-TK7t17N7N5JyL87k3z9KW3p0GQQ8kv1MHW8tNzf86H1rL9W5mP=
+Pbc5qsd9RN605-Psnm4wqN6g8-kKr0rVZW5psM5l60328yW78hmTK5s6xmHV9Fd2t4bCnPVf5wx=
+2PR04 )
+------=_Part_3821_471767403.1736528419974
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www=
+.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns=3D"http://www.w3=
+.org/1999/xhtml" xmlns:o=3D"urn:schemas-microsoft-com:office:office" xmlns:=
+v=3D"urn:schemas-microsoft-com:vml" lang=3D"en"><head>
+    <title>Drive IT Efficiency with These Expert Resources</title>
+    <meta property=3D"og:title" content=3D"Drive IT Efficiency with These E=
+xpert Resources">
+    <meta name=3D"twitter:title" content=3D"Drive IT Efficiency with These =
+Expert Resources">
+   =20
+   =20
+   =20
+<meta name=3D"x-apple-disable-message-reformatting">
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0">
+    <!--[if gte mso 9]>
+  <xml>
+      <o:OfficeDocumentSettings>
+      <o:AllowPNG/>
+      <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+  </xml>
+ =20
+  <style>
+    ul > li {
+      text-indent: -1em;
+    }
+  </style>
+<![endif]-->
+<!--[if mso]>
+<style type=3D"text/css">
+ body, td {font-family: Arial, Helvetica, sans-serif;}
+ .hse-body-wrapper-table {background-color: #f4f6fa;}
+</style>
+<![endif]-->
+   =20
+     =20
+ =20
+   =20
+  <meta name=3D"generator" content=3D"HubSpot"><meta property=3D"og:url" co=
+ntent=3D"https://info.leanix.net/drive-it-efficiency-with-these-expert-reso=
+urces-3"><meta name=3D"robots" content=3D"noindex,follow"><!--[if !((mso)|(=
+IE))]><!-- --><style type=3D"text/css">@media only screen and (max-width:63=
+9px){img.stretch-on-mobile,.hs_rss_email_entries_table img,.hs-stretch-cta =
+.hs-cta-img{height:auto !important;width:100% !important}
+.display_block_on_small_screens{display:block}.hs_padded{padding-left:20px =
+!important;padding-right:20px !important}
+.hs-hm,table.hs-hm{display:none}.hs-hd{display:block !important}table.hs-hd=
+{display:table !important}
+}.moz-text-html .hse-column-container{max-width:600px !important;width:600p=
+x !important}
+.moz-text-html .hse-column{display:table-cell;vertical-align:top}.moz-text-=
+html .hse-section .hse-size-4{max-width:200px !important;width:200px !impor=
+tant}
+.moz-text-html .hse-section .hse-size-8{max-width:400px !important;width:40=
+0px !important}
+.moz-text-html .hse-section .hse-size-12{max-width:600px !important;width:6=
+00px !important}
+@media only screen and (min-width:640px){.hse-column-container{max-width:60=
+0px !important;width:600px !important}
+.hse-column{display:table-cell;vertical-align:top}.hse-section .hse-size-4{=
+max-width:200px !important;width:200px !important}
+.hse-section .hse-size-8{max-width:400px !important;width:400px !important}=
+.hse-section .hse-size-12{max-width:600px !important;width:600px !important=
+}
+}@media screen and (max-width:639px){.social-network-cell{display:inline-bl=
+ock} }</style><!--<![endif]--><style type=3D"text/css">#hs_body #hs_cos_wra=
+pper_main a[x-apple-data-detectors]{color:inherit !important;text-decoratio=
+n:none !important;font-size:inherit !important;font-family:inherit !importa=
+nt;font-weight:inherit !important;line-height:inherit !important}
+a{text-decoration:underline}p{margin:0}body{-ms-text-size-adjust:100%;-webk=
+it-text-size-adjust:100%;-webkit-font-smoothing:antialiased;moz-osx-font-sm=
+oothing:grayscale}
+table{border-spacing:0;mso-table-lspace:0;mso-table-rspace:0}table,td{borde=
+r-collapse:collapse}
+img{-ms-interpolation-mode:bicubic}p,a,li,td,blockquote{mso-line-height-rul=
+e:exactly}</style></head>
+  <body id=3D"hs_body" bgcolor=3D"#f4f6fa" style=3D"margin:0 !important; pa=
+dding:0 !important; font-family:Arial, sans-serif; font-size:15px; color:#2=
+22f4b; word-break:break-word">
+    <div id=3D"preview_text" style=3D"display:none;font-size:1px;color:#f4f=
+6fa;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;=
+" lang=3D"en">Jyothi See these resources that can make a difference in your=
+ IT strategy.</div>
+   =20
+<!--[if gte mso 9]>
+<v:background xmlns:v=3D"urn:schemas-microsoft-com:vml" fill=3D"t">
+    <v:fill type=3D"tile" size=3D"100%,100%" color=3D"#ffffff"/>
+</v:background>
+<![endif]-->
+    <div class=3D"hse-body-background" lang=3D"en" style=3D"background-colo=
+r:#f4f6fa" bgcolor=3D"#f4f6fa">
+      <table role=3D"presentation" class=3D"hse-body-wrapper-table" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"margin:0; padding:0; width:100% !impo=
+rtant; min-width:320px !important; height:100% !important" width=3D"100%" h=
+eight=3D"100%">
+        <tbody><tr>
+          <td class=3D"hse-body-wrapper-td" valign=3D"top" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding-top:20px; padding-bottom:20px">
+            <div id=3D"hs_cos_wrapper_main" class=3D"hs_cos_wrapper hs_cos_=
+wrapper_widget hs_cos_wrapper_type_dnd_area" style=3D"color: inherit; font-=
+size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget" d=
+ata-hs-cos-type=3D"dnd_area">  <div id=3D"section_1678178819752" class=3D"h=
+se-section hse-section-first" style=3D"padding-left:10px; padding-right:10p=
+x">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation">
+      <tr>
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1678178819752_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_16781788197502" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><div style=3D"overflow:hidden">
+  <table role=3D"presentation" class=3D"hse-pre-header hse-secondary" width=
+=3D"100%" cellpadding=3D"0" cellspacing=3D"0" style=3D"text-align:right; fo=
+nt-family:Arial, sans-serif; font-size:12px; line-height:135%; color:#23496=
+d; margin-bottom:0; padding:0" align=3D"right">
+    <tbody>
+      <tr>
+        <td align=3D"right" valign=3D"top" style=3D"color:#222f4b; word-bre=
+ak:break-word; text-align:right; font-family:Arial, sans-serif; font-size:1=
+2px; padding:10px 0; margin-bottom:0; line-height:135%">
+          <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8=
+X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF5nR32W7Y9pgv6lZ3mPN6mVg3N1WsMQW44QPgk=
+7z9TrSW6VVqyk8J9S2kW97HCZJ5BHzHSW6xqbJg3g_PQXW5vt36t37c_-BW3R4YTD5PKvg3VRSk=
+Q-3f6nH7W6JxrT52dzC0XW8WHfLl1dlKPCW3sPCgf8w21JvW72FnH56dL5HgW64ZMwM64t9ZnMZ=
+KySVpdjmcN3S7jmfv_SCzW88fXkB1RP_46W6KTkMj1pmP84W4P7CPG4M6KBpW47-80Q2hpTLDMR=
+jPw4BYHsnW2zVfY33JVSd4W8nytd51P2NKsW1XkF-x3s1HTDW3VgcSg29T8XCW4XnxWm7gj1NVW=
+8lmx8-5ZFnsfW8gXxwf4_Vz41W1hWlKr7N2cVLMtD7J1Rj95dW6F1-Nb2l4cKKN1DnjGcW9KtJW=
+2rlf3v6P1ztlN1K-SWBXGFlnN6yS_kLXcgyXW1k-Wt07VgWJDW32KySs8929jSW8WQwP62CrKV0=
+W1_hGLy6_xd6pW39JqXy5T8xCQW7wtMvP52r9LVW4y0R9y58QDw8W5_Npx46g6h46f85q2wK04"=
+ style=3D"color:#166bff; font-weight:bold; text-decoration:underline; font-=
+style:normal" data-hs-link-id=3D"0" target=3D"_blank">View in browser</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17182777500963" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1718277750096-0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17182777500962" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; color:#222f4b; word-break:break-word; text-align:center; padding:0px=
+; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF3qgyTW7Y8-PT6lZ3lBW3s9fD-48hF0GW1BmZ8t3=
+fbHV0VtJ8VS232wvgW4NTsZ24qxxwHW2MlNNX5LKqdPW1887W55ynH1SW7SSyG_1QW-fYW91Q5Y=
+94YSmgWW7C6Hl76v7smhW1s4Y0D91-8CSVfpdg91H-cfHVznDQ941CH25W507Nth992wTMVqldh=
+T1gqZvvW8cpS2X3mXhNbW83fLH02WVJGJW4K0LPL805XJcW9knyWr5wmLnlN7PH9cJLSn8qW1kx=
+w4v50KzcwW7F2JBK8mZf89MQzNHjjtdTfW89SM4b6RfdjqVYt9919gSn6LW1vc-3n4k6gJcW27z=
+c1b43FP1sf6qSP3z04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-=
+id=3D"0">
+        <img alt=3D"SAP LeanIX - Webpage" src=3D"https://info.leanix.net/hs=
+-fs/hubfs/Imported%20images/Email%20Header%202020.png?width=3D1200&amp;upsc=
+ale=3Dtrue&amp;name=3DEmail%20Header%202020.png" style=3D"outline:none; tex=
+t-decoration:none; border:none; max-width:100%; font-size:16px" width=3D"60=
+0" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1717056306951" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1717056306951_0" class=3D"hse-column hse-size-12">
+  <div id=3D"hs_cos_wrapper_module_17170563069241" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; color:#222f4b; word-break:break-word; text-align:center; padding:0px=
+; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YY3qgyTW8wLKSR6lZ3p8W3zfRv51wL-FPW4ngSL34=
+hT2HYW98nN_81n8F_PW9hPpdm4df4qhW4Bm8ZC75x_cfW4F6HfS5SMJ48VKj_ZS25rzL-W6DVpl=
+G3nGS-DW4D-q9l1FLkH8VH5J3P2gh9cdW82hnYp1H9QRyW2xk__Y4N5vZFF5Bk1LNTRgvW5QmbH=
+H7X_lBRW68G12Z3TK0rYN4g00fkHgq8gW6-kg6n3dX89WW3LwF724HKBsDW2R0b_S8l4F1DW1M8=
+ZJr5CtPNVV4Kch22z0L-cW6FPF0b7PW9ljW8GHp952FrQxnW40QvGn5XWMCSW4q41JP3KnMClVg=
+DfV34H188kW4KYRGm5PylH5W7msGw68xCzShf32wcZP04" target=3D"_blank" style=3D"c=
+olor:#00a4bd" data-hs-link-id=3D"0">
+        <img alt=3D"Drive IT Efficiency with These Expert Resources" src=3D=
+"https://info.leanix.net/hs-fs/hubfs/SAPLeanIX_Reactivation_Header-2.png?wi=
+dth=3D1200&amp;upscale=3Dtrue&amp;name=3DSAPLeanIX_Reactivation_Header-2.pn=
+g" style=3D"outline:none; text-decoration:none; border:none; max-width:100%=
+; font-size:16px" width=3D"600" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1571916139458" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1677080471326_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:20px 2=
+0px 5px"><div id=3D"hs_cos_wrapper_module_16781807041801" class=3D"hs_cos_w=
+rapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: in=
+herit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_16=
+781807041801_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper=
+_type_rich_text" style=3D"color: inherit; font-size: inherit; line-height: =
+inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text=
+"><p style=3D"mso-line-height-rule:exactly; line-height:175%">Hey Jyothi,</=
+p>
+<pre data-stringify-type=3D"pre" style=3D"white-space:pre-wrap"></pre>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">We hope this em=
+ail finds you well. You recently downloaded our <span style=3D"font-weight:=
+ bold;">[Poster] SAP LeanIX Business Capability Map. </span><span style=3D"=
+font-weight: normal;">As an <span style=3D"font-weight: bold;">IT Professio=
+nal </span> at <span style=3D"font-weight: bold;">your organization </span>=
+</span>we thought you=E2=80=99d find these additional resources valuable.</=
+p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; line-height:175%">Many <span styl=
+e=3D"font-weight: normal;"><span style=3D"font-weight: bold;">IT Profession=
+al 's </span></span>have used these assets to optimize their IT landscapes =
+and drive digital transformation. We hope they provide similar insights for=
+ you and your team.</p></div></div></td></tr></tbody></table>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-se=
+rif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 20p=
+x"><div id=3D"hs_cos_wrapper_module_167414251376714" class=3D"hs_cos_wrappe=
+r hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit=
+; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"wi=
+dget" data-hs-cos-type=3D"module"><table role=3D"none" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" style=3D"vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995af;width:75%;marg=
+in:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995af;wid=
+th:420px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17273508189914" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-1727350818990-0" class=3D"hse-column hse-size-4">
+  <div id=3D"hs_cos_wrapper_module_17273508189902" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#222f4b; word-break:break-word; text-align=
+:center; padding:10px 20px; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24XM5nR32W69t95C6lZ3lYW1YHKMR3JW3RGW7v6gLm1=
+W3h3cW6y-gtq3GrTVqW43hJtk6RLJRgW6sBjG75GyTwrW18hNcD79wpyWW8P0Xsp5VKrmKW7vXg=
+Vv8_TXQZW90jzt383r1jKW6ww-ff4jBRW9VVz4N285PK1MW5wWy-07BDywFW22l-5Q8ywB2lW4C=
+8Ktj2YppcxW4FxPQq2rLjTMW2vTy3N7wwKjjW1SXmDt7D1Bt8N8tJg45Zdv9KN1B2qRKpyGStN6=
+nRzm1lhqvfM65JJK_LVmTW67k7-q3jRm8zW3hV1wJ5YQv-ZW2w_g_86TPzRkN2wd8F2dDxXpN4t=
+Vg5hbHPWyN1R8vrLLq18HW22rljb42zYDkW87GlNB5Xg9cJW1R0J0K83sK2lVkTTP2131ZJ0W6j=
+mRdH3JSd0SW6W5RKH7nkPHyN5YhnqHsg5QxW4TV4Gm25D94vW2MhqM87jSWwff127Gsx04" tar=
+get=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0">
+        <img alt=3D"Poster - TOGAF" src=3D"https://info.leanix.net/hs-fs/hu=
+bfs/23-TY%20Emails/EN/Thumbnails%20360x250/Thumbnail-Poster-320x320.png?wid=
+th=3D320&amp;upscale=3Dtrue&amp;name=3DThumbnail-Poster-320x320.png" style=
+=3D"outline:none; text-decoration:none; border:none; max-width:100%; font-s=
+ize:16px" width=3D"160" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-1727350818991-1" class=3D"hse-column hse-size-8">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:5px 20=
+px 10px"><div id=3D"hs_cos_wrapper_module_17273508189903" class=3D"hs_cos_w=
+rapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: in=
+herit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_17=
+273508189903_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper=
+_type_rich_text" style=3D"color: inherit; font-size: inherit; line-height: =
+inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text=
+"><p style=3D"mso-line-height-rule:exactly; font-size:16px; line-height:175=
+%"><a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8=
+fbQRM3K7hpNW2H1VMy5qFFy4N1k24XM5nR32W69t95C6lZ3q5VzrYw611bHLrVLRqTk5dPYD7W1=
+lFmfd9jYYKXL6GWRsff4kW256M0X6qyBYxW7vNRD24ZK2bsW17wGMm3VYn-dVZDg6_8phPm8W79=
+wntz5_TSYkV2WmmN2NtZDZW99DcsD67pKNgW2M-0C06_9PJhVMrb4V18rcGRW8KLcjM6YSlg0N6=
+9zNznDP-qVN5FdtW4QKXStW3dV4zs82pV6yW4XBW0N3TGhk_Vswm918hBnz7V2S-274LS-fsW5w=
+w3x-6TP83jW4xcB3y5qHDVCW87cnWY2FL7JJW1nrvYs5vHYv7W5y7y1K3sbcb9Vplp2B2J2j2ZW=
+3CjBNG69v_0XW1dtjFX7GW6tWM4HlFqMzZmNW77f2_r4fyGd9W2CV_mS6JZgVDVKbNXC4v1Sn_N=
+64gFWD5wf4JW4tj40r6HtV9mW6pBRZT58QvPqW3Jbznp94GcCwf1XClMs04" rel=3D"noopene=
+r" style=3D"color:#166bff; font-weight:bold" data-hs-link-id=3D"1" target=
+=3D"_blank"><strong data-renderer-mark=3D"true">Agile Framework for TOGAF I=
+mplementation</strong>&nbsp;</a></p>
+<div style=3D"mso-line-height-rule:exactly; line-height:175%">
+<p style=3D"mso-line-height-rule:exactly; font-size:14px; line-height:175%"=
+ data-renderer-start-pos=3D"4580">Master an agile framework to implement TO=
+GAF using the SAP LeanIX tool. <a href=3D"https://info.leanix.net/e3t/Ctc/W=
+Y+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24XM5nR32W69t95C6lZ3=
+pMN8VX_-dR4zzHW2c8_WL2g87XTW4Lcct55blK0wW35N1gL51c29MW36pdwf3-2K2MVy5Wnr2TY=
+DxCW5H_lbF4drk4vN8jpCw7dlYYfW7_NVQl4dqrz0W4jJ9RS29g2YdN1nv49gFSL9VW8xM92l2P=
+qzLRW6bN4Dw8qTyRkN4SX64C79Xg6W19wfWy2CgfyqW2277n-7WHgqhW4CsLn-5czcXVW6GjtTT=
+1Xtj8lW8DKT6f73MwPHW2hstTP6VDmqNW3hV_pr5W50kKVR81Hj7M2KQwW2C30XP8n_SxSW6r7p=
+W03SB04tW7D59wB3kyK4yW3mCXfj4g2hCjVt2qXm5Bqlb0W2pHvCd6WPnT4W4GC2ph7XV2-4V5y=
+dRt5qKdHyW19vmjf121HBKW53D3Xl8rL71nW4kmBqL7KC17wW3x4zWY3jlMnNV4pMhf4zytDlW3=
+5X02x98GH4Mf74mTcg04" rel=3D"noopener" style=3D"color:#166bff; font-weight:=
+bold" data-hs-link-id=3D"2" target=3D"_blank">Streamline</a> your enterpris=
+e architecture processes for better adaptability and efficiency.</p>
+</div></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1716380427023" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1716380427023_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17195859493023" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><table role=3D"none" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995af;width:75%;marg=
+in:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995af;wid=
+th:420px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17273509458257" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-1727350945825-0" class=3D"hse-column hse-size-4">
+  <div id=3D"hs_cos_wrapper_module_17273509458255" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#222f4b; word-break:break-word; text-align=
+:center; padding:20px; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32W50kH_H6lZ3nXW6WYcsn72LN_5W40SWh99=
+768-XW2zg_ZG61Xyb8W1ZCfGy7rm0dHW6-9Sqg1g57-WW4yRyM56ydhf5W4PGNp64LKVZJW8G6S=
+9B8CDRW0W5F3kq_7h28vFW7b6zKL5G8_vkW39zMTd4WbmJlN63dbJrM2_KbW94Q14L7Td6FlW6G=
+zmNK3WnDbqW6V0RDX39J_LcN2WGmdt1gQmrW8GSb583SpdyTW3ljK0b8d1Y3pW2mMgbR78gyBYW=
+14jvfq7h1Lq9N7sWgZF2P4NqW2NKyx58kZGVGV3TtxV2237rgW8FsSR63qSyBrW5wv2d22X1466=
+W5wF0bD7NCTfxW7x7Kgv8vw7NRW7nXYYQ2XnFdtM-Ddsfsp8F8N6zY8RDLTM6zN4nNgrhPcJCSW=
+90BTVH3fFNCjf3wzv_b04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-li=
+nk-id=3D"0">
+        <img alt=3D"Whitepaper - The Definitive Guide to Business Capabilit=
+ies" src=3D"https://info.leanix.net/hs-fs/hubfs/23-TY%20Emails/EN/Thumbnail=
+s%20360x250/Thumbnail-White%20Paper-360x250.png?width=3D320&amp;upscale=3Dt=
+rue&amp;name=3DThumbnail-White%20Paper-360x250.png" style=3D"outline:none; =
+text-decoration:none; border:none; max-width:100%; font-size:16px" width=3D=
+"160" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-1727350945825-1" class=3D"hse-column hse-size-8">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:15px 2=
+0px 10px"><div id=3D"hs_cos_wrapper_module_17273509458256" class=3D"hs_cos_=
+wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: i=
+nherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_17=
+273509458256_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper=
+_type_rich_text" style=3D"color: inherit; font-size: inherit; line-height: =
+inherit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text=
+"><h2 style=3D"margin:0; mso-line-height-rule:exactly; font-size:16px; line=
+-height:175%"><a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2=
+DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32W50kH_H6lZ3pnW7cHpZ04rPN-sW3=
+vG9W_51Gx08W8G_HhQ2nZmSfW4Hvqwm5nZ8-SW160drq3sWGpTW2vZN9S89Nw3qW4-ykTm398k2=
+_W6mcN384sGMKkN2J8c2rzkPdwVg_lK91pW_7RW3Xg44B2sKF_1N1qp8dfbJsfZVgsJV36-XqHw=
+W6XKsFH2XYb7FW9lmygq3xxc3BW5qN52T1hzgFHW1Fv4lM7GfqB0W5gL7l36xZKYqW57Tq318Zw=
+cD3W8pglv29lM-zCW1Vc5947Tssz-W4CV_xt7wTxMXW61xqx_5qGSzjW4B_xQ76HVdfMW7kM_2-=
+4lLDVZW7yg0S87CzS1HW8xYsk68t6_fmN2rvWTTvkLSSN5Ww6gSLjG2sW4BqhtK44lGK7W1Sdv0=
+T2JcNLtMwHz2yrLftZf1pxFG604" rel=3D"noopener" style=3D"color:#166bff; font-=
+weight:bold" data-hs-link-id=3D"1" target=3D"_blank">The Definitive Guide t=
+o Business Capabilities</a></h2>
+<p style=3D"mso-line-height-rule:exactly; font-size:14px; line-height:175%"=
+>Business capability modeling enhances enterprise efficiency, reducing cost=
+s and risks. <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2D=
+Fx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32W50kH_H6lZ3mwM6XRC5d0-BRW8G13=
+lf4pPdDhMtR32fcQnqcW3pdf-B4S1fY_W4NTRBN62Y0cxW1RSybJ2Z7BkxW90RklJ7gzL-1W4l5=
+lc_7kVjbyW8115NM9k2xrFN4Bp7ZyV1cj7Vd2x1v1qtJl7W25jkbN6TvqF-N2-5vzSfVsgjW2Mr=
+Mnd726mBpW45fjVY6k0fLxW5q83fB562kvhW2HSlJW19-tGkW2NVPJc7sDQf1W4tbT8P5W2Y_vW=
+2KrtL3225pFrW1Yd0WH78WhxwW5VsT-h8_0h2tN1CcWscr9F0-N40zpt62t8x7VkH1S93lvtJpW=
+2qJhPJ8c-tV8W13XsFv98qyJ_W7FcjLK6f_mYvW5rb57N4QXQhmW5CPQHb1N889KW9cfRvk41nH=
+qCW1N8J617DD8S8f3KCtHH04" rel=3D"noopener" style=3D"color:#166bff; font-wei=
+ght:bold" data-hs-link-id=3D"2" target=3D"_blank">This guide</a> discusses =
+mapping strategies, practical applications, and includes case studies for e=
+ffective implementation.</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17195859414643" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1719585941464-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17195859345721" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><table role=3D"none" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995af;width:75%;marg=
+in:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995af;wid=
+th:420px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17273532842284" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:200px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"200" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:200px">
+<![endif]-->
+<div id=3D"column-1727353284228-0" class=3D"hse-column hse-size-4">
+  <div id=3D"hs_cos_wrapper_module_17273532842282" class=3D"hs_cos_wrapper =
+hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; =
+font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widg=
+et" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"=
+presentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#222f4b; word-break:break-word; text-align=
+:center; padding:10px 20px; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32W50kH_H6lZ3nSW1c0_dq78XRQrVsTnqH6h=
+WxSfW7smSwL1ZsQDSW24w0B-3Kt_xWW2SBRbQ7nprnMW6Fb1vG2NjRfvW5sgmdv72fNxBW5b6LR=
+V4sZrqGW4fS19360qzLKN5lb0YcHyRxKW3GZ-4X6Wnm6YN1X7tWpW4MCbN4x5dvKcmlx3W6MT8p=
+64QCt8nW1JL7bl3mrmMYW2f92b-2R1SVRVVQYPm42YbqJW2TSwsJ1Z31YZW4-ZQK53Qp_59W3s7=
+WtN1C4VFlW2pDbp16m_r48W19lkbt8TNYlVW3wr-Sj3469XnVwKdHm4RwlvvW4ZM6l44XwF-XW2=
+qmSMj18yYLKW6vVbW16XdH0GW8kCvsF2Cklb5N9gNj4jdvv7TW6Mz9YT3zQSTyW67x2Yp8wfnfj=
+W6WrdRl2dfCjCf3YKn1P04" target=3D"_blank" style=3D"color:#00a4bd" data-hs-l=
+ink-id=3D"0">
+        <img alt=3D"Success Kit  Application Rationalization: Free Success =
+Kit" src=3D"https://info.leanix.net/hs-fs/hubfs/23-TY%20Emails/EN/Thumbnail=
+s%20360x250/Thumbnail-Success%20Kit-360x250.png?width=3D320&amp;upscale=3Dt=
+rue&amp;name=3DThumbnail-Success%20Kit-360x250.png" style=3D"outline:none; =
+text-decoration:none; border:none; max-width:100%; font-size:16px" width=3D=
+"160" align=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+<!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:400px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"400" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:400px">
+<![endif]-->
+<div id=3D"column-1727353284228-1" class=3D"hse-column hse-size-8">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17273532842283" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_1727353=
+2842283_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type=
+_rich_text" style=3D"color: inherit; font-size: inherit; line-height: inher=
+it;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><h2=
+ style=3D"margin:0; mso-line-height-rule:exactly; font-size:15px; line-heig=
+ht:175%"><span style=3D"font-size: 16px;"><a href=3D"https://info.leanix.ne=
+t/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32=
+W50kH_H6lZ3q6W37P3ld8y-ttdW43wV7R2Y8-GjW3_QBfN7W4gn3W23VZBH4tRNx1W6M5QQF8x3=
+srfW3jRLdj1Xk4SfN7FYXQj8zG76W8LjJDr18XNkZW1gXcyg3BHQbHW586NZ36qHQNRW3Bnzgn6=
+-8BDjW8ZS8FZ2vdvWqW4kVvDS4pnckdW7lZw4q23bm7wW1nmhft3jJ4wtV_f1M34qMyM3W3r7Wh=
+y8HDBK7Vqy-Xg3c1jNlW3BBczC205J6tW3GQtj06ns3Z2W13VQgB1ZDzvcW7Jm0jz4Slz4BW65L=
+_n42b-G2QVgHVWQ7y7d02W739dBf3HlfVzVC1Scd7VQPXGW5GPb292mW7WFW8rcTJq4QdPB2MGr=
+GZXDN_17W3kKQxs2HnJTTW2MJWGb5RVT5TW5RxYrJ7H6R3yf7TrgfF04" rel=3D"noopener" =
+style=3D"color:#166bff; font-weight:bold" data-hs-link-id=3D"1" target=3D"_=
+blank">Application Rationalization Success Kit</a></span></h2>
+<p style=3D"mso-line-height-rule:exactly; font-size:14px; line-height:175%"=
+>Reduce IT costs and complexity with our Application Rationalization Succes=
+s Kit. <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1c=
+42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24X85nR32W50kH_H6lZ3ntM5b-TzMjZswW4Q_ywM7mf9=
+DTW3rQkq719LyK4W3zblKD3Z8ZW3W28qNqN2gWZVQV2CYpB2smjwlN2kVpFgMy2XgW7vNtx38KG=
+3gcW2411dm3Vkw50W1Qysh84TjHhlMQ_lLTV6PNlW1BQl4w6dHjT1W1KN9S-8cj59tW5-blw53b=
+bSdmW7Hl70c8zrFDqVdFF5r2QkWqbW15lTxn1V5W8KW1KBzsl3M0gGQVZgtpR66_wf2W4L6Q2d2=
+kD_LgW7lTYcD3__Sq8W2W52c57WJdnfV2mKHx6jFrRHMbDLTpcBzHJW7Vp5v975tKSDW6RVyfk3=
+Mr6FKW2yjXC55v9g6nVDJmrt8S-njxMZM2QKyC04yW3LPmGB98cypwW2B3g0d8cR2QKN271JF--=
+hZdhf24tS5604" rel=3D"noopener" style=3D"color:#166bff; font-weight:bold" d=
+ata-hs-link-id=3D"2" target=3D"_blank">Find out</a> how to get started and =
+see results in a matter of weeks.</p></div></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_1674142382110" class=3D"hse-section" style=3D"padding-=
+left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column_1674142382110_0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_16741423998339" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><table role=3D"none" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995af;width:75%;marg=
+in:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995af;wid=
+th:420px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17182777756158" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1718277775615-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17182777756157" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_1718277=
+7756157_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type=
+_rich_text" style=3D"color: inherit; font-size: inherit; line-height: inher=
+it;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><p =
+style=3D"mso-line-height-rule:exactly; font-weight:bold; font-size:15px; li=
+ne-height:175%">Thanks again for your download!&nbsp;</p>
+<p style=3D"mso-line-height-rule:exactly; font-weight:bold; font-size:15px;=
+ line-height:175%">The SAP LeanIX team</p></div></div></td></tr></tbody></t=
+able>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17273525585753" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1727352558575-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17273525585752" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><table role=3D"none" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" style=3D"vertical-align:top" width=3D"100%">
+  <tbody><tr>
+    <td align=3D"center" style=3D"font-family:Arial, sans-serif; color:#222=
+f4b; font-size:0; word-break:break-word">
+      <p style=3D"font-size:1px;border-top:1px solid #8995AF;width:100%;mar=
+gin:0 auto;"></p>
+      <!--[if mso]>
+        <table role=3D"none" align=3D"center" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" style=3D"font-size:1px;border-top:1px solid #8995AF;wid=
+th:560px;">
+          <tr>
+            <td style=3D"height:0;line-height:0">&nbsp;</td>
+          </tr>
+        </table>
+      <![endif]-->
+    </td>
+  </tr>
+</tbody></table></div></td></tr></tbody></table>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_17308977807144" class=3D"hse-section" style=3D"padding=
+-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#ffffff" bg=
+color=3D"#ffffff">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#ffffff">
+      <tr style=3D"background-color:#ffffff;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1730897780714-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 2=
+0px"><div id=3D"hs_cos_wrapper_module_17308977807142" class=3D"hs_cos_wrapp=
+er hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inheri=
+t; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"w=
+idget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_1730897=
+7807142_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type=
+_rich_text" style=3D"color: inherit; font-size: inherit; line-height: inher=
+it;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><p =
+style=3D"mso-line-height-rule:exactly; line-height:175%; text-align:center"=
+ align=3D"center">Want to learn more about SAP LeanIX? See what people are =
+saying on <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8=
+X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YY3qgyTW8wLKSR6lZ3lqVPJdFB1Rxb3HN78wTg_=
+yBqqTW7MH7P-54gTghW8w156y8j__bbW63hRSB3_qbfyW3ql72S8HVdh0W5C1WYL4ync8_W2F1v=
+zl6KPgmHN2MrlHxGMyssW4ySL9t68T_yyW7n20J319zxHPN2-KP-PtqFj9VJlPpk6sPl-tW76Z0=
+Qz4j3cw8W4Z76FP5P6MnZW2xbhy67R8DzwW4pf2rH94VxG7W37ZvGF8Xw7pbW2vFm_91ZZ0xdVj=
+2RzK4xLhkxW90ns7S71DTZcW3SKkg6994qpCW59wSYQ34jfWkW1JscWW2Lf0FcW1PYyn91rvGtz=
+VtjMLL4wh9nzW8KkY7m3KnM6GW3msZxL6-4Wmkf7gstXK04" rel=3D"noopener" style=3D"=
+color:#166bff; font-weight:bold" data-hs-link-id=3D"0" target=3D"_blank">G2=
+</a>:</p></div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module_17308977807143" class=3D"hs_cos_wrapper hs=
+_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; fo=
+nt-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widget=
+" data-hs-cos-type=3D"module"><table class=3D"hse-image-wrapper" role=3D"pr=
+esentation" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0">
+  <tbody>
+    <tr>
+      <td class=3D"hs_padded" align=3D"center" valign=3D"top" style=3D"font=
+-family:Arial, sans-serif; color:#222f4b; word-break:break-word; text-align=
+:center; padding:0px 20px 10px; font-size:0px">
+        <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8X1=
+c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24Zd3qgyTW95jsWP6lZ3mMW4b4jKb2XtZJ4W1j8Lmy3=
+NSl0LW1vsmyP6LccY1W7MlQ-j5fm3PcW998prS4zXM4xW8TRV3r7MrKvQW4zHlKf8WsZDQW5mNw=
+Ys5qXqL_W7r_Ck64SC1vYW5x22_J1Hy4PwW2Nl-L48VypTWW7wCK-43KR1rWW8dfKgL6_JtpDW3=
+4Wn9x3lSvBmN7rwQZwdv0g6W3LMBxw31PcXFW4hVg0y3bS8T5W5PM7l95qNK1xW5ls1mJ7PpfDJ=
+VfSh3G4qHlm0W6Nb9D56pSPx-W7zsNKj5ylpkCW4CbycG4jvjBWW5Sn0fy44K2pgN5QMbFR6hqQ=
+sW4JvBR33Z859-W5wqD7T1CkHjkW6jc97t8b_Rc-W1qpf2Z5-xt-RW8YhW2D7F6z9yf70l3zW04=
+" target=3D"_blank" style=3D"color:#00a4bd" data-hs-link-id=3D"0">
+        <img alt=3D"SAP LeanIX G2 Review" src=3D"https://info.leanix.net/hs=
+-fs/hubfs/G2%20Email%20Image%20GIF%202.gif?width=3D1120&amp;upscale=3Dtrue&=
+amp;name=3DG2%20Email%20Image%20GIF%202.gif" style=3D"outline:none; text-de=
+coration:none; border:none; max-width:100%; font-size:16px" width=3D"560" a=
+lign=3D"middle">
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div>
+  <div id=3D"section_171827777964214" class=3D"hse-section hse-section-last=
+" style=3D"padding-left:10px; padding-right:10px">
+   =20
+   =20
+    <!--[if !((mso)|(IE))]><!-- -->
+      <div class=3D"hse-column-container" style=3D"min-width:280px; max-wid=
+th:600px; Margin-left:auto; Margin-right:auto; background-color:#223548" bg=
+color=3D"#223548">
+    <!--<![endif]-->
+   =20
+    <!--[if (mso)|(IE)]>
+      <div class=3D"hse-column-container" style=3D"min-width:280px;max-widt=
+h:600px;width:100%;Margin-left:auto;Margin-right:auto;">
+      <table align=3D"center" style=3D"width:600px;" cellpadding=3D"0" cell=
+spacing=3D"0" role=3D"presentation" width=3D"600" bgcolor=3D"#223548">
+      <tr style=3D"background-color:#223548;">
+    <![endif]-->
+    <!--[if (mso)|(IE)]>
+  <td valign=3D"top" style=3D"width:600px;">
+<![endif]-->
+<!--[if gte mso 9]>
+  <table role=3D"presentation" width=3D"600" cellpadding=3D"0" cellspacing=
+=3D"0" style=3D"width:600px">
+<![endif]-->
+<div id=3D"column-1718277779642-0" class=3D"hse-column hse-size-12">
+  <table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D=
+"100%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; padding:20px 2=
+0px 0px"><div id=3D"hs_cos_wrapper_module_171827777964211" class=3D"hs_cos_=
+wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: i=
+nherit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=
+=3D"widget" data-hs-cos-type=3D"module"><table role=3D"presentation" align=
+=3D"center" style=3D"width: auto; text-align: center;" class=3D"hs_cos_wrap=
+per_type_social_module">
+  <tbody>
+    <tr align=3D"center">
+      <td class=3D"social-network-cell" style=3D"font-family:Arial, sans-se=
+rif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a  href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/=
+VX2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YY3qgyTW8wLKSR6lZ3mcVCjVhM6SjGG_=
+W7S8pcJ3H0y3RW7xXg9h4qYFzMW7v7hD489FzftW4C6PNM45PpfNW4-JCBr1YrlHhN7VzMskWKB=
+P9W45MbLw4ZDddtW7sFffg7ddVwBW7dCSJ14Dt5ZgW2h-0y77LT-ccW51h-RK45RRvLW69KBNp3=
+xgYnjW1mVdjq8p2t2WW7xNy3Q9gl0t3W9bGTjc215rp7N2skwsfhMl0jW2xvdDg4D6PgMW6tgF5=
+q4r0t8xW4hD2dr29wlGfW71RW6n2WxjL0W5F_D5T25bnC7W6bm99w8cf725W2m1ltZ70tWRZN28=
+x0kpFHz1JW1j3xhD2gtQQHW439bRK3K-955VdM6LK5KKym7f1MSN8-04" style=3D"color:#0=
+0a4bd; text-decoration:none !important" data-hs-link-id=3D"0" target=3D"_bl=
+ank"><img src=3D"https://info.leanix.net/hs/hsstatic/TemplateAssets/static-=
+1.262/img/hs_default_template_images/modules/Follow+Me+-+Email/linkedin_ori=
+ginal_white.png" alt=3D"LinkedIn" height=3D"32" style=3D"outline:none; text=
+-decoration:none; border:none; width:auto!important; height:32px!important;=
+ vertical-align:middle" valign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/V=
+X2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF3qgyTW7Y8-PT6lZ3p5W27d-Vs1L3ZjS=
+W5lPXCP3D1xB-W5QM-Cc93slQyN3DJsqf2KsqNW8YZL068h33F4W5M4B5C8RhlfnW3jknJc1c6z=
+PbW1XVVQ11SPwmSW1c65fL6cT0hpW2x1rSL9fZPR4W6F0Vf86PfMD1N13wJD4YrC4kN5CWxtqM3=
+HGfW8JLsl32WBddDW7DV_ls937RrBW6jvYkS9bkCGZW117wmy4pCg8XW7YQ0yL4rK5rCVwnN-p4=
+CzYlmW2dH3Mm76GblnW2KDxfx7m1S-dW3Dnq219dWY5tW24Wm_M7NtPnrVCllPP8LpLJqW14fcB=
+L3d-L_FW2sz3wW572lW9f4Fb7Hx04" style=3D"color:#00a4bd; text-decoration:none=
+ !important" data-hs-link-id=3D"0" target=3D"_blank"><img src=3D"https://in=
+fo.leanix.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_templa=
+te_images/modules/Follow+Me+-+Email/twitter_original_white.png" alt=3D"X" h=
+eight=3D"32" style=3D"outline:none; text-decoration:none; border:none; widt=
+h:auto!important; height:32px!important; vertical-align:middle" valign=3D"m=
+iddle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/V=
+X2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24Zd3qgyTW95jsWP6lZ3m1W4GCL2Y1Vq1F4=
+W4LNPPx8TZQhwW4ccrbT8W6wt-W7j-VKf6461QkN8rtfLmQbFXVN7R1hHMDW7P1W7QmsWb4T9FS=
+nW3Dpk9r2LcDczVcwhgC5TSx2RW86jL031qBJwHW93-hHk4vKM4zN6Rbz1G4m4yGW6dH64Q6-Fw=
+3LW6cF49_2mLgYtW1-Bs1y6GqryKW1CZHNH89ClGSW6ls06b119fbnW2_FjGB7hfXL6W5gy9BL6=
+-d5kSW4Yj9Xv8-rWGRW5Fj-w57sGGW8W3pd6Nq5-BtXMN8NRvgqt8PwxW18QFvc2XdvVTW2rRHc=
+K26s12qW6SCrh_6sDhghV92ykv89vwgyW2WTpvS4Mj36vW1pgpr-2kJSWjW4QXJkK1tygkKf1Kn=
+fWR04" style=3D"color:#00a4bd; text-decoration:none !important" data-hs-lin=
+k-id=3D"0" target=3D"_blank"><img src=3D"https://info.leanix.net/hs/hsstati=
+c/TemplateAssets/static-1.262/img/hs_default_template_images/modules/Follow=
++Me+-+Email/youtube_original_white.png" alt=3D"YouTube" height=3D"32" style=
+=3D"outline:none; text-decoration:none; border:none; width:auto!important; =
+height:32px!important; vertical-align:middle" valign=3D"middle" width=3D"au=
+to">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td><td class=3D"social-network-cell" style=3D"font-family:Arial, sa=
+ns-serif; font-size:15px; color:#222f4b; word-break:break-word">
+        <table role=3D"presentation" align=3D"center" style=3D"width: auto;=
+ text-align: center;" class=3D"hs_cos_wrapper_type_social_module_single">
+          <tbody>
+            <tr align=3D"center">
+              <td class=3D"display_block_on_small_screens" style=3D"font-fa=
+mily:Arial, sans-serif; font-size:15px; color:#222f4b; word-break:break-wor=
+d; padding:8px 15px; line-height:1; vertical-align:middle" valign=3D"middle=
+">
+                <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/V=
+X2DFx8X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF3qgyTW7Y8-PT6lZ3pYV-mxc77ZTT76W=
+65d2jl5_bddbVfFJ7j6Sl8bdW1C8wJd54K816W70tmqg4Pkg7rW4h3KwX4q2TKwW2VRrBD6_VMQ=
+sW21QS3_11s1ckW2tFVVy5T235fW5p6qTw7-SkF4W7_Yydd1wQ2LVW7PvXwl2PX9YnW1fTfDy6D=
+w6YFW2MBPVG7s--txM-cX_c_ZjnpW2QfGHB66k0sxW2t_TcW4Bt919W8Fc-M58LkRVGW8cFC0p6=
+LrJx2W3n37TP4n1rN9W8Yltq92VlQFzW7BWWyy3K4PfCW94_RqC2HPsH6W9d9hkT5_9yjDW3Jkq=
+Cy8qjkMyW8rDL3Y6HVFnZf3zf_Kj04" style=3D"color:#00a4bd; text-decoration:non=
+e !important" data-hs-link-id=3D"0" target=3D"_blank"><img src=3D"https://i=
+nfo.leanix.net/hs/hsstatic/TemplateAssets/static-1.262/img/hs_default_templ=
+ate_images/modules/Follow+Me+-+Email/facebook_original_white.png" alt=3D"Fa=
+cebook" height=3D"32" style=3D"outline:none; text-decoration:none; border:n=
+one; width:auto!important; height:32px!important; vertical-align:middle" va=
+lign=3D"middle" width=3D"auto">
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div></td></tr></tbody></table>
+<table role=3D"presentation" cellpadding=3D"0" cellspacing=3D"0" width=3D"1=
+00%"><tbody><tr><td class=3D"hs_padded" style=3D"font-family:Arial, sans-se=
+rif; font-size:15px; color:#222f4b; word-break:break-word; padding:10px 20p=
+x 0px"><div id=3D"hs_cos_wrapper_module_17005705689853" class=3D"hs_cos_wra=
+pper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inhe=
+rit; font-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D=
+"widget" data-hs-cos-type=3D"module"><div id=3D"hs_cos_wrapper_module_17005=
+705689853_" class=3D"hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_ty=
+pe_rich_text" style=3D"color: inherit; font-size: inherit; line-height: inh=
+erit;" data-hs-cos-general-type=3D"widget" data-hs-cos-type=3D"rich_text"><=
+/div></div></td></tr></tbody></table>
+<div id=3D"hs_cos_wrapper_module_171827777964213" class=3D"hs_cos_wrapper h=
+s_cos_wrapper_widget hs_cos_wrapper_type_module" style=3D"color: inherit; f=
+ont-size: inherit; line-height: inherit;" data-hs-cos-general-type=3D"widge=
+t" data-hs-cos-type=3D"module">
+<table role=3D"presentation" class=3D"hse-footer hse-secondary" width=3D"10=
+0%" cellpadding=3D"0" cellspacing=3D"0" style=3D"font-family:Arial, sans-se=
+rif; font-size:12px; line-height:135%; color:#23496d; margin-bottom:0; padd=
+ing:0">
+  <tbody>
+    <tr>
+      <td align=3D"center" valign=3D"top" style=3D"font-family:Arial, sans-=
+serif; font-size:15px; color:#222f4b; word-break:break-word; text-align:cen=
+ter; margin-bottom:0; line-height:135%; padding:20px 20px">
+        <p style=3D"font-family:Arial, sans-serif;font-size:14px;font-weigh=
+t:normal;text-decoration:none;font-style:normal;color:#F5F6F7;">
+          LeanIX GmbH, Friedrich-Ebert-Allee 37-39, Bonn, NRW 53113, +49 22=
+8 28629920
+        </p>
+        <p>
+         =20
+          <a data-unsubscribe=3D"true" href=3D"https://info.leanix.net/hs/p=
+references-center/en/direct?data=3DW2nXS-N30h-GVW47pF5d1QBFPJW2Y9MfW3bq244W=
+4pnBtz4kM6GSW2TjSMp2vNkGnW1Sc1Cf2WrgDwW2TKRmd3GSxCZW4pCHjH1BKgVmW2HTb9X4myz=
+Q0W2FG4Td3Hf4DQW2r8_J11VbqzsW3XKJVk43ZzKDW3ZM_Yn4hKHbDW1Vdq0S2RMmTvW3Fg6jj4=
+hhMJKW3dcVP_2FshnXW3F1jP51W--k9W2MPpJ21VnRr_W2y3q3-23jsG6W3bwV8K3ChdVGW1Nt5=
+gw36BfkKW4fJGwZ2FCy_cW4m9yL-2w0g_BW2KS7yB1LhMShW2t1l4G1L71MPW2r8b6T213m8GW2=
+p0XlQ1QxLGRW1XwFmR3293PhW2KG3dR3fYJK-W4hgZqq21kVklW2Wtpgp237fwbW3bjf0f2B1Zk=
+HW4kHMYS3blH3CW3GV7Zh1Syj67W2zFglJ2KMVDWW213Q233JXTyMW3LP5Pq4t6126W2Kyklv3L=
+Nh4_W1BJVFx1QsW0wW3NR2fl3ZNMvDW1Nlytr1VwSgmW1Zw39K1XsM9jW400rZ62FFDGCW2YvSY=
+71QBF9WW2-m5BC45M-pFW1LByz32nQ7Hkf2-kq0f04&amp;utm_campaign=3DFY24-Q3-GM-GL=
+-ALL-LX-EMN-Re_Activate_Contacts&amp;utm_source=3Dhs_automation&amp;utm_med=
+ium=3Demail&amp;utm_content=3D326411541&amp;_hsenc=3Dp2ANqtz-_wAiBAjekjdsHZ=
+U3przk8YozkEhiJa2dV4sMLxIJvpcc9gXkiidf2Yo8BzAy5w4nPT2UIVG4DRx1eWrtbWgk1-Jgo=
+VdA&amp;_hsmi=3D326412867" style=3D"font-family:Helvetica,Arial,sans-serif;=
+ font-size:14px; color:#8995af; font-weight:normal; text-decoration:underli=
+ne; font-style:normal" data-hs-link-id=3D"0" target=3D"_blank">Unsubscribe<=
+/a>
+         =20
+          <a data-unsubscribe=3D"true" href=3D"https://info.leanix.net/hs/p=
+references-center/en/page?data=3DW2nXS-N30h-GVW47pF5d1QBFPJW2Y9MfW3bq244W4p=
+nBtz4kM6GSW2TjSMp2vNkGnW1Sc1Cf2WrgDwW2TKRmd3GSxCZW4pCHjH1BKgVmW2HTb9X4myzQ0=
+W2FG4Td3Hf4DQW2r8_J11VbqzsW3XKJVk43ZzKDW3ZM_Yn4hKHbDW1Vdq0S2RMmTvW3Fg6jj4hh=
+MJKW3dcVP_2FshnXW3F1jP51W--k9W2MPpJ21VnRr_W2y3q3-23jsG6W3bwV8K3ChdVGW1Nt5gw=
+36BfkKW4fJGwZ2FCy_cW4m9yL-2w0g_BW2KS7yB1LhMShW2t1l4G1L71MPW2r8b6T213m8GW2p0=
+XlQ1QxLGRW1XwFmR3293PhW2KG3dR3fYJK-W4hgZqq21kVklW2Wtpgp237fwbW3bjf0f2B1ZkHW=
+4kHMYS3blH3CW3GV7Zh1Syj67W2zFglJ2KMVDWW213Q233JXTyMW3LP5Pq4t6126W2Kyklv3LNh=
+4_W1BJVFx1QsW0wW3NR2fl3ZNMvDW1Nlytr1VwSgmW1Zw39K1XsM9jW400rZ62FFDGCW2YvSY71=
+QBF9WW2-m5BC45M-pFW1LByz32nQ7Hkf2-kq0f04&amp;utm_campaign=3DFY24-Q3-GM-GL-A=
+LL-LX-EMN-Re_Activate_Contacts&amp;utm_source=3Dhs_automation&amp;utm_mediu=
+m=3Demail&amp;utm_content=3D326411541&amp;_hsenc=3Dp2ANqtz-_wAiBAjekjdsHZU3=
+przk8YozkEhiJa2dV4sMLxIJvpcc9gXkiidf2Yo8BzAy5w4nPT2UIVG4DRx1eWrtbWgk1-JgoVd=
+A&amp;_hsmi=3D326412867" style=3D"font-family:Helvetica,Arial,sans-serif; f=
+ont-size:14px; color:#8995af; font-weight:normal; text-decoration:underline=
+; font-style:normal" data-hs-link-id=3D"0" target=3D"_blank">Manage prefere=
+nces</a>
+         =20
+          <a href=3D"https://info.leanix.net/e3t/Ctc/WY+113/cjkwq04/VX2DFx8=
+X1c42W8fbQRM3K7hpNW2H1VMy5qFFy4N1k24YF3qgyTW7Y8-PT6lZ3lMW3pDxFs8Yt0Q9W1smw8=
+g8zSP5QW2FSwvp2Z9qRLW6VnHmY9jLcPdVH8HGb9bPp8TW39jm8B4DLXdKN1k0rHX8jBHBW49hz=
+bp31SxNlW30YwgQ57ClXTN26Q9zs58f6fW3Kmbvv4M6c1DW67fLf-7ytsgPW4LnL2X6Fqk5LVm_=
+5NB6tgBCYW75dF645r2MSWW96c16Y7TQ6hNW7Lj5Bc5Tx6g6W855vgv77B2D6W7x2PbK35g2C0N=
+14-Rm1rPlX8W8TvsmC1YRy4hW2YYY1g3VF2NYN5_Qbt4kJPfHW8dJp9w8pykTVW3vszk23gphqM=
+W5cFgx24gxh5sf4PqfBY04" target=3D"_blank" style=3D"font-family:Helvetica,Ar=
+ial,sans-serif; font-size:14px; color:#8995af; font-weight:normal; text-dec=
+oration:underline; font-style:normal" data-hs-link-id=3D"0">Imprint</a>
+        </p>
+      </td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<!--[if gte mso 9]></table><![endif]-->
+<!--[if (mso)|(IE)]></td><![endif]-->
+    <!--[if (mso)|(IE)]></tr></table><![endif]-->
+    </div>
+  =20
+  </div></div>
+          </td>
+        </tr>
+      </tbody></table>
+    </div>
+ =20
+<img src=3D"https://info.leanix.net/e3t/Cto/WY+113/cjkwq04/VX2DFx8X1c42W8fb=
+QRM3K7hpNW2H1VMy5qFFy4W1k24J73Db8z8112" alt=3D"" width=3D"1" height=3D"1" b=
+order=3D"0" style=3D"display:none!important;min-height:1px!important;width:=
+1px!important;border-width:0!important;margin-top:0!important;margin-bottom=
+:0!important;margin-right:0!important;margin-left:0!important;padding-top:0=
+!important;padding-bottom:0!important;padding-right:0!important;padding-lef=
+t:0!important"></body></html>
+------=_Part_3821_471767403.1736528419974--
+
